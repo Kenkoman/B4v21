@@ -3,6 +3,11 @@ Various old blockland releases with extra B4v21 addons included.
 
 This is the v20 branch, check the other branches for the other versions.
 
+# Instructions
+1) Click the 'Clone or download' button on this page, and click on 'Download ZIP'
+2) Extract the zip into a folder
+3) Run 'Launch v13' to launch the game.
+
 # v20
 
 (credit to Port for the original v20 download!)
