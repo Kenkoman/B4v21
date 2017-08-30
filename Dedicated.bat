@@ -1,0 +1,1 @@
+blockland.exe -dedicated
