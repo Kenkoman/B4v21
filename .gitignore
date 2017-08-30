@@ -1,7 +1,4 @@
-v13/base/server/temp/temp.bls
-v13/config/server/*.cs
-v13/config/client/*.cs
-v13/cache.db
-v13/cache.db.journal
-v13/console.log
-v13/key.dat
+cache.db
+cache.db.journal
+console.log
+key.dat

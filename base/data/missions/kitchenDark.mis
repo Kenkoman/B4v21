@@ -1,0 +1,292 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         desc1 = "Author: Eric Hartman";
+         previewImage = "base/data/missions/kitchenDark";
+         descLines = "2";
+         desc0 = "Name: Kitchen - Dark";
+         saveName = "Kitchen";
+         name = "Kitchen - Dark";
+   };
+   new MissionArea(MissionArea) {
+      Area = "-1376 -1664 3744 3328";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sunset/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "900";
+      fogDistance = "500";
+      fogColor = "0.000000 0.000000 0.300000 1.000000";
+      fogStorm1 = "0";
+      fogStorm2 = "0";
+      fogStorm3 = "0";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.000000 0.000000 0.200000 1.000000";
+      useSkyTextures = "0";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      azimuth = "290";
+      elevation = "90";
+      color = "0.000000 0.000000 0.000000 1.000000";
+      ambient = "0.000000 0.000000 0.000000 1.000000";
+         rotation = "1 0 0 0";
+         locked = "true";
+         direction = "0.57735 0.57735 -0.57735";
+         scale = "1 1 1";
+         position = "0 0 0";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      terrainFile = "./kitchenDark.ter";
+      squareSize = "16";
+      bumpScale = "5";
+      bumpOffset = "0.0051";
+      zeroBumpScale = "5";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-378.777 -166.072 120.378";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         canSetIFLs = "0";
+         radius = "40";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            homingCount = "0";
+            lockCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-418.253 -139.854 246.793";
+      rotation = "0 0 1 89.9544";
+      scale = "8.16207 7 7";
+      dataBlock = "fluorescentLight";
+      canSetIFLs = "0";
+   };
+   new StaticShape() {
+      position = "-453.739 -244.448 150.529";
+      rotation = "0 0 -1 90";
+      scale = "29 19 19";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new StaticShape() {
+      position = "-500.939 54.952 198.129";
+      rotation = "0 0 -1 90";
+      scale = "112 76 76";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new InteriorInstance() {
+      position = "-316.5 -92.671 183.284";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/kitchen.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-462.365 -243.435 211.646";
+      rotation = "0 0 1 89.9544";
+      scale = "3.23499 4 4";
+      dataBlock = "fluorescentLight";
+      canSetIFLs = "0";
+   };
+   new StaticShape() {
+      position = "-500.879 -158.048 198.129";
+      rotation = "0 0 -1 90";
+      scale = "112 76 76";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new TSStatic() {
+      position = "-474.511 -229.689 171.034";
+      rotation = "0 0 -1 89.9543";
+      scale = "8 8 1";
+      shapeName = "~/data/shapes/environment/stoveburner.dts";
+   };
+   new TSStatic() {
+      position = "-474.532 -256.689 171.034";
+      rotation = "0 0 -1 89.9543";
+      scale = "8 8 1";
+      shapeName = "~/data/shapes/environment/stoveburner.dts";
+   };
+   new TSStatic() {
+      position = "-471.982 -242.671 171.034";
+      rotation = "0 0 -1 89.9543";
+      scale = "9 9 1";
+      shapeName = "~/data/shapes/environment/stoveburner.dts";
+   };
+   new TSStatic() {
+      position = "-462.349 -253.058 171.034";
+      rotation = "0 0 -1 89.9543";
+      scale = "11 11 1";
+      shapeName = "~/data/shapes/environment/stoveburner.dts";
+   };
+   new TSStatic() {
+      position = "-462.554 -232.338 171.049";
+      rotation = "0 0 -1 89.9543";
+      scale = "11 11 1";
+      shapeName = "~/data/shapes/environment/stoveburner.dts";
+   };
+   new fxLight() {
+      position = "-355.108 -297.634 175.67";
+      rotation = "0 0 -1 6.31369";
+      scale = "1 1 1";
+      dataBlock = "PlayerLight";
+      Enable = "1";
+      IconSize = "1";
+         Player = "33727";
+   };
+   new StaticShape(tenHours) {
+      position = "-483.144 -246.558 175.657";
+      rotation = "-0.159318 -6.96664e-009 0.987227 180";
+      scale = "1 1 1";
+      dataBlock = "LCD";
+      canSetIFLs = "0";
+         delay = "60000";
+         skinName = "green";
+         time = "0";
+   };
+   new StaticShape() {
+      position = "-483.12 -243.458 175.576";
+      rotation = "-0.159318 -6.96664e-009 0.987227 180";
+      scale = "0.8 0.8 0.8";
+      dataBlock = "LCDColon";
+      canSetIFLs = "0";
+         skinName = "green";
+   };
+   new StaticShape() {
+      position = "-363.411 151.6 176.529";
+      rotation = "0 0 1 179.473";
+      scale = "56 112 112";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new StaticShape() {
+      position = "-410.853 -139.849 246.578";
+      rotation = "0 0 1 89.9544";
+      scale = "8.16207 7 7";
+      dataBlock = "fluorescentLight";
+      canSetIFLs = "0";
+   };
+   new StaticShape() {
+      position = "-289.462 -202.542 176.529";
+      rotation = "0 0 -1 90";
+      scale = "56 112 112";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new StaticShape() {
+      position = "-289.462 -146.342 176.529";
+      rotation = "0 0 -1 90";
+      scale = "56 112 112";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new StaticShape() {
+      position = "-379.355 -286.275 183.433";
+      rotation = "0 0 1 89.9544";
+      scale = "1.52947 3 3";
+      dataBlock = "fluorescentLight";
+      canSetIFLs = "0";
+   };
+   new StaticShape() {
+      position = "-419.609 151.083 176.529";
+      rotation = "0 0 1 179.473";
+      scale = "56 112 112";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+         indestructable = "1";
+   };
+   new TSStatic() {
+      position = "-576.243 51.7739 76.5853";
+      rotation = "0 0 1 92.8191";
+      scale = "7.21498 6.29969 5.34295";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Palm/Sharp_Palm05.dts";
+   };
+   new TSStatic() {
+      position = "-698.625 167.171 97.3016";
+      rotation = "-0.188674 -0.0441769 0.981046 26.847";
+      scale = "9.7327 8.02446 12.0746";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Palm/Sharp_Palm02.dts";
+   };
+   new TSStatic() {
+      position = "-605.312 -313.427 88.859";
+      rotation = "0 0 1 180";
+      scale = "8.81072 10.5212 10.3172";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Palm/Sharp_Palm04.dts";
+   };
+   new TSStatic() {
+      position = "-573.376 -166.368 77.7335";
+      rotation = "0 0 1 184.492";
+      scale = "7.21498 6.29969 5.50464";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Palm/Sharp_Palm05.dts";
+   };
+   new StaticShape(minutes) {
+      position = "-483.147 -240.124 175.656";
+      rotation = "-0.159318 -6.96664e-009 0.987227 180";
+      scale = "1 1 1";
+      dataBlock = "LCD";
+      canSetIFLs = "0";
+         delay = "60000";
+         skinName = "green";
+         time = "0";
+   };
+   new StaticShape(tenMinutes) {
+      position = "-483.147 -241.884 175.656";
+      rotation = "-0.159318 -6.96664e-009 0.987227 180";
+      scale = "1 1 1";
+      dataBlock = "LCD";
+      canSetIFLs = "0";
+         delay = "60000";
+         skinName = "green";
+         time = "0";
+   };
+   new StaticShape(hours) {
+      position = "-483.144 -244.818 175.657";
+      rotation = "-0.159318 -6.96664e-009 0.987227 180";
+      scale = "1 1 1";
+      dataBlock = "LCD";
+      canSetIFLs = "0";
+         delay = "60000";
+         skinName = "green";
+         time = "0";
+   };
+};
+//--- OBJECT WRITE END ---

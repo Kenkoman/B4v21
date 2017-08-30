@@ -1,0 +1,333 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         desc0 = "Name: Bedroom";
+         name = "Bedroom";
+         previewImage = "base/data/missions/bedroom";
+         desc1 = "Author: Eric Hartman";
+         descLines = "2";
+         saveName = "Bedroom";
+   };
+   new MissionArea(MissionArea) {
+      area = "-1376 -1664 3744 3328";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "900";
+      fogDistance = "500";
+      fogColor = "0.950000 0.950000 1.000000 1.000000";
+      fogStorm1 = "0";
+      fogStorm2 = "0";
+      fogStorm3 = "0";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0 0 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      azimuth = "250";
+      elevation = "35";
+      color = "0.700000 0.700000 0.700000 1.000000";
+      ambient = "0.400000 0.400000 0.300000 1.000000";
+         direction = "0.57735 0.57735 -0.57735";
+         position = "0 0 0";
+         scale = "1 1 1";
+         rotation = "1 0 0 0";
+         locked = "true";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/greenhills/TTgrass01";
+      terrainFile = "./bedroom.ter";
+      bumpTexture = "~/data/terrains/greenhills/TTgrass01";
+      squareSize = "16";
+      bumpScale = "14";
+      bumpOffset = "0.1";
+      zeroBumpScale = "5";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "95.1626 -97.867 287.415";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         canSetIFLs = "0";
+         radius = "40";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+   };
+   new InteriorInstance() {
+      position = "84.1401 -113.78 348.812";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/bedroom.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-62.1013 -136.229 331.606";
+      rotation = "0 0 -1 90";
+      scale = "16 30 30";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+   };
+   new StaticShape() {
+      position = "-67.1263 -136.025 363.006";
+      rotation = "0 0 -1 90";
+      scale = "16 30 30";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+   };
+   new StaticShape() {
+      position = "-67.1413 -154.825 363.006";
+      rotation = "0 0 -1 90";
+      scale = "16 30 30";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+   };
+   new SimGroup(clock) {
+
+      new StaticShape(hours) {
+         position = "-0.56393 -196.93 351.979";
+         rotation = "-0.104797 -0.0137857 0.994398 165.095";
+         scale = "2 1.5 2";
+         dataBlock = "LCD";
+         canSetIFLs = "0";
+            maxTime = "10";
+            delay = "3600000";
+            time = "0";
+      };
+      new StaticShape(minutes) {
+         position = "-2.41614 -190.145 351.979";
+         rotation = "-0.104797 -0.0137857 0.994398 165.095";
+         scale = "2 1.5 2";
+         dataBlock = "LCD";
+         canSetIFLs = "0";
+            maxTime = "10";
+            delay = "60000";
+            time = "1";
+      };
+      new StaticShape(tenMinutes) {
+         position = "-1.67219 -192.804 351.979";
+         rotation = "-0.104797 -0.0137857 0.994398 165.095";
+         scale = "2 1.5 2";
+         dataBlock = "LCD";
+         canSetIFLs = "0";
+            maxTime = "6";
+            delay = "600000";
+            time = "0";
+      };
+      new StaticShape(tenHours) {
+         position = "0.152609 -199.574 351.979";
+         rotation = "-0.104797 -0.0137857 0.994398 165.095";
+         scale = "2 1.5 2";
+         dataBlock = "LCD";
+         canSetIFLs = "0";
+            maxTime = "10";
+            delay = "36000000";
+            time = "0";
+      };
+   };
+   new TSStatic() {
+      position = "-229.912 -308.119 88.3873";
+      rotation = "1 0 0 0";
+      scale = "7.80539 10.5676 15.9578";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Oaks/Sharp_Oak02.dts";
+         RayHeight = "10";
+   };
+   new fxGrassReplicator(grass) {
+      position = "75.727 -133.745 128.058";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideGrass = "0";
+      ShowPlacementArea = "0";
+      PlacementAreaHeight = "35";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "1376312589";
+      GrassFile = "~/data/foliage/grassComp";
+      GrassCount = "40000";
+      GrassRetries = "100";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "600";
+      OuterRadiusY = "600";
+      MinWidth = "12";
+      MaxWidth = "16";
+      MinHeight = "3";
+      MaxHeight = "4";
+      FixAspectRatio = "0";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "0";
+      UseCulling = "1";
+      CullResolution = "32";
+      ViewDistance = "70";
+      ViewClosest = "1";
+      FadeInRegion = "20";
+      FadeOutRegion = "1";
+      AlphaCutoff = "0.5";
+      GroundAlpha = "0.9";
+      SwayOn = "1";
+      SwaySync = "0";
+      SwayMagSide = "0.1";
+      SwayMagFront = "0.2";
+      MinSwayTime = "4";
+      MaxSwayTime = "15";
+      LightOn = "1";
+      LightSync = "0";
+      MinLuminance = "0.7";
+      MaxLuminance = "0.9";
+      lightTime = "10";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "90";
+      FoilageColourTop = "0.500000 1.000000 0.100000 1.000000";
+      FoilageColourBtm = "0.500000 1.000000 0.100000 1.000000";
+      UseColour = "1";
+      IsRandomRot = "1";
+      IsSquareArea = "0";
+      RotationAngle = "0";
+      SurfaceExclusionMode = "0";
+      SurfaceType = "Any";
+   };
+   new StaticShape() {
+      position = "-11.3835 -192.787 361.78";
+      rotation = "1 0 0 0";
+      scale = "1.2 1.2 1.75925";
+      dataBlock = "lightBulbA";
+      canSetIFLs = "0";
+   };
+   new fxFoliageReplicator(grass) {
+      position = "-243.64 -42.3528 102.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideFoliage = "0";
+      ShowPlacementArea = "0";
+      PlacementAreaHeight = "35";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "1376312589";
+      FoliageFile = "~/data/foliage/beargrass.png";
+      FoliageCount = "1000";
+      FoliageRetries = "100";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "600";
+      OuterRadiusY = "600";
+      MinWidth = "1";
+      MaxWidth = "3";
+      MinHeight = "1";
+      MaxHeight = "10";
+      FixAspectRatio = "1";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "1";
+      UseCulling = "1";
+      CullResolution = "16";
+      ViewDistance = "70";
+      ViewClosest = "1";
+      FadeInRegion = "20";
+      FadeOutRegion = "1";
+      AlphaCutoff = "0.5";
+      GroundAlpha = "0.9";
+      SwayOn = "1";
+      SwaySync = "0";
+      SwayMagSide = "0.1";
+      SwayMagFront = "0.2";
+      MinSwayTime = "4";
+      MaxSwayTime = "15";
+      LightOn = "1";
+      LightSync = "0";
+      MinLuminance = "0.7";
+      MaxLuminance = "1";
+      lightTime = "10";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "90";
+   };
+   new TSStatic() {
+      position = "-135.602 -12.754 95.7073";
+      rotation = "0.138865 -0.0890078 0.986303 66.0372";
+      scale = "6.5196 5.82919 5.59256";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Maples/Sharp_Maple09.dts";
+   };
+   new TSStatic() {
+      position = "-138.036 101.152 99.7586";
+      rotation = "0 0 1 55.0039";
+      scale = "5.24854 6.94708 4.10025";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Maples/Sharp_Maple09.dts";
+   };
+   new TSStatic() {
+      position = "62.422 -271.297 106.568";
+      rotation = "0.13455 0.0245947 0.990602 159.473";
+      scale = "4.8989 5.393 3.5";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Scrub_Pines/Sharp_ScrubPine09.dts";
+   };
+   new TSStatic() {
+      position = "161.342 -261.573 79.4536";
+      rotation = "1 0 0 0";
+      scale = "4.2701 4.83004 3";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Scrub_Pines/Sharp_ScrubPine04.dts";
+   };
+   new StaticShape() {
+      position = "-0.967249 -195.019 351.757";
+      rotation = "-0.104797 -0.0137857 0.994398 165.095";
+      scale = "1.5 1 1.5";
+      dataBlock = "LCDColon";
+      canSetIFLs = "0";
+   };
+   new TSStatic() {
+      position = "-21.1035 -251.774 96.379";
+      rotation = "0.00450871 -0.0541553 0.998522 220.035";
+      scale = "5.90619 6.14023 3.5";
+      shapeName = "~/data/shapes/Sharp_Trees/Trees/Scrub_Pines/Sharp_ScrubPine09.dts";
+   };
+   new StaticShape() {
+      position = "-62.1013 -154.949 331.606";
+      rotation = "0 0 -1 90";
+      scale = "16 30 30";
+      dataBlock = "glassA";
+      canSetIFLs = "0";
+   };
+};
+//--- OBJECT WRITE END ---
