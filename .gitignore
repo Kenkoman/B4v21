@@ -1,7 +1,7 @@
-blockland-20/base/server/temp/temp.bls
-blockland-20/config/server/*.cs
-blockland-20/config/client/*.cs
-blockland-20/cache.db
-blockland-20/cache.db.journal
-blockland-20/console.log
-blockland-20/key.dat
+v20/base/server/temp/temp.bls
+v20/config/server/*.cs
+v20/config/client/*.cs
+v20/cache.db
+v20/cache.db.journal
+v20/console.log
+v20/key.dat
