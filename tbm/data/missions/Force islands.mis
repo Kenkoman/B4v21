@@ -1,0 +1,146 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         name = "Force Islands";
+         desclines = "2";
+         desc0 = "what cant stand how flat these islands are then build on them -map by 5Force";
+         preview = "tbm/data/missions/Previews/Forceislands.png";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "300";
+      fogColor = "0.600000 0.699997 0.900000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.800000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+         position = "0 0 0";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./Force islands.ter";
+      squareSize = "8";
+      emptySquares = "267909";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-43.052 -200.547 107.287";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-40.4587 -195.221 100.068";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-360.459 -195.221 100.068";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "407.541 -483.221 100.068";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "343.541 76.779 100.068";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WaterBlock() {
+      position = "-648 -1016 98.1";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 1";
+      UseDepthMask = "0";
+      surfaceTexture = "~/data/water/water";
+      ShoreTexture = "~/data/water/water";
+      envMapOverTexture = "~/data/water/water";
+      envMapUnderTexture = "~/data/water/water";
+      submergeTexture[0] = "~/data/water/water";
+      liquidType = "StagnantWater";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "1";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0.4";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         textureSize = "32 32";
+         params2 = "0.39 0.39 0.2 0.133";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         floodFill = "1";
+   };
+};
+//--- OBJECT WRITE END ---

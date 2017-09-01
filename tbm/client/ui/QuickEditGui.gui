@@ -1,0 +1,140 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(QuickEditGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "380 8";
+      extent = "252 180";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+
+      new GuiSliderCtrl(slider_X) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "40 40";
+         extent = "200 30";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "value";
+         helpTag = "0";
+         range = "0.000000 359.000000";
+         ticks = "10";
+         value = "223.771";
+      };
+      new GuiSliderCtrl(slider_Y) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "40 80";
+         extent = "200 30";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "value";
+         helpTag = "0";
+         range = "0.000000 359.000000";
+         ticks = "10";
+         value = "223.771";
+      };
+      new GuiSliderCtrl(slider_Z) {
+         profile = "GuiSliderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "40 120";
+         extent = "200 30";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "value";
+         helpTag = "0";
+         range = "0.000000 359.000000";
+         ticks = "10";
+         value = "223.771";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 41";
+         extent = "24 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "X";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 81";
+         extent = "8 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Y";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 121";
+         extent = "8 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Z";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function getQuickEditVars(%xrot,%yrot,%zrot) {
+slider_X.setValue(%xrot);
+slider_Y.setValue(%xrot);
+slider_Z.setValue(%xrot);
+}
+
+function quickEditUpdate() {
+%x = slider_X.getValue();
+%y = slider_Y.getValue();
+%z = slider_Z.getValue();
+commandtoserver('editoroptions',$pref::Editor::MoveFactor,$pref::Editor::RotateFactor);
+commandtoserver('rotateobj',300,%x SPC %y SPC %z);
+}
+
+$QuickEditGuiTog = 0; //Noob protect
+function openDecalPalletWindow (%val)
+{
+	if(%val && $QuickEditGuiTog == 0)
+		canvas.pushDialog(QuickEditGuiTog);
+	else if(%val && $QuickEditGuiTog == 1)
+		canvas.popDialog(QuickEditGuiTog);
+}
+function QuickEditGui::OnWake() {
+$QuickEditGuiTog = 1;
+//setmodpaths(getmodpaths());
+}
+function QuickEditGui::OnSleep() {
+$QuickEditGuiTog = 0;
+}

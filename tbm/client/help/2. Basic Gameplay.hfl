@@ -1,0 +1,121 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Basic Gameplay
+
+<just:left><font:Arial:14>This section will cover basic gameplay that does not require you to be an Admin or Mod. You will become acquanted with movement, brick placing, and other features.
+
+
+
+<font:Arial Bold:20>Player View
+
+<font:Arial:14>Once you've spawned, you'll notice the several parts of the player GUI. In the top-left corner, you'll see the <font:Arial Italic:14>Chatbox<font:Arial:14>. This displays server messages, and messages from other players. If an IRC channel has been chosen, the messages from other servers will appear here. 
+
+In the bottom-left corner, you'll notice two bars. The blue one is the <font:Arial Italic:14>jetpack/jump energy meter<font:Arial:14>. This bar is rather pointless as it is not used, although could be used by a usermod or in future versions. The green bar is the health bar. While not used much in building, it is essential in deathmatch. As you lose health, the green parts of the bar will disappear. When it empties, you die.
+
+On the bottom side, you'll notice 10 brick-shaped areas. This is your inventory, for bricks, items, and other things. Press <font:Arial Italic:14>I<font:Arial:14> to switch between slots 1-10 and 11-20.
+
+
+
+<font:Arial Bold:20>Movement
+
+<font:Arial:14>Moving your player around is simple. Here are the default keys to walk and look around.
+
+<font:Arial Bold:14>Forward<font:Arial:14> - W
+<font:Arial Bold:14>Backward<font:Arial:14> - S
+<font:Arial Bold:14>Strafe Left<font:Arial:14> - A
+<font:Arial Bold:14>Strafe Right<font:Arial:14> - D
+
+<font:Arial Bold:14>Crouch<font:Arial:14> - Shift
+<font:Arial Bold:14>Jump<font:Arial:14> - Space
+
+<font:Arial Bold:14>Look Around<font:Arial:14> - Arrow Keys or Mouse
+<font:Arial Bold:14>Use Current Item in Hand<font:Arial:14> - Left Click
+<font:Arial Bold:14>Jetpack<font:Arial:14> - Right Click
+
+<font:Arial Bold:14>3rd Person View<font:Arial:14> - Tab
+<font:Arial Bold:14>Turn Head<font:Arial:14> - Ctrl
+<font:Arial Bold:14>Toggle Zoom<font:Arial:14> - F
+<font:Arial Bold:14>Static Zoom<font:Arial:14> - R
+
+<font:Arial Bold:14>Suicide<font:Arial:14> - Alt + K
+<font:Arial Bold:14>Enter Vehicle<font:Arial:14> - Enter
+
+
+
+<font:Arial Bold:20>Bricks
+
+<font:Arial:14>Placing bricks in TOB is easy. First, pick an inventory slot by pressing its number and select a brick. You will also notice that the bricks in question are sorted according to type, to make looking for your bricks easier. The slots are as follows:
+
+<font:Arial Bold:14>1<font:Arial:14>. Basic bricks
+<font:Arial Bold:14>2<font:Arial:14>. Slopes
+<font:Arial Bold:14>3<font:Arial:14>. Inverted slopes
+<font:Arial Bold:14>4<font:Arial:14>. Arches
+<font:Arial Bold:14>5<font:Arial:14>. Windows
+<font:Arial Bold:14>6<font:Arial:14>. Wings, cones, and dishes
+<font:Arial Bold:14>7<font:Arial:14>. Miscellaneous bricks 1
+<font:Arial Bold:14>8<font:Arial:14>. Miscellaneous bricks 2
+<font:Arial Bold:14>9<font:Arial:14>. Decals
+<font:Arial Bold:14>10<font:Arial:14>. Baseplates
+
+All of these contain a scroll list of bricks. Use your mouse's <font:Arial Italic:14>scroll wheel<font:Arial:14> to shift through them. For those of you without scroll wheels, you can press the number repeatedly to scroll forward, and hold <font:Arial Italic:14>Alt<font:Arial:14> while doing so to scroll backwards. 
+
+Once you have selected a brick, just walk up to a baseplate or existing brick, point at where you want to put a contruction brick, and <font:Arial Italic:14>left-click<font:Arial:14>.
+
+From there, you can use the <font:Arial Italic:14>Numpad<font:Arial:14> controls to move the brick into place. 
+
+<font:Arial Bold:14>Move Forward<font:Arial:14> - Numpad 8
+<font:Arial Bold:14>Move Backward<font:Arial:14> - Numpad 2
+<font:Arial Bold:14>Move Left<font:Arial:14> - Numpad 4
+<font:Arial Bold:14>Move Right<font:Arial:14> - Numpad 6
+
+<font:Arial Bold:14>Move Up<font:Arial:14> (1 Brick) - Numpad +
+<font:Arial Bold:14>Move Down<font:Arial:14> - Numpad 5
+<font:Arial Bold:14>Move Up 1/3<font:Arial:14> (1 Plate)- Numpad 3
+<font:Arial Bold:14>Move Down 1/3<font:Arial:14> - Numpad 1
+
+<font:Arial Bold:14>Rotate Clockwise<font:Arial:14> - Numpad 9
+<font:Arial Bold:14>Rotate Counterclockwise<font:Arial:14> - Numpad 7
+
+Press <font:Arial Italic:14>Enter<font:Arial:14> on the numpad to place the brick itself. Your construction brick will remain, so you can move it to the next position you want and place another without having to select it again.
+
+The bricks in slot 1 have the additional feature of being able to be quick-scaled. Basically, it means you can turn a 1x5x1 into a 1x5x8 with just a few keypresses.
+
+Increase Slot 1 Brick Height - Numpad *
+Increase Slot 1 Brick Height x10 - Alt + Numpad *
+Decrease Slot 1 Brick Height - Numpad *
+Decrease Slot 1 Brick Height x10 - Alt + Numpad *
+
+If you decrease the height below 1, it will turn into a plate, and then a slate, which is a plate without studs. This can be useful if you are stretching bricks and don't want those ugly studs to show.
+
+
+
+<just:left><font:Arial Bold:20>Painting
+
+<font:Arial:14>TOB allows players to color their bricks over 96 different colors. Just press <font:Arial Italic:14>Q<font:Arial:14> to equip the spraycan, then <font:Arial Italic:14>Alt + Q<font:Arial:14> to open the <font:Arial Italic:14>Color Pallet<font:Arial:14>. Choose your color in the pallet and the spraycan will use it.
+From there, all you have to do it point at the bricks you want to color and left-click.
+
+You can also auto-color the bricks you lay down by setting a color in the pallet before you put the bricks down, allowing for faster building.
+
+See a color on a brick you like, and want to make your bricks the exact same color? Use the <font:Arial Italic:14>eyedropper<font:Arial:14> for this. Press <font:Arial Italic:14>X<font:Arial:14> to equip the eyedropper, then just point and <font:Arial Italic:14>left click<font:Arial:14>. The spraycan will now shoot the color of the object you selected.
+
+
+
+
+<font:Arial Bold:20>Decals
+
+<font:Arial:14>Decals can add a bit of flavor to your bricks, as long as you don't overdo them. Placing them is easy. Press - <font:Arial Italic:14>Alt + D<font:Arial:14> to bring up the Decal Pallet. Simply click the one you want, then select a decal brick in slot 9. Use the LEGO text to help you line up the decal. When you have it in the correct position, just place it like you would place any other brick.
+
+Type, or letter decals, are a bit more complicated in that they require use of the Editor Staff. 
+
+First, place as many Type Decals in a row as you have letters in the desired word. Basically, if you're spelling <font:Arial Italic:14>CAT<font:Arial:14>, you'd put 3 in a row. Hit the decal that marks the beginning of the word.Then, load up the Pallet and look in the bottom-right corner. There is a text box for typing in the desired message. Click the <font:Arial Italic:14>Type Color<font:Arial:14> box to select a color, and finally, press <font:Arial Italic:14>Type<font:Arial:14>. 
+
+The Pallet should disappear and the first decal should change to the first letter. From here, hit the next letter position with the staff. When it has changed, do the next one. Keep hitting them consecutively until the entire word has been spelled out.
+
+
+
+<font:Arial Bold:20>Miscellaneous Info
+
+<font:Arial:14>To bring up the players list, press <font:Arial Italic:14>F2<font:Arial:14>.
+
+To send somebody a private message, press <font:Arial Italic:14>Alt + A<font:Arial:14>, and find the player's name. Double click it, and a text box will appear.
+
+
+

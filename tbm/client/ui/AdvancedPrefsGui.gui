@@ -1,0 +1,95 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(AdvancedPrefsGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "119 37";
+      extent = "402 406";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Advanced Prefs Gui";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popdialog(Advancedprefsgui);";
+
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "11 36";
+         extent = "380 339";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(Advpreflist) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 -1631";
+            extent = "358 2672";
+            minExtent = "8 2";
+            visible = "1";
+            altCommand = "Txtadvprefvalue.setvalue(getfield(Advpreflist.getrowtextbyid(Advpreflist.getselectedid()),1));";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0 240";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiTextEditCtrl(Txtadvprefvalue) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "74 381";
+         extent = "316 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "11 379";
+         extent = "58 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "changeadvpref();";
+         helpTag = "0";
+         text = "Set Pref";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

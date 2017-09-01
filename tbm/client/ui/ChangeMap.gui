@@ -1,0 +1,120 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ChangeMapGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "center";
+   vertSizing = "center";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "88 103";
+      extent = "463 306";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Change Map";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(changemapgui);";
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "8 276";
+         extent = "100 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "canvas.popDialog(changemapgui);";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "356 276";
+         extent = "100 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "CM_StartMission();";
+         helpTag = "0";
+         text = "Launch Mission";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "255 30";
+         extent = "200 238";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "1 1";
+            defaultLineHeight = "15";
+
+         new GuiTextListCtrl(CM_missionList) {
+            profile = "GuiTextArrayProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 3";
+            extent = "176 224";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               noDuplicates = "false";
+         };
+      };
+      new GuiBitmapCtrl(previewImage2) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 30";
+         extent = "240 180";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/data/missions/blocktopia.png";
+         wrap = "0";
+      };
+      new GuiMLTextCtrl(MissionDescription2) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 213";
+         extent = "243 14";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

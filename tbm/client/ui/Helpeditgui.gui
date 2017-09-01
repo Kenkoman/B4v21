@@ -1,0 +1,193 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(Helpeditgui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "center";
+      position = "143 60";
+      extent = "345 480";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Help Edit Gui";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "345 400";
+      closeCommand = "canvas.popdialog(helpeditgui);";
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 29";
+         extent = "50 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "savehelpfile();";
+         helpTag = "0";
+         text = "Save";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "6 75";
+         extent = "332 376";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMLTextEditCtrl(txthelptxt) {
+            profile = "GuiMLTextEditProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "310 2730";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiTextEditCtrl(txthelpsave) {
+         profile = "TBM_TextEditProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "65 29";
+         extent = "200 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 53";
+         extent = "50 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "loadhelpfile();";
+         helpTag = "0";
+         text = "Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(txthelpload) {
+         profile = "TBM_TextEditProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "65 53";
+         extent = "200 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "270 52";
+         extent = "13 19";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$helpeditmode";
+         helpTag = "0";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "286 454";
+         extent = "51 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "savehelpfile(\"exec\");";
+         helpTag = "0";
+         text = "Exec";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function savehelpfile(%mode)
+{
+if($helpeditmode == 1)
+%savename = txthelpsave.getValue();
+else
+%savename = "tbm/client/help/"@txthelpsave.getValue()@".hfl";
+%savetext = txthelptxt.getText();
+	%file = new FileObject();
+	%file.openForWrite(%savename);
+    %file.writeLine(%savetext);
+    %file.close();
+    %file.delete();
+if(%mode $= "exec")
+exec($openedHelpfile);
+}
+
+function loadhelpfile()
+{
+//if($helpeditmode == 1)
+//%loadname = txthelpload.getValue();
+//else
+//%loadname = "tbm/client/help/"@txthelpload.getValue()@".hfl";
+%loadname = $helpeditmode? txthelpload.getValue():"tbm/client/help/"@txthelpload.getValue()@".hfl";
+	%file = new FileObject();
+	%file.openForRead(%loadname);
+    	while(!%file.isEOF()) {
+if(%loadtext $= "")
+%loadtext = %file.readLine();
+else
+ %loadtext = %loadtext NL %file.readline();
+ }
+ txthelptxt.setText(%loadtext);
+    %file.close();
+    %file.delete();
+$openedHelpfile = %loadname;
+}
+$Helpeditguitog = 0; //Noob protect
+function toghelpedit() {
+	if($Helpeditguitog == 0)
+		canvas.pushDialog(Helpeditgui);
+	else if($Helpeditguitog == 1)
+		canvas.popDialog(Helpeditgui);
+}

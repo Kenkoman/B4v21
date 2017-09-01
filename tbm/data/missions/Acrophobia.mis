@@ -1,0 +1,469 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         desc0 = "Acrophobia: An abnormal fear of high places.  Map by Plague.";
+         name = "Acrophobia";
+         preview = "tbm/data/missions/Previews/mountain.jpg";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-1000 -1000 2000 2000";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Plague/mist/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0015";
+      cloudSpeed2 = "0.0005";
+      cloudSpeed3 = "0.0002";
+      visibleDistance = "1500";
+      fogDistance = "600";
+      fogColor = "0.700000 0.700000 0.800000 1.000000";
+      fogVolume1 = "500 1 900";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.800000 0.800000 0.830000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.700000 0.700000 0.780000 1.000000";
+      ambient = "0.560000 0.570000 0.600000 1.000000";
+         scale = "1 1 1";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+   };
+   new fxSunLight(sunlight) {
+      position = "109.939 328.781 2.224";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "225";
+      SunElevation = "25";
+      FlareTP = "1";
+      Colour = "1.700000 1.500000 1.200000 1.000000";
+      Brightness = "0.8";
+      FlareSize = "2";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "1";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "1";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "1";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "1";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "150";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "20";
+      RotationTime = "100";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "40";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail_plague.png";
+      terrainFile = "./Acrophobia.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "40.8273 547.353 970.71";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            homingCount = "0";
+            lockCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-672.127 -837.612 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-640.128 -837.612 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-656.128 -837.612 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-672.127 -869.613 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-640.128 -869.613 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-656.128 -869.613 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-672.127 -853.613 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-640.128 -853.613 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-656.128 -853.613 963.37";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WaterBlock() {
+      position = "-224 224 541.905";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 400";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/plague/water";
+      ShoreTexture = "~/data/water/plague/wateredge";
+      envMapOverTexture = "~/data/skies/plague/mist/cool7.png";
+      envMapUnderTexture = "~/data/terrains/Plague/rock2.jpg";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "10";
+      waveMagnitude = "2";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.35";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "0.3";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         params1 = "0.63 -2.41 0.33 0.21";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "32 32";
+         extent = "100 100 10";
+         floodFill = "1";
+         params0 = "0.32 -0.67 0.066 0.5";
+   };
+   new StaticShape() {
+      position = "18.3815 485.154 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "34.3815 485.154 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "2.38257 485.154 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "18.3815 469.154 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "34.3815 469.154 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "2.38257 469.154 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "18.3815 501.155 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "34.3815 501.155 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "2.38257 501.155 954.651";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "252.277 -782.539 1554.52";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-53.4636 -39.6931 1251.24";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "52.2049 27.2791 1157.34";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-392.694 -400.625 1309.99";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-408.694 -400.625 1309.99";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-392.694 -384.625 1309.99";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-408.694 -384.625 1309.99";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "307.441 -364.154 1225.26";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "291.441 -364.154 1225.26";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "307.441 -348.154 1225.26";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "291.441 -348.154 1225.26";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "-33.1776 519.752 953.41";
+      rotation = "1 0 0 0";
+      scale = "1.5 1.5 1.5";
+      shapeName = "~/data/shapes/Plague/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "-48.6341 517.173 945.267";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/Plague/rock3.dts";
+   };
+   new TSStatic() {
+      position = "116.104 536.05 952.113";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/Plague/rock2.dts";
+   };
+   new TSStatic() {
+      position = "117.863 539.23 953.852";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/Plague/rock1.dts";
+   };
+   new TSStatic() {
+      position = "-7.32356 608.986 971.483";
+      rotation = "0.367786 0.245591 0.896894 166.895";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/Plague/rock2.dts";
+   };
+   new TSStatic() {
+      position = "32.2661 412.855 960.829";
+      rotation = "1 0 0 0";
+      scale = "1.4 1.4 1.4";
+      shapeName = "~/data/shapes/Plague/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "99.2725 504.522 952.957";
+      rotation = "0 0 -1 10.3132";
+      scale = "1.2 1.2 1.2";
+      shapeName = "~/data/shapes/Plague/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "106.181 563.593 954.192";
+      rotation = "0 0 1 34.3775";
+      scale = "1.4 1.4 1.4";
+      shapeName = "~/data/shapes/Plague/trees/tree2.dts";
+   };
+   new StaticShape() {
+      position = "-97.8346 -678.861 1923.05";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "-625.071 -803.638 961.625";
+      rotation = "1 0 0 0";
+      scale = "1.5 1.5 1.5";
+      shapeName = "~/data/shapes/Plague/trees/tree.dts";
+   };
+   new StaticShape() {
+      position = "-700.159 -29.9889 967.088";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-684.159 -29.9889 967.088";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-700.159 -13.9879 967.088";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-684.159 -13.9879 967.088";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "322.729 619.103 958.25";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/Plague/rock3.dts";
+   };
+   new TSStatic() {
+      position = "297.737 595.192 965.659";
+      rotation = "0 0 1 162.147";
+      scale = "1.4 1.4 1.4";
+      shapeName = "~/data/shapes/Plague/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "30.0733 613.169 976.694";
+      rotation = "0 0 -1 48.1284";
+      scale = "1.3 1.3 1.3";
+      shapeName = "~/data/shapes/Plague/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "256.444 701.665 964.988";
+      rotation = "0 0 -1 104.278";
+      scale = "1.2 1.2 1.2";
+      shapeName = "~/data/shapes/Plague/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "-738.603 -27.8234 967.768";
+      rotation = "1 0 0 0";
+      scale = "1.5 1.5 1.5";
+      shapeName = "~/data/shapes/Plague/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "-647.828 10.5167 964.321";
+      rotation = "1 0 0 0";
+      scale = "1.4 1.4 1.4";
+      shapeName = "~/data/shapes/Plague/trees/tree2.dts";
+   };
+};
+//--- OBJECT WRITE END ---

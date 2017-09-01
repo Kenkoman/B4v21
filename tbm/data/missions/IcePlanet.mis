@@ -1,0 +1,140 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "Ice planet";
+         desclines = "2";
+         preview = "tbm/data/missions/Previews/IcePlanet.png";
+         desc0 = "We landed on this Unfamiliar planet, ITS FREEZAH!             FeedBack";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "-768 -496 149.665";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 20";
+      materialList = "~/data/skies/Taehl/calm/calm2hack.dml";
+      cloudText[0] = "0";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0";
+      cloudSpeed2 = "0";
+      cloudSpeed3 = "0";
+      visibleDistance = "1000";
+      fogDistance = "-200";
+      fogColor = "1.000000 1.000000 1.000000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0 7 0";
+      windEffectPrecipitation = "0";
+      SkySolidColor = "0.000000 0.000000 0.600000 0.600000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "1.000000 1.000000 1.000000 1.000000";
+      ambient = "0.300000 0.300000 0.300000 0.300000";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "2 2 2";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-43.3925 -75.9181 371.7";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-7969 -8173 369.3";
+      rotation = "1 0 0 0";
+      scale = "1000 1000 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-39 -87 369.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WaterBlock(vsvfsdv) {
+      position = "-280 -336 369.4";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 0";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/terrains/chris/whitesand1";
+      ShoreTexture = "~/data/terrains/chris/whitesand1";
+      envMapOverTexture = "~/data/terrains/chris/whitesand1";
+      envMapUnderTexture = "~/data/terrains/chris/whitesand1";
+      submergeTexture[0] = "~/data/terrains/chris/whitesand1";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "0";
+      surfaceOpacity = "900";
+      envMapIntensity = "0";
+      TessSurface = "0";
+      TessShore = "100";
+      SurfaceParallax = "9";
+      FlowAngle = "900";
+      FlowRate = "0";
+      DistortGridScale = "0";
+      DistortMag = "0";
+      DistortTime = "90000";
+      ShoreDepth = "200";
+      DepthGradient = "9000";
+      MinAlpha = "100";
+      MaxAlpha = "100";
+      removeWetEdges = "1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "1000 1000";
+         floodFill = "900";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+   new Precipitation(Precipitation) {
+      position = "-22.3135 -83.675 371.43";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      nameTag = "snow";
+      dataBlock = "Snow";
+      offsetSpeed = "0.25";
+      minVelocity = "0.25";
+      maxVelocity = "1.5";
+      color1 = "1.000000 1.000000 1.000000 1.000000";
+      color2 = "-1.000000 0.000000 0.000000 1.000000";
+      color3 = "-1.000000 0.000000 0.000000 1.000000";
+      percentage = "1";
+      maxNumDrops = "2000";
+      maxRadius = "125";
+   };
+};
+//--- OBJECT WRITE END ---

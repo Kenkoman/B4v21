@@ -1,0 +1,167 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ServerNewsEditorGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(ServerNewsWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "-250 -4";
+      extent = "800 408";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Server News Editor";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(ServerNewsEditorGUI);";
+
+      new GuiCheckBoxCtrl(chkboxEnableNews) {
+         profile = "TBM_CheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "25 367";
+         extent = "80 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         variable = "$Pref::Server::EnableNews";
+         text = "Enable News";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "315 367";
+         extent = "100 26";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ServerNewsGUI_SaveNews();";
+         helpTag = "0";
+         text = "Save and view";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "425 367";
+         extent = "60 26";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popdialog(ServerNewsEditorGUI);";
+         helpTag = "0";
+         text = "Close";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+
+      new GuiScrollCtrl(ServerNewsEditScroller) {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 28";
+         extent = "400 332";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "1 0";
+
+         new GuiMLTextCtrl(txtServerNewsEdit) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 2";
+            extent = "440 332";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiScrollCtrl(ServerNewsEditorScroller) {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "400 28";
+         extent = "394 332";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "1 0";
+
+         new GuiMLTextEditCtrl(txtServerNewsEditor) {
+            profile = "GuiMLTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 2";
+            extent = "372 332";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "1";
+            allowColorChars = "0";
+         };
+      };
+
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ServerNewsEditorGUI::OnWake(%this) {
+ServerNewsGUI_LoadNews();
+}
+
+
+function ServerNewsGUI_SaveNews() {
+$ServerNews = strreplace(strreplace(txtServerNewsEditor.getvalue(),"]",">"),"[","<");
+%file = new FileObject();
+%file.openForwrite("tbm/client/ServerNews.hfl");
+%file.writeline($ServerNews);
+%file.close();
+%file.delete();
+txtServerNewsEdit.setvalue($ServerNews);
+}
+
+function ServerNewsGUI_LoadNews() {
+$ServerNews = "";
+%file = new FileObject();
+%file.openForRead("tbm/client/ServerNews.hfl");
+while(!%file.isEOF()) {
+	$ServerNews = $ServerNews@%file.readline()@"\n";
+}
+%file.close();
+%file.delete();
+txtServerNewsEdit.setvalue($ServerNews);
+txtServerNewsEditor.setvalue(strreplace(strreplace($ServerNews,">","]"),"<","["));
+if(!ServerNewsEditorGUI.isAwake())
+	canvas.pushDialog(ServerNewsEditorGUI);
+}

@@ -1,0 +1,906 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(iGobGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+   helpPage = "8. iGob";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "center";
+      position = "214 65";
+      extent = "270 349";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "iGob GUI";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "270 250";
+      closeCommand = "Canvas.popDialog(iGobGui);";
+
+      new GuiControl(iGobGuiPane1) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "5 56";
+         extent = "260 287";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiCheckBoxCtrl(iGobcheck) {
+            profile = "TBM_CheckBoxProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "6 26";
+            extent = "137 25";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            text = "Destroy on save";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+               maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "174 50";
+            extent = "82 20";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGoblist.sortnumerical(1);";
+            helpTag = "0";
+            text = "Brick Count";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 50";
+            extent = "171 20";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGoblist.sort(0);";
+            helpTag = "0";
+            text = "Name";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextEditCtrl(igobsavetxt) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "63 7";
+            extent = "192 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "6 6";
+            extent = "53 20";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SaveiGob();";
+            helpTag = "0";
+            text = "Save";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "6 263";
+            extent = "51 19";
+            minExtent = "8 2";
+            visible = "1";
+            command = "MessageBoxYesNo(\"Delete\", \"Are you sure you want to delete this iGob?\", \"deleteiGob();\", \"\");";
+            helpTag = "0";
+            text = "Delete";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "top";
+            position = "203 263";
+            extent = "51 19";
+            minExtent = "8 2";
+            visible = "1";
+            command = "LoadiGob();";
+            helpTag = "0";
+            text = "Load";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiScrollCtrl() {
+            profile = "TBM_ScrollProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "3 71";
+            extent = "254 189";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(iGoblist) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 -557";
+               extent = "232 976";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0 190";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+         new GuiControl(iGobload) {
+            profile = "TBM_WindowProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "14 153";
+            extent = "214 39";
+            minExtent = "8 2";
+            visible = "0";
+            helpTag = "0";
+
+            new GuiProgressCtrl(iGob_loadbar) {
+               profile = "Load_ProgressProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "7 7";
+               extent = "200 25";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "196 5";
+               extent = "15 29";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./load_right";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "3 5";
+               extent = "15 29";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./load_left";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "18 5";
+               extent = "178 29";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./load_center";
+               wrap = "1";
+            };
+            new GuiTextCtrl(iGob_loadtxt) {
+               profile = "Load_ProgressTextProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "7 9";
+               extent = "200 18";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               text = "Loading 100%";
+               maxLength = "255";
+            };
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 28";
+         extent = "80 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "setiGobguiPane(1);";
+         helpTag = "0";
+         text = "Save/Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "95 28";
+         extent = "80 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "setiGobguiPane(2);";
+         helpTag = "0";
+         text = "iGob Editor";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "183 28";
+         extent = "80 24";
+         minExtent = "8 2";
+         visible = "1";
+         command = "setiGobguiPane(3);";
+         helpTag = "0";
+         text = "Other";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiControl(iGobGuiPane2) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "5 56";
+         extent = "260 287";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 200";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(1);";
+            helpTag = "0";
+            text = "Set Color";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "168 102";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(3);";
+            helpTag = "0";
+            text = "Cloak";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 102";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(7);";
+            helpTag = "0";
+            text = "iGob Perm";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "168 130";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(4);";
+            helpTag = "0";
+            text = "De-Cloak";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 256";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(2,iGobguiporttxt.getvalue());";
+            helpTag = "0";
+            text = "Set Doorset #";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 130";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(8);";
+            helpTag = "0";
+            text = "iGob DePerm";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 74";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(10);";
+            helpTag = "0";
+            text = "DePerm";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 46";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(9);";
+            helpTag = "0";
+            text = "Perm";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "168 46";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(5);";
+            helpTag = "0";
+            text = "Fade";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "168 74";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "iGobsettings(6);";
+            helpTag = "0";
+            text = "Defade";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextEditCtrl(iGobguiporttxt) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "92 259";
+            extent = "70 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "36 2";
+            extent = "185 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "All these settings will modify only your";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "55 18";
+            extent = "147 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "currently iGob selected bricks.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "8 228";
+            extent = "80 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "igobsettings(12,iGobguicolortxt.getvalue());";
+            helpTag = "0";
+            text = "Replace Color";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextEditCtrl(iGobguicolortxt) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "92 231";
+            extent = "70 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "174 229";
+            extent = "58 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "<-- old color";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "26 175";
+            extent = "204 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "The new color is chosen in the color pallet";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(iGobGuiPane3) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "5 56";
+         extent = "260 287";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 20";
+            extent = "100 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "canvas.pushDialog(ColorPalletGui);$colorsetting=-1;";
+            helpTag = "0";
+            text = "iGob Sphere Color";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 87";
+            extent = "237 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "iGob Hot Saving/Loading \"Hot\" iGob\'ing will allow ";
+            maxLength = "-1";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 47";
+            extent = "100 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "commandtoserver(\'gimmeiGobColors\');";
+            helpTag = "0";
+            text = "Get iGob\'d Colors";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 143";
+            extent = "100 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "commandtoserver(\'hotsaveigob\',iGobguihotsavetxt.getvalue());";
+            helpTag = "0";
+            text = "Save Selection";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 168";
+            extent = "100 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "commandtoserver(\'hotloadigob\',iGobguihotloadtxt.getvalue());";
+            helpTag = "0";
+            text = "Load Selection";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextEditCtrl(iGobguihotsavetxt) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "115 144";
+            extent = "70 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "1";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(iGobguihotloadtxt) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "115 170";
+            extent = "70 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "1";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "TBM_MessageVectorProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "6 72";
+            extent = "250 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c2iGob Hot Saving/Loading---------------------------";
+            maxLength = "-1";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 98";
+            extent = "241 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "you to \"save\" a selection for later editing, thereby ";
+            maxLength = "-1";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 110";
+            extent = "234 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "eliminating the need to move something one brick";
+            maxLength = "-1";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 122";
+            extent = "185 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "at a time if other bricks are in the way.";
+            maxLength = "-1";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "169 21";
+            extent = "56 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "iGob Shape";
+            maxLength = "-1";
+         };
+         new GuiTextCtrl() {
+            profile = "TBM_MessageVectorProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 -1";
+            extent = "252 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c2Settings---------------------------------------------------";
+            maxLength = "-1";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "146 47";
+            extent = "48 24";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$Pref::Client::iGobShape = \"Sphere\";";
+            command = "commandtoserver(\'iGobtype\',\"Sphere\");";
+            helpTag = "0";
+            text = "Sphere";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "198 47";
+            extent = "48 24";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$Pref::Client::iGobShape = \"Cube\";";
+            command = "commandtoserver(\'iGobtype\',\"Cube\");";
+            helpTag = "0";
+            text = "Cube";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "TBM_MessageVectorProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 190";
+            extent = "250 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c2iGob Scaling--------------------------------------------";
+            maxLength = "-1";
+         };
+         new GuiTextEditCtrl(iGobguiscale) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "115 259";
+            extent = "64 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 256";
+            extent = "100 24";
+            minExtent = "8 2";
+            visible = "1";
+            command = "commandtoserver(\'igobscale\',iGobguiscale.getvalue());";
+            helpTag = "0";
+            text = "Scale iGob";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 206";
+            extent = "238 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "iGob Scaling relatively scales the selected bricks.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 220";
+            extent = "236 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "So if you type \"2 2 2\", then the build will be twice";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "8 234";
+            extent = "210 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "as big, and \".5 .5 .5\" will reverse the effect.";
+            maxLength = "255";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function iGobGui::onWake(%this) {
+$togigobgui = 1;
+}
+function iGobGui::onSleep(%this) {
+$togigobgui = 0;
+}
+$togigobgui = 0; //Noob protect
+function openiGobWindow (%val)
+{
+	if(%val && $togigobgui == 0)
+		canvas.pushDialog(iGobGui);
+	else if(%val && $togigobgui == 1)
+		canvas.popDialog(iGobGui);
+}
+function getlinecount(%filename) {
+	%file = new FileObject();
+	%file.openForRead(%filename);
+	while(!%file.isEOF())
+	{
+	%file.readLine();
+    %linenum++;
+    }
+    return %linenum;
+	%file.close();
+	%file.delete();
+}
+function LoadiGobList()
+{
+iGoblist.clear();
+%loc = "tbm/client/iGob/*.save";
+%rowcount = 0;
+for (%filename = findFirstFile(%loc); %filename !$= ""; %filename = findNextFile(%loc)) {
+  if(strstr(%filename,"iGob_temp") != -1)
+    continue;
+  if((%brickcount = getlinecount(%filename)) > 0) {
+    %filename = strreplace(strreplace(%filename,".save",""),"tbm/client/iGob/","");
+    iGoblist.addrow(%rowcount++, %filename TAB %brickcount);
+  }
+}
+iGoblist.sort(0);
+}
+
+function LoadiGob()
+{
+	%iGobsname = getfield(iGoblist.getRowTextbyID(iGoblist.getSelectedID()),0);
+    echo(%iGobsname);
+    iGob_load(%iGobsname);
+}
+
+function SaveiGob() {
+%savename = igobsavetxt.getValue();
+openfile(%savename,iGobcheck.getValue());
+}
+loadigoblist();
+
+function deleteiGob() {
+if(iGoblist.getRowTextbyID(iGoblist.getSelectedID()) !$= "") {
+  %file = new FileObject();
+  %file.openForWrite("tbm/client/iGob/" @ getField(iGoblist.getRowTextbyID(iGoblist.getSelectedID()), 0) @ ".save");
+  %file.delete();
+  iGoblist.removeRowByID(iGoblist.getSelectedID());
+}
+}
+
+function setiGobguipane(%num) {
+switch(%num) {
+case 1:
+iGobGuiPane1.setVisible(1);
+iGobGuiPane2.setVisible(0);
+iGobGuiPane3.setVisible(0);
+case 2:
+iGobGuiPane1.setVisible(0);
+iGobGuiPane2.setVisible(1);
+iGobGuiPane3.setVisible(0);
+case 3:
+iGobGuiPane1.setVisible(0);
+iGobGuiPane2.setVisible(0);
+iGobGuiPane3.setVisible(1);
+}
+}
+
+//need to add in gui hooks for this function
+function igobsettings(%opt,%num) {
+commandtoserver('igobhandleoptions',%opt,%num);
+}

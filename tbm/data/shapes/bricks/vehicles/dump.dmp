@@ -1,0 +1,219 @@
+First pass:  enumerate scene...
+
+Processing Node Bounds with parent ROOT
+Bounding box found
+Processing Node __mainTree with parent ROOT
+Found subtree starting at Node "__mainTree"
+
+Second pass:  put shape structure together...
+
+Adding detail named "detail0" of size 0 to subtree "__mainTree".
+Adding node "__mainTree" with parent "__mainTree" to subtree rooted on node "__mainTree".
+Adding node "__meshes" with parent "__mainTree" to subtree rooted on node "__mainTree".
+Adding node "body0" with parent "__meshes" to subtree rooted on node "__mainTree".
+Attaching object to node.
+Adding object named "body".
+Adding mesh of size 0 to object "body".
+Adding node "blades0" with parent "__meshes" to subtree rooted on node "__mainTree".
+Attaching object to node.
+Adding object named "blades".
+Adding mesh of size 0 to object "blades".
+Adding node "seats0" with parent "__meshes" to subtree rooted on node "__mainTree".
+Attaching object to node.
+Adding object named "seats".
+Adding mesh of size 0 to object "seats".
+Adding node "rails0" with parent "__meshes" to subtree rooted on node "__mainTree".
+Attaching object to node.
+Adding object named "rails".
+Adding mesh of size 0 to object "rails".
+Adding node "mount5" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "mount4" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "mount3" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "mount1" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "mount2" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "mount0" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "Unlink" with parent "__meshes" to subtree rooted on node "__mainTree".
+Adding node "Cam" with parent "Unlink" to subtree rooted on node "__mainTree".
+Adding node "Root" with parent "__meshes" to subtree rooted on node "__mainTree".
+
+Third pass:  Collapsing unneeded nodes...
+
+Removing node "__mainTree"
+Removing node "__meshes"
+
+Add default object states...
+
+Adding object state to 1 detail level(s) of mesh "body".
+Adding frame.
+Object is visible.
+Object offset transform for mesh dl=0:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=0.00000, z=0.00000
+    actual rotation:  x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding object state to 1 detail level(s) of mesh "seats".
+Adding frame.
+Object is visible.
+Object offset transform for mesh dl=0:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=0.00000, z=0.00000
+    actual rotation:  x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding object state to 1 detail level(s) of mesh "rails".
+Adding frame.
+Object is visible.
+Object offset transform for mesh dl=0:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=0.00000, z=0.00000
+    actual rotation:  x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding object state to 1 detail level(s) of mesh "blades".
+Adding frame.
+Object is visible.
+Object offset transform for mesh dl=0:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=0.00000, z=0.00000
+    actual rotation:  x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+
+Add default node states...
+
+Adding node rotation at time 0.000000 for node "body0".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "body0".
+  translation:     x=0.00000, y=0.00000, z=0.00000
+---------------------------------
+Adding node rotation at time 0.000000 for node "blades0".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "blades0".
+  translation:     x=0.00000, y=0.00000, z=0.00000
+---------------------------------
+Adding node rotation at time 0.000000 for node "seats0".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "seats0".
+  translation:     x=0.00000, y=0.00000, z=0.00000
+---------------------------------
+Adding node rotation at time 0.000000 for node "rails0".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "rails0".
+  translation:     x=0.00000, y=0.00000, z=0.00000
+---------------------------------
+Adding node rotation at time 0.000000 for node "mount5".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "mount5".
+  translation:     x=-0.14706, y=-3.70821, z=-0.66522
+---------------------------------
+Adding node rotation at time 0.000000 for node "mount4".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "mount4".
+  translation:     x=2.01471, y=-4.48043, z=-2.00345
+---------------------------------
+Adding node rotation at time 0.000000 for node "mount3".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "mount3".
+  translation:     x=0.58824, y=0.50903, z=-0.67012
+---------------------------------
+Adding node rotation at time 0.000000 for node "mount1".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "mount1".
+  translation:     x=-1.00000, y=-2.41648, z=-0.66059
+---------------------------------
+Adding node rotation at time 0.000000 for node "mount2".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "mount2".
+  translation:     x=1.00000, y=-2.41384, z=-0.66667
+---------------------------------
+Adding node rotation at time 0.000000 for node "mount0".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "mount0".
+  translation:     x=-0.57353, y=0.51343, z=-0.67015
+---------------------------------
+Adding node rotation at time 0.000000 for node "Unlink".
+  rotation:     x=0.00003, y=0.21169, z=0.97734, w=0.00015
+---------------------------------
+Adding node translation at time 0.000000 for node "Unlink".
+  translation:     x=0.00000, y=0.00000, z=-2.00000
+---------------------------------
+Adding node rotation at time 0.000000 for node "Cam".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "Cam".
+  translation:     x=-0.00000, y=24.16606, z=0.00000
+---------------------------------
+Adding node rotation at time 0.000000 for node "Root".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "Root".
+  translation:     x=0.00000, y=0.00000, z=0.00000
+---------------------------------
+
+Optimizing meshes...
+
+Optimizing mesh "body" detail level 0.
+174 verts before joining verts
+174 verts after joining verts
+392 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+21 strips with average length 26.38 (range 4 to 104) and 120 reversals
+
+Optimizing mesh "seats" detail level 0.
+80 verts before joining verts
+80 verts after joining verts
+48 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+24 strips with average length 4.00 (range 4 to 4) and 0 reversals
+
+Optimizing mesh "rails" detail level 0.
+104 verts before joining verts
+104 verts after joining verts
+200 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+8 strips with average length 33.50 (range 7 to 96) and 52 reversals
+
+Optimizing mesh "blades" detail level 0.
+8 verts before joining verts
+8 verts after joining verts
+8 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+4 strips with average length 4.00 (range 4 to 4) and 0 reversals
+
+Shape Hierarchy:
+
+   Details:
+      detail0, Subtree 0, objectDetail 0, size 0
+
+   Subtrees:
+      Subtree 0
+         body0 --> Object body with following details:  0
+         blades0 --> Object blades with following details:  0
+         seats0 --> Object seats with following details:  0
+         rails0 --> Object rails with following details:  0
+         mount5
+         mount4
+         mount3
+         mount1
+         mount2
+         mount0
+         Unlink
+            Cam
+         Root
+
+   Sequences:
+
+   Material list:
+   material #0: "base.brickside".
+   material #1: "rotor".  Additive-translucent.

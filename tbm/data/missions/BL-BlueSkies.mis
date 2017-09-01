@@ -1,0 +1,160 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         name = "BlueSkies";
+         preview = "tbm/data/missions/Previews/BL-BlueSkies.png";
+         desclines = "2";
+         desc0 = "Ah, a nice peaceful build in the sky... but there\'s no ground below you, so be careful! Map by GreyMario.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "0.6 0.6 0.6";
+      materialList = "~/data/skies/Bluesky/sky_bluesky.dml";
+      cloudHeightPer[0] = "0.74997";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.0008";
+      cloudSpeed3 = "0.0001";
+      visibleDistance = "1500";
+      fogDistance = "1200";
+      fogColor = "0.371094 0.519531 0.765625 0.200000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0.5 1.1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.000000 0.000000 0.000000 0.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0 -0.707107 -0.707107";
+      color = "0.900000 0.900000 1.000000 1.000000";
+      ambient = "0.700000 0.700000 0.700000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-28 -20 160.6";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new StaticShape() {
+      position = "-28 -20 158.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-44 -20 158.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-28 -36 158.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new fxSunLight(Sun) {
+      position = "-21.244 -41.4947 160.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "360";
+      SunElevation = "20";
+      FlareTP = "1";
+      Colour = "1.000000 1.000000 1.000000 1.000000";
+      Brightness = "0.7";
+      FlareSize = "1";
+      FadeTime = "1";
+      BlendMode = "2";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "0";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "0";
+      LerpSize = "0";
+      LerpAzimuth = "0";
+      LerpElevation = "0";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "1.000000 0.500000 0.000000 1.000000";
+      MaxColour = "1.000000 0.500000 0.000000 1.000000";
+      MinBrightness = "0.5";
+      MaxBrightness = "0.6";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "0.5";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "10";
+      BrightnessTime = "8";
+      RotationTime = "0.1";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+         locked = "true";
+   };
+   new StaticShape() {
+      position = "-44 -36 158.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-4028 -4020 158";
+      rotation = "1 0 0 0";
+      scale = "2000 2000 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

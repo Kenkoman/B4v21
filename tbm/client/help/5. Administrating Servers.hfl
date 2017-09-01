@@ -1,0 +1,93 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Admining Servers
+
+<just:left><font:Arial:14>It's a tough job, but somebody's got to do it. As the host/admin of a server, you will need to be alert for spammers, trolls, idiots, and laggy builds. Try to keep the server peaceful, as constant flaming will lead to e-drama that wastes everyone's time.
+
+
+
+<font:Arial Bold:20>The Admin GUI
+
+<font:Arial:14>The <font:Arial Italic:14>Admin GUI<font:Arial:14> can be accessed by pressing <font:Arial Italic:14>Alt + A<font:Arial:14>. 
+
+<font:Arial Bold:14>Password<font:Arial:14> box - This is the box used to enter in the admin password and become a super admin. Type the password in and press Submit.
+
+<font:Arial Bold:14>Magic Wand<font:Arial:14> - This button sets the currently used tool to the Magic Wand. It is a rather destructive and unpredictable way of removing builds, and therefore its use is not advised.
+
+<font:Arial Bold:14>Player List<font:Arial:14> - The base for all the Admin-Player options. Selecting a persons name will make them the target of whatever option you select next. Double click a player's name to send a personal message to them. This is useful for sending confidential information like the admin password.
+
+<font:Arial Bold:14>Player Profile<font:Arial:14> - Gives basic info on a player such as server powers, bricks placed, IP address, and other things. Useful for keeping an eye on players.
+
+<font:Arial Bold:14>Admin Player<font:Arial:14> - It's as simple as it says. Admins the currently selected player. If you are not the super admin, two admins must "vote" for the player in question by choosing this option.
+
+<font:Arial Bold:14>De-Admin Player<font:Arial:14> - Removes a player's admin powers. If you are not the super admin, two admins must "complain" against the player in question by choosing this option.
+
+<font:Arial Bold:14>Mod Player<font:Arial:14> - Gives a player mod powers. Allows them to use basic features of the editor wand and allows slightly greater freedom.
+
+<font:Arial Bold:14>De-Mod Player<font:Arial:14> - Removes a player's mod powers.
+
+<font:Arial Bold:14>Kick Player<font:Arial:14> - Removes a player from the server until they decide to come back. Kicking a player first is usually a better move than banning them.
+
+<font:Arial Bold:14>Ban Player<font:Arial:14> - Permanently removes a player from the server. To allow the given player back, you must manually remove them from the banlist.
+
+<font:Arial Bold:14>De-Perm by Name<font:Arial:14> - Makes a given player's bricks de-permmed, or open to hammering and painting by other players.
+
+<font:Arial Bold:14>Destroy by Name<font:Arial:14> - Destroys all of a player's bricks. Use with caution! Can be useful in the case of brick spammers, or people who build incredibly laggy builds.
+
+<font:Arial Bold:14>Color by Name<font:Arial:14> - Paints all of a player's bricks the currently selected color. Use with caution!
+
+
+
+<font:Arial Bold:14>Inventory<font:Arial:14> - Toggles the brick/tool inventory on or off. If off, players will no longer be able to use the hammer, eyedropper, spraycan, iGob, or bricks. The staff will still be available.
+
+<font:Arial Bold:14>Floating Bricks<font:Arial:14> - Toggles the ability to have floating bricks on or off. Although not particularly realistic, floating bricks have become an integral part of Blockland. It allows for things such as planes and ships that aren't limited to a baseplate.
+
+<font:Arial Bold:14>Brick Overlap<font:Arial:14> - Toggles the check for brick collisions on or off. If on, you can place infinite bricks in the same location, or place bricks through each other. Due to the possibility of spamming and accidental brick doubles, it is recommended that you leave this on only for short periods of time.
+
+<font:Arial Bold:14>Load Build<font:Arial:14> - Brings up a dialog box that shows all the available saves for the current map. With the new tbmzip format, loading no longer risks crashing or severely lagging your server.
+
+<font:Arial Bold:14>Save Build<font:Arial:14> - Saves all the bricks on the map into a tbmzip. With this, you'll never have to lose a build again. It is recommended that you save often. If you pick the same filename, it will give you a confirmation, as to prevent accidental erasure of saves.
+
+<font:Arial Bold:14>Brick Limit<font:Arial:14> - Sets the number of bricks that picking up a toybox gives you. Once this number of bricks have been placed, the non-admin will need to pick up another toybox.
+
+<font:Arial Bold:14>Jetpack Force<font:Arial:14> - Changes the force at which the jetpack moves you upward. At a level of 30, the jetpack moves you very quickly. At 130, the jetpack does not lift you at all. 50 is a good setting for most servers.
+
+<font:Arial Bold:14>Set IRC Channel<font:Arial:14> - Used to change the channel in case you don't feel like being bothered anymore, or want to have a private channel with friends. Type in <font:Arial Italic:14>#yourchannelnamehere<font:Arial:14> and hit the button.
+
+<font:Arial Bold:14>Change Map<font:Arial:14> - Changes the map on the server to another one. Make sure all players are done working, and that you have saved any current work.
+
+<font:Arial Bold:14>Clear Blocks<font:Arial:14> - Removes all bricks in the entire map. Use with caution. It's important enough that there is now a confirmation box when you press it. This should remove any frustrations of earlier versions.
+
+
+
+<font:Arial Bold:20>Special Options GUI
+
+<font:Arial:14><font:Arial Italic:14>Middle click<font:Arial:14> to bring up this GUI. One server option resides in the <font:Arial Italic:14>Editor<font:Arial:14> tab.
+
+<font:Arial Bold:14>Save Blocks<font:Arial:14> - If you are an admin on the server, pressing this will save all the bricks on the map to the name of the last saved file. Get permission to do this first.
+
+
+
+<font:Arial Bold:20>Admin Cameras
+
+<font:Arial Bold:14>Free Camera<font:Arial:14> - This allows you to move your player view around the map. Pressing <font:Arial Italic:14>F8<font:Arial:14> will enter camera mode, and position it at your player's current position. Pressing <font:Arial Italic:14>F7<font:Arial:14> will exit camera mode and teleport you to its current position.
+
+<font:Arial Bold:14>Spy Camera<font:Arial:14> - This feature allows you to position the admin camera at any player's position. Use <font:Arial Italic:14>M<font:Arial:14> and <font:Arial Italic:14>Alt + M<font:Arial:14> to cycle through players. With this, players can no longer hide in a remote area of the map. The free camera keybinds still apply in spy camera mode.
+
+
+
+<font:Arial Bold:20>Advanced Preferences Editor
+
+<font:Arial:14>Pressing <font:Arial Italic:14>Alt + P<font:Arial:14> brings up the advanced preferences editor, which allows you to modify multiple game options without having to restart the server. Find the value you want to change, type in the new one, and hit the button. It should update the settings. This is especially useful when you want to put a password on your server without kicking the current guests.
+
+
+
+<font:Arial Bold:20>Tips
+
+<font:Arial:14>It's always a good idea to keep a set of admins that you can trust. With the need to vote, one rogue admin can no longer completely dominate the server and admin all his friends. But if he has a partner in crime, he'll be able to get past this. This is a good reason why you shouldn't admin anybody you don't know and trust. Give them mod abilities instead. 
+
+Always remember to save often. Nobody likes losing their work because a spammer came in or the server crashed for some unknown reason.
+
+Don't allow spammers to reside in your channel, especially if you are connected to <font:Arial Italic:14>#tbmirc<font:Arial:14>. This makes the other servers have to deal with it too. They will either have to live with it or change the channel and lose communication with each other.
+
+Use the free and spy cameras to keep track of players. This can be useful in situations where a player would be hiding while spamming freely.
+
+Keep a low brick limit to prevent non-admins from spamming. Bricks regenerate over time so it only hinders spammers.

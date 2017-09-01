@@ -1,0 +1,14 @@
+TBM_WindowProfile.opaque = true;
+TBM_WindowProfile.border = 2;
+TBM_WindowProfile.fillColor = "0 0 0";
+TBM_WindowProfile.fillColorHL = "0 0 0";
+TBM_WindowProfile.fillColorNA = "0 0 0";
+//TBM_WindowProfile.fontType = "Impact";
+//TBM_WindowProfile.fontSize = 16;
+TBM_WindowProfile.fontColor = "255 255 255";
+TBM_WindowProfile.fontColorHL = "255 255 255";
+TBM_WindowProfile.text = "TBM_Window";
+TBM_WindowProfile.bitmap = "tbm/client/ui/window_images/LCARS.png";
+TBM_WindowProfile.textOffset = "6 5";
+TBM_WindowProfile.hasBitmapArray = false;
+TBM_WindowProfile.justify = "left";

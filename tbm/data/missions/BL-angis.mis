@@ -1,0 +1,411 @@
+if (strstr(getmodpaths(),"tbm")==-1)
+   return;
+function AudioProfiled() {
+  if (strstr(getmodpaths(),"tbm")==-1 || strstr(getmodpaths(),"rtb")!=-1 || strstr(getmodpaths(),"aio")!=-1)
+    quit();
+}
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         desclines = "2";
+         name = "Terra Alta";
+         desc0 = "Mysterious islands floating above the clouds! Map By: Ragnarok";
+         desc1 = "NOTE: Mission lighting will hang, it will load, just be patient";
+         preview = "tbm/data/missions/previews/float.jpg";
+   };
+   new MissionArea(MissionArea) {
+      area = "-1016 -1016 2032 2032";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "-804.723 601.196 393.6";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Rag/calm1/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "900";
+      fogColor = "0.930000 0.930000 0.930000 1.000000";
+      fogVolume1 = "1 1 10";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "-2.3 0.5 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.900000 0.800000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.583304 0.262845 -0.76855";
+      color = "0.900000 0.900000 0.900000 1.000000";
+      ambient = "0.900000 0.900000 0.900000 1.000000";
+         scale = "1 1 1";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "0 0 1 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere(Drop1) {
+         position = "-327.465 274.311 386.1";
+         rotation = "0 0 1 179.909";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "10";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            homingCount = "0";
+            locked = "false";
+      };
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./BL-angis.ter";
+      squareSize = "8";
+      emptySquares = "3638541 165389 99906 231181 100162 165901 100418 231693 100674 166413 166466 166669 166722 166925 166978 167181 167234 167437 167490 233229 167746 167949 168002 233741 1544514 168461 168514 102999 234253 103255 168973 103511 234765 103767 169485 431703 235277 104284 169997 104540 235789 104796 170509 105052 236301 105308 171021 105564 236813 105820 171533 106076 237325 106332 172045 106588 237837 106844 172557 107100 238349 107356 173069 107612 173325 435543 173581 108119 239373 108375 174093 370771 239885 174419 174605 1223234 240397 109378 175117 109634 240909 109890 175629 110146 241421 110402 176141 110658 241933 110914 176653 111170 3584781 767003";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new WaterBlock() {
+      position = "0 0 -40";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 50";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/skies/cloud3";
+      liquidType = "Quicksand";
+      density = "1";
+      viscosity = "25";
+      waveMagnitude = "20";
+      surfaceOpacity = "1";
+      envMapIntensity = "0.4";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0.5";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "2";
+      ShoreDepth = "0";
+      DepthGradient = "0";
+      MinAlpha = "0";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         params1 = "0.63 -2.41 0.33 0.21";
+         floodFill = "1";
+         params2 = "0.39 0.39 0.2 0.133";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+   new InteriorInstance() {
+      position = "-656.313 230 260";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Rag/angbot2.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-196.171 557.772 68.0742";
+      rotation = "0 0 -1 45";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Rag/pathis.dif";
+      showTerrainInside = "0";
+   };
+   new WaterBlock() {
+      position = "-616 192 378";
+      rotation = "1 0 0 0";
+      scale = "320 96 0.0001";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water";
+      ShoreTexture = "~/data/water/water03";
+      envMapOverTexture = "~/data/water/water01";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "Quicksand";
+      density = "0";
+      viscosity = "0";
+      waveMagnitude = "0";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.4";
+      TessSurface = "5";
+      TessShore = "6";
+      SurfaceParallax = "0.5";
+      FlowAngle = "180";
+      FlowRate = "0.25";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "2";
+      ShoreDepth = "2";
+      DepthGradient = "1";
+      MinAlpha = "0.4";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         params1 = "0.63 -2.41 0.33 0.21";
+         floodFill = "1";
+         params2 = "0.39 0.39 0.2 0.133";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+   new WaterBlock() {
+      position = "-704 184 514";
+      rotation = "1 0 0 0";
+      scale = "96 96 0.0001";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water";
+      ShoreTexture = "~/data/water/water03";
+      envMapOverTexture = "~/data/water/water01";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "Quicksand";
+      density = "0";
+      viscosity = "0";
+      waveMagnitude = "0";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.4";
+      TessSurface = "5";
+      TessShore = "6";
+      SurfaceParallax = "0.5";
+      FlowAngle = "180";
+      FlowRate = "0.1";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "2";
+      ShoreDepth = "2";
+      DepthGradient = "1";
+      MinAlpha = "0.4";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         params1 = "0.63 -2.41 0.33 0.21";
+         floodFill = "1";
+         params2 = "0.39 0.39 0.2 0.133";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+   new ParticleEmitterNode(Waterfall) {
+      position = "-600.746 240.775 513";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(waterfall2) {
+      position = "-285.038 236.095 371.544";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(edge) {
+      position = "-293.33 236.509 383.744";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(mist) {
+      position = "-579.679 238.002 379.697";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(edge2) {
+      position = "-607.525 241.122 519.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new fxSunLight(Sun) {
+      position = "-923.523 703.996 475.059";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "237";
+      SunElevation = "10";
+      FlareTP = "1";
+      Colour = "1.000000 0.500000 0.000000 1.000000";
+      Brightness = "1";
+      FlareSize = "0.5";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "1";
+      AnimBrightness = "1";
+      AnimRotation = "1";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "1.000000 0.400000 0.000000 1.000000";
+      MaxColour = "1.000000 0.500000 0.000000 1.000000";
+      MinBrightness = "1";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "360";
+      minSize = "1";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "5";
+      RotationTime = "100";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+   };
+   new StaticShape() {
+      position = "-321 296 372";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "-923.523 703.996 475.059";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Rag/weirdis.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-924.438 -296.738 67.8574";
+      rotation = "0 0 1 145";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Rag/bris2.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-63.4922 -388.888 125.917";
+      rotation = "0 0 -1 64.7442";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Rag/platis2.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-965 192 372";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-747 449 372";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-750 -49 372";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-789 287 466";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-244 613 68.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-379 227 329.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-52 -332 104.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-91 -420 210.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-890 -296 66.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-996 -376 43.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-919 713 453.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-206 568 127.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

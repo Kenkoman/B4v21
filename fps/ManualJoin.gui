@@ -1,0 +1,122 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ManualJoin) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "208 161";
+      extent = "224 157";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Connect to IP";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popdialog(\"manualJoin\");";
+
+      new GuiTextEditCtrl(MJ_txtIP) {
+         profile = "TBM_TextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "67 71";
+         extent = "139 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "116 103";
+         extent = "91 38";
+         minExtent = "8 2";
+         visible = "1";
+         command = "MJ_connect();";
+         text = "Connect >>";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./client/ui/button2";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+            wrap = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 70";
+         extent = "47 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Server IP:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(MJ_txtJoinPass) {
+         profile = "TBM_TextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "67 41";
+         extent = "139 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         historySize = "0";
+         password = "1";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 40";
+         extent = "53 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Password:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 103";
+         extent = "91 38";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popDialog(manualJoin);";
+         text = "<< Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./client/ui/button2";
+         lockAspectRatio = "0";
+         alignLeft = "0";
+         overflowImage = "0";
+         mKeepCached = "0";
+         mColor = "255 255 255 255";
+            wrap = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

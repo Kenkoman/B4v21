@@ -1,0 +1,52 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Joining Servers
+
+<just:left><font:Arial:14>To quickly jump into a TOB game, join an existing server. Press the <font:Arial Italic:14>Join Server<font:Arial:14> button in the main menu. A server list and a few options will be available to you. The Join Server GUI is available while ingame via <font:Arial Italic:14>Alt + J<font:Arial:14>. This means you don't need to disconnect to check the server list.
+
+
+
+<just:left><font:Arial Bold:20>Main Options
+
+<font:Arial Bold:14>Back<font:Arial:14> - Returns you to the main menu or closes box if in-game.
+
+<font:Arial Bold:14>Query LAN<font:Arial:14> - Searches for servers on your Local Area Network.
+
+<font:Arial Bold:14>Query Master<font:Arial:14> - Searches for servers on the master server.
+
+<font:Arial Bold:14>Query IRC<font:Arial:14> - Searches for servers running TBM:IRC over the IRC channel.  This can be used even if the master server is down for maintenance.
+
+<font:Arial Bold:14>Join Server<font:Arial:14> - Clicking this makes you join the server you have selected.
+
+
+
+<font:Arial Bold:20>Server List
+
+<font:Arial Bold:14>Name<font:Arial:14> - Usually tells the user/group that is hosting, mod info, or build theme.
+
+<font:Arial Bold:14>Ping<font:Arial:14> - The lower the ping number, the less network lag that server has. Keep in mind that it may still be FPS-intensive.
+
+<font:Arial Bold:14>Players<font:Arial:14> - Shows how many players are in a server, and how many spots are still open.
+
+<font:Arial Bold:14>Pass<font:Arial:14> - If it says <font:Arial Italic:14>no<font:Arial:14> you can enter this server without a password. If it says <font:Arial Italic:14>yes<font:Arial:14>, well then you will need to get the password from the host.
+
+
+
+<font:Arial Bold:20>Join Options
+
+<font:Arial Bold:14>Join Password<font:Arial:14> - This is where you type in the password 
+for protected servers before you try and join.
+
+<font:Arial Bold:14>Join IP<font:Arial:14> - If you have another user's IP, you can type it in here to join their server even if the master server is down.
+
+<font:Arial Bold:14>Favorite server list<font:Arial:14> (FSL) - The favorite server list allows you to categorize the servers that you like the best. Just click on a server in the server list, and press <font:Arial Italic:14>Add to FSL<font:Arial:14> to add them to your list. Then press <font:Arial Italic:14>Toggle FSL<font:Arial:14> to open the list.
+
+<font:Arial Bold:14>TBM2 Only<font:Arial:14> checkbox - Turn this on to filter out all servers that aren't running TOB.
+
+
+
+<font:Arial Bold:20>Server Info
+
+<font:Arial Bold:14>Server IP<font:Arial:14> - Displays current selected server's IP.
+
+<font:Arial Bold:14>Server Mission<font:Arial:14> - Displays the current selected server's map name.
+
+<font:Arial Bold:14>Server Info<font:Arial:14> - Displays the current selected server's information. It can include build information or anything else the host decides to include.

@@ -1,0 +1,473 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/previews/treehouse.jpg";
+         desc0 = "Don\'t lean over the edge! map by: gobbles";
+         desclines = "2";
+         name = "Treehouse";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.05";
+      cloudSpeed2 = "0.01";
+      cloudSpeed3 = "0.03";
+      visibleDistance = "1200";
+      fogDistance = "900";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.300000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "fps/data/terrains/details/detail1";
+      terrainFile = "./BL-Treehouse.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "72.6 -112.3 410.6";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "10";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new StaticShape() {
+      position = "297 -293 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "17 -115 400.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "313 -293 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "297 -277 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-138.4 -461.5 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-306 -108 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-138.4 -445.5 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-154.4 -461.5 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "53.7 -192 424.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "53.7 -208 424.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "53.7 -176 424.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-154.4 -445.5 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-12.1 -178.7 772.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 149 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "13 -124 578.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-306 -76 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-3 -124 578.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-274 -76 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 117 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-16 133 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 133 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 117 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-48 133 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-48 117 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-306 -92 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-274 -92 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-48 149 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-32 149 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "19.2 -284.4 134.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "1 -131 400.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "1 -115 400.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "313 -277 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-3 -140 578.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "17 -131 400.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-274 -108 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-290 -108 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-290 -92 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-290 -76 100";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new SimGroup(treez) {
+
+      new TSStatic() {
+         position = "-311.478 -199.522 105.445";
+         rotation = "0 0 -1 49.2744";
+         scale = "90 90 90";
+         shapeName = "~/data/shapes/Chris/Tree11/tree11d.dts";
+            locked = "false";
+            hidden = "false";
+      };
+      new TSStatic() {
+         position = "-21.816 -540.849 101.6";
+         rotation = "1 0 0 0";
+         scale = "80 80 80";
+         shapeName = "~/data/shapes/Chris/Tree11/tree11b.dts";
+            locked = "false";
+            hidden = "false";
+      };
+      new TSStatic() {
+         position = "165.177 80.1412 101.445";
+         rotation = "1 0 0 0";
+         scale = "55 55 55";
+         shapeName = "~/data/shapes/Chris/Tree11/tree11d.dts";
+            locked = "false";
+            hidden = "false";
+      };
+      new TSStatic() {
+         position = "-267.446 441.632 172.7";
+         rotation = "1 0 0 0";
+         scale = "90 90 90";
+         shapeName = "~/data/shapes/Chris/Tree11/tree11c.dts";
+            locked = "false";
+            hidden = "false";
+      };
+      new TSStatic() {
+         position = "-200.589 57.5543 103.9";
+         rotation = "1 0 0 0";
+         scale = "50 50 50";
+         shapeName = "~/data/shapes/Chris/Tree11/tree11c.dts";
+            locked = "false";
+            hidden = "false";
+      };
+   };
+   new StaticShape() {
+      position = "13 -140 578.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "12.3733 -170.692 398.43";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Chris/treehouse/treehouse.dif";
+      showTerrainInside = "0";
+   };
+   new TSStatic() {
+      position = "388.71 -272.063 105.445";
+      rotation = "0 0 -1 29.7938";
+      scale = "90 90 90";
+      shapeName = "~/data/shapes/Chris/Tree11/tree11d.dts";
+         locked = "false";
+         hidden = "false";
+   };
+   new StaticShape() {
+      position = "-24.8 -127.2 684.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-24.8 -143.2 684.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-8.8 -143.2 684.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-8.8 -127.2 684.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "48 -207 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "32 -207 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "32 -239 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "32 -223 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "48 -239 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "48 -223 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "64 -223 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "64 -239 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "64 -207 538.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "-375.922 -597.529 170.6";
+      rotation = "0 0 1 7.60224";
+      scale = "80 80 80";
+      shapeName = "~/data/shapes/Chris/Tree11/tree11b.dts";
+         locked = "false";
+         hidden = "false";
+   };
+   new TSStatic() {
+      position = "-25.1915 283.025 105.9";
+      rotation = "1 0 0 0";
+      scale = "70 70 70";
+      shapeName = "~/data/shapes/Chris/Tree11/tree11c.dts";
+         locked = "false";
+         hidden = "false";
+   };
+   new TSStatic() {
+      position = "445.754 322.732 146.5";
+      rotation = "1 0 0 0";
+      scale = "90 90 90";
+      shapeName = "~/data/shapes/Chris/Tree11/tree11c.dts";
+         locked = "false";
+         hidden = "false";
+   };
+};
+//--- OBJECT WRITE END ---

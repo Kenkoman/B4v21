@@ -1,0 +1,30 @@
+<just:center><font:Arial Bold:32>Sample news file
+
+EDIT THIS IN THE ADMIN GUI
+
+<just:left><font:Arial Bold:16>This is an example news file.  You should make your own news file so everyone who joins your server will know what you expect.
+
+Here's a short list of tags:
+<just:left>Left justification
+<just:center>Center justification
+<just:right>Right justification
+<just:center>(The thing that pops up is wider and
+can display that part without scrolling)
+<just:left><color:206464>Color tag: <color:FF0000>Accepts RGB values <color:00FF00>in hexadecimal <color:0000FF>(00 to FF)
+<color:000000><font:Arial:16>Arial size 16 font
+<font:Arial:24>Arial size 24 font
+<font:Arial Bold:16>Arial Bold size 16 font
+<font:Arial Bold:24>Arial Bold size 24 font
+<font:Arial Bold:16>Image tags:
+<bitmap:tbm/client/help/images/PPK>
+
+
+
+
+
+
+
+Note: people who join your server will only see images that are already in their TOB directory.  If you make a new image, people are probably not going to see it unless they download it somehow.
+
+
+

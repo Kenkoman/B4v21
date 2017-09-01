@@ -1,0 +1,492 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(FirstRunGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "196 57";
+      extent = "360 271";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "First Run Gui";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+
+      new GuiTextCtrl(FR_Counter) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "330 20";
+         extent = "222 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "1/5";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(FR_continue) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "210 230";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "nextFRpage();";
+         helpTag = "0";
+         text = "Continue -->";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 230";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popdialog(FirstRunGui);";
+         helpTag = "0";
+         text = "Skip This";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiControl(FR_page1) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 194";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "6 112";
+            extent = "336 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = " Welcome to TOB 2.3! If this is your first time playing TOB, ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 126";
+            extent = "330 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "it is highly recommended that you do this short walkthrough.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 140";
+            extent = "334 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "It will walk you through the steps needed to get used ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 154";
+            extent = "309 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "to TOB. If you have already played a previous version of TOB, ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 168";
+            extent = "127 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "feel free to skip this guide.";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(FR_page2) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "The first thing you need to do before playing the game is set up your ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Player name. This name is shown throughout the game and gives";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 40";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "you an identity that other players can remember.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "29 120";
+            extent = "101 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Your Player\'s Name: ";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl() {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 120";
+            extent = "120 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$pref::Player::Name";
+            helpTag = "0";
+            maxLength = "16";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+      };
+      new GuiControl(FR_page3) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl(FR_page3_textOne) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Okay, Player, now you need to create an outfit so you";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "don't look like a New Player. Pick out some new threads and hit OK";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 40";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "when you're done.     (You can access this ingame by pressing Alt-O)";
+            maxLength = "255";
+         };
+        new GuiButtonCtrl(FR_page3_buttonOne) {
+           profile = "TBM_ButtonProfile";
+           horizSizing = "right";
+           vertSizing = "bottom";
+           position = "110 130";
+           extent = "140 30";
+           minExtent = "8 2";
+           visible = "1";
+           command = "";
+           helpTag = "0";
+           text = "Player Options";
+           groupNum = "-1";
+           buttonType = "PushButton";
+           command = "FR_page3_buttonOne.setText(\"Please wait...\");canvas.schedule(100, pushDialog, optionsDlg);optionsDlg.schedule(100, setPane, Player); FR_page3_buttonOne.schedule(100, setText, \"Player Options\");";
+        };
+      };
+      new GuiControl(FR_page4) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "You're almost done now.  The last thing you need to do is read the";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Help files.  They can answer just about all of your questions - how to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 40";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "spawn weapons, how to make a switch, and stuff like that.  You can";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 54";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "keep reading them ingame by pressing F1.";
+            maxLength = "255";
+         };
+        new GuiButtonCtrl() {
+           profile = "TBM_ButtonProfile";
+           horizSizing = "right";
+           vertSizing = "bottom";
+           position = "110 130";
+           extent = "140 30";
+           minExtent = "8 2";
+           visible = "1";
+           command = "";
+           helpTag = "0";
+           text = "Help Files";
+           groupNum = "-1";
+           buttonType = "PushButton";
+           command = "canvas.pushDialog(TBMHelpDlg);";
+        };
+      };
+      new GuiControl(FR_page5) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Well, that's basically everything.  Once you close this, press the Start";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Server button and start your own server.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 40";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Remember, if you have any questions, feel free to just ask someone.";
+            maxLength = "255";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function FirstRunGUI::onWake(%this) {
+$Pref::Server::EnableNews = "1";
+}
+
+function FirstRunGUI::onSleep(%this) {
+$Pref::Player::FirstRun = 0;
+exportTBMPrefs();
+moveMap.save("~/client/config.cs");
+}
+
+function nextFRpage() {
+if($FRPage)
+  nameToID("FR_page" @ $FRpage).setVisible(0);
+$FRpage++;
+FR_Counter.setText($FRpage @ "/5");
+nameToID("FR_page" @ $FRpage).setVisible(1);
+FR_page3_textOne.setText("Okay, " @ $Pref::Player::Name @ ", now you need to create an outfit so you");
+if($FRPage == 5) {
+  FR_continue.setVisible(0);
+  (nameToID(FR_Continue)+1).resize(110, 230, 140, 30);
+  (nameToID(FR_Continue)+1).setText("All done!");
+}
+}
+
+$FRpage = 0;
+nextFRpage();
+
+if($Pref::Player::FirstRun)
+  canvas.schedule(4000, pushDialog, firstRunGUI);

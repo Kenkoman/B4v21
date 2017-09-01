@@ -1,0 +1,166 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/previews/bathroom.png";
+         desc0 = "Try not to fall in! Map by DShiznit";
+         name = "Bathroom";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Plague/Sky_Night1/resource.dml";
+      cloudHeightPer[0] = "0.2";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.01";
+      cloudSpeed2 = "0.1";
+      cloudSpeed3 = "0.5";
+      visibleDistance = "2000";
+      fogDistance = "2000";
+      fogColor = "0.720000 0.720000 0.720000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0 0 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.300000 0.300000 0.900000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0 0.894427 -0.447214";
+      color = "1.000000 1.000000 1.000000 1.000000";
+      ambient = "0.750000 0.750000 0.750000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-67.0838 36.7111 137.3";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+   };
+   new InteriorInstance() {
+      position = "36.5184 -15.5932 179.071";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/DShiznit/bathroom/bathtub.dif";
+      showTerrainInside = "0";
+   };
+   new WaterBlock() {
+      position = "-88 -8 124.9";
+      rotation = "1 0 0 0";
+      scale = "128 64 5";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/chris/water_04.jpg";
+      ShoreTexture = "~/data/water/chris/water_04.jpg";
+      envMapOverTexture = "~/data/water/water";
+      envMapUnderTexture = "~/data/water/chris/water_04.jpg";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "1";
+      surfaceOpacity = "0.25";
+      envMapIntensity = "0";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0";
+      DistortMag = "0";
+      DistortTime = "0.5";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "1";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params2 = "0.39 0.39 0.2 0.133";
+         params1 = "0.63 -2.41 0.33 0.21";
+         textureSize = "512 1024";
+         floodFill = "0";
+   };
+   new StaticShape() {
+      position = "-38.6439 -12.4179 190.9";
+      rotation = "1 0 0 0";
+      scale = "75 1 110";
+      dataBlock = "glassA";
+   };
+   new StaticShape() {
+      position = "8.0609 -13.7686 191.093";
+      rotation = "1 0 0 0";
+      scale = "75 1 110";
+      dataBlock = "glassA";
+   };
+   new StaticShape() {
+      position = "29.114 40.4121 132.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-22.886 50.4121 156";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-50.886 5.4121 112.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "69.114 33.4121 114.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "125.114 -78.0879 165";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-10.886 -66.5879 110.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,35 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Starting a Server
+
+<just:left><font:Arial:14>After playing on other people's servers, you will probably want to make your own. Begin by pressing the <font:Arial Italic:14>Start Server<font:Arial:14> button in the main menu. From there you will need to decide on multiple options to customize.
+
+
+
+<font:Arial Bold:20>The Options
+
+<font:Arial Bold:14>Map selector<font:Arial:14> - The big list on the right and the pictures at the top describe the current map you have selected. Pick a map that fits the server you're going to make. If you're going to make a brick-intensive build, use a simple map. Choose a good map that people like, but try to add some variety to the lineup.
+
+<font:Arial Bold:14>Server name<font:Arial:14> - The name of your server.
+
+<font:Arial Bold:14>Server info<font:Arial:14> - Your server info will show up when players select your server from the join game list. Make it something that describes your server and what it's about.
+
+<font:Arial Bold:14>MOTD<font:Arial:14> - This is the message players get once joining your server. It's a good idea to make this the rules of the server, or an introduction.
+
+<font:Arial Bold:14>Admin pass<font:Arial:14> - Set an admin pass if you want to be able to entrust other people with the ability to become super admins. Be VERY careful when giving out your super admin pass. If you don't want anyone guessing your pass, you can always leave this field blank.
+
+<font:Arial Bold:14>Password<font:Arial:14> - Set a password if you only want certain people who know it to join your server.
+
+<font:Arial Bold:14>Time limit<font:Arial:14> - How long your server lasts before it closes down. It's a very good idea to leave this alone, unless you are hosting a timed round of deathmatch.
+
+<font:Arial Bold:14>IRC channel<font:Arial:14> - Set an IRC channel for your server to connect to. With the introduction of TBM:IRC, servers can now communicate with other servers in the same IRC channel. You can choose any channel on IRCtoo, a popular network. Be careful where you join, because not all people want your server in on their conversation. IRC traffic appears as white text in the chat hud. The default channel is <font:Arial Italic:14>#tbmirc<font:Arial:14>. If you do not wish to enable this, leave it blank.
+
+<font:Arial Bold:14>Port<font:Arial:14> - Usually set to <font:Arial Italic:14>28000<font:Arial:14>. Leave it alone unless you know what you're doing.
+
+<font:Arial Bold:14>Max players<font:Arial:14> - Set the amount of players allowed to join your server. How many you will want depends on your connection. Dial-up should stick with 3-5 players, DSL can be 8-12 players, Cable can host about 10-14 players, and T1/T3 can host up to 18 under good conditions. Keep in mind that the computer that is hosting needs to be somewhat modern as well.
+
+<font:Arial Bold:14>Flood protection<font:Arial:14> - Turning this on keeps people from spamming in your chat hud. People who attempt to spam will be muted for 10 seconds.
+
+<font:Arial Bold:14>Multiplayer<font:Arial:14> checkbox - Turn this on to connect to the master server and allow others to join your game over the internet.
+
+<font:Arial Bold:14>LAN<font:Arial:14> checkbox - Turn this on to allow other players on your local network to connect for your server. Useful for LAN parties, school, and home. Having only this turned on does not allow connections over the internet. You will need to check the <font:Arial Italic:14>Multiplayer<font:Arial:14> checkbox to do that.
+
+<font:Arial Bold:14>Launch mission<font:Arial:14> - Once everything has been selected and set, click <font:Arial Italic:14>Launch Mission<font:Arial:14> to start the game.

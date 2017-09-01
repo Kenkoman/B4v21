@@ -1,0 +1,51 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>iGob
+
+<just:left><font:Arial:14>iGob allows you to do things that previously were only possible if you were the host or had access to F11. Now, you can do the same things on a dedicated or on somebody else's server.
+
+
+
+<font:Arial Bold:20>The Basics
+
+<font:Arial:14>To begin using iGob functions, press <font:Arial Italic:14>G<font:Arial:14> to toggle iGob mode. A CD disk should appear in your hand. Next, fire at any brick or baseplate. The iGob sphere will appear.
+
+The iGob sphere can be moved just like a construction brick and scaled the same way the bricks in slot 1 are. Use <font:Arial Italic:14>/<font:Arial:14> and <font:Arial Italic:14>*<font:Arial:14> on the <font:Arial Italic:14>Numpad<font:Arial:14> to decrease and increase the iGob size. Hold <font:Arial Italic:14>Alt<font:Arial:14> while doing so to increase the scale factor.
+
+The iGob sphere is intended to modify all bricks within the radius of the sphere, but due to problems associated with scaling and collision meshes, sometimes an extra brick gets picked up. Look out for this.
+
+
+
+<font:Arial Bold:20>Movement and Rotation
+
+<font:Arial:14>You can move and rotate large groups of bricks using iGob. To attach bricks to the sphere, which is similar to selecting bricks with the Editor Staff, press <font:Arial Italic:14>Numpad Enter<font:Arial:14>. You should get a message that it did so. Press it again to deselect all selected bricks.
+
+Movement of the selected group is the exact same of the Editor Staff. Rotation is the same except that for the time being, you can only rotate along the Z axis.
+
+You can delete the selected group by pressing <font:Arial Italic:14>Delete<font:Arial:14>.
+
+
+
+<font:Arial Bold:20>Copying, Pasting, and Deleting
+
+<font:Arial:14>There are a few keybinds used to copy and paste. These will affect all the bricks in the iGob sphere's radius. You do not have to select the bricks beforehand.
+
+<font:Arial Bold:14>Copy<font:Arial:14> - <font:Arial Italic:14>Alt + C<font:Arial:14> - Copies a group while leaving the original intact. Useful for making copies of things..
+
+<font:Arial Bold:14>Cut<font:Arial:14> - <font:Arial Italic:14>Alt + X<font:Arial:14> - The same as copy, except that it removes the original group.
+
+<font:Arial Bold:14>Paste<font:Arial:14> - <font:Arial Italic:14>Alt + V<font:Arial:14> - Pastes the copied/cutted group. You can do this as many times as you like. It is important that when you are done positioning it, that you deselect it. Otherwise you can end up with broken loads and duplicates.
+
+
+
+<font:Arial Bold:20>Saving and Loading
+
+<font:Arial:14>This is done from the iGob GUI. To open it, press <font:Arial Italic:14>Alt + G<font:Arial:14>. 
+
+To save something, just enclose your build within the sphere, pick a name, and press Save. You have the option to remove the original copy as well. Always wait until it is completely done saving, or you may end up with a broken iGob save.
+
+To load something, just select it in the list, and press Load. It will load where the sphere currently is. It is important that when you are done positioning it, that you deselect it. Otherwise you can end up with broken loads and duplicates.
+
+
+
+<font:Arial Bold:20>Other Options
+
+<font:Arial Bold:14>iGob Sphere Color<font:Arial:14> - Brings up a color box so you can change the color of your iGob. Use this if you can't see your iGob on a dark/bright map.

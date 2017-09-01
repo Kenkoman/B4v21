@@ -1,0 +1,11 @@
+exec("./hammer.cs");
+exec("./spraycan.cs");
+exec("./wand.cs");
+exec("./SarumanStaff.cs");
+exec("./abuselogger.cs");
+exec("./eyeDropper.cs");
+exec("./selectorgun.cs");
+SarumanStaff.muzzleVelocity = 50;
+SarumanStaff.velInheritFactor = 1;
+SarumanStaff.emap = false;
+SarumanStaffImage.emap = false;

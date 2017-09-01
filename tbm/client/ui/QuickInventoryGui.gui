@@ -1,0 +1,336 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(QuickInventoryGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "QuickInventory_WindowProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "295 58";
+      extent = "241 269";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Quick Inventory Gui";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "222 239";
+      closeCommand = "Canvas.popDialog(Quickinventorygui);";
+
+      new GuiControl() {
+         profile = "QuickInventory_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 35";
+         extent = "80 202";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+            closeCommand = "QuickInventoryGui.toggle();";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 2";
+            extent = "45 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Primitives";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 22";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Slopes";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 42";
+            extent = "50 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Inv Slopes";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 62";
+            extent = "36 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Arches";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 82";
+            extent = "46 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Windows";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 102";
+            extent = "57 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Wings, etc..";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 122";
+            extent = "47 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Various 1";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 142";
+            extent = "47 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Various 2";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 162";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Decals";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "7 182";
+            extent = "45 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "\c3Platforms";
+            maxLength = "255";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot1) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot2) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 22";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot3) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 42";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot4) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 62";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot5) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 82";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot6) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 102";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot7) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 122";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot8) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 142";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot9) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 162";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiMouseEventCtrl(QuickInv_slot10) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 182";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lockMouse = "0";
+         };
+         new GuiShapeNameHud(QuickInv_highlight) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 22";
+            extent = "76 20";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            fillColor = "0.000000 1.000000 0.000000 0.300000";
+            frameColor = "0.972500 0.800000 0.000000 1.000000";
+            textColor = "0.972500 0.800000 0.000000 1.000000";
+            showFill = "1";
+            showFrame = "1";
+            verticalOffset = "0.5";
+            distanceFade = "0.1";
+         };
+      };
+      new GuiControl() {
+         profile = "DP_ButtonProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "101 35";
+         extent = "121 202";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiScrollCtrl() {
+            profile = "QuickInventory_ScrollProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "121 202";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "1 1";
+
+            new GuiTextListCtrl(QuickInv_list) {
+               profile = "CenterPrintProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "1 2";
+               extent = "103 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+      };
+   };
+};
+movemap.bindCmd(keyboard,"ctrl-alt i","Canvas.popDialog(Quickinventorygui);","");
+//--- OBJECT WRITE END ---

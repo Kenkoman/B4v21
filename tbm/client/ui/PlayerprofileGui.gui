@@ -1,0 +1,263 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PlayerprofileGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(PlayerProfile) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "193 76";
+      extent = "254 328";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Player Profile";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(Playerprofilegui);";
+
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 120";
+         extent = "71 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5Bricks Planted:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 40";
+         extent = "63 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5Player Name:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "center";
+         vertSizing = "top";
+         position = "97 287";
+         extent = "60 26";
+         minExtent = "8 2";
+         visible = "1";
+         command = "closeprofilegui();";
+         helpTag = "0";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl(txtprofilename) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "78 40";
+         extent = "38 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "gobbles";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(txtprofilebricks) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "85 120";
+         extent = "137 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "1542315 bricks ever placed.";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 100";
+         extent = "60 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5In Edit Mode:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 80";
+         extent = "71 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5Server Power:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 60";
+         extent = "56 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5IP Address:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(txtprofilepower) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "86 80";
+         extent = "59 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "SuperAdmin";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(txtprofileedit) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "74 100";
+         extent = "13 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "No";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(txtprofileIP) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 60";
+         extent = "57 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "192.168.0.1";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 140";
+         extent = "66 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5Current Brick:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(txtprofilebrick) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "81 140";
+         extent = "45 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Brick 2x2";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 160";
+         extent = "21 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "\c5Info:";
+         maxLength = "255";
+      };
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "6 178";
+         extent = "242 102";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "1 0";
+
+         new GuiMLTextCtrl(txtprofileinfo) {
+            profile = "GuiTextProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "3 2";
+            extent = "218 14";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "1";
+            allowColorChars = "1";
+            maxChars = "-1";
+               fitParentWidth = "1";
+         };
+      };
+      new GuiScrollCtrl(profile_edit_scroll) {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "6 178";
+         extent = "242 102";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "1 0";
+
+         new GuiMLTextEditCtrl(profile_edit_txt) {
+            profile = "GuiMLTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "3 2";
+            extent = "220 102";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "255";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

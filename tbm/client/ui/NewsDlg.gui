@@ -1,0 +1,232 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(NewsDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl(bgTile) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "1024 768";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./mainmenuImages/transgrey";
+      wrap = "0";
+         glow = "1";
+   };    
+   new GuiControl(NewsDlgWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "center";
+      position = "192 0";
+      extent = "582 383";
+      minExtent = "300 200";
+      visible = "1";
+      helpTag = "0";
+      text = "Latest News";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(NewsDlg);";
+
+      new GuiBitmapCtrl(joinServerTile) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "582 64";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/tile";
+         wrap = "0";
+            glow = "1";
+      };
+      new GuiBitmapCtrl(joinServerLogo) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "192 63";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/news";
+         wrap = "0";
+            glow = "1";
+      };	  
+	  
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "16 75";
+         extent = "547 268";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMLTextCtrl(TBMNewsText) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "480 3983";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "17 350";
+         extent = "127 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(NewsDlg);";
+         helpTag = "0";
+         text = "<< Back";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+
+//News downloader
+//By EmperorWiggy
+//You can go ahead and steal and modify this for your own purposes if you want.  Just give me credit.
+//Also don't make malicious stuff.
+
+function TCPnews_init() {
+if($NewsHasStarted) return;
+new TCPObject(TCPNews);
+TCPNews.connect("news.theorangeblock.org:80");
+$NewsHasStarted = 1;
+}
+
+function TCPnews::onConnected(%this) {
+$newstext = "";
+TCPNews.send("GET http://news.theorangeblock.org/news.txt  \n\r\n");  //Note to self: replace this with a pref.
+}
+
+function TCPnews::online(%this,%line) {
+if(strStr(%line, "[rev:") != -1) {
+  %this.secure = 1;
+  if(($newsVersion = getSubStr(%line, 5, strlen(%line) - 6)) > $Pref::Player::NewsVersion)
+    //Button_News_Text.setText("\c2NEWS!");
+    doNothing();
+  return;
+}
+if(!%this.secure) {
+  $NewsText = "An unknown error occurred while attempting to download the news.";
+  %line = "[END OF FILE]";
+  %this.schedule(0, disconnect);
+}
+if(!isObject(NewsFile)) {
+  new FileObject(NewsFile);
+  NewsFile.openForWrite("tbm/client/news.hfl");
+}
+if(%line $= "[END OF FILE]") {
+  //The last line has been loaded
+  NewsFile.delete();
+  cancel($newstimeoutschedule);
+  schedule(100, 0, NewsDlgInit);
+  return;
+}
+NewsFile.writeline(%line);
+$newstext = $newstext @ %line @ "\n";
+cancel($newstimeoutschedule);
+$newstimeoutschedule =  schedule(333, 0, NewsDlgInit);
+}
+
+function TCPnews::onConnectionFailed(%this) {
+error("TCP news connection failed");
+$NewsText = "Error: Could not connect to the news server.  Loading old news from disk:\n\n";
+readNewsFromDisk();
+}
+
+function TCPnews::onDNSResolved(%this) {
+echo("TCP news DNS resolved");
+}
+
+function TCPnews::onDNSFailed(%this) {
+echo("TCP news DNS failed");
+$NewsText = "Error: DNS lookup of the news server failed.  Loading old news from disk:\n\n";
+readNewsFromDisk();
+}
+
+function TCPnews::onConnectFailed(%this) {
+echo("TCP news connect failed");
+$NewsText = "Error: Could not connect to the news server.  Loading old news from disk:\n\n";
+readNewsFromDisk();
+}
+
+function TCPnews::onDisconnect(%this) {
+%this.delete();
+echo("TCP news has disconnected and has been deleted.");
+}
+
+
+function TCPnews::onConnectRequest(%this,%address,%tag) {
+echo("TCP news connect request");
+}
+
+//This function, previously, also opened the news dialog.
+//Now it just kills the downloader and pastes the news into the dialog.
+function NewsDlgInit() {
+if(isObject(TCPNews))
+  TCPNews.disconnect();
+TBMNewsText.setText($newstext);
+}
+
+function readNewsFromDisk() {
+if(!isObject(NewsFile))
+  new FileObject(NewsFile);
+else
+  NewsFile.close();
+if(NewsFile.openForRead("tbm/client/news.hfl")) {
+  while(!NewsFile.isEOF())
+    $newstext = $newstext @ NewsFile.readLine() @ "\n";
+}
+NewsFile.delete();
+schedule(100, 0, NewsDlgInit);
+}
+
+function TBMNewsText::onURL(%this,%url) {
+echo(%url);
+setClipboard(%url);
+goToWebPage(%url);
+}
+
+function NewsDlg::onWake(%this) {
+if($newsVersion !$= "")
+  $Pref::Player::NewsVersion = $newsVersion;
+}
+
+TCPNews_init();

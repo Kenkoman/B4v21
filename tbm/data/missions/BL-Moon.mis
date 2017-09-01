@@ -1,0 +1,159 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/Previews/moon.jpg";
+         desc0 = "Made By: gobbles // credit to Magicpants and Luquado";
+         name = "Moon";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Chris/moon/resource.dml";
+      cloudHeightPer[0] = "0";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1024";
+      fogDistance = "800";
+      fogColor = "0.000000 0.000000 0.000000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.000000 0.000000 0.000000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      noRenderBans = "1";
+         locked = "false";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.500000 0.500000 0.400000 1.000000";
+      ambient = "0.475000 0.475000 0.475000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "fps/data/terrains/details/detail1";
+      terrainFile = "./BL-Moon.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-7.56298 233.719 9.8";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "10";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new fxSunLight(Sun) {
+      position = "321.776 459.037 2.61551";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "0";
+      SunElevation = "25";
+      FlareTP = "1";
+      Colour = "1.000000 1.000000 1.000000 1.000000";
+      Brightness = "1";
+      FlareSize = "0.3";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "0";
+      AnimRotation = "0";
+      AnimSize = "0";
+      AnimAzimuth = "1";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "5";
+      RotationTime = "5";
+      SizeTime = "5";
+      AzimuthTime = "500";
+      ElevationTime = "5";
+   };
+   new StaticShape() {
+      position = "30 220 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "30 204 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new PhysicalZone(zone1) {
+      position = "-1000 5000 -5000";
+      rotation = "1 0 0 0";
+      scale = "10000 10000 10000";
+      velocityMod = "1";
+      gravityMod = "0.5";
+      appliedForce = "0 0 0";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+//You found a secret!!! TBM only map!!! stealers beware!!!

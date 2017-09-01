@@ -1,0 +1,583 @@
+new GuiControlProfile (TextProfile_MainMenu : GuiTextProfile)
+{
+   fontColorHL = "32 100 100";
+   fontColor = "244 244 244";
+   justify = "right";
+   fontType = "Segoe UI Light";
+   fontSize = "20";
+};
+new GuiControlProfile (MainMenuLoad_ProgressProfile)
+{
+   opaque = true;
+   fillColor = "214 118 12";
+   //fillColor = "255 60 0 150";
+   border = false;
+   borderColor = "40 40 40";
+};
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MainMenuGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./mainmenuImages/menubackground.png";
+   useVariable = "0";
+   tile = "1";
+
+   new GuiControl(MainMenuUI) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "0 783";
+         extent = "640 300";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/bg_peg.png";
+         wrap = "1";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "0 11";
+            extent = "640 270";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./mainmenuImages/bg_peg.png";
+            wrap = "1";
+         };
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "0 173";
+         extent = "640 300";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/bg_peg.png";
+         wrap = "1";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "0 481";
+         extent = "640 140";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/bg_peg.png";
+         wrap = "1";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "0 11";
+            extent = "640 120";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./mainmenuImages/bg_peg.png";
+            wrap = "1";
+         };
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "0 631";
+         extent = "640 140";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/bg_peg.png";
+         wrap = "1";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "0 11";
+            extent = "640 120";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./mainmenuImages/bg_peg.png";
+            wrap = "1";
+         };
+      };
+      new GuiControl(Slideshow_holder) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 248";
+         extent = "1700 247";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiControl(MainMenu_Frame1) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "607 0";
+            extent = "340 248";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Frame1) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 5";
+               extent = "320 228";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "~/data/missions/BLCR.jpg";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "340 248";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/frame.png";
+               wrap = "1";
+            };
+         };
+         new GuiControl(MainMenu_Frame2) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "947 0";
+            extent = "340 248";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Frame2) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 5";
+               extent = "320 228";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "~/data/missions/sunset.jpg";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "340 248";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/frame.png";
+               wrap = "1";
+            };
+         };
+         new GuiControl(MainMenu_Frame3) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "-413 0";
+            extent = "340 248";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Frame3) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 5";
+               extent = "320 228";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "~/data/missions/BL-ScopicEndemia.jpg";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "340 248";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/frame.png";
+               wrap = "1";
+            };
+         };
+         new GuiControl(MainMenu_Frame4) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "-73 0";
+            extent = "340 248";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Frame4) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 5";
+               extent = "340 228";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "~/data/missions/mountain.jpg";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "340 248";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/frame.png";
+               wrap = "1";
+            };
+         };
+         new GuiControl(MainMenu_Frame5) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "267 0";
+            extent = "340 248";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Frame5) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "10 5";
+               extent = "320 228";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "~/data/missions/BL-Lavapit.png";
+               wrap = "0";
+            };
+            new GuiBitmapCtrl() {
+               profile = "GuiDefaultProfile";
+               horizSizing = "width";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "340 248";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/frame.png";
+               wrap = "1";
+            };
+         };
+      };
+      new GuiProgressCtrl(MainMenuLoadbar) {
+         profile = "MainMenuLoad_ProgressProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "192 100";
+         extent = "448 23";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+      };
+      new GuiBitmapCtrl(Tint2) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "0 248";
+         extent = "1656 247";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/metal_bar_small.png";
+         wrap = "1";
+      };
+      new GameTSCtrl(MainMenuTSCtrl) {
+         profile = "GuiContentProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 0";   //80 60
+         extent = "640 480";   //and 480 360 also looks nice
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         cameraZRot = "0";
+         forceFOV = "0";
+      };
+      new GuiBitmapCtrl(Tint) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "192 1600";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/transgrey.png";
+         wrap = "1";
+            tile = "1";
+      };
+      new GuiBitmapCtrl(Sidebar) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "center";
+         position = "0 0";
+         extent = "192 383";
+         minExtent = "192 383";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/sidebar_metro";
+         wrap = "1";
+
+         new GuiControl(Button_StartServer) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_StartServer_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+                  glow = "1";
+            };
+            new GuiMouseEventCtrl(MainMenu_StartServer) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_JoinServer) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 64";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_JoinServer_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+                  glow = "23319";
+            };
+            new GuiMouseEventCtrl(MainMenu_JoinServer) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_Options) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 128";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_Options_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(MainMenu_Options) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_News) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 192";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_News_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(MainMenu_News) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_Help) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 256";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_Help_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "1";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "1";
+                  tile = "1";
+            };
+            new GuiMouseEventCtrl(MainMenu_Help) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_Quit) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 320";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_Quit_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(MainMenu_Quit) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

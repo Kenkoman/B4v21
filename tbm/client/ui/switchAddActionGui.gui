@@ -1,0 +1,79 @@
+new GuiControl(SwitchAddActionGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(SwitchAddActionWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "141 78";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "New Action";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "325 211";
+      closeCommand = "canvas.popDialog(SwitchAddActionGui);";
+
+      new GuiPopUpMenuCtrl(SwitchTypeMenu) {
+         profile = "TBM_PopUpMenuProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 23";
+         extent = "105 20";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         maxPopupHeight = "200";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 48";
+         extent = "105 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popDialog(SwitchAddActionGui);";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+
+function SwitchAddActionGui::onWake(%this) {
+SwitchTypeMenu.clear();
+SwitchTypeMenu.add(" ", 0);
+for(%i = 1; %i <= $Client::Switch::numTypes; %i++)
+  SwitchTypeMenu.add($Client::Switch::RealName[$Client::Switch::Typelist[%i]], %i);
+SwitchTypeMenu.setSelected(0);
+}
+
+function SwitchTypeMenu::onSelect(%this, %id, %text) {
+if(%id) {
+  $Client::Switch::Type[$Client::Switch::numActions + 1] = $Client::Switch::Typelist[%id];
+  $Client::Switch::Delay[$Client::Switch::numActions + 1] = "";
+  $Client::Switch::Direction[$Client::Switch::numActions + 1] = "";
+  $Client::Switch::Doorset[$Client::Switch::numActions + 1] = "";
+  $Client::Switch::Times[$Client::Switch::numActions + 1] = "";
+  $Client::Switch::Sleep[$Client::Switch::numActions + 1] = "";
+  canvas.popDialog(SwitchAddActionGui);
+  openSwitchAction($Client::Switch::numActions + 1);
+}
+}

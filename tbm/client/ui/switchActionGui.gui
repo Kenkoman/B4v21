@@ -1,0 +1,2960 @@
+new GuiControl(SwitchActionGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(SwitchActionWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "center";
+      position = "91 86";
+      extent = "325 256";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Switch Action";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "325 211";
+      closeCommand = "canvas.popDialog(SwitchActionGui);";
+
+      new GuiControl(Frame_Switch_Teleporter) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 11";
+            extent = "95 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "$Client::Switch::TeleportDestination[switchActionGui.currentAction] = serverConnection.getControlObject().getTransform();";
+            helpTag = "0";
+            text = "Save Destination";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 7";
+            extent = "149 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Save your current location and";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 20";
+            extent = "157 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "direction as the teleport\'s output.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 50";
+            extent = "157 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Teleporter effects coming soon!";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(Frame_Switch_Jumper) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiSliderCtrl(Jumper_X) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "90 7";
+            extent = "220 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-100.000000 100.000000";
+            ticks = "10";
+            value = "0";
+         };
+         new GuiSliderCtrl(Jumper_Y) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "90 39";
+            extent = "220 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-100.000000 100.000000";
+            ticks = "10";
+            value = "0";
+         };
+         new GuiSliderCtrl(Jumper_Z) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "90 71";
+            extent = "220 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-100.000000 100.000000";
+            ticks = "10";
+            value = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 7";
+            extent = "73 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X axis velocity:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 39";
+            extent = "74 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y axis velocity:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 71";
+            extent = "73 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z axis velocity:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 102";
+            extent = "131 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Delay between activations:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "16 123";
+            extent = "125 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Use limit (Must be over 0):";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Jumper_Delay) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "150 102";
+            extent = "153 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Jumper_Times) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "150 123";
+            extent = "153 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+      };
+      new GuiControl(Frame_Switch_Mover) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 5";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 18";
+            extent = "180 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "move. This links the brick and switch.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Mover_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "205 10";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 33";
+            extent = "170 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your mover brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 46";
+            extent = "86 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "an ID number to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "205 37";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Mover_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 72";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X axis (studs):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "108 72";
+            extent = "34 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y axis (studs):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 72";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z axis (plates):";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Mover_X) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "80 73";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Mover_Y) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "180 73";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Mover_Z) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "283 73";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 98";
+            extent = "101 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Speed (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 133";
+            extent = "114 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Movement smoothness:";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(Mover_Speed) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "137 97";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "5.000000 100.000000";
+            ticks = "10";
+            value = "5";
+         };
+         new GuiSliderCtrl(Mover_Smooth) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "137 133";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "1.000000 360.000000";
+            ticks = "18";
+            value = "1";
+         };
+      };
+      new GuiControl(Frame_Switch_Rotator) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 2";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 13";
+            extent = "182 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "rotate. This links the brick and switch.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Rotator_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "206 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 28";
+            extent = "137 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 41";
+            extent = "57 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "your ID to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "206 33";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Rotator_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 64";
+            extent = "93 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Rotation (degrees):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "112 64";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "176 64";
+            extent = "34 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "243 64";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z axis:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Rotator_X) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "147 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Rotator_Y) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "212 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Rotator_Z) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "278 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 93";
+            extent = "101 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Speed (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 132";
+            extent = "104 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Rotation smoothness:";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(Rotator_Speed) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 92";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "5.000000 100.000000";
+            ticks = "10";
+            value = "5";
+         };
+         new GuiSliderCtrl(Rotator_Smooth) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 132";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "1.000000 360.000000";
+            ticks = "18";
+            value = "1";
+         };
+      };
+      new GuiControl(Frame_Switch_MR) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 0";
+            extent = "171 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want to ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 13";
+            extent = "189 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "your M&R by. This links the switch to it.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(MR_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 28";
+            extent = "140 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 41";
+            extent = "53 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "that ID to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 29";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(MR_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 60";
+            extent = "111 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Move distance (studs):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "128 60";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "187 60";
+            extent = "34 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "249 60";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z axis:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(MRM_X) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "161 60";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(MRM_Y) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "221 60";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(MRM_Z) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "282 60";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 102";
+            extent = "101 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Speed (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 136";
+            extent = "114 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Movement smoothness:";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(MR_Speed) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "140 102";
+            extent = "170 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "5.000000 100.000000";
+            ticks = "10";
+            value = "5";
+         };
+         new GuiSliderCtrl(MR_Smooth) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "140 135";
+            extent = "170 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "1.000000 360.000000";
+            ticks = "18";
+            value = "1";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 77";
+            extent = "93 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Rotation (degrees):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "128 78";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "187 78";
+            extent = "34 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "249 78";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z axis:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(MRR_X) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "161 78";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(MRR_Y) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "221 78";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(MRR_Z) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "282 78";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+      };
+      new GuiControl(Frame_Switch_Cloaker) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 4";
+            extent = "156 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 17";
+            extent = "191 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "to cloak. This links the brick and switch.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Cloaker_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 9";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 76";
+            extent = "271 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "This switch will now toggle whether the brick is cloaked";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 49";
+            extent = "52 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "this ID to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 37";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Cloaker_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 36";
+            extent = "137 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 90";
+            extent = "234 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "or not. For proper invisibility, use a fader switch.";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(Frame_Switch_Fader) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 3";
+            extent = "159 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 16";
+            extent = "202 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "to fade. This binds the switch to the brick.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Fader_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "220 8";
+            extent = "90 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 32";
+            extent = "137 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 45";
+            extent = "47 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "an ID to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 35";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Fader_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 65";
+            extent = "135 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Fading speed (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(Fader_Speed) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "153 64";
+            extent = "160 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "5.000000 100.000000";
+            ticks = "18";
+            value = "5";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 122";
+            extent = "175 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "When it is, you cannot see it, period.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 108";
+            extent = "275 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "This switch will now toggle whether the brick is invisible.";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(Frame_Switch_Effects) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiBitmapCtrl(FX_Colorbg) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "284 117";
+            extent = "25 25";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "~/data/shapes/base.blank.jpg";
+            wrap = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 2";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 14";
+            extent = "96 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "create an effect on.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(FX_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 30";
+            extent = "130 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select the brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 42";
+            extent = "175 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "your ID to it, linking brick and switch.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 32";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(FX_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 60";
+            extent = "157 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Choose what model/effect you\'d";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "14 73";
+            extent = "194 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "like to appear at the location of the brick.";
+            maxLength = "255";
+         };
+         new GuiPopUpMenuCtrl(Effects_popupmenu) {
+            profile = "TBM_PopUpMenuProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 65";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "Effects_popupmenuOnSelect();";
+            helpTag = "0";
+            maxLength = "255";
+            maxPopupHeight = "200";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 118";
+            extent = "154 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Effect Color (Where applicable):";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(FX_Image) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 95";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            skinName = "sandred";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 94";
+            extent = "124 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Effect Name (if not in list):";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(FX_Skin) {
+            profile = "DP_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "284 117";
+            extent = "25 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "$colorsetting=7;Canvas.pushdialog(Colorpalletgui);";
+            helpTag = "0";
+            text = " ";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            skinName = "darkorange";
+         };
+         new GuiTextEditCtrl(FX_Color) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 120";
+            extent = "65 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            skinName = "sandred";
+            command = "FX_Colorbg.setBitmap(\"tbm/data/shapes/\"@ (isFile(\"tbm/data/shapes/\"@ FX_Color.getValue() @\".blank.jpg\") ? FX_Color.getValue() : \"base\") @ \".blank.jpg\");";
+         };
+         new GuiCheckBoxCtrl(FX_Trigger) {
+            profile = "TBM_CheckBoxProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "14 144";
+            extent = "109 21";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Fire weapon?";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "150 145";
+            extent = "58 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Mount point:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(FX_Mountpoint) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 145";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            skinName = "sandred";
+         };
+      };
+      new GuiControl(Frame_Switch_Turret) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextEditCtrl(Turret_Range) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 83";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            skinName = "sandred";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 2";
+            extent = "156 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 15";
+            extent = "92 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "to turn into a turret.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Turret_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 8";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 29";
+            extent = "137 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 42";
+            extent = "170 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "this ID to it, linking it and the switch.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 32";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Turret_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextEditCtrl(Turret_Image) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 61";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            skinName = "sandred";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "13 61";
+            extent = "106 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = " Weapon image name:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 83";
+            extent = "114 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Range of turret (studs):";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Turret_Delay) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 106";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 105";
+            extent = "193 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Enter time between shots (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 127";
+            extent = "193 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Valid Targets:";
+            maxLength = "255";
+         };
+         new GuiPopUpMenuCtrl(Turret_Targets) {
+            profile = "TBM_PopUpMenuProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 128";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            maxPopupHeight = "200";
+         };
+
+      };
+      new GuiControl(Frame_Switch_Scaler) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 0";
+            extent = "156 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 13";
+            extent = "41 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "to scale.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Scaler_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "210 8";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 28";
+            extent = "137 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 41";
+            extent = "190 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "your ID to it. This links brick and switch.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "211 32";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Scaler_Name).getValue());";
+            helpTag = "0";
+            text = "Assign Doorset #";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 65";
+            extent = "90 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Magnitude:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "113 65";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "180 65";
+            extent = "34 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y axis:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "250 65";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z axis:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Scaler_X) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "149 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Scaler_Y) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "216 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Scaler_Z) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "284 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 92";
+            extent = "102 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Adjust Speed";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 128";
+            extent = "121 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Adjust Smoothing";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(Scaler_Speed) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "140 92";
+            extent = "170 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "5.000000 100.000000";
+            ticks = "9";
+            value = "5";
+         };
+         new GuiSliderCtrl(Scaler_Smooth) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "140 128";
+            extent = "170 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "1.000000 360.000000";
+            ticks = "20";
+            value = "1";
+         };
+      };
+      new GuiControl(Frame_Switch_Pivot) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+ 
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 2";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 13";
+            extent = "182 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "rotate. This links the brick and switch.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Pivot_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "206 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 28";
+            extent = "137 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 41";
+            extent = "57 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "your ID to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "206 33";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Pivot_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 64";
+            extent = "93 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Origin (X, Y):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "110 64";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "160 64";
+            extent = "34 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Pivot_X) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "127 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(Pivot_Y) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "177 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "220 64";
+            extent = "33 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z rotation:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Pivot_rot) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "278 65";
+            extent = "25 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 93";
+            extent = "101 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Speed (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 132";
+            extent = "104 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Rotation smoothness:";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(Pivot_Speed) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 92";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "5.000000 100.000000";
+            ticks = "10";
+            value = "5";
+         };
+         new GuiSliderCtrl(Pivot_Smooth) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "130 132";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "1.000000 360.000000";
+            ticks = "18";
+            value = "1";
+         };
+      };
+      new GuiControl(Frame_Switch_Colors) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+     
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 5";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Pick an ID for the brick you want to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 18";
+            extent = "180 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "color. This links the brick and switch.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Color_Name) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "205 10";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$doorsetnum";
+            command = "commandtoserver(\'autodoorsetobj\',$doorsetnum);";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 33";
+            extent = "170 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select your mover brick and assign";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 46";
+            extent = "86 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "an ID number to it.";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "205 37";
+            extent = "100 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "SOS_Assign(nameToID(Color_Name).getValue());";
+            helpTag = "0";
+            text = "Assign ID Number";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 72";
+            extent = "107 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Color 1:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Color_Name1) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "52 72";
+            extent = "75 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            command = "Color_bg1.setBitmap(\"tbm/data/shapes/\"@ (isFile(\"tbm/data/shapes/\"@ Color_Name1.getValue() @\".blank.jpg\") ? Color_Name1.getValue() : \"base\") @ \".blank.jpg\");";
+         };
+         new GuiBitmapCtrl(Color_bg1) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "132 69";
+            extent = "25 25";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "~/data/shapes/base.blank.jpg";
+            wrap = "0";
+         };
+         new GuiButtonCtrl(Color_Skin1) {
+            profile = "DP_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "132 69";
+            extent = "25 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "$colorsetting=8;Canvas.pushdialog(Colorpalletgui);";
+            helpTag = "0";
+            text = " ";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "162 72";
+            extent = "107 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Color 2:";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Color_Name2) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "200 72";
+            extent = "75 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiBitmapCtrl(Color_bg2) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "280 69";
+            extent = "25 25";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "~/data/shapes/base.blank.jpg";
+            wrap = "0";
+         };
+         new GuiButtonCtrl(Color_Skin2) {
+            profile = "DP_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "280 69";
+            extent = "25 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "$colorsetting=9;Canvas.pushdialog(Colorpalletgui);";
+            helpTag = "0";
+            text = " ";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 98";
+            extent = "101 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Cooldown (miliseconds):";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(Color_Cooldown) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "137 97";
+            extent = "175 35";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "50.000000 500.000000";
+            ticks = "9";
+            value = "100";
+         };
+      };
+      new GuiControl(Frame_Switch_Kill) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 2";
+            extent = "260 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Set a death message so people can tell the difference";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 14";
+            extent = "184 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "tell between a bottomless pit and lava.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Kill_Message) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "40 40";
+            extent = "240 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 80";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Use (Player) for the player\'s name:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 93";
+            extent = "142 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "ex. \"(Player) fell to his doom.\"";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(Frame_Switch_Wait) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 18";
+         extent = "316 175";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 2";
+            extent = "260 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Type how long, in seconds, the switch should wait";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 14";
+            extent = "184 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "before processing the next action.";
+            maxLength = "255";
+         };
+         new GuiTextEditCtrl(Wait_Time) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "40 40";
+            extent = "240 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            command = "Wait_Output.setText(\" Wait for:\" SPC millisecondsToTime($thisControl.getValue() * 1000));";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl(Wait_Output) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "42 80";
+            extent = "168 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "0 s";
+            maxLength = "255";
+         };
+      };
+      new GuiCheckBoxCtrl(Switch_Sleep) {
+         profile = "TBM_CheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 194";
+         extent = "160 21";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Begin next action immediately";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 214";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "SwitchAction_OK();";
+         helpTag = "0";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "166 214";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "SwitchAction_Cancel();";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//$SwitchActionFrame[$SwitchActionFrames++] = 
+//$SwitchActionFrame["name_of_switch"] = 
+
+//function Frame_Switch_Whatever::populate(%this, %action)
+//function Frame_Switch_Whatever::save(%this, %action)
+
+//Switch frame lists
+$SwitchActionFrames = 0;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Teleporter;
+$SwitchActionFrame["teleport"] = Frame_Switch_Teleporter;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Jumper;
+$SwitchActionFrame["jump"] = Frame_Switch_Jumper;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Mover;
+$SwitchActionFrame["move"] = Frame_Switch_Mover;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Rotator;
+$SwitchActionFrame["rotate"] = Frame_Switch_Rotator;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_MR;
+$SwitchActionFrame["mr"] = Frame_Switch_MR;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Cloaker;
+$SwitchActionFrame["cloak"] = Frame_Switch_Cloaker;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Fader;
+$SwitchActionFrame["fade"] = Frame_Switch_Fader;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Effects;
+$SwitchActionFrame["effect"] = Frame_Switch_Effects;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Turret;
+$SwitchActionFrame["turret"] = Frame_Switch_Turret;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Scaler;
+$SwitchActionFrame["scale"] = Frame_Switch_Scaler;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Pivot;
+$SwitchActionFrame["pivot"] = Frame_Switch_Pivot;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Colors;
+$SwitchActionFrame["color"] = Frame_Switch_Colors;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Kill;
+$SwitchActionFrame["kill"] = Frame_Switch_Kill;
+$SwitchActionFrame[$SwitchActionFrames++] = Frame_Switch_Wait;
+$SwitchActionFrame["wait"] = Frame_Switch_Wait;
+
+//Populate methods, to initialize the frame when opening the specified action
+
+function Frame_Switch_Teleporter::populate(%this, %action) {
+//Nothing atm; 2.2 teleporters don't have any options to speak of.
+//2.3 will hopefully have some effects to choose from.
+}
+
+function Frame_Switch_Jumper::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      nameToID(Jumper_X).setvalue(getWord(%direction, 0));
+      nameToID(Jumper_Y).setvalue(getWord(%direction, 1));
+      nameToID(Jumper_Z).setvalue(getWord(%direction, 2));
+      nameToID(Jumper_Delay).settext($Client::Switch::Delay[%action]);
+      nameToID(Jumper_Times).settext($Client::Switch::Times[%action]);
+}
+
+function Frame_Switch_Mover::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      %times = $Client::Switch::Times[%action];
+      nameToID(Mover_Speed).setvalue(($Client::Switch::Delay[%action] * %times) /100);
+      nameToID(Mover_Smooth).setvalue(%times);
+      nameToID(Mover_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(Mover_X).setText(getWord(%direction, 0) * %times * 2);
+      nameToID(Mover_Y).setText(getWord(%direction, 1) * %times * 2);
+      nameToID(Mover_Z).setText(getWord(%direction, 2) * %times * 5);
+}
+
+function Frame_Switch_Rotator::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      %times = $Client::Switch::Times[%action];
+      nameToID(Rotator_Speed).setvalue(($Client::Switch::Delay[%action] * %times) /100);
+      nameToID(Rotator_Smooth).setvalue(%times);
+      nameToID(Rotator_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(Rotator_X).settext(getWord(%direction, 0) * %times);
+      nameToID(Rotator_Y).settext(getWord(%direction, 1) * %times);
+      nameToID(Rotator_Z).settext(getWord(%direction, 2) * %times);
+}
+
+function Frame_Switch_MR::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      %times = $Client::Switch::Times[%action];
+      nameToID(MR_Speed).setvalue(($Client::Switch::Delay[%action] * %times) /100);
+      nameToID(MR_Smooth).setvalue(%times);
+      nameToID(MR_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(MRM_X).settext(getWord(%direction, 0) * %times * 2);
+      nameToID(MRM_Y).settext(getWord(%direction, 1) * %times * 2);
+      nameToID(MRM_Z).settext(getWord(%direction, 2) * %times * 5);
+      nameToID(MRR_X).settext(getWord(%direction, 3) * %times);
+      nameToID(MRR_Y).settext(getWord(%direction, 4) * %times);
+      nameToID(MRR_Z).settext(getWord(%direction, 5) * %times);
+}
+
+function Frame_Switch_Cloaker::populate(%this, %action) {
+      nameToID(Cloaker_Name).settext($Client::Switch::Doorset[%action]);
+}
+
+function Frame_Switch_Fader::populate(%this, %action) {
+      nameToID(Fader_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(Fader_Speed).setvalue($Client::Switch::Delay[%action]/100);
+}
+
+function Frame_Switch_Effects::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      nameToID(FX_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(FX_Image).settext(getWord(%direction, 0));
+      nameToID(FX_Color).settext(getWord(%direction, 1));
+      nameToID(FX_ColorBG).setbitmap("tbm/data/shapes/" @ getWord(%direction, 1)@  ".blank.jpg");
+      nameToID(FX_Mountpoint).settext($Client::Switch::Times[%action]);
+      nameToID(FX_Trigger).setValue($Client::Switch::Delay[%action]);
+}
+
+function Frame_Switch_Turret::populate(%this, %action) {
+      nameToID(Turret_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(Turret_Image).settext($Client::Switch::Direction[%action]);
+      nameToID(Turret_Delay).settext(getWord($Client::Switch::Delay[%action], 0));
+      nameToID(Turret_Range).settext(getWord($Client::Switch::Delay[%action], 1));
+      nameToID(Turret_Targets).clear();
+      for(%i = 1; %i <= $Client::Switch::numGroups; %i++)
+        nameToID(Turret_Targets).add($Client::Switch::Groupname[$Client::Switch::Group[%i]], %i);
+      nameToID(Turret_Targets).setSelected(1);
+      for(%i = 1; %i <= $Client::Switch::numGroups; %i++) {
+        if($Client::Switch::Times[%action] $= $Client::Switch::Group[%i])
+          nameToID(Turret_Targets).setSelected(%i);
+      }
+}
+
+function Frame_Switch_Scaler::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      %times = $Client::Switch::Times[%action];
+      nameToID(Scaler_Speed).setvalue(($Client::Switch::Delay[%action] * %times) /100);
+      nameToID(Scaler_Smooth).setvalue(%times);
+      nameToID(Scaler_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(Scaler_X).settext(getWord(%direction, 0) * %times);
+      nameToID(Scaler_Y).settext(getWord(%direction, 1) * %times);
+      nameToID(Scaler_Z).settext(getWord(%direction, 2) * %times);
+}
+
+function Frame_Switch_Pivot::populate(%this, %action) {
+      %direction = $Client::Switch::Direction[%action];
+      %times = $Client::Switch::Times[%action];
+      nameToID(Pivot_Speed).setvalue(($Client::Switch::Delay[%action] * %times) /100);
+      nameToID(Pivot_Smooth).setvalue(%times);
+      nameToID(Pivot_Name).settext($Client::Switch::Doorset[%action]);
+      nameToID(Pivot_X).settext(getWord(%direction, 0));
+      nameToID(Pivot_Y).settext(getWord(%direction, 1));
+      nameToID(Pivot_rot).settext(getWord(%direction, 2) * %times);
+}
+
+function Frame_Switch_Colors::populate(%this, %action) {
+    nameToID(Color_Name).setValue($Client::Switch::Doorset[%action]);
+    nameToID(Color_Name1).setValue(getWord($Client::Switch::Direction[%action], 0));
+    nameToID(Color_Name2).setValue(getWord($Client::Switch::Direction[%action], 1));
+    nameToID(Color_Cooldown).setvalue($Client::Switch::Delay[%action]);
+}
+
+function Frame_Switch_Kill::populate(%this, %action) {
+    nameToID(Kill_Message).setvalue($Client::Switch::Direction[%action]);
+}
+
+function Frame_Switch_Wait::populate(%this, %action) {
+    nameToID(Wait_Time).setvalue($Client::Switch::Delay[%action] / 1000);
+    Wait_Output.setText(" Wait for:" SPC millisecondsToTime($Client::Switch::Delay[%action]));
+}
+
+//Save methods, to save the action's appropriate data back into the data arrays
+
+function Frame_Switch_Teleporter::save(%this, %action) {
+    $Client::Switch::Delay[%action]= "";
+    $Client::Switch::Direction[%action]= $Client::Switch::TeleportDestination[%action];
+    $Client::Switch::Doorset[%action] = -2;
+    $Client::Switch::Times[%action] = "";
+    //Nothing atm really; 2.2 teleporters don't have any options to speak of.
+    //2.3 will hopefully have some effects to choose from.
+}
+
+function Frame_Switch_Jumper::save(%this, %action) {
+    $Client::Switch::Delay[%action]= nameToID(Jumper_Delay).getValue();
+    $Client::Switch::Direction[%action] = mRound(nameToID(Jumper_X).getValue()) SPC mRound(nameToID(Jumper_Y).getValue()) SPC mRound(nameToID(Jumper_Z).getValue());
+    $Client::Switch::Doorset[%action] =-1;
+    $Client::Switch::Times[%action] = nameToID(Jumper_Times).getValue();
+}
+
+function Frame_Switch_Mover::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(Mover_Speed).getValue()) * 100;
+    $Client::Switch::Times[%action] = mRound(nameToID(Mover_Smooth).getValue());
+    $Client::Switch::Doorset[%action] = nameToID(Mover_Name).getValue();
+    $Client::Switch::Direction[%action] =(nameToID(Mover_X).getValue() / 2 / $Client::Switch::Times[%action]) SPC (nameToID(Mover_Y).getValue() / 2 / $Client::Switch::Times[%action]) SPC (nameToID(Mover_Z).getValue() / 5 / $Client::Switch::Times[%action]);
+    $Client::Switch::Delay[%action]= mRound($Client::Switch::Delay[%action] / $Client::Switch::Times[%action]);
+}
+
+function Frame_Switch_Rotator::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(Rotator_Speed).getValue()) * 100;
+    $Client::Switch::Times[%action] = mRound(nameToID(Rotator_Smooth).getValue());
+    $Client::Switch::Doorset[%action] = nameToID(Rotator_Name).getValue();
+    $Client::Switch::Direction[%action] =(nameToID(Rotator_X).getValue() / $Client::Switch::Times[%action]) SPC (nameToID(Rotator_Y).getValue() / $Client::Switch::Times[%action]) SPC (nameToID(Rotator_Z).getValue() / $Client::Switch::Times[%action]);
+    $Client::Switch::Delay[%action]= mRound($Client::Switch::Delay[%action] / $Client::Switch::Times[%action]);
+}
+
+function Frame_Switch_MR::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(MR_Speed).getValue()) * 100;
+    $Client::Switch::Times[%action] = mRound(nameToID(MR_Smooth).getValue());
+    $Client::Switch::Doorset[%action] = nameToID(MR_Name).getValue();
+    $Client::Switch::Direction[%action] =(nameToID(MRM_X).getValue() / 2 / $Client::Switch::Times[%action]) SPC (nameToID(MRM_Y).getValue() / 2 / $Client::Switch::Times[%action]) SPC (nameToID(MRM_Z).getValue() / 5 / $Client::Switch::Times[%action]);
+    $Client::Switch::Direction[%action] =$Client::Switch::Direction[%action] SPC (nameToID(MRR_X).getValue() / $Client::Switch::Times[%action]) SPC (nameToID(MRR_Y).getValue() / $Client::Switch::Times[%action]) SPC (nameToID(MRR_Z).getValue() / $Client::Switch::Times[%action]);    
+    $Client::Switch::Delay[%action]= mRound($Client::Switch::Delay[%action] / $Client::Switch::Times[%action]);
+}
+
+function Frame_Switch_Cloaker::save(%this, %action) {
+    $Client::Switch::Delay[%action]= "";
+    $Client::Switch::Direction[%action] = "";
+    $Client::Switch::Doorset[%action] = nameToID(Cloaker_Name).getValue();
+    $Client::Switch::Times[%action] = "";
+}
+
+function Frame_Switch_Fader::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(Fader_Speed).getValue()) * 100; //NTS: The GUI actually says milliseconds when it means deciseconds: if you pick 5 it takes a half-second to fade/unfade.
+    $Client::Switch::Direction[%action] = "";
+    $Client::Switch::Doorset[%action] = nameToID(Fader_Name).getValue();
+    $Client::Switch::Times[%action] = "";
+}
+
+function Frame_Switch_Effects::save(%this, %action) {
+    $Client::Switch::Delay[%action]= nameToID(FX_Trigger).getValue();
+    $Client::Switch::Direction[%action] = nameToID(FX_Image).getValue() SPC nameToID(FX_Color).getValue();
+    $Client::Switch::Doorset[%action] = nameToID(FX_Name).getValue();
+    $Client::Switch::Times[%action] = nameToID(FX_Mountpoint).getValue();
+}
+
+function Frame_Switch_Turret::save(%this, %action) {
+    $Client::Switch::Delay[%action]= nameToID(Turret_Delay).getValue() SPC nameToID(Turret_Range).getValue();
+    $Client::Switch::Direction[%action] = nameToID(Turret_Image).getValue();
+    $Client::Switch::Doorset[%action] = nameToID(Turret_Name).getValue();
+    $Client::Switch::Times[%action] = $Client::Switch::Group[nameToID(Turret_Targets).getSelected()];
+}
+
+function Frame_Switch_Scaler::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(Scaler_Speed).getValue()) * 100;
+    $Client::Switch::Times[%action] = mRound(nameToID(Scaler_Smooth).getValue());
+    $Client::Switch::Doorset[%action] = nameToID(Scaler_Name).getValue();
+    $Client::Switch::Direction[%action] =(nameToID(Scaler_X).getValue() / $Client::Switch::Times[%action]) SPC (nameToID(Scaler_Y).getValue() / $Client::Switch::Times[%action]) SPC (nameToID(Scaler_Z).getValue() / $Client::Switch::Times[%action]);
+    $Client::Switch::Delay[%action]= mRound($Client::Switch::Delay[%action] / $Client::Switch::Times[%action]);
+}
+
+function Frame_Switch_Pivot::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(Pivot_Speed).getValue()) * 100;
+    $Client::Switch::Times[%action] = mRound(nameToID(Pivot_Smooth).getValue());
+    $Client::Switch::Delay[%action]= mRound($Client::Switch::Delay[%action] / $Client::Switch::Times[%action]);
+    $Client::Switch::Doorset[%action] = nameToID(Pivot_Name).getValue();
+    $Client::Switch::Direction[%action] = (nameToID(Pivot_X).getValue()) SPC (nameToID(Pivot_Y).getValue()) SPC (nameToID(Pivot_rot).getValue() / $Client::Switch::Times[%action]);
+}
+
+function Frame_Switch_Colors::save(%this, %action) {
+    $Client::Switch::Delay[%action]= mRound(nameToID(Color_Cooldown).getValue());
+    $Client::Switch::Direction[%action] = nameToID(Color_Name1).getValue() SPC nameToID(Color_Name2).getValue();
+    $Client::Switch::Doorset[%action] = nameToID(Color_Name).getValue();
+    $Client::Switch::Times[%action] = "";
+}
+
+function Frame_Switch_Kill::save(%this, %action) {
+    $Client::Switch::Delay[%action]= "";
+    $Client::Switch::Direction[%action] = nameToID(Kill_Message).getValue();
+    $Client::Switch::Doorset[%action] = "";
+    $Client::Switch::Times[%action] = "";
+}
+
+function Frame_Switch_Wait::save(%this, %action) {
+    $Client::Switch::Delay[%action]= nameToID(Wait_Time).getValue() * 1000;
+    $Client::Switch::Direction[%action] = "";
+    $Client::Switch::Doorset[%action] = "";
+    $Client::Switch::Times[%action] = "";
+}
+
+//getElapsedTime methods; these are here so Frame_Switches_ActionList can draw from these to display to the user the approximate amount of time a specific action will take.
+//All returns should be in milliseconds
+
+function Frame_Switch_Teleporter::getElapsedTime(%this, %action) {
+return 500;
+}
+
+function Frame_Switch_Jumper::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action] * $Client::Switch::Times[%action];
+}
+
+function Frame_Switch_Mover::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action] * $Client::Switch::Times[%action];
+}
+
+function Frame_Switch_Rotator::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action] * $Client::Switch::Times[%action];
+}
+
+function Frame_Switch_MR::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action] * $Client::Switch::Times[%action];
+}
+
+function Frame_Switch_Cloaker::getElapsedTime(%this, %action) {
+return 500;
+}
+
+function Frame_Switch_Fader::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action];
+}
+
+function Frame_Switch_Effects::getElapsedTime(%this, %action) {
+return 500;
+}
+
+function Frame_Switch_Turret::getElapsedTime(%this, %action) {
+return 500;
+}
+
+function Frame_Switch_Scaler::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action] * $Client::Switch::Times[%action];
+}
+
+function Frame_Switch_Pivot::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action] * $Client::Switch::Times[%action];
+}
+
+function Frame_Switch_Colors::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action];
+}
+
+function Frame_Switch_Kill::getElapsedTime(%this, %action) {
+return 500;
+}
+
+function Frame_Switch_Wait::getElapsedTime(%this, %action) {
+return $Client::Switch::Delay[%action];
+}
+
+
+//
+//GUI functions and methods
+//
+
+function SwitchActionGui::onWake(%this) {
+SwitchActionWindow.setText($Client::Switch::Realname[$Client::Switch::Type[switchActionGui.currentAction]]);
+}
+
+function SwitchAction_OK() {
+$SwitchActionFrame[$Client::Switch::Type[switchActionGui.currentAction]].save(switchActionGui.currentAction);
+$Client::Switch::Sleep[switchActionGui.currentAction] = Switch_Sleep.getValue();
+if(switchActionGui.currentAction == $Client::Switch::numActions + 1)
+  $Client::Switch::numActions = switchActionGui.currentAction;
+canvas.popDialog(SwitchActionGui);
+loadSwitchActionList();
+}
+
+function SwitchAction_Cancel() {
+canvas.popDialog(SwitchActionGui);
+if(switchActionGui.currentAction > $Client::Switch::numActions)
+  $Client::Switch::Type[switchActionGui.currentAction] = ""; //We should be okay if this stays as whatever since nothing over the maximum ever gets cleaned up, but it can't hurt to have this here.
+}
+
+function Effects_popupmenuOnSelect() {
+%text = Effects_popupmenu.getText();
+FX_Image.setValue(%text);
+}
+
+function SOS_Assign(%doorset) {
+  commandtoserver('AdjustObj', 500, getWord(strReplace(%doorset, ",", " "), 0));
+}
+
+//getElapsedTime
+//switchActionGui.currentAction

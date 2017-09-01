@@ -1,0 +1,2148 @@
+5 0 0 0 0 -152.048 -145.004 -1045.3 1 0 0 0 1 10 10 staticguardrail 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -181 -27.0051 1402.5 1 0 0 0 1 1 4 staticPlate6x6 0 sandgreen 0 0 0
+5 0 0 0 0 -113 -35.503 154.9 1 0 0 0 1 1 9 staticPlate1x14 0 grayDark 0 0 0
+5 47.5 0 270 0 -105 -12.003 1408.7 0.373587 0.373586 -0.849038 99.3348 1 1 1 staticdecal2x2 0 scomputer3 0 0 0
+5 0 0 90 0 -149 -77.0042 -1038.9 0 0 1 90.0002 13 58 0.3333 staticSlate1x1 0 grayDark 0 0 0
+5 47.5 0 0 0 -130.5 -83.0036 -1036.9 1 0 0 47.5 1 1 1 staticdecal2x2 0 scomputer1 0 0 0
+5 0 0 315 0 -105 21.9966 163.9 0 0 -1 44.9999 1 1 4 staticPlate6x8 0 rust 0 0 0
+5 312.5 0 180 0 -122.994 -140.506 -1037.09 -5.10514e-007 0.402744 0.915313 180 -1 -1 -1 staticdecal2x2 0 radar05 0 0 0
+5 47.5 0 90 0 -159 -28.0042 1402.1 0.373585 -0.373586 0.849039 99.3348 1 1 1 staticdecal2x2 0 radar03 0 0 0
+5 0 0 90 0 -106 -49.003 165.3 0 0 1 90.0002 1 1 1 staticdecal1x2 0 redstripes 0 0 0
+5 0 0 270 0 -136.494 -107.506 -1045.3 0 0 -1 90.0002 1 1 0.333333 staticPlate1x1 0 yellowflipflop 0 0 0
+5 0 0 90 0 -111 31.497 165.1 0 0 1 90.0002 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+4 0 0 0 0 -160.969 -15.976 1400.16 1 0 0 0 3.9 3.9 0.333 portculyswitch 0 mediumblueviolet 0 0 -2 0 1.10899¤6.64858¤-1236.05¤0¤0¤1¤1.68876 0 0 0 1 0
+5 0 0 75 0 -107 -39.003 163.9 0 0 1 75.0002 1 1 4 staticPlate8x12 0 rust 0 0 0
+5 0 0 0 0 -100.5 -4.00282 -1039.9 1 0 0 0 1 48 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -109 -28.003 1406.1 1 0 0 0 1 1 3 staticPlate1x1 0 yellow 0 0 0
+5 0 0 180 0 -149 -76.5042 -1039.1 0 0 1 180 1 1 20 staticPlate1x14 0 base 0 0 0
+5 0 0 0 0 -120.5 -84.0036 -1039.1 1 0 0 0 1 1 20 staticPlate1x14 0 base 0 0 0
+5 0 0 0 0 -98.5 -0.00277345 -1045.9 1 0 0 0 4 4 10 statictrans1x1round 0 blue 0 0 0
+5 0 0 90 0 -152.5 -83.5042 -1039.1 0 0 1 90.0002 1 16 10 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 270 0 -120.5 -84.0036 -1039.1 0 0 -1 90.0002 1 10 10 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 270 0 -125.5 -84.0036 -1039.1 0 0 -1 90.0002 1 22 2 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -120.994 -145.006 -1044.5 0 0 1 180 1 1 17.3333 staticPlate1x2 0 sandblue 0 0 0
+5 0 0 270 0 -107 10.997 149.5 0 0 -1 89.9999 1 28 20 staticSlate1x1 0 0 0 103 0
+5 0 0 0 0 -125 -63.0036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -100.5 -20.003 -1044.7 0 0 -1 90.0002 1 41 8 staticPlate1x1 0 base 0 0 0
+5 0 0 90 0 -130 22.4964 170.5 0 0 1 90.0002 1 52 8 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 270 0 -108.5 -40.003 -1039.9 0 0 -1 90.0002 1 1 0.333333 staticSlate8x24 0 black 0 0 0
+5 0 0 180 0 -133 -39.0036 155.5 0 0 1 180 1 1 0.333333 staticSlate4x4 0 lightroyalblue 0 0 0
+5 47.5 0 180 0 -156.5 6.49562 1402.1 5.10518e-007 -0.402747 0.915311 180 1 1.45 1 staticdecal1x2 0 littlecomputer1 0 0 0
+5 0 0 90 0 -123 -49.0036 165.5 0 0 1 90.0002 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 0 0 -52.4994 -19.5021 163.9 1 0 0 0 1 1 10 staticPlate1x4 0 black 0 0 0
+5 0 0 180 0 -148.497 -7.5051 -1045.3 0 0 1 180 1 1 0.333333 staticSlate1x8 0 yellow 0 0 To 
+5 0 0 0 0 -52.4997 -6.50225 163.9 1 0 0 0 1 1 10 staticPlate1x4 0 black 0 0 0
+5 0 0 180 0 -154.5 -28.0042 1401.5 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -109.5 -65.503 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 330 0 90 0 -139 21.9958 165.5 -0.25056 0.250561 0.935114 93.841 1 3 0.333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 0 0 -113 -65.503 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -115.5 -65.503 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -119 -65.5036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -121 -37.0036 163.7 0 0 -1 90.0002 20 30 0.333333 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 0 0 -109.5 -49.503 165.5 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -123.5 -49.5036 165.5 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -121.5 -49.5036 165.5 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -109.5 -49.503 165.5 0 0 -1 90.0002 0.25 1 2 staticplate1x3 0 brightblueviolet 0 0 0
+5 0 0 90 0 -111.5 -49.003 166.7 0 0 1 90.0002 1 1.25 0.3333 staticSlate1x4 0 black 0 0 0
+5 0 0 90 0 -119.5 -9.50336 1407.9 0 0 1 90.0002 1 21 0.3333 staticSlate1x1 0 yellow 0 0 0
+5 0 0 90 0 -123.5 -49.0036 165.3 0 0 1 90.0002 1 1.25 0.3333 staticSlate1x4 0 black 0 0 0
+5 0 0 90 0 -123.5 -49.0036 166.7 0 0 1 90.0002 1 1.25 0.3333 staticSlate1x4 0 black 0 0 0
+5 0 0 90 0 -111 -49.003 165.1 0 0 1 90.0002 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 270 0 -129.5 -83.5036 -1037.5 0 0 -1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 70 0 180 0 -124.49 -77.7836 -1036.49 7.2706e-007 -0.573576 0.819152 180 1.5 1.25 1 staticdecal2x2 0 scomputer1 0 0 0
+5 0 0 90 0 -136.5 -83.5036 -1037.9 0 0 1 90.0002 1 5.5 0.6 staticBrick1x4x5window 0 grayDark 0 0 0
+5 0 0 90 0 -136.5 -83.5036 -1036.1 0 0 1 90.0002 1 5.5 0.6 staticBrick1x4x5window 0 grayDark 0 0 0
+5 0 0 270 0 -121 -20.0036 169.3 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 -20.0036 163.9 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 -20.0036 164.5 1 0 0 0 1 1 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -154 -7.50432 164.5 1 0 0 0 1 38 8 staticPlate1x1 0 base 0 0 0
+5 0 70 270 0 -124.5 -78.0036 -1037.45 -0.497543 0.497543 -0.710565 109.208 1 1 0.2 staticSlate2x3 0 black 0 0 0
+5 0 0 90 0 -148.5 -90.0042 -1044.1 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 90 0 -122 -4.00342 163.9 0 0 1 90.0002 1 1 1 staticslopeC2x2 82.16.150.56 mediumstonegrey 0 0 0
+5 355 355 270 0 162 -11.9952 1361.5 -4.47048e-008 -0.0868255 -0.996224 90.4357 150 200 1 slatewedge2x3L 0 0 0 0 0
+5 5 355 90 0 -136.7 -12.0036 1387.7 4.32146e-007 -0.0868258 0.996224 90.437 150 200 1 slatewedge2x3R 0 0 0 0 0
+5 0 0 0 0 -122 -5.00342 169.3 1 0 0 0 1 1 1 staticslopeIC2x2 82.16.150.56 mediumstonegrey 0 0 0
+5 0 0 270 0 -122 -4.50342 164.5 0 0 -1 90.0002 1 32 8 staticPlate1x1 82.16.150.56 0 0 0 0
+5 0 0 90 0 -107 -4.003 169.3 0 0 1 90.0002 1 1 1 staticslopeIC2x2 82.16.150.56 mediumstonegrey 0 0 0
+5 0 0 270 0 -106 11.997 163.9 0 0 -1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -138 -20.0036 163.9 0 0 -1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 90 0 180 0 -76.5 0.487846 -1042.3 -8.96324e-007 0.707108 -0.707106 180 1.5 1.61 1 staticdecal2x2 0 inf1 0 0 0
+5 0 0 90 0 -71.9994 -12.5018 -1043.7 0 0 1 90.0002 1 1 1 staticdecal1x2 0 panel4 0 0 0
+5 0 0 180 0 -106 -4.003 163.9 0 0 1 180 1 1 1 staticslopeC2x2 82.16.150.56 mediumstonegrey 0 0 0
+5 0 0 180 0 -124.51 -78.1836 -1037.37 0 0 1 180 1.5 1.5 1 staticdecal2x2 0 keyboard 0 0 0
+5 0 0 180 0 -106 -19.003 169.3 0 0 1 180 1 1 1 staticslopeIC2x2 82.16.150.56 mediumstonegrey 0 0 0
+5 0 0 270 0 -106 -20.003 163.9 0 0 -1 90.0002 1 1 1 staticslopeC2x2 82.16.150.56 mediumstonegrey 0 0 0
+5 0 0 90 0 -106 -19.503 164.5 0 0 1 90.0002 1 128 8 staticPlate1x1 82.16.150.56 base 0 0 0
+5 180 0 270 0 -129 -38.0036 174.3 0.707107 0.707106 -8.96322e-007 180 19 20 0.33333 staticSlate8x8 0 black 0 0 0
+5 0 0 0 0 -104.5 -30.503 1400.1 1 0 0 0 1 37 3 staticSlate1x2 0 base 0 0 0
+5 0 0 90 0 -154 -7.00432 163.9 0 0 1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -184 7.99484 1399.9 0 0 1 90.0002 10 20 0.33333 staticSlate8x8 0 grayDark 0 0 0
+5 180 0 270 0 -130 33.9964 170.1 0.707107 0.707106 -8.96322e-007 180 3 6.5 0.333333 staticSlate8x8 0 black 0 0 0
+5 0 0 90 0 -148.5 -88.5042 -1042.3 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 90 0 -148.5 -88.0042 -1041.7 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 180 0 270 0 -184 -32.0054 1412.3 0.707107 0.707106 -8.96322e-007 180 10 20 0.33333 staticSlate8x8 0 black 0 0 0
+5 180 0 90 0 -41.5 -10.0012 170.1 -0.707106 0.707108 -8.96324e-007 180 1 17 0.333333 staticSlate4x8 0 black 0 0 0
+5 0 0 180 0 -116.5 -20.003 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 0 0 -122 -4.50342 164.5 1 0 0 0 1 34 8 staticPlate1x1 82.16.150.56 base 0 0 0
+5 0 0 0 0 -106 -4.003 169.3 0 0 1 90.0002 1 128 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -138 -4.0039 163.9 0 0 1 180 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -154 -17.0042 163.9 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -106 -4.003 164.5 0 0 1 90.0002 1 128 8 staticPlate1x1 82.16.150.56 base 0 0 0
+5 0 0 0 0 -122 -4.00342 163.9 1 0 0 0 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 90 0 45 0 -138.632 -92.5189 -1041.7 0.862857 -0.357407 0.357406 98.4212 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 0 0 -106 11.997 169.3 0 0 1 180 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 11.9964 163.9 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -106.5 -4.503 164.5 1 0 0 0 1 34 8 staticPlate1x1 82.16.150.56 0 0 0 0
+5 0 0 180 0 -106 11.997 163.9 0 0 1 180 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -106 -4.003 163.9 0 0 1 90.0002 1 128 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -121 11.9964 169.3 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -41.9994 -20.0012 163.9 0 0 -1 90.0002 1 128 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -41.9994 -20.0012 169.3 0 0 -1 90.0002 1 128 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 -4.00342 169.3 1 0 0 0 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -106 12.997 169.3 0 0 1 180 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -104.5 -34.003 -1044.7 0 0 -1 90.0002 1 1 8 staticPlate1x8 0 grayDark 0 0 0
+5 0 0 90 0 -108.5 -42.003 -1044.7 0 0 1 90.0002 1 1 8 staticPlate1x8 0 grayDark 0 0 0
+5 0 0 90 0 -138 -4.0039 163.9 0 0 1 90.0002 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -108.5 -40.003 -1044.7 0 0 1 180 1 1 8 staticPlate1x4 0 grayDark 0 0 0
+5 0 0 90 0 -138 -4.0039 169.3 0 0 1 90.0002 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -122 -20.0036 164.5 0 0 -1 90.0002 1 32 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -109 -36.003 -1044.7 1 0 0 0 1 1 8 staticPlate1x4 0 grayDark 0 0 0
+5 0 0 270 0 -122 -20.0036 163.9 0 0 -1 90.0002 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -122 -20.0036 169.3 0 0 -1 90.0002 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -154 -36.0042 169.3 1 0 0 0 1 38 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -153.5 11.9958 164.5 0 0 1 90.0002 1 12 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -138 11.9964 163.9 0 0 1 180 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -154 -36.0042 163.9 1 0 0 0 1 38 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -154 11.9958 163.9 0 0 1 90.0002 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -138 -19.5036 164.5 0 0 1 180 1 32 8 staticPlate1x1 0 base 0 0 0
+5 0 0 270 0 -138 -36.0036 163.9 0 0 -1 90.0002 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -153 -17.0042 169.3 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -154 -7.00432 169.3 1 0 0 0 1 38 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -138 -20.0036 169.3 0 0 1 180 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -154 11.9958 169.3 0 0 1 90.0002 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -138 -36.0036 169.3 0 0 -1 90.0002 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -108.5 -36.003 -1044.7 0 0 -1 90.0002 1 24 8 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -153.5 -16.5042 164.5 0 0 1 180 1 38 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -138 -20.0036 163.9 0 0 1 180 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -154 -7.00432 163.9 1 0 0 0 1 38 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -138 11.9964 169.3 0 0 1 180 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -138.5 -36.0038 164.5 0 0 -1 90.0002 1 10 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -138 -19.0036 169.3 0 0 1 180 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -139 -4.0039 169.3 0 0 1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -107.5 -37.003 -1044.1 1 0 0 0 1 1 0.333333 staticSlate4x4 0 lightroyalblue 0 0 0
+5 0 0 0 0 -138.5 -4.5039 164.5 1 0 0 0 1 32 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -154 -8.00432 169.3 1 0 0 0 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -106 -20.003 163.9 0 0 1 180 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 -36.0036 163.9 1 0 0 0 1 32 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 -36.0036 169.3 1 0 0 0 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -106 -20.003 169.3 0 0 1 180 1 32 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -106 -36.003 163.9 0 0 1 90.0002 1 16 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -130 -36.0036 163.9 0 0 1 90.0002 1 16 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -130 -36.0036 169.3 0 0 1 90.0002 1 16 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -43.9997 -6.50213 163.9 0 0 1 180 1 1 10 staticPlate8x24 0 black 0 0 0
+5 0 0 90 0 -106 -36.003 169.3 0 0 1 90.0002 1 16 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -97.9988 -36.003 163.9 0 0 1 180 1 64 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -97.9988 -36.003 169.3 0 0 1 180 1 64 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -97.9982 -68.003 163.9 0 0 -1 90.0002 1 64 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -97.9982 -68.003 169.3 0 0 -1 90.0002 1 64 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -130 -68.0036 163.9 1 0 0 0 1 64 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -130 -68.0036 169.3 1 0 0 0 1 64 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 90 0 135 0 -136.511 -95.3613 -1041.7 -0.281083 0.6786 -0.678597 211.399 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 90 0 -122 -36.0036 163.9 0 0 1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 150 0 -137.628 -118.444 -1044.3 0 0 1 150 1 1 2 staticPlate1x6 0 black 0 0 0
+5 0 0 90 0 -107 -36.003 169.3 0 0 1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 -37.0036 169.3 1 0 0 0 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 240 0 -134.293 -129.22 -1044.3 0 0 -1 120 16 1 1 staticSlope1x2x3I 0 black 0 0 0
+5 0 0 0 0 -148.997 -16.5051 -1045.3 1 0 0 0 1 1 0.333333 staticSlate1x8 0 yellow 0 0 From 
+5 0 0 270 0 -122 11.9964 163.9 0 0 -1 90.0002 1 16 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -122 11.9964 169.3 0 0 -1 90.0002 1 16 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -98.0006 11.997 163.9 0 0 -1 90.0002 1 16 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -98.0006 11.997 169.3 0 0 -1 90.0002 1 16 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -125 -36.5036 160.9 0 0 1 90.0002 1 8 4.6666 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -108.5 -42.003 -1039.9 1 0 0 0 1 1 0.333333 staticSlate8x16 0 black 0 0 0
+5 0 0 0 0 -130 11.9964 163.9 1 0 0 0 1 64 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -130 11.9964 169.3 1 0 0 0 1 64 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 180 0 0 0 -167.5 -12.0048 170.1 1 0 0 180 31.5 20 0.333333 staticSlate8x8 0 black 0 0 0
+5 0 0 90 0 -130 43.9964 163.9 0 0 1 90.0002 1 64 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -130 43.9964 169.3 0 0 1 90.0002 1 64 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -98.0012 43.997 163.9 0 0 1 180 1 64 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -98.0012 43.997 169.3 0 0 1 180 1 64 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -106 12.497 164.5 0 0 1 90.0002 1 1 8 staticPlate1x16 0 base 0 0 0
+5 0 0 0 0 -130 12.4964 164.5 1 0 0 0 1 62 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -117.5 -49.5035 165.5 0 0 1 180 1 1 1 staticdecal1x2 0 police 0 0 0
+5 0 0 270 0 -122 11.9964 164.5 0 0 -1 90.0002 1 1 8 staticPlate1x16 0 base 0 0 0
+5 0 0 90 0 -129.5 43.9964 164.5 0 0 1 90.0002 1 62 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -98.0012 43.497 164.5 0 0 1 180 1 62 8 staticPlate1x1 0 base 0 0 0
+5 290 0 180 0 -110.5 -51.503 164.5 -7.27058e-007 0.573574 0.819154 180 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 270 0 -98.4982 -68.003 164.5 0 0 -1 90.0002 1 62 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -98.4982 -67.503 164.5 1 0 0 0 1 62 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -130 -67.5036 164.5 1 0 0 0 1 62 8 staticPlate1x1 0 base 0 0 0
+5 0 0 270 0 -121.5 -36.5036 164.5 0 0 -1 90.0002 1 16 8 staticPlate1x1 0 base 0 0 0
+5 0 0 90 0 -106.5 -36.003 164.5 0 0 1 90.0002 1 16 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -121.5 -20.0036 164.5 0 0 1 180 1 32 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -106 -19.503 164.5 0 0 1 180 1 33 8 staticPlate1x1 0 base 0 0 0
+5 180 0 270 0 -102 33.497 170.1 0.707107 0.707106 -8.96322e-007 180 1 1 0.333333 staticSlate4x12 0 black 0 0 0
+5 0 0 270 0 -136.5 -84.0036 -1039.1 0 0 -1 90.0002 1 1 8 staticPlate1x10 0 grayDark 0 0 0
+5 0 0 0 0 -121 3.49658 165.3 1 0 0 0 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -71.4994 -12.5018 -1042.7 1 0 0 0 1 1 1 statictrans1x1round 0 blue 0 0 0
+5 0 0 0 0 -121 -67.0036 163.7 1 0 0 0 6 30 0.333333 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 0 0 -108.5 -50.003 165.1 1 0 0 0 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 0 0 -161 -16.0048 163.9 1 0 0 0 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 47.5 0 0 0 -157.5 -30.5042 1402.1 1 0 0 47.5 1 1.45 1 staticdecal1x2 0 littlecomputer2 0 0 0
+5 0 0 0 0 -161 -10.0048 163.9 1 0 0 0 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 0 0 0 0 -87.9988 -40.0024 163.9 1 0 0 0 1 1 1 staticPlate8x8 0 black 0 0 0
+5 0 0 180 0 -106.5 -49.003 165.1 0 0 1 180 1 1 0.333333 staticSlate1x2 0 white 0 0 0
+5 0 0 0 0 -161 -16.0048 1400.1 1 0 0 0 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 0 0 270 0 -125.5 -38.0036 165.1 0 0 -1 90.0002 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 0 0 -119 -50.0036 165.3 1 0 0 0 0.25 1 2 staticPlate1x2 0 grayDark 0 0 0
+5 0 0 270 0 -48.9997 -16.0027 163.9 0 0 -1 90.0002 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 0 0 270 0 -49 -10.003 163.9 0 0 -1 90.0002 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 180 0 270 0 -169.5 -10.0048 170.1 0.707107 0.707106 -8.96322e-007 180 7.5 32 0.333333 staticSlate8x8 0 black 0 0 0
+5 0 0 180 0 -105.5 -49.003 165.1 0 0 1 180 1 1 0.333333 staticSlate1x2 0 white 0 0 0
+5 0 0 180 0 -156.5 -8.00438 169.9 0 0 1 180 1 1 50 staticPlate1x16 0 black 0 0 0
+5 0 0 0 0 -71.4994 -13.0018 -1045.1 1 0 0 0 1 1 0.333333 staticSlate2x2 0 black 0 0 0
+5 47.5 0 180 0 -126 -37.5036 165.9 5.10518e-007 -0.402747 0.915311 180 1 1.45 1 staticdecal1x2 0 littlecomputer1 0 0 0
+5 47.5 0 270 0 -155 -29.0042 1402.1 0.373587 0.373586 -0.849038 99.3348 1 0.74 1 staticdecal2x2 0 satellite01 0 0 0
+5 180 0 90 0 -111.5 -10.003 170.1 -0.707106 0.707108 -8.96324e-007 180 1 19 0.333333 staticSlate4x8 0 black 0 0 0
+5 0 0 0 0 -158 -8.00444 154.7 1 0 0 0 1 1 75.333 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -158 -17.0042 154.7 1 0 0 0 1 1 75.333 staticPlate2x2 0 black 0 0 0
+5 180 0 270 0 -130 19.9964 170.1 0.707107 0.707106 -8.96322e-007 180 28 100 0.33333 staticSlate1x1 0 black 0 0 0
+4 0 0 0 0 -132.503 -83.496 -1037.69 1 0 0 0 2 2 2 portculyswitch 0  0 0 -2 0 -17.891¤-98.667¤-12.38¤0¤0¤1¤3.14155 0 0 0 1 Beam me up Scotty! 
+5 0 0 270 0 -154 -17.0042 163.9 0 0 -1 90.0002 1 1 11 staticPlate1x6 0 base 0 0 0
+5 0 0 270 0 -154 -7.50432 163.9 0 0 -1 90.0002 1 1 11 staticPlate1x6 0 base 0 0 0
+5 0 0 0 0 -165.994 -115.506 -1045.5 1 0 0 0 40 40 0.333333 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 270 0 -108.5 -14.003 1406.1 0 0 -1 90.0002 1 1 1 staticSlate8x24 0 grayDark 0 0 0
+5 0 0 180 0 -108.5 3.99694 1407.9 0 0 1 180 1 28 0.3333 staticSlate1x1 0 yellow 0 0 0
+5 0 310 0 0 -116.6 3.9967 1399.88 0 -1 0 50 1 1.33333 17.6666 staticPlate1x6 0 black 0 0 0
+5 0 0 90 0 -100.5 3.99718 -1039.9 0 0 1 90.0002 1 48 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 310 0 0 -116.6 -32.003 1399.88 0 -1 0 50 1 1.33333 17.6666 staticPlate1x6 0 black 0 0 0
+5 0 0 0 0 -104.5 -32.003 1400.1 1 0 0 0 1 1 20 staticSlate1x3 0 base 0 0 0
+5 0 0 90 0 -148.5 -89.5042 -1043.5 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 270 0 -129 -83.5036 -1038.7 0 0 -1 90.0002 1 1 2 staticplate2x10 0 grayDark 0 0 0
+5 0 0 90 0 -148.5 -89.0042 -1042.9 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 0 0 -158.5 -11.0039 163.9 1 0 0 0 1 1 0.333333 staticSlate1x8 0 yellow 0 0 From 
+5 0 0 90 0 -148.5 -91.0042 -1045.3 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 0 0 -108.5 -32.003 1406.1 1 0 0 0 1 10 1 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 90 0 -119.5 -14.0036 1407.9 0 0 1 90.0002 1 21 0.3333 staticSlate1x1 0 yellow 0 0 0
+5 47.5 0 180 0 -109.5 30.997 165.9 5.10518e-007 -0.402747 0.915311 180 1 0.74 1 staticdecal2x2 0 satellite02 0 0 0
+5 0 0 0 0 -109 3.49694 1406.1 1 0 0 0 1 1 3 staticPlate1x1 0 yellow 0 0 0
+5 47.5 0 90 0 -159 4.9955 1402.1 0.373585 -0.373586 0.849039 99.3348 1 1.45 1 staticdecal1x2 0 littlecomputer2 0 0 0
+5 47.5 0 90 0 -119 -11.5036 1408.7 0.373585 -0.373586 0.849039 99.3348 1 1 1 staticdecal2x2 0 radar01 0 0 0
+5 0 0 180 0 -120.5 -40.0036 154.3 0 0 1 180 1 1 10 staticPlate1x12 0 grayDark 0 0 0
+5 47.5 0 0 0 -114.5 -58.503 165.9 1 0 0 47.5 1 1.45 1 staticdecal1x2 0 littlecomputer2 0 0 0
+5 0 0 0 0 -122.5 -51.5036 164.5 1 0 0 0 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 290 0 180 0 -121.5 -51.5036 164.5 -7.27058e-007 0.573574 0.819154 180 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 270 0 -121 -46.5036 154.3 0 0 -1 90.0002 1 2 10 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 0 0 -121 -36.0036 154.3 1 0 0 0 1 1 10 staticPlate1x12 0 grayDark 0 0 0
+5 47.5 0 270 0 -155 3.99562 1402.1 0.373587 0.373586 -0.849038 99.3348 1 0.74 1 staticdecal2x2 0 satellite03 0 0 0
+5 0 0 270 0 -108.5 -40.503 -1044.7 0 0 -1 90.0002 1 24 8 staticPlate1x1 0 grayDark 0 0 0
+5 312.5 0 270 0 -120.43 4.49659 165.83 -0.373584 -0.373584 -0.849041 99.3349 -1 -1 -1 staticdecal1x2 0 littlecomputer1 0 0 0
+5 0 0 345 0 -107 -18.503 163.9 0 0 -1 14.9998 1 1 3 staticPlate6x6 0 brightbluegreen 0 0 0
+5 0 0 0 0 -111.5 -51.503 164.5 1 0 0 0 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 90 0 -118.5 -49.5036 165.3 0 0 1 90.0002 1 1 0.333333 staticSlate1x2 0 white 0 0 0
+5 0 0 0 0 -111.5 -51.503 163.9 1 0 0 0 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -122.5 -51.5036 163.9 1 0 0 0 1 1 1 staticPlate2x2 0 black 0 0 0
+5 90 0 315 0 -141.475 -94.6408 -1041.7 0.862857 0.357406 -0.357405 98.4212 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 15 0 -134 -17.5036 163.9 0 0 1 15 1 1 3 staticplate4x6 0 lemonmetallic 0 0 0
+5 0 0 345 0 -111.5 2.99688 163.9 0 0 -1 14.9998 1 1 5 staticplate6x10 0 flameredorange 0 0 0
+5 0 322 270 0 -146 -91.0042 -1045.3 0.309575 -0.309575 -0.89907 96.0845 1 1 12.6666 staticPlate1x4 0 grayDark 0 0 0
+5 0 0 0 0 -109 -14.503 1406.1 1 0 0 0 1 1 3 staticPlate1x1 0 yellow 0 0 0
+5 0 0 0 0 -143.5 -28.5042 163.9 1 0 0 0 1 1 3 staticPlate4x4 0 bluemetallic 0 0 0
+5 0 0 330 0 -102 -61.003 165.7 0 0 -1 29.9998 1 1 3 staticPlate4x4 0 earthorange 0 0 0
+5 0 0 0 0 -101.5 -59.503 163.9 1 0 0 0 1 1 3 staticPlate4x4 0 lemonmetallic 0 0 0
+5 0 0 0 0 -102.5 -62.503 163.9 1 0 0 0 1 1 3 staticPlate4x4 0 rust 0 0 0
+5 0 0 15 0 -104.5 -60.003 163.9 0 0 1 15 1 1 3 staticPlate4x4 0 bluemetallic 0 0 0
+5 0 0 0 0 -109 -10.003 1406.1 1 0 0 0 1 1 3 staticPlate1x1 0 yellow 0 0 0
+5 0 0 0 0 -107.5 -41.003 -1044.1 1 0 0 0 1 1 0.333333 staticSlate4x4 0 lightroyalblue 0 0 0
+5 0 0 0 0 -119.5 -10.0036 1406.1 1 0 0 0 1 1 3 staticPlate1x1 0 yellow 0 0 0
+5 0 0 0 0 -107.5 -37.003 -1044.7 1 0 0 0 1 1 1 staticPlate4x4 0 grayDark 0 0 From 
+5 0 0 180 0 -152 -7.00453 -1045.3 0 0 1 180 1 3 10 staticPlate1x16 0 black 0 0 0
+5 0 0 45 0 -78 -8.00222 163.9 0 0 1 45 1 1 2 staticPlate4x4 0 lightbrickyellow 0 0 0
+5 0 0 0 0 -109 -28.003 1407.9 1 0 0 0 1 28 0.3333 staticSlate1x1 0 yellow 0 0 0
+5 0 0 0 0 -108.5 -42.003 -1044.9 1 0 0 0 1 1 0.333333 staticPlate8x16 0 black 0 0 0
+5 0 0 0 0 -119.5 -14.5036 1406.1 1 0 0 0 1 1 3 staticPlate1x1 0 yellow 0 0 0
+4 0 0 0 0 -107.487 -40.9938 -1044.04 1 0 0 0 4 4 0.3333 portculyswitch 0 lightroyalblue 0 0 -2 0 -26.974¤0.3652¤1199.75¤0¤0¤1¤1.48848 0 0 0 1 0
+5 0 0 270 0 -135.494 -108.006 -1045.3 0 0 -1 90.0002 1 1 0.333333 staticPlate1x1 0 sandyellow 0 0 0
+5 0 0 180 0 -98.4988 -45.003 165.1 0 0 1 180 1 1 0.333333 staticPlate1x16 0 black 0 0 0
+5 0 0 270 0 -98.4988 -37.003 165.1 0 0 -1 90.0002 1 1 0.333333 staticPlate1x16 0 black 0 0 0
+5 0 0 180 0 -98.4988 -37.003 165.1 0 0 1 180 1 1 0.333333 staticPlate1x16 0 black 0 0 0
+5 0 0 90 0 -106.5 12.997 165.1 0 0 1 90.0002 1 1 0.333333 staticPlate1x16 0 black 0 0 0
+5 0 0 0 0 -99.0006 20.997 165.1 1 0 0 0 1 1 0.333333 staticPlate1x16 0 black 0 0 0
+5 0 0 0 0 -99.0006 12.997 165.1 1 0 0 0 1 1 0.333333 staticPlate1x16 0 black 0 0 0
+4 0 0 180 0 -133.032 -34.9941 155.565 0 0 1 180 4 4 0.3333 portculyswitch 0 lightroyalblue 0 0 -2 0 26.461¤-1.1012¤-1199.5¤0¤0¤-1¤1.60491 0 0 0 1 0
+5 0 0 90 0 -120.5 -36.0036 -1044.9 0 0 1 90.0002 1 1 0.333333 staticPlate8x24 0 black 0 0 0
+5 0 0 180 0 -104 -34.003 -1044.7 0 0 1 180 1 2 8 staticSlate1x12 0 grayDark 0 0 0
+5 0 0 0 0 -107.5 -41.003 -1044.7 1 0 0 0 1 1 1 staticPlate4x4 0 grayDark 0 0 To 
+5 0 0 90 0 -161.5 -7.50456 173.1 0 0 1 90.0002 1 1 44 staticPlate6x6 0 black 0 0 0
+5 0 0 180 0 -47.9994 -17.0021 163.9 0 0 1 180 1 1 10 staticPlate8x24 0 grayDark 0 0 0
+5 0 0 0 0 -76.5 0.497846 -1043.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -133 -37.0036 154.9 0 0 -1 90.0002 1 1 1 staticPlate4x4 0 grayDark 0 0 To 
+5 0 0 180 0 -133 -39.0036 154.9 0 0 1 180 1 1 1 staticPlate4x4 0 grayDark 0 0 From 
+5 47.5 0 270 0 -105 -13.003 1408.7 0.373587 0.373586 -0.849038 99.3348 1 1 1 staticdecal2x2 0 scomputer5 0 0 0
+5 0 0 270 0 -102 33.497 171.3 0 0 -1 90.0002 1 1 0.333333 staticPlate1x4 69.37.78.82 lightstonegrey 0 0 0
+5 0 0 0 0 -152 -15.5045 -1045.3 1 0 0 0 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 0 0 90 0 -165.5 -7.50468 173.1 0 0 1 90.0002 1 1 44 staticPlate6x6 0 black 0 0 0
+5 0 0 90 0 -126 -78.0036 -1037.5 0 0 1 90.0002 1 1 0.2 staticSlate2x3 0 black 0 0 0
+5 90 0 270 0 -121 -81.5036 -1033.5 0.577351 0.577351 -0.577349 120 3 3 1 staticdecal2x2 0 scomputer3 0 0 0
+5 0 0 0 0 -134 -83.0036 -1037.44 1 0 0 0 1 1 1 staticdecal1x2 0 panel1 0 0 0
+5 0 0 90 0 -134 -82.5036 -1037.5 0 0 1 90.0002 1 1 0.1 staticSlate1x2 0 base 0 0 0
+5 0 0 270 0 -131.5 -83.5036 -1037.5 0 0 -1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -121 -81.5036 -1035.7 1 0 0 0 0.1 1 5 staticPlate1x6 0 black 0 0 0
+5 47.5 0 0 0 -132.5 -83.0036 -1036.9 1 0 0 47.5 1 0.75 1 staticdecal2x2 0 boxpanel1 0 0 0
+5 0 0 0 0 -119.5 -12.5036 1408.1 1 0 0 0 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -145 19.9958 168.1 0 0 1 180 1 1 0.333333 staticplate4x8 0 black 0 0 0
+5 0 0 0 0 -155.5 -29.0042 1400.1 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -147 15.9958 165.5 1 0 0 0 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 90 0 -134 -83.0036 -1037.5 0 0 1 90.0002 0.1 1 1 staticPlate1x2 0 base 0 0 0
+4 0 0 0 0 -144.114 11.4139 166.111 1 0 0 0 1 1 1 portculyswitch 0 green 3 52 901 50 0¤2.5¤0 0 0 0 0 0
+5 0 0 0 0 -159.5 3.9955 1401.5 1 0 0 0 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 90 0 -123.494 -140.006 -1037.9 0 0 1 90.0002 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 0 0 -155.5 3.99562 1400.1 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -159.5 3.9955 1400.1 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -159.5 -29.0042 1400.1 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -157.5 -31.0042 1400.1 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -156.5 -31.0042 1401.5 0 0 -1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -159.5 -29.0042 1401.5 1 0 0 0 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -71.4994 -13.0018 -1044.9 1 0 0 0 1 1 1 staticdecal2x2 0 panel3 0 0 0
+5 0 0 90 0 -157.5 6.99556 1401.5 0 0 1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -154.5 4.99562 1401.5 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -116.5 19.997 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 0 0 -119.5 -12.5036 1406.7 1 0 0 0 1 1 2 staticPlate2x2 0 0 0 0 0
+5 180 0 0 0 -133.48 -103.506 -1042.7 1 0 0 180 1 3 2 staticdecal1x2side 0 arrowyellow 0 0 0
+5 0 0 270 0 -121.994 -141.006 -1037.7 0 0 -1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -157.5 5.99556 1400.1 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 90 0 -147.5 11.9958 164.5 0 0 1 90.0002 1 1 2 staticPlate1x6 0 base 0 0 0
+5 0 0 270 0 -138.5 11.4962 164.5 0 0 -1 90.0002 1 12 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -145 15.9958 168.1 0 0 1 180 1 1 0.333333 staticplate4x8 0 black 0 0 0
+5 0 0 90 0 -147.5 11.9958 168.1 0 0 1 90.0002 1 1 2 staticPlate1x6 0 base 0 0 0
+5 0 0 0 0 -147.5 11.9958 165.7 1 0 0 0 1 1 4 staticPlate1x16 0 lightstonegrey 0 0 0
+5 0 0 0 0 -145 11.9958 165.7 1 0 0 0 1 1 4 staticPlate1x16 0 lightstonegrey 0 0 0
+5 0 0 0 0 -147 11.9958 165.5 1 0 0 0 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 180 270 90 0 -144.5 11.4958 165.7 -0.577349 0.577352 -0.57735 120 1 1 0.333333 staticPlate6x6 0 base 0 901 0
+5 0 0 90 0 -143 21.9958 165.5 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 90 0 -147 21.9958 165.5 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 -24.003 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 330 0 90 0 -139 21.9958 168.1 -0.25056 0.250561 0.935114 93.8407 1 3 0.333 staticplate4x8 0 black 0 0 0
+5 0 0 90 0 -143 21.9958 168.1 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 black 0 0 0
+5 0 0 90 0 -147 21.9958 168.1 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 black 0 0 0
+5 0 0 90 0 -128.5 21.9964 171.5 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -68.5 3.49808 -1044.7 0 0 1 180 1 96 8 staticPlate1x1 0 base 0 0 0
+5 0 0 90 0 -124.5 21.9964 171.5 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 90 0 -148 -4.00414 -1044.7 0 0 1 90.0002 1 96 8 staticPlate1x1 0 base 0 0 0
+5 0 0 90 0 -120.5 21.9964 171.5 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 90 0 -116.5 21.997 171.5 0 0 1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 15.997 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 11.997 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 7.9967 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 3.9967 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 -0.00328027 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 -4.0033 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 -8.0033 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 -12.003 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -116.5 -16.003 171.5 0 0 1 180 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 180 0 -137.52 -103.506 -1043.9 0 0 1 180 1 3 2 staticdecal1x2side 0 arrowyellow 0 0 0
+5 0 0 90 0 -116 -9.50324 171.7 0 0 1 90.0002 1 9 4 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 270 0 -148.5 -16.5042 -1045.3 0 0 -1 90.0002 1 1 10 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 270 0 -111.5 -12.003 171.5 0 0 -1 90.0002 1 1 0.333333 staticplate4x8 0 grayDark 0 0 0
+5 0 0 90 0 -123 -49.0036 165.1 0 0 1 90.0002 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 90 0 -111.5 -49.003 165.3 0 0 1 90.0002 1 1.25 0.3333 staticSlate1x4 0 black 0 0 0
+5 0 0 270 0 -125 -41.0036 163.7 0 0 -1 90.0002 14 4 0.333333 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 0 0 -96.9994 -20.003 163.7 1 0 0 0 14 4 0.333333 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 180 0 -116 -12.003 171.7 0 0 1 180 1 60 4 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 0 0 -116.5 -27.503 171.7 1 0 0 0 1 1 4 staticPlate1x4 0 lightstonegrey 0 0 0
+5 0 0 0 0 -116.5 -12.003 171.5 1 0 0 0 1 1 0.333333 staticPlate2x4 0 grayDark 0 0 0
+5 0 0 15 0 -133.496 -42.5052 -1045.3 0 0 1 15 1 1 4 staticPlate8x8 0 rust 0 0 0
+5 0 0 0 0 -147.5 19.9958 165.7 1 0 0 0 1 1 4 staticPlate1x4 0 lightstonegrey 0 0 0
+5 0 0 90 0 -144.5 20.0058 165.7 0 0 1 90.0002 1 1.83 15 staticPlate1x16 0 lightstonegrey 0 0 0
+5 0 0 90 0 -147 22.4958 163.9 0 0 1 90.0002 1 2.16666 18 staticPlate1x16 0 lightstonegrey 0 0 0
+5 0 0 0 0 -151.994 -146.006 -1034.1 1 0 0 0 1 1 1 staticslopeI3x2 0 sandblue 0 0 0
+5 0 0 90 0 -151.994 -145.006 -1033.5 0 0 1 90.0002 2 62 0.333 staticSlate1x1 0 sandblue 0 0 0
+5 0 0 0 0 -151.994 -146.006 -1045.1 1 0 0 0 1 1 1 staticslope3x2 0 sandblue 0 0 0
+5 0 0 90 0 -151.994 -145.006 -1045.3 0 0 1 90.0002 2 62 0.333 staticSlate1x1 0 sandblue 0 0 0
+5 0 0 0 0 -107 -65.503 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -120.994 -145.006 -1045.1 0 0 1 180 1 1 1 staticslope3x2 0 sandblue 0 0 0
+5 0 0 180 0 -116 19.997 171.7 0 0 1 180 1 60 4 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 180 0 -118.5 19.9964 171.7 0 0 1 180 1 100 4 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 90 0 -130 19.9964 170.7 0 0 1 90.0002 1 23 8 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 180 0 -109 -10.003 170.1 0 0 1 180 1 1 8 staticPlate1x4 0 lightstonegrey 0 0 0
+5 0 0 0 0 -112 -12.003 170.1 1 0 0 0 1 1 2.33333 staticPlate1x4 0 lightstonegrey 0 0 0
+5 0 0 90 0 -111.5 -12.003 170.1 0 0 1 90.0002 1 1 8 staticPlate1x4 0 lightstonegrey 0 0 0
+5 0 0 270 0 -109.5 -10.003 170.1 0 0 -1 90.0002 1 1 8 staticPlate1x4 0 lightstonegrey 0 0 0
+5 0 0 90 0 -116 -12.003 171.7 0 0 1 90.0002 1 9 4 staticPlate1x1 0 lightstonegrey 0 0 0
+5 0 0 90 0 -116 19.997 170.5 0 0 1 90.0002 1 5 8 staticPlate1x6 0 lightstonegrey 0 0 0
+5 0 0 180 0 -158.5 5.49556 1401.3 0 0 1 180 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 0 0 -149 -83.5042 -1036.3 1 0 0 0 1 1 0.333333 staticSlate1x16 0 black 0 0 0
+5 0 0 0 0 -149 -83.5042 -1037.5 1 0 0 0 1 1 0.333333 staticSlate1x16 0 black 0 0 0
+5 0 0 180 0 -98.5012 43.497 163.9 0 0 1 180 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -126 38.4964 163.9 1 0 0 0 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -103.5 38.497 163.9 1 0 0 0 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -108 38.497 163.9 1 0 0 0 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -112.5 38.497 163.9 1 0 0 0 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -117 38.497 163.9 1 0 0 0 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 90 0 -128.5 38.9964 163.9 0 0 1 90.0002 1 1 2 staticPlate2x4 0 lemonmetallic 0 0 0
+5 0 0 0 0 -121.5 38.4964 163.9 1 0 0 0 1 1 10 staticPlate1x10 0 base 0 0 0
+5 0 0 90 0 -107.5 38.997 163.9 0 0 1 90.0002 1 1 10 staticPlate1x8 0 blue 1 605 0
+5 0 0 0 0 -129 39.4964 163.9 1 0 0 0 1 1 3 staticPlate4x4 0 mediumblue 0 0 0
+5 0 0 90 0 -125.5 38.9964 163.9 0 0 1 90.0002 1 1 10 staticPlate1x8 0 blue 1 601 0
+5 0 0 90 0 -121 38.9964 163.9 0 0 1 90.0002 1 1 10 staticPlate1x8 0 blue 1 602 0
+5 0 0 90 0 -116.5 38.997 163.9 0 0 1 90.0002 1 1 10 staticPlate1x8 0 blue 1 603 0
+5 0 0 90 0 -112 38.997 163.9 0 0 1 90.0002 1 1 10 staticPlate1x8 0 blue 1 604 0
+5 0 0 0 0 -125.5 38.5964 163.9 1 0 0 0 8 0.5 10 statictrans1x1 0 red 0 601 0
+5 0 0 0 0 -121 38.5964 163.9 1 0 0 0 8 0.5 10 statictrans1x1 0 red 0 602 0
+5 0 0 0 0 -116.5 38.597 163.9 1 0 0 0 8 0.5 10 statictrans1x1 0 red 0 603 0
+5 0 0 0 0 -112 38.597 163.9 1 0 0 0 8 0.5 10 statictrans1x1 0 red 0 604 0
+5 0 0 0 0 -107.5 38.597 163.9 1 0 0 0 8 0.5 10 statictrans1x1 0 red 0 605 0
+5 0 0 90 0 -103 38.997 163.9 0 0 1 90.0002 1 1 10 staticPlate1x8 0 blue 1 606 0
+5 0 0 0 0 -103 38.597 163.9 1 0 0 0 8 0.5 10 statictrans1x1 0 red 0 606 0
+5 0 0 0 0 -126.5 37.9964 163.9 1 0 0 0 55 1 0.3333 staticSlate1x3 0 grayDark 0 0 0
+5 0 0 0 0 -126.5 37.9964 169.3 1 0 0 0 55 1 1 staticSlate1x3 0 grayDark 0 0 0
+5 0 0 90 0 -125 32.4964 163.9 0 0 1 90.0002 1 53 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -125 32.4964 163.9 0 0 -1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -125 32.4964 163.9 0 0 1 180 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -98.5011 32.497 163.9 0 0 -1 90.0002 1 53 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -122 31.9964 163.9 0 0 1 180 1 28 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -98.5011 32.497 169.3 0 0 -1 90.0002 1 53 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -125 32.4964 169.3 0 0 1 90.0002 1 53 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -125 33.4964 169.3 0 0 1 180 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -126 32.4964 169.3 0 0 1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -125.5 32.9964 164.5 0 0 1 90.0002 1 30 8 staticPlate2x2 0 base 0 0 0
+5 0 0 0 0 -122 17.9964 163.9 1 0 0 0 1 28 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -122 17.9964 163.9 0 0 1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -122 17.9964 163.9 0 0 1 180 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -123 17.9964 169.3 0 0 1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 16.9964 169.3 1 0 0 0 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+4 0 0 0 0 -124.091 30.2415 164.318 1 0 0 0 1 1 1 portculyswitch 0 green 2 40 601 50 0¤0¤-0.16 0 0 0 0 0
+5 0 0 180 0 -122 31.9964 169.3 0 0 1 180 1 28 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122 17.9964 169.3 1 0 0 0 1 28 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -122.5 17.4964 164.5 1 0 0 0 1 15 8 staticPlate2x2 0 base 0 0 0
+5 0 0 180 0 -171.5 -20.0048 1400.1 0 0 1 180 1 24 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -124 29.9964 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -124 28.4964 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -124 26.9964 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -124 25.4964 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -124 23.9964 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -124 22.4964 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 black 0 0 0
+5 0 0 180 0 -104 7.99706 1411.5 0 0 1 180 1 100 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -171 -4.0048 1400.1 0 0 1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -171 -20.0048 1400.1 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -171.5 -4.00481 1400.1 0 0 1 180 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -171.5 -20.0048 1400.1 0 0 -1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+4 0 0 0 0 -124.087 22.7793 164.306 1 0 0 0 1 1 1 portculyswitch 0 green 2 40 606 50 0¤0¤-0.16 0 0 0 0 0
+4 0 0 0 0 -124.079 24.2844 164.307 1 0 0 0 1 1 1 portculyswitch 0 green 2 40 605 50 0¤0¤-0.16 0 0 0 0 0
+4 0 0 0 0 -124.044 25.7796 164.315 1 0 0 0 1 1 1 portculyswitch 0 green 2 40 604 50 0¤0¤-0.16 0 0 0 0 0
+4 0 0 0 0 -124.077 27.2797 164.316 1 0 0 0 1 1 1 portculyswitch 0 green 2 40 603 50 0¤0¤-0.16 0 0 0 0 0
+4 0 0 0 0 -124.07 28.7594 164.317 1 0 0 0 1 1 1 portculyswitch 0 green 2 40 602 50 0¤0¤-0.16 0 0 0 0 0
+5 0 0 270 0 -120.994 -141.006 -1039.3 0 0 -1 90.0002 114 1 0.333 staticSlate1x6 0 black 0 0 0
+5 0 0 0 0 -121.5 10.4964 165.1 1 0 0 0 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 270 0 -152.494 -116.006 -1045.5 0 0 -1 90.0002 1 20 20.6667 staticPlate1x1 0 0 0 0 0
+5 0 0 0 0 -161.5 -17.0048 173.5 1 0 0 0 1 1 4 staticPlate6x6 0 black 0 0 0
+5 0 0 90 0 -181.5 -22.0053 1400.1 0 0 1 90.0002 1 1 4 staticPlate6x6 0 lemonmetallic 0 0 0
+5 0 0 105 0 -181.5 -25.5053 1400.1 0 0 1 105 1 1 4 staticPlate6x6 0 sandyellow 0 0 0
+5 0 0 90 0 -158 6.99556 1401.3 0 0 1 90.0002 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 180 0 -154.5 5.49562 1401.3 0 0 1 180 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 75 0 -178.5 -24.505 1400.1 0 0 1 75.0002 1 1 4 staticPlate6x6 0 flameredorange 0 0 0
+5 0 0 0 0 -148.5 -87.0042 -1039.3 1 0 0 0 49 1 0.333 staticSlate1x6 0 black 0 0 0
+5 0 0 270 0 -114.5 18.997 163.9 0 0 -1 90.0002 1 1 3 staticPlate4x4 69.37.78.82 flameyelloworange 0 0 0
+5 0 0 105 0 -115.5 18.497 163.9 0 0 1 105 1 1 4 staticPlate6x8 69.37.78.82 darknougat 0 0 0
+5 0 0 0 0 -155.5 -29.5042 1401.3 1 0 0 0 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 90 0 -158 -30.0042 1401.3 0 0 1 90.0002 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 0 0 -159.5 -29.5042 1401.3 1 0 0 0 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 180 0 -104.5 -11.003 1408.1 0 0 1 180 1 1 1 staticslope2x4 0 black 0 0 0
+5 0 0 0 0 -105.5 -13.503 1407.9 1 0 0 0 1 1 0.333333 staticplate2x6 0 black 0 0 0
+5 0 0 180 0 -104.5 -11.003 1406.7 0 0 1 180 1 1 2 staticPlate2x4 0 0 0 0 0
+5 0 0 0 0 -51.9994 -11.0021 163.9 1 0 0 0 1 1 0.333333 staticSlate1x8 0 yellow 0 0 From 
+5 0 0 270 0 -120.994 -145.906 -1045.1 0 0 -1 90.0002 1 62 20 statictrans1x1 0 blue 0 0 0
+5 0 0 270 0 -102 19.997 171.5 0 0 -1 90.0002 1 1 0.333333 staticplate4x8 69.37.78.82 grayDark 0 0 0
+5 0 0 270 0 -120.994 -145.806 -1045.1 0 0 -1 90.0002 1 62 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -119.5 -13.0036 1407.9 1 0 0 0 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 270 0 -533.5 -87.015 160.7 0 0 -1 90.0002 1 1 0.333333 staticPlate6x12 0 0 0 0 0
+5 0 0 270 0 -108.5 19.997 171.5 0 0 -1 90.0002 1 1 0.333333 staticplate4x8 69.37.78.82 grayDark 0 0 0
+5 0 0 270 0 -104.5 19.997 171.5 0 0 -1 90.0002 1 1 0.333333 staticplate4x8 69.37.78.82 grayDark 0 0 0
+5 0 0 0 0 -51.9997 -7.00222 163.9 1 0 0 0 1 1 10 staticPlate8x24 0 grayDark 0 0 0
+5 90 0 225 0 -139.354 -97.4834 -1041.7 0.281085 0.6786 -0.678597 148.6 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 270 0 -116 -50.003 163.9 0 0 -1 90.0002 1 1 2 staticplate4x16 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -148.494 -141.006 -1039.3 0 0 -1 90.0002 114 1 0.333 staticSlate1x6 0 black 0 0 0
+5 0 0 180 0 -158 -13.0039 163.9 0 0 1 180 1 1 0.333333 staticSlate1x8 0 yellow 0 0 To 
+5 0 0 90 0 -112 -48.003 163.9 0 0 1 90.0002 1 1 2 staticplate4x16 0 lightgreymetallic 0 0 0
+5 312.5 0 90 0 -123.5 25.4964 165.71 -0.373583 0.373584 0.849041 99.3354 -1 -0.75 -1 staticdecal2x2 0 boxpanel1 0 0 0
+5 312.5 0 90 0 -123.5 22.4964 165.71 -0.373583 0.373584 0.849041 99.3354 -1 -1 -1 staticdecal2x2 0 scomputer2 0 0 0
+5 0 0 180 0 -171.5 7.99519 1400.1 0 0 1 180 1 24 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -104 35.997 170.1 0 0 1 90.0002 1 1 10 staticPlate1x4 69.37.78.82 lightstonegrey 0 0 0
+5 0 0 0 0 -104 21.997 171.5 1 0 0 0 1 1 0.333333 staticplate4x8 69.37.78.82 grayDark 0 0 0
+5 0 0 0 0 -104 25.997 171.5 1 0 0 0 1 1 0.333333 staticplate4x8 69.37.78.82 grayDark 0 0 0
+5 0 0 0 0 -104 29.997 171.5 1 0 0 0 1 1 0.333333 staticplate4x8 69.37.78.82 grayDark 0 0 0
+5 0 0 270 0 -113 -59.003 165.1 0 0 -1 90.0002 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 180 0 -120.55 -85.0036 -1045.3 0 0 1 180 1 10 10 staticguardrail 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -104.5 22.497 170.1 1 0 0 0 1 2 10 staticPlate1x16 69.37.78.82 lightstonegrey 0 0 0
+5 0 0 0 0 -102 19.997 170.1 1 0 0 0 1 2 10 staticPlate1x16 69.37.78.82 lightstonegrey 0 0 0
+5 0 0 180 0 -120.5 -84.0036 -1045.3 0 0 1 180 1 124 20 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -120.994 -145.006 -1034.1 0 0 1 180 1 1 1 staticslopeI3x2 0 sandblue 0 0 0
+5 0 0 90 0 -114.5 -58.003 163.9 0 0 1 90.0002 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -103.99 -32.503 1407.9 0 0 -1 90.0002 4 1 4 staticslopeI2x1 0 base 0 0 0
+5 0 0 270 0 -113.5 -59.003 165.3 0 0 -1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 270 0 -148.5 -8.0042 -1045.3 0 0 -1 90.0002 1 3 10 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 0 0 -152.494 -146.006 -1045.3 1 0 0 0 1 128 20 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -104 35.497 170.1 0 0 1 180 1 1 3 staticPlate1x4 69.37.78.82 lightstonegrey 0 0 0
+5 90 0 0 0 -134 -83.0036 -1036.9 1 0 0 90.0002 1 1 1 staticdecal1x2 0 tapereel 0 0 0
+5 0 0 180 0 -104 7.99706 1400.1 0 0 1 180 1 1 20 staticSlate1x3 0 base 0 0 0
+5 0 0 330 0 -125.5 -75.0036 -1045.3 0 0 -1 29.9998 1 1 5 staticPlate6x6 0 lightroyalblue 0 0 0
+5 312.5 0 90 0 -123.5 26.9964 165.71 -0.373583 0.373584 0.849041 99.3354 -1 -1 -1 staticdecal2x2 0 scomputer1 0 0 0
+5 312.5 0 90 0 -123.5 23.9964 165.71 -0.373583 0.373584 0.849041 99.3354 -1 -1 -1 staticdecal2x2 0 scomputer2 0 0 0
+5 312.5 0 90 0 -123.5 29.9964 165.71 -0.373583 0.373584 0.849041 99.3354 -1 -1 -1 staticdecal2x2 0 scomputer1 0 0 0
+5 0 0 0 0 -125 -65.5036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -121.5 -65.5036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -107 10.497 165.1 1 0 0 0 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 270 0 -102 33.497 170.1 0 0 -1 90.0002 1 1 2 staticPlate1x4 69.37.78.82 lightstonegrey 0 0 0
+5 0 0 90 0 -110.5 31.497 165.3 0 0 1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 0 0 -121 2.99658 165.1 1 0 0 0 1 1 0.333333 staticPlate2x4 0 black 0 0 0
+5 0 0 90 0 -110.5 31.497 163.9 0 0 1 90.0002 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -137.5 -46.0036 154.9 1 0 0 0 1 2 10 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 270 0 -158 -17.0042 154.7 0 0 -1 90.0002 1 16 75.333 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -135 -37.0036 155.5 1 0 0 0 1 1 0.333333 staticSlate4x4 0 lightroyalblue 0 0 0
+5 0 0 270 0 -121 -30.0036 154.3 0 0 -1 90.0002 1 2 10 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 90 0 -166 -7.00468 154.7 0 0 1 90.0002 1 16 75.333 staticSlate1x1 0 grayDark 0 0 0
+5 180 0 270 0 -102.001 35.497 170.1 0.707107 0.707106 -8.96322e-007 180 20 20 0.33333 staticSlate1x1 0 black 0 0 0
+5 0 0 180 0 -161.5 -7.50468 154.7 0 0 1 180 1 3 75.333 staticplate2x6 0 black 0 0 0
+5 0 0 180 0 -91.5 -6.00258 -1045.3 0 0 1 180 1 1 2 staticplate4x12 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -125.5 -43.0036 160.9 1 0 0 0 1 1 4.6666 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 90 0 -78.5 0.997792 -1043.9 0 0 1 90.0002 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 90 0 -74.4994 -24.002 -1044.1 0 0 1 90.0002 1 1 0.333333 staticSlate4x8 0 white 0 0 0
+5 0 0 270 0 -107 -3.503 149.519 0 0 -1 89.9999 1 28 20 staticSlate1x1 0 0 0 104 0
+5 0 0 0 0 -90.9994 -17.5028 163.9 1 0 0 0 1 1 4 staticPlate6x8 0 bluemetallic 0 0 0
+5 180 0 180 0 -102 35.497 170.1 -1.26759e-006 1 -1.26759e-006 180 4 20 0.33333 staticSlate1x1 0 black 0 0 0
+5 0 0 0 0 -161.5 -10.5048 163.1 1 0 0 0 1 1 0.333333 staticSlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -165.5 -10.5048 163.1 1 0 0 0 1 1 0.333333 staticSlate6x6 0 grayDark 0 0 0
+5 0 0 90 0 -122.994 -140.006 -1039.1 0 0 1 90.0002 1 1 2 staticPlate2x2 0 grayDark 0 0 0
+5 0 0 180 0 -162 -19.005 1400.1 0 0 1 180 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -162 -5.00486 1400.1 0 0 -1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -162 -5.00486 1400.1 0 0 1 180 1 28 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -148 -5.00465 1400.1 0 0 -1 90.0002 1 28 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -162 -19.005 1400.1 0 0 1 90.0002 1 28 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -111 -49.003 165.5 0 0 1 90.0002 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 180 0 -117 -49.003 165.3 0 0 1 180 0.25 1 2 staticPlate1x2 0 grayDark 0 0 0
+5 0 0 0 0 -121 3.49658 163.9 1 0 0 0 1 1 2 staticPlate2x2 0 lightgreymetallic 0 0 0
+5 0 0 90 0 -105 -37.003 163.7 0 0 1 90.0002 1 1 0.333333 staticPlate6x16 0 grayDark 0 0 0
+5 0 0 90 0 -119 -49.0036 165.9 0 0 1 90.0002 1 1 0.333333 staticSlate2x4 0 grayDark 0 0 0
+5 0 0 90 0 -161.5 -10.0048 154.7 0 0 1 90.0002 1 1 14 staticPlate1x6 0 black 0 0 0
+5 0 0 90 0 -165.5 -10.0048 154.7 0 0 1 90.0002 1 1 14 staticPlate1x6 0 black 0 0 0
+5 0 0 90 0 -161.5 -13.0048 163.9 0 0 1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 90 0 -161.5 -10.5048 163.9 0 0 1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 90 0 -51.4997 -13.003 163.9 0 0 1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 270 0 -48.4997 -11.003 163.9 0 0 -1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 270 0 -162.5 -14.0048 173.1 0 0 -1 90.0002 1 1 44 staticPlate1x6 0 black 0 0 0
+5 0 0 270 0 -158.5 -14.0042 173.1 0 0 -1 90.0002 1 1 44 staticPlate1x6 0 black 0 0 0
+5 0 0 90 0 -152 -11.0045 -1045.3 0 0 1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 90 0 -152 -12.5045 -1045.3 0 0 1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 180 0 -158 -13.5045 1400.1 0 0 1 180 1 1 0.333333 staticSlate1x6 0 yellow 0 0 To 
+5 0 0 0 0 -158.5 -10.5045 1400.1 1 0 0 0 1 1 0.333333 staticSlate1x6 0 yellow 0 0 From 
+5 0 0 90 0 -121.5 11.9964 163.9 0 0 1 90.0002 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 270 0 -106.5 -4.003 163.9 0 0 -1 90.0002 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 90 0 -121.5 11.9964 169.3 0 0 1 90.0002 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 180 0 0 0 -152.5 -74.0042 -1033.1 1 0 0 180 40 18 0.333333 staticSlate8x8 0 black 0 0 0
+5 0 0 0 0 -120.5 -50.0036 165.1 1 0 0 0 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 270 0 -120.5 -79.0036 -1038.7 0 0 -1 90.0002 1 1 2 staticplate4x16 0 grayDark 0 0 0
+5 180 0 270 0 -167.5 -84.0048 -1039.1 0.707107 0.707106 -8.96322e-007 180 30 30 0.333333 staticSlate8x8 0 black 0 0 0
+5 0 0 180 0 -51.4994 -13.0021 163.9 0 0 1 180 1 1 0.333333 staticSlate1x8 0 yellow 0 0 To 
+5 0 0 0 0 -129.5 -53.5036 165.55 1 0 0 0 1 1 1 staticwting3x14 68.37.73.143 lightgreymetallic 0 0 0
+5 0 0 0 0 -129.5 -53.5036 164.95 1 0 0 0 1 1 1 staticslopeI2x1 68.37.73.143 lightgreymetallic 0 0 0
+5 0 0 0 0 -129.5 -47.0036 164.95 1 0 0 0 1 1 1 staticslopeI2x1 68.37.73.143 lightgreymetallic 0 0 0
+5 0 0 0 0 -121.5 -4.00342 168.7 1 0 0 0 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 90 0 -138 -4.5039 164.5 0 0 1 90.0002 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 90 0 -138 -4.5039 168.7 0 0 1 90.0002 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 270 0 -136.5 -19.5036 164.5 0 0 -1 90.0002 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 270 0 -136.5 -19.5036 168.7 0 0 -1 90.0002 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 180 0 -136.5 -4.50384 163.9 0 0 1 180 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 90 0 -138 -19.0036 165.1 0 0 1 90.0002 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 90 0 -138 -4.5039 165.1 0 0 1 90.0002 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 270 0 -122 -19.5036 164.5 0 0 -1 90.0002 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 90 0 -123.5 -4.50348 165.1 0 0 1 90.0002 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 270 0 -122 -19.5036 165.1 0 0 -1 90.0002 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 180 0 -122 -4.50342 163.9 0 0 1 180 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 90 0 -123.5 -4.50348 164.5 0 0 1 90.0002 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 90 0 -123.5 -4.50348 168.7 0 0 1 90.0002 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 270 0 -122 -19.5036 168.7 0 0 -1 90.0002 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+4 0 0 0 0 -121.679 -21.2328 165.807 1 0 0 0 1 1 1 portculyswitch 0 green 2 54 102 48 0¤0¤-0.166667 0 0 0 0 Blast Doors 
+5 0 0 180 0 -122 -4.50342 169.3 0 0 1 180 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -121.5 -4.00342 165.1 1 0 0 0 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 0 0 -138 -19.5036 169.3 1 0 0 0 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -106.5 11.997 168.7 0 0 1 180 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 0 0 -121.5 10.4964 164.5 1 0 0 0 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 180 0 -106.5 11.997 164.5 0 0 1 180 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 0 0 -121.5 -4.00342 164.5 1 0 0 0 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 180 0 -106.5 -2.503 164.5 0 0 1 180 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 180 0 -122.5 -5.00343 171.916 0 0 1 180 1 30 9 staticSlate1x1 0 base 0 102 0
+5 0 0 180 0 -106.5 -2.503 168.7 0 0 1 180 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 0 0 -121.5 10.4964 168.7 1 0 0 0 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 90 0 -121.5 -2.50342 169.3 0 0 1 90.0002 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -107 -4.003 165.1 1 0 0 0 1 1 6 staticplate1x3 0 grayDark 0 0 0
+6 0 0 0 0 -162.826 0.0533654 -1.06466e+007 1 0 0 0 1 1 1 LightMaleHumanArmor  black 0 0 islandShowImage black islandaccShowImage mediumlilac cloakShowImage mediumlilac  mediumorange Space-Spyrius-Robot kiss Speckz 0
+5 0 0 180 0 -137 -5.00384 171.916 0 0 1 180 1 30 9 staticSlate1x1 0 base 0 101 0
+4 0 0 0 0 -125.551 12.3254 165.507 1 0 0 0 1 1 1 portculyswitch 0 green 2 54 104 48 0¤0¤0.166667 0 0 0 0 Outer Blast Doors 
+4 0 0 0 0 -123.253 12.3209 165.51 1 0 0 0 1 1 1 portculyswitch 0 green 2 54 103 48 0¤0¤0.166667 0 0 0 0 Inner Blast Doors 
+4 0 0 0 0 -138.761 -3.35453 165.804 1 0 0 0 1 1 1 portculyswitch 0 green 2 54 101 48 0¤0¤-0.166667 0 0 0 0 Blast Doors 
+5 0 0 0 0 -148.5 -22.5042 -1045.3 1 0 0 0 1 3 1 staticslope2x4 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 90 0 -148.5 -7.5042 -1045.3 0 0 1 90.0002 1 1 1 staticslopeC2x2 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.5 -16.5042 -1045.3 1 0 0 0 1 1 1 staticslopeC2x2 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.5 -7.5042 -1045.3 1 0 0 0 1 3 1 staticslope2x4 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 180 0 -68.5 3.99808 -1045.3 0 0 1 180 1 25 1 staticslope2x4 216.83.117.60 mediumstonegrey 0 0 0
+5 0 0 270 0 -100.5 -20.003 -1045.3 0 0 -1 90.0002 1 10 1 staticslope2x4 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 90 0 -100.5 3.99718 -1045.3 0 0 1 90.0002 1 25 1 staticslope2x4 216.83.117.60 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.5 -21.0042 -1044.7 1 0 0 0 1 1 8 staticPlate1x10 0 base 0 0 0
+5 0 0 270 0 -68.4994 -28.0018 -1045.3 0 0 -1 90.0002 1 16 1 staticslope2x4 216.83.117.60 mediumstonegrey 0 0 0
+5 0 0 90 0 -148 -76.0042 164.5 0 0 1 90.0002 1 180 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -148 -36.0042 164.5 0 0 1 180 1 80 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 90 0 -143.5 -71.5042 164.5 0 0 1 90.0002 1 110 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -100.5 -4.00282 -1045.3 1 0 0 0 1 25 1 staticslope2x4 216.83.117.60 mediumstonegrey 0 0 0
+5 0 0 0 0 -100.5 -20.003 -1045.3 1 0 0 0 1 1 1 staticslopeC2x2 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 90 0 -148.5 -4.0042 -1045.3 0 0 1 90.0002 1 24 1 staticslope2x4 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 90 0 -100.5 -4.00282 -1045.3 0 0 1 90.0002 1 1 1 staticslopeC2x2 70.31.114.52 mediumstonegrey 0 0 0
+5 0 0 270 0 -100.5 -20.003 -1039.9 0 0 -1 90.0002 1 20 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -162.494 -116.006 -1057.5 1 0 0 0 300 1 20 staticPlate1x1 0 0 0 0 0
+5 0 0 180 0 -143.5 -36.0042 164.5 0 0 1 180 1 72 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -148.5 -8.0042 -1044.7 1 0 0 0 1 1 8 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -113 -63.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -121.5 -63.0036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -107 -63.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -115.5 -63.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -101 -65.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -109.5 -63.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -120.548 -115.004 -1045.3 0 0 1 180 1 10 10 staticguardrail 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -119 -63.0036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -103.5 -63.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -103.5 -65.503 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -101 -63.003 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -68.9994 -28.0018 -1044.7 0 0 -1 90.0002 1 96 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -100.5 -27.503 -1044.7 1 0 0 0 1 16 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -151.944 -115.006 -1045.3 1 0 0 0 1 10 10 staticguardrail 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -125.5 -84.0036 -1034.3 0 0 -1 90.0002 1 38 2 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -165.5 -17.0048 173.5 1 0 0 0 1 1 4 staticPlate6x6 0 black 0 0 0
+5 0 0 90 0 -118.5 -12.0036 170.9 0 0 1 90.0002 1 1 3 staticfence1x4x2 0 0 0 0 0
+5 0 0 90 0 -118.5 -27.5036 171.7 0 0 1 90.0002 1 1 4 staticPlate1x4 0 black 0 0 0
+5 0 0 90 0 -153.5 -35.5042 164.5 0 0 1 90.0002 1 10 8 staticPlate1x1 0 base 0 0 0
+5 0 0 270 0 -145 -36.0042 168.1 0 0 -1 90.0002 1 1 1 staticPlate1x1 0 black 0 0 0
+5 312.5 0 90 0 -123.5 28.4964 165.71 -0.373583 0.373584 0.849041 99.3354 -1 -0.75 -1 staticdecal2x2 0 boxpanel1 0 0 0
+5 0 0 270 0 -144 -36.0042 166.3 0 0 -1 90.0002 1 1 1 staticPlate1x1 0 0 0 0 0
+5 0 0 270 0 -136.5 -84.0036 -1045.3 0 0 -1 90.0002 1 32 10 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -120.5 -20.0036 -1045.3 0 0 1 180 1 64 1 staticslope2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -137.5 -46.5036 154.3 1 0 0 0 100 100 1 staticSlate1x1 0 black 0 0 0
+5 0 0 0 0 -136.5 -84.0036 -1045.3 1 0 0 0 1 64 1 staticslope2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -121 -36.0036 -1044.7 1 0 0 0 1 32 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -121 -84.0036 -1044.7 1 0 0 0 1 88 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -120.5 -20.0036 -1039.9 0 0 1 180 1 64 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -136.5 -84.0036 -1044.7 1 0 0 0 1 128 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -136.5 -84.0036 -1039.9 1 0 0 0 1 64 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -143.5 -36.0042 164.5 0 0 -1 90.0002 1 1 2 staticPlate1x2 0 black 0 0 0
+5 0 0 90 0 -149 -76.5042 -1039.1 0 0 1 90.0002 1 100 20 staticPlate1x1 0 base 0 0 0
+5 0 0 270 0 -121.5 -49.5036 165.5 0 0 -1 90.0002 0.25 1 2 staticplate1x3 0 red 0 0 0
+5 0 0 30 0 -69.9996 -10.5026 163.9 0 0 1 30 1 1 4 staticPlate8x8 0 darkgreen 0 0 0
+5 0 0 90 0 -119 -49.0036 165.1 0 0 1 90.0002 1 1 0.333333 staticSlate2x4 0 grayDark 0 0 0
+5 0 0 270 0 -80.4988 -36.0024 154.9 0 0 -1 90.0002 1 4 25 staticPlate1x8 0 grayDark 0 0 0
+5 0 0 270 0 -87.9988 -40.5024 154.9 0 0 -1 90.0002 1 2 25 staticPlate1x8 0 grayDark 0 0 0
+5 50 0 270 0 -87.4988 -40.0024 163.7 0.389282 0.389282 -0.834817 100.289 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 180 0 -87.9988 -40.0024 164.5 0 0 1 180 1 64 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 270 0 -136 -20.0036 -1044.7 0 0 -1 90.0002 1 25 8 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -87.9988 -52.0024 163.9 1 0 0 0 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 30 0 -113.496 -9.50506 -1045.3 0 0 1 30 1 1 6 staticPlate8x8 0 darkgreen 0 0 0
+5 0 0 270 0 -147.5 -36.0042 168.1 0 0 -1 90.0002 1 1 2 staticPlate1x2 0 black 0 0 0
+5 0 0 270 0 -148 -36.0042 164.5 0 0 -1 90.0002 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -144 -36.0042 168.7 1 0 0 0 1 1 1 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -145.5 -36.0042 168.7 1 0 0 0 1 1 1 staticPlate1x1 0 0 0 0 0
+5 0 0 0 0 -144 -36.0042 166.9 1 0 0 0 1 1 1 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -145.5 -36.0042 164.5 0 0 -1 90.0002 1 1 1 staticPlate1x2 0 0 0 0 0
+5 0 0 270 0 -147.5 -36.0042 165.7 0 0 -1 90.0002 1 1 1 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -147 -36.0042 168.1 0 0 -1 90.0002 1 1 1 staticPlate1x1 0 0 0 0 0
+5 10 355 315 0 -148.5 -36.0042 164.5 0.2491 -0.017511 -0.968319 45.8712 1 1 8 staticPlate1x8 0 0 0 0 0
+5 0 0 0 0 -100.5 -28.003 -1045.3 1 0 0 0 1 8 1 staticslope2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -99.9982 -72.003 163.9 0 0 1 90.0002 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 180 0 -144 -36.0042 163.9 0 0 1 180 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 90 0 -100 3.99718 -1044.7 0 0 1 90.0002 1 96 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -144 -48.0042 163.9 0 0 1 180 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 180 0 -144 -60.0042 163.9 0 0 1 180 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 90 0 -148 -72.0042 163.9 0 0 1 90.0002 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 90 0 -136 -72.0036 163.9 0 0 1 90.0002 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 90 0 -124 -72.0036 163.9 0 0 1 90.0002 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 90 0 -112 -72.003 163.9 0 0 1 90.0002 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 0 0 -87.9976 -76.0024 163.9 1 0 0 0 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 0 0 -87.9982 -64.0024 163.9 1 0 0 0 1 1 1 staticPlate8x24 0 black 0 0 0
+5 0 0 0 0 -151.994 -146.006 -1044.5 1 0 0 0 1 1 17.3333 staticPlate1x2 0 sandblue 0 0 0
+5 0 0 0 0 -83.9976 -76.0024 164.5 1 0 0 0 1 80 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 270 0 -68.4994 -28.0018 -1039.9 0 0 -1 90.0002 1 48 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -100.5 -4.00282 -1044.7 1 0 0 0 1 96 8 staticPlate1x1 0 base 0 0 0
+5 0 0 180 0 -68.5 3.99808 -1039.9 0 0 1 180 1 48 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -100.5 -28.003 -1039.9 1 0 0 0 1 8 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -99.4994 -20.003 -1039.9 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -100.5 -5.00282 -1039.9 1 0 0 0 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -136.5 -20.0036 -1045.3 0 0 -1 90.0002 1 12 1 staticslope2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -120.5 -19.0036 -1039.9 0 0 1 180 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -135.5 -20.0036 -1039.9 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -136.5 -20.0036 -1045.3 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -120.5 -20.0036 -1045.3 0 0 -1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -136.5 -20.0036 -1039.9 0 0 -1 90.0002 1 12 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.5 -28.5042 -1039.9 1 0 0 0 1 12 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -147.5 -16.5042 -1039.9 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.5 -8.5042 -1039.9 1 0 0 0 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.5 -7.5042 -1039.9 1 0 0 0 1 12 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -148.5 -4.0042 -1039.9 0 0 1 90.0002 1 48 1 staticslopeI2x2 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -121 -41.0036 163.7 0 0 1 180 15 7.5 0.333333 staticSlate8x8 0 grayDark 0 0 0
+5 0 0 0 0 -125 -41.0036 163.7 1 0 0 0 1 1 1 staticgrill8x8flat 0 grayDark 0 804 0
+4 0 0 90 0 -126.761 -37.604 164.322 0 0 1 90.0002 1 1 1 portculyswitch 0 green 3 72 804 32 0¤2.8125¤0 0 0 0 0 0
+5 0 0 270 0 -126 -38.0036 163.9 0 0 -1 90.0002 1 0.5 2 staticPlate2x4 0 lightgreymetallic 0 0 0
+5 0 0 90 0 -127 -37.0036 165.3 0 0 1 90.0002 1 1 1 staticslope2x2 0 black 0 0 0
+4 0 0 0 0 -161.005 -15.9964 163.954 1 0 0 0 4 4 0.333 portculyswitch 0 mediumblue 0 0 -2 0 1.34201¤7.00732¤1236.36¤0¤0¤1¤1.69611 0 0 0 1 0
+5 0 0 0 0 -152 -10.5045 -1045.3 1 0 0 0 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+4 0 0 90 0 -151.978 -8.51993 -1045.13 0 0 1 90.0002 4 4 0.3333 portculyswitch 0 mediumblueviolet 0 0 -2 0 101.762¤-0.46419¤1209.24¤0¤0¤-1¤1.54671 0 0 0 1 0
+5 0 0 0 0 -161 -10.0048 1400.1 1 0 0 0 1 1 0.333333 staticSlate4x4 0 mediumblue 0 0 0
+5 0 0 0 0 -85.4994 -12.0024 -1045.3 1 0 0 0 1 1 2 staticplate4x12 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -78.5 0.497792 -1043.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 90 0 15 0 -178.93 1.82512 1403.7 0.983106 -0.129429 0.129428 90.9767 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 0 0 -127.5 -65.5036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -127.5 -63.0036 163.9 1 0 0 0 1 1 10 staticPlate1x1 0 black 0 0 0
+5 0 0 90 0 -98.5 1.99724 -1039.9 0 0 1 90.0002 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 90 0 -98.5 1.99724 -1045.3 0 0 1 90.0002 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 0 0 -83.5 -0.0023511 -1039.9 1 0 0 0 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 0 0 -93.5 -0.00263268 -1045.3 1 0 0 0 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 0 0 -93.5 -0.00263268 -1039.9 1 0 0 0 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 0 0 -88.5 -0.00249187 -1039.9 1 0 0 0 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 0 0 -88.5 -0.00249187 -1045.3 1 0 0 0 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 0 0 -83.5 -0.0023511 -1045.3 1 0 0 0 1 1 1 staticPlate4x4 0 black 0 0 0
+5 0 0 270 0 -71.5 -0.00201323 -1045.3 0 0 -1 90.0002 1 1 2 staticPlate6x16 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -75.5 -0.00212585 -1044.1 1 0 0 0 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 0 0 -92.4994 -11.5024 -1043.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -92.4994 -11.0024 -1043.7 1 0 0 0 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 90 0 -83 -0.412337 -1043.59 0 0 1 90.0002 1 1 0.8 staticdecal1x2side 0 panel2 0 0 0
+5 0 0 90 0 -98 -0.41276 -1043.54 0 0 1 90.0002 1 1 0.8 staticdecal1x2side 0 panel2 0 0 0
+5 0 0 0 0 -83.5 -0.0023511 -1045.9 1 0 0 0 4 4 10 statictrans1x1round 0 blue 0 0 0
+5 0 0 0 0 -93.5 -0.00263268 -1045.9 1 0 0 0 4 4 10 statictrans1x1round 0 blue 0 0 0
+5 0 0 0 0 -88.5 -0.00249187 -1045.9 1 0 0 0 4 4 10 statictrans1x1round 0 blue 0 0 0
+5 0 0 0 0 -82.9994 -25.0024 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -97.4994 -25.003 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -97.4994 -22.503 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 90 0 -97.4994 -22.003 -1044.1 0 0 1 90.0002 1 1 0.333333 staticPlate6x12 0 black 0 0 0
+5 0 0 90 0 -88.4994 -22.0024 -1044.1 0 0 1 90.0002 1 1 0.333333 staticPlate6x12 0 black 0 0 0
+5 0 0 0 0 -91.9994 -22.5024 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -91.9994 -25.0024 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -88.4994 -25.0024 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -88.4994 -22.5024 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -82.9994 -22.5024 -1045.3 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 300 0 -71.9994 -13.5018 -1045.3 0 0 -1 60.0001 0.1 1 10 staticPlate1x4 0 black 0 0 0
+5 0 0 0 0 -70 -7.00198 -1045.3 1 0 0 0 1 1 10 staticPlate1x6 0 lightgreymetallic 0 0 0
+5 0 0 0 0 -69.9994 -14.0018 -1045.3 1 0 0 0 1 1 10 staticPlate1x6 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -70 -7.00198 -1045.3 0 0 -1 90.0002 1 1 10 staticPlate1x4 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -70 -4.50198 -1045.3 0 0 -1 90.0002 1 1 10 staticPlate1x4 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -69.9994 -11.5018 -1045.3 0 0 -1 90.0002 1 1 10 staticPlate1x4 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -69.9994 -14.0018 -1045.3 0 0 -1 90.0002 1 1 10 staticPlate1x4 0 lightgreymetallic 0 0 0
+5 0 0 180.005 0 -72 -4.51204 -1045.3 0 0 1 180.005 0.1 1 10 staticPlate1x4 0 black 0 247 0
+5 0 0 0 0 -71.9994 -13.5018 -1040.5 1 0 0 0 1 1 0.333333 staticSlate4x4 0 black 0 0 0
+5 0 0 0 0 -71.9994 -13.5018 -1045.3 1 0 0 0 1 1 0.333333 staticSlate4x4 0 black 0 0 0
+5 0 0 0 0 -71.9994 -13.5018 -1044.1 1 0 0 0 1 1 0.333333 staticSlate4x4 0 black 0 0 0
+5 0 0 0 0 -71.9994 -13.5018 -1042.9 1 0 0 0 1 1 0.333333 staticSlate4x4 0 black 0 0 0
+5 0 0 0 0 -71.9994 -13.5018 -1041.7 1 0 0 0 1 1 0.333333 staticSlate4x4 0 black 0 0 0
+5 0 0 90 0 -74.4994 -20.002 -1044.1 0 0 1 90.0002 1 1 0.333333 staticSlate4x8 0 white 0 0 0
+5 0 0 270 0 -70.4994 -26.0018 -1045.3 0 0 -1 90.0002 1 1 2 staticplate4x8 0 lightgreymetallic 0 0 0
+5 0 0 270 0 -70.4994 -22.0018 -1045.3 0 0 -1 90.0002 1 1 2 staticplate4x8 0 lightgreymetallic 0 0 0
+5 0 0 90 0 -127 -63.0036 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 0 0 0
+5 0 0 90 0 -103 -63.003 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 0 0 0
+5 0 0 90 0 -103 -63.003 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 1 0 0
+5 0 0 90 0 -109 -63.003 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 0 0 0
+5 0 0 90 0 -109 -63.003 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 1 0 0
+5 0 0 90 0 -115 -63.003 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 0 0 0
+5 0 0 90 0 -115 -63.003 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 1 0 0
+5 0 0 90 0 -121 -63.0036 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 0 0 0
+5 0 0 90 0 -121 -63.0036 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 1 0 0
+5 0 0 90 0 -127 -63.0036 163.9 0 0 1 90.0002 1 1 10 staticPlate4x4 0 brightblueviolet 1 0 0
+5 270 0 0 0 -137.5 -102.306 -1045.3 -1 0 0 90.0002 1 1 0.333333 staticPlate8x8 0 lemonmetallic 0 0 0
+5 0 0 315 0 -138.993 -97.8299 -1045.3 0 0 -1 44.9998 1 1 6 staticPlate8x8 0 black 0 0 0
+5 270 0 0 0 -137.5 -102.506 -1045.3 -1 0 0 90.0002 1 1 7 staticPlate1x8 0 lemonmetallic 0 0 0
+5 0 90 270 0 -134 -102.506 -1045.3 -0.577351 0.577351 -0.577349 120 1 1 7 staticPlate1x6 0 lemonmetallic 0 0 0
+5 0 90 270 0 -134 -102.506 -1041.8 -0.577351 0.577351 -0.577349 120 1 1 7 staticPlate1x6 0 lemonmetallic 0 0 0
+5 270 0 0 0 -134 -102.506 -1045.3 -1 0 0 90.0002 1 1 7 staticPlate1x8 0 lemonmetallic 0 0 0
+5 0 0 270 0 -134.994 -107.506 -1045.3 0 0 -1 90.0002 1 1 0.333333 staticPlate1x1 0 yellowflipflop 0 0 0
+5 0 0 180 0 -133.994 -107.506 -1045.3 0 0 1 180 1 1 1 staticPlate1x2 0 brightyelloworange 0 0 0
+5 0 0 270 0 -136.994 -109.506 -1045.3 0 0 -1 90.0002 1 1 0.333333 staticPlate1x1 0 sandyellow 0 0 0
+5 0 0 90 0 -107 -49.003 165.3 0 0 1 90.0002 1 1 1 staticdecal1x2 0 arrowred 0 0 0
+4 0 0 0 0 -51.0177 -15.986 164.09 1 0 0 0 4 4 0.333 portculyswitch 0 mediumblue 0 0 -2 0 -100.116¤1.7665¤-1209.18¤0¤0¤1¤1.56634 0 0 0 0 0
+5 0 0 90 0 -98.75 2.24724 -1043.65 0 0 1 90.0002 2.5 2.5 1 staticSlatecyl2x2 0 black 0 0 0
+5 0 0 0 0 -93.75 -0.50264 -1043.7 1 0 0 0 2.5 2.5 1 staticSlatecyl2x2 0 black 0 0 0
+4 0 0 0 0 -120.388 3.7629 164.351 1 0 0 0 1 1 1 portculyswitch 0 green 2 54 104 48 0¤0¤0.166667 0 0 0 0 0
+5 0 0 0 0 -88.75 -0.252497 -1043.7 1 0 0 0 2.5 2.5 1 staticSlatecyl2x2 0 black 0 0 0
+5 0 0 0 0 -83.75 -0.252358 -1043.7 1 0 0 0 2.5 2.5 1 staticSlatecyl2x2 0 black 0 0 0
+5 0 90 270 0 -97 -0.00273121 -1043.55 -0.577351 0.577351 -0.577349 120 1 1 0.666 staticSlate1x2 0 black 0 0 0
+5 0 90 270 0 -92 -0.252592 -1043.6 -0.577351 0.577351 -0.577349 120 1 1 0.666 staticSlate1x2 0 black 0 0 0
+5 0 0 180 0 -92 -9.50258 -1043.7 0 0 1 180 0.25 1 2 staticplate1x3 0 brightblueviolet 0 0 0
+5 0 90 270 0 -82 -0.00230886 -1043.6 -0.577351 0.577351 -0.577349 120 1 1 0.666 staticSlate1x2 0 black 0 0 0
+5 0 90 270 0 -87 -0.00244967 -1043.6 -0.577351 0.577351 -0.577349 120 1 1 0.666 staticSlate1x2 0 black 0 0 0
+5 0 0 90 0 -93 -7.50264 -1044.1 0 0 1 90.0002 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 270 0 -82.4994 -25.0024 -1043.9 0 0 -1 90.0002 1 1 0.333333 staticSlate6x12 0 white 0 0 0
+5 0 0 90 0 -97.4994 -22.003 -1043.9 0 0 1 90.0002 1 1 0.333333 staticSlate6x12 0 white 0 0 0
+5 0 0 90 0 -93 -0.662616 -1043.59 0 0 1 90.0002 1 1 0.8 staticdecal1x2side 0 panel2 0 0 0
+5 0 0 90 0 -88 -0.412478 -1043.59 0 0 1 90.0002 1 1 0.8 staticdecal1x2side 0 panel2 0 0 0
+5 0 0 0 0 -73.5 0.99793 -1044.1 1 0 0 0 1 1 1 statictrans1x1round 0 red 0 0 0
+5 0 0 0 0 -73 0.497942 -1044.1 1 0 0 0 1 1 1 statictrans1x1round 0 red 0 0 0
+5 0 0 0 0 -71.4994 -13.5018 -1042.7 1 0 0 0 1 1 1 statictrans1x1round 0 sandyellow 0 0 0
+5 0 0 270 0 -70.9994 -12.0018 -1043.9 0 0 -1 90.0002 1 1 0.333333 staticSlate1x2 0 sandgreen 0 0 0
+5 0 0 270 0 -70.4994 -12.5018 -1043.9 0 0 -1 90.0002 1 1 0.333333 staticSlate1x2 0 sandgreen 0 0 0
+5 0 0 0 0 -71.9994 -13.5018 -1043.9 1 0 0 0 1 1 0.333333 staticSlate1x2 0 white 0 0 0
+5 0 0 0 0 -92.4994 -11.5024 -1042.5 1 0 0 0 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -92.4994 -11.5024 -1043.9 1 0 0 0 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -92.5 -9.50258 -1043.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 270 0 -76.5 0.497846 -1043.7 0 0 -1 90.0002 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 90 0 -78 0.997804 -1043.7 0 0 1 90.0002 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 90 0 -78.5 0.997792 -1042.5 0 0 1 90.0002 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 180 0 -84.5 -6.5024 -1042.5 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -85 -7.0024 -1043.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -85 -9.0024 -1043.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -84.5 -6.5024 -1043.9 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -85 -8.5024 -1043.7 1 0 0 0 0.25 1 2 staticplate1x3 0 brightblueviolet 0 0 0
+5 0 0 180 0 -84.5 -7.0024 -1043.7 0 0 1 180 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 0 0 -96.9996 -40.5034 160.9 1 0 0 0 1 1 16 staticPlate1x10 0 grayDark 0 0 0
+5 0 0 90 0 -85.5 -9.5024 -1044.1 0 0 1 90.0002 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 90 0 -78 0.997804 -1044.1 0 0 1 90.0002 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 0 0 -85 -8.5024 -1044.1 1 0 0 0 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 0 0 -92.4994 -11.0024 -1044.1 1 0 0 0 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 0 0 -87 -7.50246 -1045.3 1 0 0 0 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -91 -10.5024 -1045.3 1 0 0 0 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -77.5 -1.50216 -1045.3 1 0 0 0 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 0 0 -91 -10.5024 -1044.7 1 0 0 0 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 0 0 -77.5 -1.50216 -1044.7 1 0 0 0 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 0 0 -87 -7.50246 -1044.7 1 0 0 0 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 290 0 180 0 -76.5 -1.50216 -1044.65 -7.27058e-007 0.573574 0.819154 180 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 290 0 180 0 -86 -7.5024 -1044.66 -7.27058e-007 0.573574 0.819154 180 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 290 0 90 0 -90 -9.50252 -1044.66 -0.49754 0.497542 0.710567 109.207 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 90 0 -148.5 -90.5042 -1044.7 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 90 0 -148.5 -86.5042 -1039.9 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 90 0 -148.5 -87.0042 -1040.5 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 90 0 -148.5 -87.5042 -1041.1 0 0 1 90.0002 1 1 0.333333 staticSlate2x6 0 black 0 0 0
+5 0 0 270 0 -103.99 -32.503 1401.9 0 0 -1 90.0002 4 1 4 staticslope2x1 0 base 0 0 0
+5 0 0 90 0 -104.49 8.49706 1401.9 0 0 1 90.0002 4 1 4 staticslope2x1 0 base 0 0 0
+5 0 0 90 0 -104.49 8.49706 1407.9 0 0 1 90.0002 4 1 4 staticslopeI2x1 0 base 0 0 0
+5 0 0 180 0 -103.99 6.49706 1410.3 0 0 1 180 1 37 3 staticSlate1x2 0 base 0 0 0
+5 0 0 0 0 -103.99 -34.003 1400.7 1 0 0 0 1 22 4 staticBrick1x4x5window 0 base 0 0 0
+5 0 0 180 0 -103.5 7.49706 1400.1 0 0 1 180 0.5 42 20 staticSlate1x2 0 base 1 0 0
+5 0 0 270 0 -104.5 -32.003 1400.1 0 0 -1 90.0002 1 82 20 staticSlate1x2 0 base 0 0 0
+5 0 0 270 0 -104.5 7.49706 1400.1 0 0 -1 90.0002 1 82 20 staticSlate1x2 0 base 0 0 0
+5 0 0 0 0 -172 -31.5048 1400.1 1 0 0 0 3 12 20 staticSlate1x2 0 base 0 0 0
+5 0 0 180 0 -170.5 7.4952 1400.1 0 0 1 180 3 12 20 staticSlate1x2 0 base 0 0 0
+5 0 0 270 0 -170.5 -19.5048 1400.7 0 0 -1 90.0002 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 90 0 -172 -4.50486 1400.7 0 0 1 90.0002 1 1 1 staticslope3x3 0 grayDark 0 0 0
+5 0 0 0 0 -172 -19.5048 1400.1 1 0 0 0 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -183.5 7.99484 1400.1 0 0 1 180 1 20 20 staticPlate1x4 0 base 0 0 0
+5 0 0 90 0 -172 -4.50486 1401.3 0 0 1 90.0002 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 270 0 -170.5 -19.5048 1401.3 0 0 -1 90.0002 1 1 6 staticplate1x3 0 grayDark 0 0 0
+5 0 0 270 0 -170.5 -19.5048 1404.9 0 0 -1 90.0002 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 90 0 -172 -4.50486 1404.9 0 0 1 90.0002 1 1 1 staticslopeI3x3 0 grayDark 0 0 0
+5 0 0 0 0 -172 -19.5048 1405.5 1 0 0 0 3 30 1 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 180 0 -170.5 -4.5048 1406.1 0 0 1 180 3 30 10 staticSlate1x1 0 base 0 0 0
+5 0 0 0 0 -171.5 -19.5048 1406.1 1 0 0 0 1 2 10 staticSlate1x16 0 base 0 020301 0
+4 0 0 0 0 -172.33 -20.9409 1401.71 1 0 0 0 1 1 1 portculyswitch 0 green 2 28 020301 39 0¤0¤-0.14359 0 0 0 0 Blast Doors 
+4 0 0 0 0 -118.789 -12.2741 1407.12 1 0 0 0 1 1 1 portculyswitch 0 green 2 28 020301 39 0¤0¤-0.14359 0 0 0 0 Engine Room 
+5 0 0 0 0 -171 -32.0048 1400.1 1 0 0 0 1 24 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -171 -4.0048 1400.1 1 0 0 0 1 24 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -186.5 7.99474 1400.1 0 0 1 90.0002 1 164 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -104.5 -32.003 1400.1 0 0 -1 90.0002 1 164 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -184 -31.5054 1400.1 1 0 0 0 1 100 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -104 7.49706 1400.1 0 0 1 180 1 100 1 staticslope2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -171 -32.0048 1411.5 1 0 0 0 1 100 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -171.5 7.99519 1411.5 0 0 1 180 1 100 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -204.5 7.99424 1411.5 0 0 1 90.0002 1 200 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -104.5 -32.003 1411.5 0 0 -1 90.0002 1 200 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -123 29.4964 165.1 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -123 27.9964 165.1 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -123 30.9964 165.1 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -123 23.4964 165.1 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -123 24.9964 165.1 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 0 180 0 -123 26.4964 165.1 0 0 1 180 1 1 1 staticslope2x2 0 black 0 0 0
+5 0 180 90 0 -121.5 -43.0036 160.9 0.707108 0.707106 8.96324e-007 180 100 50 1 staticSlate1x1 0 black 0 0 0
+5 0 180 0 0 -121 -37.0036 160.9 0 1 0 180 100 50 1 staticSlate1x1 0 black 0 0 0
+5 0 180 270 0 -125 -37.0036 160.9 -0.707106 0.707107 -8.96322e-007 180 100 50 1 staticSlate1x1 0 black 0 0 0
+5 0 180 270 0 -121 -41.0036 160.9 -0.707106 0.707107 -8.96322e-007 180 100 8 1 staticSlate1x1 0 black 0 0 0
+5 0 0 90 0 -125 -41.0036 160.9 0 0 1 90.0002 1 1 4.6666 staticPlate1x8 0 grayDark 0 0 0
+5 0 0 0 0 -121.5 -41.0036 160.9 1 0 0 0 1 1 4.6666 staticPlate1x8 0 grayDark 0 0 0
+5 0 0 90 0 -120.5 -35.5036 154.9 0 0 1 90.0002 1 1 9 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 90 0 -105 -35.503 154.9 0 0 1 90.0002 1 17 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 270 0 -95.9988 -40.5028 154.9 0 0 -1 90.0002 1 49 9 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 90 0 -112.5 -28.503 154.9 0 0 1 90.0002 1 1 9 staticPlate1x16 0 grayDark 0 0 0
+5 0 0 0 0 -105 -35.503 154.9 1 0 0 0 1 1 9 staticPlate1x14 0 grayDark 0 0 0
+5 0 0 180 0 -118.5 -9.50318 1400.1 0 0 1 180 1 1 10 staticplate4x10 0 black 0 0 0
+5 0 0 180 0 -107 -9.503 1400.1 0 0 1 180 1 1 10 staticplate4x10 0 black 0 0 0
+5 0 0 270 0 -158 -13.5047 1400.1 0 0 -1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 270 0 -158 -11.0047 1400.1 0 0 -1 90.0002 1 1 0.333333 staticSlate1x6 0 yellow 0 0 0
+5 0 0 90 0 -162 -16.505 1400.1 0 0 1 90.0002 5 2 100 staticSlate1x14 0 grayDark 0 0 0
+5 0 0 90 0 -162 -5.00486 1400.1 0 0 1 90.0002 5 2 100 staticSlate1x14 0 grayDark 0 0 0
+5 0 0 0 0 -162 -17.005 1400.1 1 0 0 0 1 2 100 staticSlate1x10 0 black 0 0 0
+5 0 180 0 0 -148 -17.0047 1412.3 0 1 0 180 28 2 10 staticSlate1x10 0 black 0 0 0
+5 0 0 0 0 -148 -19.0047 1411.5 1 0 0 0 1 7 1 staticslopeI2x4 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -148 -19.0047 1400.1 0 0 1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148 -5.00465 1400.1 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -148 -7.00465 1400.1 0 0 1 90.0002 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148 -17.0047 1400.1 1 0 0 0 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148 -19.0047 1400.1 1 0 0 0 1 1 1 staticslope2x4 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148 -7.00465 1400.1 1 0 0 0 1 1 1 staticslope2x4 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148.01 -17.0047 1406.7 1 0 0 0 1 2 10 staticPlate1x10 0 base 0 0 0
+5 0 0 0 0 -148 -7.50467 1400.7 1 0 0 0 1 1 18 staticPlate1x6 0 base 0 0 0
+5 0 0 0 0 -148 -19.5047 1400.7 1 0 0 0 1 1 18 staticPlate1x6 0 base 0 0 0
+5 0 0 180 0 -162 -4.00486 1411.5 0 0 1 180 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -147 -5.00467 1411.5 0 0 -1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -148 -20.0047 1411.5 1 0 0 0 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -163 -19.005 1411.5 0 0 1 90.0002 1 1 1 staticslopeIC2x2 0 mediumstonegrey 0 0 0
+5 0 0 270 0 -148 -5.00465 1400.7 0 0 -1 90.0002 1 28 100 staticPlate1x1 0 base 0 0 0
+5 0 0 270 0 -148 -19.5047 1400.7 0 0 -1 90.0002 1 28 100 staticPlate1x1 0 base 0 0 0
+5 0 0 0 0 -162.5 -19.505 1400.7 1 0 0 0 1 30 100 staticPlate1x1 0 base 0 0 0
+5 0 0 270 0 -148 -5.00467 1411.5 0 0 -1 90.0002 1 28 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 180 0 -162 -5.00486 1411.5 0 0 1 180 1 28 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 90 0 -162 -19.005 1411.5 0 0 1 90.0002 1 28 1 staticslopeI2x1 0 mediumstonegrey 0 0 0
+5 0 0 0 0 -126 4.49563 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 4.4956 1400.1 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 4.4956 1410.9 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 4.4956 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 6.9956 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -126 6.99563 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -128 4.9956 1401.3 1 0 0 0 4 4 100 statictrans1x1 0 blue 0 0 0
+5 0 0 0 0 -128 4.9956 1400.1 1 0 0 0 4 4 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -128 -31.0044 1401.3 1 0 0 0 4 4 100 statictrans1x1 0 blue 0 0 0
+5 0 0 0 0 -136 4.99548 1400.1 1 0 0 0 4 4 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -136.5 4.49548 1400.1 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -136.5 4.49548 1410.9 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -136.5 4.49548 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -136.5 6.99548 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -134 4.49552 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -134 6.99552 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -136 4.99548 1401.3 1 0 0 0 4 4 100 statictrans1x1 0 blue 0 0 0
+5 0 0 0 0 -144 4.99536 1400.1 1 0 0 0 4 4 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -144.5 4.49536 1400.1 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -144.5 4.49536 1410.9 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -144.5 4.49536 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -144.5 6.99536 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -142 4.4954 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -142 6.9954 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -144 4.99536 1401.3 1 0 0 0 4 4 100 statictrans1x1 0 blue 0 0 0
+5 0 0 0 0 -144 -31.0047 1400.1 1 0 0 0 4 4 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -144.5 -31.5047 1400.1 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -144.5 -31.5047 1410.9 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -144.5 -31.5047 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -144.5 -29.0047 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -142 -31.5047 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -142 -29.0047 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -144 -31.0047 1401.3 1 0 0 0 4 4 100 statictrans1x1 0 blue 0 0 0
+5 0 0 0 0 -136 -31.0044 1400.1 1 0 0 0 4 4 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -136.5 -31.5044 1400.1 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -136.5 -31.5044 1410.9 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -136.5 -31.5044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -136.5 -29.0044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -134 -31.5044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -134 -29.0044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -136 -31.0044 1401.3 1 0 0 0 4 4 100 statictrans1x1 0 blue 0 0 0
+5 0 0 0 0 -128 -31.0044 1400.1 1 0 0 0 4 4 20 staticPlate1x1 0 blue 1 0 0
+5 0 0 0 0 -128.5 -31.5044 1400.1 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 -31.5044 1410.9 1 0 0 0 1 1 2 staticPlate6x6 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 -31.5044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -128.5 -29.0044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -126 -31.5044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 0 0 -126 -29.0044 1401.3 1 0 0 0 1 1 42 staticPlate1x1 0 grayDark 0 0 0
+5 0 0 90 0 -141 -17.0047 1400.7 0 0 1 90.0002 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 90 0 -139.5 -19.5047 1401.3 0 0 1 90.0002 1 1 2 staticplate2x3 0 black 0 0 0
+5 290 0 270 0 -141 -18.0046 1400.74 -0.497542 -0.497541 -0.710566 109.207 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 0 0 -139 -18.5047 1401.3 1 0 0 0 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 180 0 -137.5 -15.0044 1400.1 0 0 1 180 1 1.5 2 staticSlate4x12 0 grey 0 0 0
+5 0 0 180 0 -126.5 -15.0044 1400.1 0 0 1 180 1 1.5 2 staticSlate4x12 0 grey 0 0 0
+5 0 0 0 0 -130 -17.5044 1400.1 1 0 0 0 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 180 0 -127.5 -16.5044 1401.5 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -128 -18.5044 1401.3 1 0 0 0 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 0 0 0 0 -128 -18.5044 1401.7 1 0 0 0 0.25 1 2 staticplate1x3 0 brightblueviolet 0 0 0
+5 0 0 180 0 -127.5 -17.0044 1401.7 0 0 1 180 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 0 0 -128 -19.0044 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -127.5 -16.5044 1402.9 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -128 -17.0044 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 90 0 -128.5 -19.5044 1401.3 0 0 1 90.0002 1 1 2 staticplate2x3 0 black 0 0 0
+5 290 0 180 0 -129 -17.5044 1400.74 -7.27058e-007 0.573574 0.819154 180 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 0 0 -130 -17.5044 1400.7 1 0 0 0 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 90 0 -141 -17.0047 1400.1 0 0 1 90.0002 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 180 0 -127.5 -1.5044 1402.9 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -128 -3.5044 1401.7 1 0 0 0 0.25 1 2 staticplate1x3 0 brightblueviolet 0 0 0
+5 0 0 180 0 -127.5 -2.0044 1401.7 0 0 1 180 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 0 0 -128 -4.0044 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -128 -2.0044 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -127.5 -1.5044 1401.5 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -128 -3.5044 1401.3 1 0 0 0 1 1 0.333333 staticSlate1x3 0 black 0 0 0
+5 290 0 315 0 -130.561 -2.35821 1400.74 -0.810703 -0.335803 -0.479579 81.6341 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 90 0 -128.5 -4.5044 1401.3 0 0 1 90.0002 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 180 0 -126.5 -0.00438093 1400.1 0 0 1 180 1 1.5 2 staticSlate4x12 0 grey 0 0 0
+5 0 0 135 0 -129.853 -1.65065 1400.7 0 0 1 135 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 135 0 -129.853 -1.65065 1400.1 0 0 1 135 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 180 0 -138.5 -6.00455 1402.9 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -139 -8.00455 1401.7 1 0 0 0 0.25 1 2 staticplate1x3 0 red 0 0 0
+5 0 0 180 0 -138.5 -6.50455 1401.7 0 0 1 180 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 0 0 -139 -8.50455 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -139 -6.50455 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -138.5 -6.00455 1401.5 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -139 -8.00455 1401.3 1 0 0 0 1 1 0.3333 staticSlate1x3 0 black 0 0 0
+5 290 0 270 0 -141 -3.5045 1400.74 -0.497542 -0.497541 -0.710566 109.207 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 90 0 -139.5 -4.50455 1401.3 0 0 1 90.0002 1 1 2 staticplate2x3 0 black 0 0 0
+5 0 0 180 0 -137.5 -0.00452572 1400.1 0 0 1 180 1 1.5 2 staticSlate4x12 0 grey 0 0 0
+5 0 0 90 0 -141 -2.50459 1400.7 0 0 1 90.0002 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 90 0 -141 -2.50459 1400.1 0 0 1 90.0002 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 180 0 -138.5 -16.5046 1402.9 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 0 0 -139 -18.5047 1401.7 1 0 0 0 0.25 1 2 staticplate1x3 0 brightblueviolet 0 0 0
+5 0 0 180 0 -138.5 -17.0046 1401.7 0 0 1 180 0.25 1 2 staticplate1x3 0 black 0 0 0
+5 0 0 0 0 -139 -19.0047 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 0 0 -139 -17.0047 1401.7 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 180 0 -138.5 -16.5046 1401.5 0 0 1 180 1 1.25 0.333333 staticSlate1x4 0 black 0 0 0
+5 0 0 135 0 -141 -6.00456 1400.7 0 0 1 135 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 290 0 225 0 -140.793 -22.2117 1400.78 0.231148 0.558041 0.79697 216.539 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 45 0 -141.5 -21.5047 1400.74 0 0 1 45 1 1 0.333333 staticSlate2x2 0 grayDark 0 0 0
+5 0 0 45 0 -141.5 -21.5047 1400.14 0 0 1 45 1 1 1 staticPlate2x2 0 black 0 0 0
+5 0 0 135 0 -141 -6.00456 1400.1 0 0 1 135 1 1 1 staticPlate2x2 0 black 0 0 0
+5 290 0 315 0 -141.707 -6.71159 1400.74 -0.810703 -0.335803 -0.479579 81.6341 1 1 0.333333 staticSlate2x3 0 grayDark 0 0 0
+5 0 0 270 0 -171.5 -31.505 1401.3 0 0 -1 90.0002 1 2 0.33333 staticSlate2x16 0 black 0 0 0
+5 0 0 0 0 -183.5 -30.5053 1401.3 1 0 0 0 1 20 0.33333 staticSlate2x16 0 black 0 0 0
+5 0 0 270 0 -172 6.49497 1401.3 0 0 -1 90.0002 1 20 0.33333 staticSlate2x16 0 black 0 0 0
+5 0 0 0 0 -173 -30.505 1401.3 1 0 0 0 1 1 0.333333 staticSlate2x16 0 black 0 0 0
+5 0 0 180 0 -172 6.49497 1401.3 0 0 1 180 1 1 0.333333 staticSlate2x16 0 black 0 0 0
+5 90 0 285 0 -180.33 -1.43303 1403.7 0.677663 0.519988 -0.519986 111.752 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 15 0 -180.45 -1.91884 1400.1 0 0 1 15 1 1 6 staticPlate8x8 0 black 0 0 0
+5 90 0 105 0 -175.671 0.424508 1403.7 -0.476904 0.621516 -0.621514 230.993 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 90 0 195 0 -177.072 -2.83412 1403.7 0.092691 0.704064 -0.704061 169.408 3 3 1 staticdecal2x2 0 spacepolice 0 0 0
+5 0 0 180 0 -120.994 -114.006 -1045.5 0 0 1 180 64 64 0.33333 staticSlate1x1 0 grayDark 0 0 0
+5 0 0 240 0 -131.695 -127.72 -1044.3 0 0 -1 120 1 1 6 staticPlate1x1 0 black 0 0 0
+5 0 0 150 0 -135.262 -120.542 -1044.5 0 0 1 150 1 1 0.333333 staticSlate8x16 0 grayDark 0 0 0
+5 0 0 240 0 -133.86 -128.97 -1044.3 0 0 -1 120 1 1 6 staticPlate1x1 0 black 0 0 0
+5 0 330 150 0 -141.373 -126.957 -1040.5 -0.258197 -0.0691829 0.963612 151.045 1 1 0.333333 staticSlate4x6 0 black 0 0 0
+5 0 0 330 0 -138.043 -122.725 -1044.3 0 0 -1 29.9998 1 1 2 staticSlope1x2x3 0 grayDark 0 0 0
+5 14 0 150 0 -132.066 -127.827 -1044.56 0.032637 -0.121804 0.992017 150.229 1 1 0.333333 staticSlate4x8 0 black 0 0 0
+5 0 0 240 0 -136.378 -120.609 -1045.3 0 0 -1 120 1 1 1 staticslope4x4 0 grayDark 0 0 0
+5 0 0 240 0 -135.695 -120.792 -1044.5 0 0 -1 120 1 1 1 staticwing6x7flat 0 black 0 0 0
+5 0 0 240 0 -138.061 -118.694 -1044.3 0 0 -1 120 1 1 2 staticPlate1x2 0 black 0 0 0
+5 0 0 240 0 -130.53 -124.738 -1044.7 0 0 -1 120 1 1 0.333333 staticSlate2x16 0 black 0 0 0
+5 0 0 240 0 -135.878 -121.475 -1041.9 0 0 -1 120 1 1 2 staticPlate1x4 0 black 0 0 0
+5 0 0 150 0 -137.775 -127.189 -1045.3 0 0 1 150 1 1 1 staticslope4x4 0 grayDark 0 0 0
+5 270 0 150 0 -129.914 -123.805 -1042.1 -0.186154 0.694747 0.694747 158.91 2 2 6 staticcylinder2x2 0 grayDark 0 0 0
+5 0 0 0 0 -111.5 -49.503 165.5 1 0 0 0 1 1 2 staticPlate1x1 0 black 0 0 0
+5 0 0 330 0 -135.878 -121.475 -1044.3 0 0 -1 29.9998 1 1 2 staticSlope1x2x3 0 grayDark 0 0 0
+5 0 0 60 0 -135.695 -120.792 -1044.3 0 0 1 60.0001 16 1 1 staticSlope1x2x3I 0 black 0 0 0
+5 0 0 330 0 -130.713 -125.421 -1045.3 0 0 -1 29.9998 1 1 1 staticslope4x4 0 grayDark 0 0 0
+5 0 330 330 0 -129.481 -123.555 -1040.5 0.186155 -0.694747 -0.694747 42.1809 1 1 0.333333 staticSlate4x6 0 black 0 0 0
+5 270 0 150 0 -137.708 -128.305 -1042.1 -0.186154 0.694747 0.694747 158.91 2 2 6 staticcylinder2x2 0 grayDark 0 0 0
+5 0 0 330 0 -134.927 -126.122 -1044.7 0 0 -1 29.9998 1 1 0.333333 staticSlate2x16 0 black 0 0 0
+5 0 0 330 0 -137.86 -122.042 -1043.1 0 0 -1 29.9998 1 1 1 staticwindshield4x7 0 blue 0 0 0
+5 0 0 150 0 -138.927 -119.194 -1044.3 0 0 1 150 1 1 2 staticPlate1x6 0 black 0 0 0
+5 0 0 330 0 -134.726 -129.47 -1040.7 0 0 -1 29.9998 1 1 0.333333 staticSlate8x16 0 black 0 0 0
+5 0 0 240 0 -129.481 -123.555 -1040.5 0 0 -1 120 1 1 0.333333 staticSlate6x24 0 black 0 0 0
+5 0 0 60 0 -135.695 -120.792 -1042.5 0 0 1 60.0001 16 1 1 staticSlope1x2x3 0 black 0 0 0
+5 0 0 240 0 -134.293 -129.22 -1042.5 0 0 -1 120 16 1 1 staticSlope1x2x3 0 black 0 0 0
+5 0 0 180 0 -106 -36.0035 163.9 0 0 1 180 1 1 1 staticslopeC2x2 0 mediumstonegrey 0 0 0
+4 0 0 0 0 -110.336 2.35529 1401.11 1 0 0 0 1 1 1 portculyswitch 0 red -1 0 0 0  0 0 0 1 0
+4 0 0 0 0 -108.683 -26.1409 1401.1 1 0 0 0 1 1 1 portculyswitch 0 red -1 0 0 0  0 0 0 1 0
+4 0 0 0 0 -132.115 -23.7138 1401.11 1 0 0 0 1 1 1 portculyswitch 0 red -1 0 0 0  0 0 0 1 0
+4 0 0 0 0 -166.109 0.93269 1401.1 1 0 0 0 1 1 1 portculyswitch 0 red -1 0 0 0  0 0 0 1 0
+1 0 0 0 0 -111.68 -12.1725 1407.71 1 0 0 0 1 1 1 Flag 1 0 red 0
+1 0 0 0 0 -135.165 -132.228 -1044.3 1 0 0 0 1 1 1 Flag 1 0 blue 0
+4 0 0 0 0 -124.62 -141.641 -1044.3 1 0 0 0 1 1 1 portculyswitch 0 blue -2 0 0 0  0 0 0 1 0
+4 0 0 0 0 -143.567 -101.259 -1044.3 1 0 0 0 1 1 1 portculyswitch 0 blue -2 0 0 0  0 0 0 1 0
+4 0 0 0 0 -135.817 -78.9516 -1037.69 1 0 0 0 1 1 1 portculyswitch 0 blue -2 0 0 0  0 0 0 1 0
+1 0 0 0 0 -136.282 -122.701 -1043.28 1 0 0 0 1 1 1 goalpoint 0 0  0
+1 0 0 0 0 -178.324 -20.1294 1401.11 1 0 0 0 1 1 1 crown 0 0  0
+4 0 0 0 0 -123.653 41.0291 164.36 1 0 0 0 1 1 1 portculyswitch 0 black -5 0 0 0  0 0 0 0 0
+1 0 0 0 0 -106.462 4.49754 1407.71 1 0 0 0 1 1 1 LaserRepeater 1 0 black 0
+1 0 0 0 0 -106.432 -29.3654 1407.7 1 0 0 0 1 1 1 LaserRifle 1 0 black 0
+1 0 0 0 0 -156.923 3.89975 1401.11 1 0 0 0 1 1 1 Shotgun 1 0 grayDark 0
+1 0 0 0 0 -156.955 -28.1764 1401.11 1 0 0 0 1 1 1 AssaultRifle 1 0 gray 0
+1 0 0 0 0 -175.846 3.00527 1401.1 1 0 0 0 1 1 1 Lightsaber 1 0  0
+1 0 0 0 0 -177.894 -29.2942 1401.1 1 0 0 0 1 1 1 Saw 1 0  0
+1 0 0 0 0 -128.014 -129.757 -1044.3 1 0 0 0 1 1 1 LaserRepeater 1 0 black 0
+1 0 0 0 0 -149.747 -91.9932 -1038.09 1 0 0 0 1 1 1 LaserRifle 1 0 black 0
+1 0 0 0 0 -122.687 -137.219 -1038.1 1 0 0 0 1 1 1 AssaultRifle 1 0 gray 0
+1 0 0 0 0 -124.487 -81.2586 -1037.69 1 0 0 0 1 1 1 Lightsaber 1 0  0
+1 0 0 0 0 -85.0233 -23.4648 -1042.69 1 0 0 0 1 1 1 Saw 1 0  0
+1 0 0 0 0 -73.7337 -11.0035 -1044.3 1 0 0 0 1 1 1 SMG 1 0 gray 0
+1 0 0 0 0 -72.8018 -20.6546 -1042.89 1 0 0 0 1 1 1 DMHealthPickup 1 0  0
+1 0 0 0 0 -93.9163 -23.1908 -1042.69 1 0 0 0 1 1 1 DMHealthPickup 1 0  0
+1 0 0 0 0 -127.752 -7.04668 1402.21 1 0 0 0 1 1 1 DMHealthPickup 1 0  0
+1 0 0 0 0 -177.981 -11.7168 1401.1 1 0 0 0 1 1 1 DMHealthPickup 1 0  0
+1 0 0 0 0 -117.557 -0.0970918 172.33 1 0 0 0 1 1 1 Gunpack 1 0 black 0
+1 0 0 0 0 -115.659 23.6134 164.904 1 0 0 0 1 1 1 Medgun 1 0  0
+1 0 0 0 0 -108.525 -66.4669 165.135 1 0 0 0 1 1 1 MissileLauncher 1 0 black 0
+1 0 0 0 0 -109.333 -31.0856 155.537 1 0 0 0 1 1 1 QuantumGun 1 0  0
+1 0 0 0 0 -70.0715 -7.29293 164.905 1 0 0 0 1 1 1 DMArrowPickup 1 0  0
+1 0 0 0 0 -100.961 -44.6093 164.905 1 0 0 0 1 1 1 DMArmorPickup 1 0  0
+1 0 0 0 0 -145.148 -74.4196 165.506 1 0 0 0 1 1 1 DMArmorPickup 1 0  0
+1 0 0 0 0 -123.464 -55.3949 164.911 1 0 0 0 1 1 1 SMG 1 0 gray 0
+1 0 0 0 0 -109.517 1.79037 164.906 1 0 0 0 1 1 1 Saw 1 0  0
+1 0 0 0 0 -127.816 38.6056 165.654 1 0 0 0 1 1 1 Shotgun 1 0 grayDark 0
+1 0 0 0 0 -151.694 9.48827 164.905 1 0 0 0 1 1 1 LaserRepeater 1 0 black 0
+1 0 0 0 0 -71.1109 -7.51477 164.904 1 0 0 0 1 1 1 AssaultRifle 1 0 gray 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

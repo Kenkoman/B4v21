@@ -1,0 +1,77 @@
+//-----------------------------------------------------------------------------
+// Torque Game Engine
+// 
+// Copyright (c) 2001 GarageGames.Com
+//-----------------------------------------------------------------------------
+
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TeamListGui) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   noCursor = true;
+
+   new GuiBitmapCtrl() {
+      profile = "HudScrollProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "65 200";
+      extent = "147 231";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./hudfill.png";
+      wrap = "0";
+
+      new GuiTextCtrl() {
+         profile = "HudTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "37 2";
+         extent = "76 20";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Team Score Board";
+         maxLength = "255";
+      };
+      new GuiScrollCtrl() {
+         profile = "HudScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 24";
+         extent = "147 207";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         defaultLineHeight = "15";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(TeamListGuiList) {
+            profile = "HudTextProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "0 0";
+            extent = "145 36";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0 120";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

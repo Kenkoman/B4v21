@@ -1,7 +1,0 @@
-none
-armor
-bucket
-cape
-pack
-quiver
-tank

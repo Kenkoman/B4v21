@@ -1,0 +1,221 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "Lavapit";
+         preview = "tbm/data/missions/Previews/BL-Lavapit.png";
+         desclines = "2";
+         desc0 = "Someone needed to do it.";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "0.6 0.6 0.6";
+      materialList = "~/data/skies/Chris/sunset1/sunset1.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0001";
+      cloudSpeed3 = "0.0001";
+      visibleDistance = "400";
+      fogDistance = "240";
+      fogColor = "0.600000 0.200000 0.000000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.300000 0.100000 0.000000 0.000000";
+      useSkyTextures = "0";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0 -0.707107 -0.707107";
+      color = "0.700000 0.500000 0.000000 1.000000";
+      ambient = "0.500000 0.500000 0.500000 1.000000";
+         locked = "false";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-15.1349 -19.784 160.5";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "2";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-28 -20 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-60 -36 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-44 -20 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-28 -36 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-60 -20 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-44 -36 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-28 -52 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new fxSunLight(sunpls) {
+      position = "-21.244 -41.4947 160.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "0";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "360";
+      SunElevation = "20";
+      FlareTP = "1";
+      Colour = "1.000000 0.500000 0.000000 1.000000";
+      Brightness = "2";
+      FlareSize = "4";
+      FadeTime = "1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "0";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "0";
+      LerpSize = "0";
+      LerpAzimuth = "0";
+      LerpElevation = "0";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "1.000000 0.500000 0.000000 1.000000";
+      MaxColour = "1.000000 0.500000 0.000000 1.000000";
+      MinBrightness = "0";
+      MaxBrightness = "0.8";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "10";
+      BrightnessTime = "8";
+      RotationTime = "3";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+   };
+   new StaticShape() {
+      position = "-44 -52 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-60 -52 158.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WaterBlock(lava) {
+      position = "-32 -48 -354";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 512";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava/volcano5";
+      ShoreTexture = "~/data/water/lava03";
+      envMapOverTexture = "~/data/water/lava03";
+      submergeTexture[0] = "~/data/water/lava/volcano5";
+      liquidType = "HotLava";
+      density = "-5";
+      viscosity = "320";
+      waveMagnitude = "0.5";
+      surfaceOpacity = "1";
+      envMapIntensity = "0";
+      TessSurface = "50";
+      TessShore = "20";
+      SurfaceParallax = "0.5";
+      FlowAngle = "45";
+      FlowRate = "0.03";
+      DistortGridScale = "0.03";
+      DistortMag = "0.03";
+      DistortTime = "4";
+      ShoreDepth = "20";
+      DepthGradient = "3";
+      MinAlpha = "1";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         params0 = "0.32 -0.67 0.066 0.5";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         extent = "100 100 10";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         textureSize = "32 32";
+   };
+};
+//--- OBJECT WRITE END ---
+$DamageHotLava = 2;

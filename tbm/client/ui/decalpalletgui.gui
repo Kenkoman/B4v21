@@ -1,0 +1,354 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(DecalPalletGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "146 85";
+      extent = "406 380";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "DecalPallet";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(decalPalletGui);";
+
+      new GuiScrollCtrl(DecalScr) {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "3 25";
+         extent = "400 304";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "TBM_CheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 355";
+         extent = "71 19";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$decalVar";
+         command = "updateDecal();";
+         helpTag = "0";
+         text = "Loop Var";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiTextEditCtrl(DP_DecalTime) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "36 334";
+         extent = "45 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$Pref::Decal::Time";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 333";
+         extent = "25 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Time:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "186 333";
+         extent = "51 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Type Text:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(DP_TypeText) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "240 333";
+         extent = "113 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$Pref::Decal::TypeText";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl(BtnOK) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "359 333";
+         extent = "41 40";
+         minExtent = "8 2";
+         visible = "1";
+         command = "starttypedecals();canvas.popDialog(decalPalletGui);";
+         helpTag = "0";
+         text = "Type";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(BtnOK) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "85 333";
+         extent = "46 40";
+         minExtent = "8 2";
+         visible = "1";
+         command = "updateDecal();";
+         helpTag = "0";
+         text = "Update";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "239 353";
+         extent = "55 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Type Color:";
+         maxLength = "255";
+      };
+      new GuiPopUpMenuCtrl(TCpopupmenu) {
+         profile = "TBM_PopUpMenuProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "296 354";
+         extent = "57 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "changeTC();";
+         helpTag = "0";
+         maxLength = "255";
+         maxPopupHeight = "200";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+$TCTotal = 0;
+$TypeColor[$TCTotal++] = "black";
+$TypeColor[$TCTotal++] = "white";
+$TypeColor[$TCTotal++] = "green";
+$TypeColor[$TCTotal++] = "yellow";
+$TypeColor[$TCTotal++] = "pink";
+$TypeColor[$TCTotal++] = "lime";
+$TypeColor[$TCTotal++] = "red";
+$TypeColor[$TCTotal++] = "blue";
+TCpopupmenu.clear();
+for(%i=1;%i<=$TCTotal;%i++) {
+TCpopupmenu.add($TypeColor[%i],%i);
+}
+function changeTC() {
+$Pref::Decal::typecolor =$TypeColor[TCpopupmenu.getSelected()];
+}
+function loadDecalImagePreviews()
+{
+	if($DecalImagePreviewsLoaded)
+    DecalScr.clear();
+	setupDecalPreviews(nameToID(DecalScr), "tbm/data/shapes/decal/*.decal.png");
+	$DecalImagePreviewsLoaded = 1;
+}
+function setLegodecalvar(%decal) {
+$lastdecal = %decal;
+%decalName = %decal;
+%decalTime = $Pref::Decal::Time;
+%decal = strreplace(%decal,"01","");  // HaXx
+commandToServer('decalpicker',%decal,%decalTime,$decalVar, %decalName);
+commandToServer('setupdecal',%decal,%decalTime,$decalVar);
+//echo("DECAL: "@%decal SPC "DECALTIME "@%decalTime SPC "LASTDECAL "@$lastdecal SPC "DECALVAR "@$DecalVar);
+}
+function disectDecalName(%file_name, %delimit, %index)
+{
+	for(%i = 0; %i < %index; %i++)
+		%file_name = getSubStr(%file_name, strpos(%file_name, %delimit)+1, strlen(%file_name));  //grab the index + rest of line
+	%file_name = getSubStr(%file_name, 0, strpos(%file_name, %delimit));  //strip the remaning words
+    if(%file_name)
+	return(%file_name);
+}
+function setupDecalPreviews(%scroll, %file_path)
+{
+	%items_on_line = 0;  //Current count of items on the line
+	%new_line = 0;  //new line bool
+	%line_pos = 10;  //position from top, starting offset of 10
+	%item_pos = 10;  //position from side, starting offset of 10
+	%first_img = 0;  //stupid hack because the first image doesn't stay put for some reason.
+    %img_size = 64;
+
+	for(%file_name = findFirstFile(%file_path); %file_name !$= ""; %file_name = findNextFile(%file_path))
+	{
+        if (getsubstr(filePath(%file_name),strlen(filePath(%file_name))-8,8) $= "previews")
+        continue;
+                 
+        if (getsubstr(filePath(%file_name),strlen(filePath(%file_name))-4,4) $= "type")
+        continue;
+        
+        %img_name = disectDecalName(%file_name, ".", 0);
+        %img_name1 = getsubstr(%img_name,strlen(%img_name)-2,1);
+        %img_name2 = getsubstr(%img_name,strlen(%img_name)-2,2);
+        if ((%img_name1 $= "0" || %img_name1 $= "1" || %img_name1 $= "2" || %img_name1 $= "3" || %img_name1 $= "4" || %img_name1 $= "5") && %img_name2 !$= "01")
+        continue;
+
+        //here's the magic, this lovely if sets up the constraints
+		if(%items_on_line == 5)
+		{
+			%line_pos += %img_size + 20;
+			%item_pos = 10;
+			%items_on_line = 0;
+		}
+			//some more magic
+		%true_file_name = %file_name;
+		while(strstr(%true_file_name, "/") != -1)
+			%true_file_name = getSubStr(%true_file_name, strpos(%true_file_name, "/")+1, strlen(%true_file_name));
+                %img_name = disectDecalName(%true_file_name, ".", 0);
+		%img_type = disectDecalName(%true_file_name, ".", 1);
+                if (%img_name $= "")
+                  continue;
+		if (isfile(filePath(%file_name)@"/previews/"@%img_name@"."@%img_type@".png"))
+                  %pic_file_name=filePath(%file_name)@"/previews/"@%img_name@"."@%img_type@".png";
+                else
+                  %pic_file_name=%file_name;
+                  
+			//Create the image and add it
+		%img = new GuiBitmapCtrl() {
+			profile = "GuiDefaultProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "1 1";
+			extent = %img_size SPC %img_size;
+			minExtent = "8 2";
+			visible = "1";
+			helpTag = "0";
+			bitmap = %pic_file_name;
+			wrap = "0";
+            canKeyFocus = false;
+		};
+		%img.position = %item_pos SPC %line_pos;
+		if(!%first_img)  //part two of the first_img hack
+			%first_img = %img;
+		%scroll.add(%img);
+        if(%img_name2 $= "01")
+        %img_text = "\c2"@%img_name;
+        else
+        %img_text = "\c0"@%img_name;
+			//Create the button and add it
+               %btn = new GuiButtonCtrl() {
+            		profile = "DP_ButtonProfile";
+		            horizSizing = "right";
+            		vertSizing = "bottom";
+            		position = %item_pos SPC (%line_pos);
+            		extent = %img_size SPC %img_size;
+            		minExtent = "8 2";
+            		visible = "1";
+            		helpTag = "0";
+			        text = " ";
+            		groupNum = "-1";
+			        command = "setLegodecalvar("@%img_name@");";
+            		buttonType = "RadioButton";
+         		};
+               %btntxt = new GuiTextCtrl() {
+                     profile = "DP_TextProfile";
+                     horizSizing = "right";
+                     vertSizing = "bottom";
+                     position = %item_pos SPC (%line_pos + %img_size);
+                     extent = %img_size SPC "18";
+                     minExtent = "8 8";
+                     visible = "1";
+                     helpTag = "0";
+                     text = %img_text;
+                     maxLength = "12";
+               };
+		%scroll.add(%btn);
+        %scroll.add(%btntxt);
+		//Increment our values for the constraints
+		%items_on_line++;
+		%item_pos += %img_size + 10;
+}
+	//create the background, using base.blank for the default torque-gray
+	%bg = new GuiBitmapCtrl() {
+		profile = "GuiDefaultProfile";
+		horizSizing = "right";
+		vertSizing = "bottom";
+		position = "1 1";
+		extent = "425" SPC (%line_pos + %img_size + 20);  //skip over the last line and add a 20px bottom border
+		minExtent = "8 2";
+		visible = "1";
+		helpTag = "0";
+		bitmap = "tbm/data/shapes/base.blank.jpg";
+		wrap = "0";
+	};
+	%scroll.add(%bg);
+		//because we added it last, it'll be in front of everything, this is BAD, and we can't add it first because we don't know how big to make it, so we just send it all the way back behind the rest ( yea, it's fucked, bringToFront, I know I know).
+	%scroll.bringToFront(%bg);
+		//now the third part of first_img hack
+	%first_img.position = "10 10";
+}
+loaddecalimagepreviews();
+
+$DecalPalletGuiTog = 0; //Noob protect
+function openDecalPalletWindow (%val)
+{
+	if(%val && $DecalPalletGuiTog == 0)
+		canvas.pushDialog("decalpalletgui");
+	else if(%val && $DecalPalletGuiTog == 1)
+		canvas.popDialog("decalpalletgui");
+}
+function DecalPalletGui::OnWake() {
+$DecalPalletGuiTog = 1;
+//setmodpaths(getmodpaths());
+}
+function DecalPalletGui::OnSleep() {
+$DecalPalletGuiTog = 0;
+}
+
+function updatedecal() {
+setLegodecalvar($lastdecal);
+}
+function starttypedecals() {
+type($Pref::Decal::TypeColor,$Pref::Decal::TypeText);
+}

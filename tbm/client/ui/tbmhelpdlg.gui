@@ -1,0 +1,219 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TBMHelpDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl(bgTile) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "1024 768";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./mainmenuImages/transgrey";
+      wrap = "0";
+         glow = "1";
+   };   
+   new GuiControl(TBM_HelpDlgWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "center";
+      position = "192 0";
+      extent = "487 383";
+      minExtent = "300 200";
+      visible = "1";
+      helpTag = "0";
+      text = "Help";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(TBMHelpDlg);";
+
+      new GuiBitmapCtrl(joinServerTile) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "487 64";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/tile";
+         wrap = "0";
+            glow = "1";
+      };
+      new GuiBitmapCtrl(joinServerLogo) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "192 63";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/help";
+         wrap = "0";
+            glow = "1";
+      };	  
+	  
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "11 81";
+         extent = "129 252";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(TBMhelpfilelist) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "125 208";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               fileName12 = "tbm/client/help/1. Setting Up TOB.hfl";
+               fileName11 = "tbm/client/help/10. Weapons.hfl";
+               fileName9 = "tbm/client/help/12. TOB Credits.hfl";
+               fileName8 = "tbm/client/help/2. Basic Gameplay.hfl";
+               fileName7 = "tbm/client/help/3. Joining Servers.hfl";
+               fileName10 = "tbm/client/help/11. Mission Editor Basics.hfl";
+               fileName5 = "tbm/client/help/5. Administrating Servers.hfl";
+               fileName4 = "tbm/client/help/6. The Editor Staff.hfl";
+               fileName3 = "tbm/client/help/7. Switches.hfl";
+               entryCount = "13";
+               fileName6 = "tbm/client/help/4. Starting a Server.hfl";
+               fileName1 = "tbm/client/help/9. Money System.hfl";
+               fileName0 = "tbm/client/help/TOB 2.2 Intro.hfl";
+               fileName2 = "tbm/client/help/8. iGob.hfl";
+         };
+      };
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "147 81";
+         extent = "328 283";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMLTextCtrl(TBMHelpText) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "310 278";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "12 337";
+         extent = "130 27";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(TBMHelpDlg);";
+         helpTag = "0";
+         text = "<< Back";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+//-----------------------------------------------------------------------------
+// Torque Engine
+//
+// Copyright (C) GarageGames.com, Inc.
+//-----------------------------------------------------------------------------
+
+function TBMhelpdlg::onWake(%this)
+{
+   TBMhelpfilelist.entryCount = 0;
+   TBMhelpfilelist.clear();
+   for(%file = findFirstFile("tbm/client/help/*.hfl"); %file !$= ""; %file = findNextFile("tbm/client/help/*.hfl"))
+   {
+      TBMhelpfilelist.fileName[TBMhelpfilelist.entryCount] = %file;
+      TBMhelpfilelist.addRow(TBMhelpfilelist.entryCount, fileBase(%file));
+      TBMhelpfilelist.entryCount++;
+   }
+   TBMhelpfilelist.sortNumerical(0);
+   TBMhelpfilelist.setSelectedRow(0);
+}
+
+function TBMhelpFileList::onSelect(%this, %row)
+{
+   %fo = new FileObject();
+   %fo.openForRead(%this.fileName[%row]);
+   %text = "";
+   while(!%fo.isEOF())
+      %text = %text @ %fo.readLine() @ "\n";
+
+   %fo.delete();
+   TBMHelpText.setText(%text);
+}
+
+function getTBMHelp(%helpName)
+{
+   Canvas.pushDialog(TBMhelpdlg);
+   if(%helpName !$= "")
+   {
+      %index = TBMHelpFileList.findTextIndex(%helpName);
+      TBMhelpfilelist.setSelectedRow(%index);
+   }
+}
+
+function contextTBMHelp()
+{
+   if(TBMhelpdlg.isAwake())
+   {
+      Canvas.popDialog(TBMhelpdlg);
+      return;
+   }
+   for(%i = 0; %i < Canvas.getCount(); %i++)
+   {
+      if((%h = Canvas.getObject(%i).getHelpPage()) !$= "")
+         %help = %h;
+   }
+   getTBMHelp(%help);
+}

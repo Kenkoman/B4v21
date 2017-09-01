@@ -1,0 +1,146 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ProfileGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "822 160";
+      extent = "246 239";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Profiles";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(ProfileGui);";
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "54 204";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ProfileGui_LoadButtonPressed();";
+         helpTag = "0";
+         text = "Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 54";
+         extent = "240 146";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(profileList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "220 32";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiTextEditCtrl(ProfileGui_saveNameField) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 29";
+         extent = "155 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "167 24";
+         extent = "72 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ProfileGui_SaveButtonPressed();";
+         helpTag = "0";
+         text = "Save";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ProfileGui::onWake(%this)
+{
+	ProfileGui_setupList();
+}
+
+function ProfileGui_setupList() {
+	profileList.clear();
+	%i=0;
+	for(%file = findFirstFile("*/profile_*.cs"); %file !$= ""; %file = findNextFile("*/profile_*.cs"))  
+		profileList.addRow(%i++, getSubStr(%file,19,strlen(%file) - 22) @ "\t" @ %file );
+	profileList.sort(0);
+	profileList.setSelectedRow(0);
+	profileList.scrollVisible(0);
+}
+
+function ProfileGui_SaveButtonPressed() {
+	%name = ProfileGui_saveNameField.getValue();
+	saveProfile(%name);
+	ProfileGui_setupList();
+}
+
+function ProfileGui_LoadButtonPressed() {
+	%id = profileList.getSelectedId();
+	%profile = getField(profileList.getRowTextById(%id), 0);
+	loadProfile(%profile);
+}
+
+function saveProfile(%name) {
+	export("$pref::Accessory::*", "tbm/client/profiles/profile_" @ %name @ ".cs", False);
+    export("$pref::Color::Skin", "tbm/client/profiles/profile_" @ %name @ ".cs", False);
+    export("$pref::Decal::*", "tbm/client/profiles/profile_" @ %name @ ".cs", False);
+ setmodpaths(getmodpaths());
+}
+
+function loadProfile(%name) {
+	exec("tbm/client/profiles/profile_" @ %name @ ".cs");
+}

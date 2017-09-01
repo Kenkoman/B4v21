@@ -1,0 +1,388 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(EscapeMenuGUI) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./mainmenuImages/menubackground.png";
+   useVariable = "0";
+   tile = "1";
+
+   new GuiControl(EscapeMenuUI) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+
+      new GameTSCtrl(EscapeMenuTSCtrl) {
+         profile = "GuiContentProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 0";   //80 60
+         extent = "640 480";   //and 480 360 also looks nice
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         cameraZRot = "0";
+         forceFOV = "0";
+      };
+      new GuiBitmapCtrl(EscapeTint) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "192 1600";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/transgrey.png";
+         wrap = "1";
+            tile = "1";
+      };
+      new GuiBitmapCtrl(escapeMenuBg) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "0 0";
+         extent = "1024 768";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/transgrey/transgrey_00";
+         wrap = "0";
+            glow = "1";
+      }; 
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "226 22";
+         extent = "100 23";
+         minExtent = "8 8";
+         visible = "0";
+         command = "canvas.pushDialog(disconnectConfirmDialog);";
+         helpTag = "0";
+         text = "";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         accelerator = "return";
+      };	  
+      new GuiBitmapCtrl(EscapeSidebar) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "center";
+         position = "0 0";
+         extent = "192 383";
+         minExtent = "192 383";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/sidebar_metro_escape";
+         wrap = "1";
+
+         new GuiControl(Button_EscapeJoinServer) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_EscapeJoinServer_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+                  glow = "23319";
+            };
+            new GuiMouseEventCtrl(Escape_JoinServer) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_EscapeOptions) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 64";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_EscapeOptions_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(Escape_Options) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_EscapeHelp) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 128";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_EscapeHelp_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "1";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "1";
+                  tile = "1";
+            };
+            new GuiMouseEventCtrl(Escape_Help) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_EscapeDisconnect) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 192";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_EscapeDisconnect_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(Escape_Disconnect) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_EscapeQuit) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 256";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_EscapeQuit_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(Escape_Quit) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+         new GuiControl(Button_EscapeBack) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "left";
+            vertSizing = "bottom";
+            position = "0 320";
+            extent = "192 64";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+
+            new GuiBitmapCtrl(Button_EscapeBack_Bitmap) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "128 0";
+               extent = "64 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               bitmap = "./mainmenuImages/dtbbutton_o0";
+               wrap = "0";
+            };
+            new GuiMouseEventCtrl(Escape_Back) {
+               profile = "GuiDefaultProfile";
+               horizSizing = "left";
+               vertSizing = "bottom";
+               position = "0 0";
+               extent = "192 64";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               lockMouse = "0";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+//Opening and closing
+function EscapeMenuGUI::onWake(%this) {
+EscapeMenuGUI.swing(-192);
+//take about 500 ms
+escapeMenuBg.setBitmap("tbm/client/ui/mainMenuImages/transGrey/transgrey_00");
+for(%i = 1; %i <= 10; %i++)
+  escapeMenuBg.schedule(50 * %i, setBitmap, "tbm/client/ui/mainMenuImages/transGrey/transgrey_" @ %i @ "0");
+for(%i = -191; %i <= 0; %i++)
+  escapeMenuGUI.schedule(500 + (2 * %i), swing, %i);
+escapeMovemap.schedule(500, push);
+$EscapeMenuButtonSchedule = schedule(50, 0, escapeMenuButtonCheck);
+}
+
+function EscapeMenuGUI::close(%this) {
+escapeMovemap.pop();
+EscapeMenuGUI.swing(0);
+//take about 500 ms
+escapeMenuBg.setBitmap("tbm/client/ui/mainMenuImages/transGrey/transgrey_100");
+for(%i = 9; %i >= 0; %i--)
+  escapeMenuBg.schedule(500 - (50 * %i), setBitmap, "tbm/client/ui/mainMenuImages/transGrey/transgrey_" @ %i @ "0");
+for(%i = 0; %i >= -192; %i--)
+  escapeMenuGUI.schedule(-2 * %i, swing, %i);
+canvas.schedule(500, setContent, playGUI);
+}
+
+function EscapeMenuGUI::toggle(%this) {
+if(%this.isAwake())
+  %this.close();
+else
+  Canvas.setContent(%this);
+}
+
+function EscapeMenuGUI::swing(%this, %x) {
+EscapeTint.position = %x SPC getWord(EscapeTint.position, 1);
+EscapeSidebar.position = %x SPC getWord(EscapeSidebar.position, 1);
+}
+
+//Escape key shenanigans
+if(!isObject(escapeMovemap)) {
+  new ActionMap(escapeMovemap);
+  escapeMovemap.bindCmd(keyboard, "escape", "", "escapeMenuGUI.close();");
+}
+
+//Buttons
+function escapeMenuButtonCheck() {
+	cancel($EscapeMenuButtonSchedule);
+	if(escapeMenuGUI.isAwake()) {
+		if(isMouseoverbutton("Escape_JoinServer") == 1 && !Escape_JoinServer.on && Escape_JoinServer.isVisible())
+			fadebutton("Button_EscapeJoinServer_Bitmap","Escape_JoinServer");
+		else if(isMouseoverbutton("Escape_Options") == 1 && !Escape_Options.on && Escape_Options.isVisible())
+			fadebutton("Button_EscapeOptions_Bitmap","Escape_Options");
+		else if(isMouseoverbutton("Escape_Help") == 1 && !Escape_Help.on && Escape_Help.isVisible())
+			fadebutton("Button_EscapeHelp_Bitmap","Escape_Help");
+		else if(isMouseoverbutton("Escape_Disconnect") == 1 && !Escape_Disconnect.on && Escape_Disconnect.isVisible())
+			fadebutton("Button_EscapeDisconnect_Bitmap","Escape_Disconnect");
+		else if(isMouseoverbutton("Escape_Quit") == 1 && !Escape_Quit.on && Escape_Quit.isVisible())
+			fadebutton("Button_EscapeQuit_Bitmap","Escape_Quit");
+		else if(isMouseoverbutton("Escape_Back") == 1 && !Escape_Back.on && Escape_Back.isVisible())
+			fadebutton("Button_EscapeBack_Bitmap","Escape_Back");
+		$EscapeMenuButtonSchedule = schedule(50, 0, escapeMenuButtonCheck);
+	}
+}
+
+
+//More buttons
+function Escape_JoinServer::onMouseDown(%this) {
+Canvas.pushDialog(joinservergui);
+}
+
+function Escape_Options::onMouseDown(%this) {
+Canvas.pushDialog(optionsdlg);
+}
+
+function Escape_Help::onMouseDown(%this) {
+Canvas.pushDialog(tbmhelpdlg);
+}
+
+function Escape_Disconnect::onMouseDown(%this) {
+canvas.pushDialog(disconnectConfirmDialog);
+}
+
+function Escape_Quit::onMouseDown(%this) {
+canvas.pushDialog(quitConfirmDialog);
+}
+
+function Escape_Back::onMouseDown(%this) {
+EscapeMenuGUI.close(%this);
+}

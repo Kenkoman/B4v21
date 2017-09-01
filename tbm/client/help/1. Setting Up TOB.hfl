@@ -1,0 +1,59 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Setting Up TOB
+
+<just:left><font:Arial:14>This section will go over various options for customizing your player and game. The first parts will deal with options from the <font:Arial Italic:14>Options GUI<font:Arial:14>. Click <font:Arial Italic:14>Options<font:Arial:14> on the main menu or press <font:Arial Italic:14>Alt + O<font:Arial:14> ingame to access this.
+
+
+
+<font:Arial Bold:20>Graphics
+
+<font:Arial Bold:14>Display Driver<font:Arial:14> - Default is OpenGL which seems to perform faster than Direct3D. Some machine can not work on the OpenGL setting and must use Direct3D while on other machines switching to Direct3D will crash the game.
+
+<font:Arial Bold:14>Resolution<font:Arial:14> - Makes the window bigger or smaller and in fullscreen mode makes the display bigger or smaller.
+
+<font:Arial Bold:14>Bit Depth<font:Arial:14> - Ignore this, it can't be changed and shouldn't be changed.
+
+<font:Arial Bold:14>Screenshot<font:Arial:14> - Changes the format that screenshots are saved to. JPG files are lower quality, but take up less space. PNGs are higher quality, and take up more space.
+
+<font:Arial Bold:14>Window Color<font:Arial:14> - Changes the window skin for TOB GUIs. Not a hugely important feature, but it's nice if you want to make TOB match your Windows skin.
+
+<font:Arial Bold:14>Cursor Style<font:Arial:14> - Like the Window Color option, this is simply personal preference. Changes the appearance of the mouse cursor.
+
+<font:Arial Bold:14>Show FPS<font:Arial:14> - Adds a small counter in the corner of the screen that shows your graphics card's current <font:Arial Italic:14>frames per second<font:Arial:14>. Useful if you want to cut down on lag.
+
+<font:Arial Bold:14>Animate FilmStrip<font:Arial:14> - When on, images will move across the screen on the Main Menu, when off, it will not move.
+
+
+<font:Arial Bold:17>3D Options<font:Arial:17> - Almost all of these should be left on as they do nothing to help performance.
+
+
+<font:Arial Bold:14>Fullscreen Video/Disable Vsync<font:Arial:14> - Makes the game go into fullscreen mode.
+
+<font:Arial Bold:14>Force restart on skin change<font:Arial:14> - Forces a restart when changing the GUI skins.
+
+<font:Arial Bold:14>Draw Distance<font:Arial:14> - Moves the fog back in ratio to the server's fog level with the most right being the same as the server.
+
+
+
+<font:Arial Bold:20>Network
+
+<font:Arial:14>Your best bet here to reduce lag is to select the preset from the box that matches your internet connection.
+
+
+
+<font:Arial Bold:20>Controls
+
+<font:Arial:14>This section allows you to rebind nearly all of the keybinds in TOB. If you don't have a mouse with a middle button, you can remap the Special Options GUI to something else. Just change things to whatever you feel comfortable with. This can also be a useful reference at times.
+
+<font:Arial Bold:14>Mouse Sensitivity<font:Arial:14> - Adjusts how much your mouse will react when you move it.
+
+<font:Arial Bold:14>Invert Mouse<font:Arial:14> - Makes moving the mouse up move your viewpoint ingame down, similar to a flight simulator.
+
+
+
+<font:Arial Bold:20>Player
+
+<font:Arial:14>A preview window exists so you can get an idea of what your minifig will look like ingame without having to deal with cameras and other things. A preset option allows for quick outfit switching.
+
+<font:Arial Bold:14>Presets<font:Arial:14> - This allows you to change outfits on-the-fly. Simply click the dropdown box and pick a preset. You will be asked if you'd like to either<font:Arial Italic:14>Overwrite<font:Arial:14>  the selected preset with the outfit you've made or<font:Arial Italic:14>Load<font:Arial:14>  the preset from the dropdown menu.
+
+<font:Arial Bold:14>Outfit Options<font:Arial:14> - Making an outfit in TOB is simple. You can pick chest and face decals at-a-glance, and see the colors of the accessories selected. Click a dropdown box to select an item from each category. Click a color to bring up the color selector.

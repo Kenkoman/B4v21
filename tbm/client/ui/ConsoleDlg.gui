@@ -1,0 +1,140 @@
+//-----------------------------------------------------------------------------
+// Copyright (C) Sickhead Games, LLC
+// http://www.sickheadgames.com
+//-----------------------------------------------------------------------------
+
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ConsoleDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "center";
+   vertSizing = "center";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(ConsoleDlgWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "68 46";
+      extent = "504 387";
+      minExtent = "225 125";
+      visible = "1";
+      helpTag = "0";
+      text = "Console";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "toggleconsole(1);";
+
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "5 26";
+         extent = "494 335";
+         minExtent = "0 0";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "1";
+         childMargin = "0 0";
+            resizeHeight = "1";
+            resizeWidth = "1";
+
+         new GuiConsole("testArrayCtrl")
+         {
+            profile = "GuiConsoleProfile";
+            position = "0 0";
+         };
+      };
+      new GuiConsoleEditCtrl(ConsoleEntry) {
+         profile = "TBM_TextEditProfile";
+         horizSizing = "width";
+         vertSizing = "top";
+         position = "4 364";
+         extent = "495 18";
+         minExtent = "0 18";
+         visible = "1";
+         altCommand = "ConsoleEntry::eval();";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "50";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "1";
+         useSiblingScroller = "1";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            resizeWidth = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ConsoleDlg::onWake()
+{
+   // Look for the prefs and correct them to
+   // the console defaults if they're invalid.
+   %position = $pref::Console::position;
+   %extent = $pref::Console::extent;
+   
+   if ( %position $= "")
+      %position = ConsoleDlgWindow.position;
+   
+   if (getWord( %extent, 0 ) < getWord( ConsoleDlgWindow.minExtent, 0 ) ||
+         getWord( %extent, 1 ) < getWord( ConsoleDlgWindow.minExtent, 1) )
+      %extent = ConsoleDlgWindow.extent;
+   
+   ConsoleDlgWindow.resize(
+      getWord( %position, 0 ),
+      getWord( %position, 1 ),
+      getWord( %extent, 0 ),
+      getWord( %extent, 1 ) );
+}
+
+function ConsoleDlg::onSleep()
+{
+   $pref::Console::position = ConsoleDlgWindow.position;
+   $pref::Console::extent = ConsoleDlgWindow.extent;
+}
+
+function ConsoleEntry::eval()
+{
+   %text = ConsoleEntry.getValue();
+   echo("==>" @ %text);
+   eval(%text);
+   ConsoleEntry.setValue("");
+}
+
+function ToggleConsole(%make)
+{
+   if (%make)
+   {
+      if ( ConsoleDlg.isAwake() )
+      {
+         if ( $enableDirectInput )
+            activateKeyboard();
+         Canvas.popDialog(ConsoleDlg);
+      }
+      else
+      {
+         if ( $enableDirectInput )
+            deactivateKeyboard();
+         Canvas.pushDialog(ConsoleDlg, 99);
+      }
+   }
+}
+
+
+
+

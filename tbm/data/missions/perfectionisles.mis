@@ -1,0 +1,282 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/previews/isles.jpg";
+         desc0 = "Welcome to Perfection Isles, where you can not only race, but build! by: gobbles NOTE: THIS IS A BETA";
+         desclines = "2";
+         name = "Perfection Isles BETA";
+   };
+   new MissionArea(MissionArea) {
+      area = "-872 -1000 1552 1536";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "-624 -712 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Chris/calm/calm.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "150";
+      fogColor = "0.350000 0.450000 0.650000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.400000 0.400000 0.100000 1.000000";
+      ambient = "0.750000 0.750000 0.750000 1.000000";
+         position = "0 0 0";
+         rotation = "0 0 1 90";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./perfectionisles.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+   };
+   new WaterBlock() {
+      position = "-960 -848 5";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 100";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/Chris/water_04";
+      ShoreTexture = "~/data/water/Chris/foam01";
+      envMapOverTexture = "~/data/water/water";
+      submergeTexture[0] = "~/data/water/Chris/water_03";
+      liquidType = "Water";
+      density = "1";
+      viscosity = "15";
+      waveMagnitude = "1";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.2";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "2";
+      DepthGradient = "2";
+      MinAlpha = "0";
+      MaxAlpha = "0.85";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         params1 = "0.63 -2.41 0.33 0.21";
+         extent = "400 400 100";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params2 = "0.39 0.39 0.2 0.133";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params0 = "1.32 -0.67 0.66 0.5";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         floodFill = "1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-373 -360 114.6";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "455.775 -296.121 112.435";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-16 -720 177.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-383 -349 111";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-399 -349 111";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-399 -333 111";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-383 -333 111";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-464 -12 109.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-480 -12 109.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-480 -28 109.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-464 -28 109.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-576 -560 133";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-560 -560 133";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-560 -400 133";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-576 -400 133";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "420 273 136.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "48.4 320.2 146.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "416 32 112";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "416 -256 112";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "440 -319 109.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "392 -319 109.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "404 273 136.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "420 289 136.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "404 289 136.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "48.4 336.2 146.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "64.4 336.2 146.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "64.4 320.2 146.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

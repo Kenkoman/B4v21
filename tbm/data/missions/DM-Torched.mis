@@ -1,0 +1,787 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/previews/torched.png";
+         desc0 = "Map by Plague";
+         desclines = "2";
+         name = "Torched";
+   };
+   new MissionArea(MissionArea) {
+      area = "-608 -1000 1616 2000";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Plague/alien2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1200";
+      fogDistance = "500";
+      fogColor = "0.180000 0.150000 0.150000 0.100000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "200.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "200.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "200.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.500000 0.500000 0.500000 1.000000";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./DM-Torched.ter";
+      squareSize = "8";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "53.7192 -169.467 132.756";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "6";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "799.989 -150.398 112.756";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "6";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "281.946 -707.634 309.331";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "314.026 -711.1 302.168";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "229.153 -700.358 347.024";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "360.503 -710.951 302.683";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "229.735 -694.482 223.696";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "276.252 -692.47 223.487";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "308.332 -695.936 216.324";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "350.926 -696.464 214.884";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "307.75 -701.812 339.652";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "235.429 -709.646 309.54";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "276.891 -696.811 284.548";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "355.448 -700.128 277.9";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new InteriorInstance() {
+      position = "270.781 -609.29 269.4";
+      rotation = "0 0 1 89.9544";
+      scale = "0.6 1 1";
+      interiorFile = "~/data/interiors/Plague/sci-fi/bridge2.dif";
+      showTerrainInside = "0";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "275.67 -698.346 346.815";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "354.227 -701.663 340.167";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "308.971 -700.277 277.385";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "230.374 -698.823 284.757";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "222.366 -697.319 149.725";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "254.745 -694.98 149.577";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "286.825 -698.446 142.414";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode(lavafall) {
+      position = "333.302 -698.297 142.929";
+      rotation = "0.314078 -0.540766 0.780338 230.899";
+      scale = "1 1 1";
+      dataBlock = "lavafallEmitterNode";
+      emitter = "lavafallEmitter";
+      velocity = "1";
+   };
+   new WaterBlock() {
+      position = "104 -1024 352.256";
+      rotation = "1 0 0 0";
+      scale = "1024 1024 1";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava03";
+      ShoreTexture = "~/data/water/lava03";
+      submergeTexture[0] = "~/data/water/lava03";
+      liquidType = "StagnantWater";
+      density = "0";
+      viscosity = "0";
+      waveMagnitude = "0.1";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.3";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "1";
+      DepthGradient = "1";
+      MinAlpha = "0.01";
+      MaxAlpha = "0.8";
+      removeWetEdges = "1";
+         textureSize = "100 100";
+         params0 = "0.32 -0.67 0.066 0.5";
+         floodFill = "1";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         extent = "100 100 10";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params1 = "0.63 -2.41 0.33 0.21";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params2 = "0.39 0.39 0.2 0.133";
+   };
+   new WaterBlock() {
+      position = "280 -384 15.483";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 80";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava03";
+      ShoreTexture = "~/data/water/lava03";
+      submergeTexture[0] = "~/data/water/lava03";
+      liquidType = "CrustyLava";
+      density = "5";
+      viscosity = "20";
+      waveMagnitude = "1";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.3";
+      FlowAngle = "-90";
+      FlowRate = "0.5";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "1";
+      DepthGradient = "1";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         textureSize = "32 32";
+         params0 = "0.32 -0.67 0.066 0.5";
+         floodFill = "1";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         extent = "100 100 10";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params1 = "0.63 -2.41 0.33 0.21";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params2 = "0.39 0.39 0.2 0.133";
+   };
+   new InteriorInstance() {
+      position = "70.1851 -157.156 166.601";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      interiorFile = "~/data/interiors/Plague/sci-fi/global_shield_center.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "840.014 -167.492 143.794";
+      rotation = "1 0 0 0";
+      scale = "6 6 6";
+      interiorFile = "~/data/interiors/Plague/sci-fi/global_shield_center.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "284.019 636.193 93.54";
+      rotation = "0 0 1 28.6478";
+      scale = "4 4 4";
+      interiorFile = "~/data/interiors/Plague/sci-fi/pipeline.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-144.213 621.011 98.2454";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Plague/sci-fi/bridge2.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "68.7681 739.246 99.88";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "68.7681 755.246 99.88";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "87.9077 -205.217 212.512";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "964.789 -305.161 99.9113";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "52.7677 739.246 99.88";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "68.7681 771.246 99.88";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-126.182 469.41 99.89";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-126.182 437.41 99.89";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-126.182 453.41 99.89";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-142.182 437.41 99.89";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-142.182 453.41 99.89";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-142.182 469.41 99.89";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "565.363 -562.022 274.714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "581.363 -562.022 274.714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "565.363 -578.022 274.714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "581.363 -578.022 274.714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "549.363 -578.022 274.714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "549.363 -562.022 274.714";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "26.94 -637.934 274.369";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "26.94 -653.934 274.369";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "42.94 -653.934 274.369";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "42.94 -637.934 274.369";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "61.1985 68.9826 114.27";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "61.1985 52.9826 114.27";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "77.1985 52.9826 114.27";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "77.1985 68.9826 114.27";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "552.62 -132.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "568.619 -180.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "552.62 -180.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "568.619 -132.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "552.62 -164.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "552.62 -148.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "568.619 -164.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "536.62 -164.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "568.619 -148.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "536.62 -148.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "536.62 -132.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "536.62 -180.298 106.849";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "52.7677 771.246 99.88";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "52.7677 755.246 99.88";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "249.357 314.736 -257.948";
+      rotation = "0 0 -1 89.9544";
+      scale = "80 90 70";
+      interiorFile = "~/data/interiors/Plague/City/barrier_box.dif";
+      showTerrainInside = "0";
+   };
+   new ParticleEmitterNode() {
+      position = "245.701 -709.419 349.456";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "248.484 -725.024 345.856";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "256.825 -713.456 350.898";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "270.327 -719.355 345.856";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "284.561 -713.292 350.764";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "306.189 -713.297 352.175";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "321.203 -711.443 353.537";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "346.236 -717.633 355.413";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "358.72 -715.944 353.897";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "357.268 -736.799 357.681";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "344.784 -738.488 359.197";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "319.751 -732.698 362.721";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "304.737 -734.552 361.359";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "283.109 -728.547 359.948";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "268.875 -734.61 355.04";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "255.373 -728.711 360.082";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "247.032 -740.279 355.04";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "244.249 -724.674 358.64";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "284.419 -745.355 354.832";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "299.433 -743.501 356.194";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "316.934 -746.289 352.575";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "331.948 -744.435 353.937";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "lavafallMistEmitterNode";
+      emitter = "lavafallMistEmitter";
+      velocity = "1";
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,192 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(SavePresetGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(SavePresetWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "445 0";
+      extent = "300 100";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Save Preset...";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(SavePresetGui);";
+
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 39";
+         extent = "48 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Name:";
+         maxLength = "255";
+      };
+       new GuiTextEditCtrl(txtSavePreset_Name) {
+          profile = "GuiTextEditProfile";
+          horizSizing = "right";
+          vertSizing = "bottom";
+          position = "40 40";
+          extent = "240 18";
+          minExtent = "8 2";
+          visible = "1";
+          helpTag = "0";
+          maxLength = "255";
+          historySize = "0";
+          password = "0";
+          tabComplete = "0";
+          sinkAllKeyEvents = "0";
+       };
+
+      new GuiButtonCtrl(btnSavePreset) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "166 70";
+         extent = "100 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "TxtPlayerName.setvalue(TxtSavePreset_Name.getvalue());handlesavedplayer(\"save\");Canvas.popdialog(SavePresetGUI);";
+         helpTag = "0";
+         text = "Save";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnCancelPreset) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "33 70";
+         extent = "100 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(SavePresetGui);";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(LoadPresetGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(LoadPresetWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "445 0";
+      extent = "300 100";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Load Preset  ?";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(LoadPresetGui);";
+
+      new GuiTextCtrl(txtPresetName) {
+         profile = "GuiTextProfile";
+         horizSizing = "center";
+         vertSizing = "bottom";
+         position = "0 25";
+         extent = "48 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Something";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 39";
+         extent = "48 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Load this preset?";
+         maxLength = "255";
+      };
+
+      new GuiButtonCtrl(btnSavePreset) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "205 70";
+         extent = "80 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "handlesavedplayer(\"load\"); Canvas.popdialog(LoadPresetGUI);";
+         helpTag = "0";
+         text = "Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnCancelPreset) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "110 70";
+         extent = "80 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "TxtPlayerName.setvalue($savedcharname[Savedcharpopup.getSelected()]);handlesavedplayer(\"save\");Canvas.popdialog(LoadPresetGUI);";
+         helpTag = "0";
+         text = "Overwrite";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnCancelPreset) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 70";
+         extent = "80 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(LoadPresetGui);";
+         helpTag = "0";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

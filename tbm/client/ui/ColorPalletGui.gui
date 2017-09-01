@@ -1,0 +1,220 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ColorPalletGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(ColorPalletWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "174 99";
+      extent = "310 331";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "ColorPallet";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(ColorPalletGui);";
+
+      new GuiScrollCtrl(ColorPallet) {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 25";
+         extent = "302 302";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOff";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function setupcolorpallet () {
+  %items_on_line = 0;  //Current count of items on the line
+  %new_line = 0;  //new line bool
+  %line_pos = 1;  //position from top, starting offset of 10
+  %item_pos = 1;  //position from side, starting offset of 10
+  %first_img = 0;  //stupid hack because the first image doesn't stay put for some reason.
+  %scroll = nametoid(colorpallet);
+  while(%scroll.getCount())
+    %scroll.getObject(0).delete();
+
+  for(%i=0; %i<=$LCTotal; %i++) {
+    if(%items_on_line == 12) {
+ 	%line_pos += 25;
+	%item_pos = 1;
+	%items_on_line = 0;
+	}
+     if ($legocolor[%i]$="")
+       continue;
+     %pic_file_name="tbm/data/shapes/"@$legocolor[%i]@".blank.jpg";
+                %img = new GuiBitmapCtrl() {
+			profile = "GuiDefaultProfile";
+			horizSizing = "right";
+			vertSizing = "bottom";
+			position = "1 1";
+			extent = "25 25";
+			minExtent = "8 2";
+			visible = "1";
+			helpTag = "0";
+			bitmap = %pic_file_name;
+			wrap = "0";
+		};
+		%img.position = %item_pos SPC %line_pos;
+		if(!%first_img)  //part two of the first_img hack
+			%first_img = %img;
+		%scroll.add(%img);
+
+			//Create the button and add it
+               %btn = new GuiButtonCtrl("Colorbtn"@%i) {
+            		profile = "DP_ButtonProfile";
+		        horizSizing = "right";
+            		vertSizing = "bottom";
+            		position = %item_pos SPC %line_pos;
+            		extent = "25 25";
+            		minExtent = "8 2";
+            		visible = "1";
+            		helpTag = "0";
+			        text = "";
+            		groupNum = "-1";
+			        command = "handlecolorsetting("@%i@");";
+            		buttonType = "RadioButton";
+         		};
+		%scroll.add(%btn);
+		%items_on_line++;
+		%item_pos += 25;
+	}
+	%bg = new GuiBitmapCtrl() {
+		profile = "GuiDefaultProfile";
+		horizSizing = "right";
+		vertSizing = "bottom";
+		position = "1 1";
+		extent = "425" SPC (%line_pos + 85);  //skip over the last line and add a 10px bottom border
+		minExtent = "8 2";
+		visible = "1";
+		helpTag = "0";
+		bitmap = "tbm/data/shapes/graydark.blank";
+		wrap = "0";
+	};
+	%scroll.add(%bg);
+		//because we added it last, it'll be in front of everything, this is BAD, and we can't add it first because we don't know how big to make it, so we just send it all the way back behind the rest ( yea, it's fucked, bringToFront, I know I know).
+	%scroll.bringToFront(%bg);
+	%first_img.position = "1 1";
+	ColorPallet.extent = "302" SPC (%line_pos + 25);
+	ColorPalletWindow.extent = "310" SPC (%line_pos + 54);
+}
+
+function handlecolorsetting(%color) {
+%colorloc = "tbm/data/shapes/"@$legocolor[%color]@".blank.jpg";
+  switch$ ($colorsetting) {
+    case 0:
+      commandToServer('ColorPicker', %color);
+    case 1:
+      $pref::Color::skin = %color;
+      DecalOPBG($legoColor[%color]);
+      bodycolorbitmap.setBitmap(%colorloc);
+    case 2:
+      $pref::Accessory::headColor =  %color;
+      headcolorbitmap.setBitmap(%colorloc);
+    case 3:
+      $pref::Accessory::VisorColor =  %color;
+      accentcolorbitmap.setBitmap(%colorloc);
+    case 4:
+      $pref::Accessory::BackColor =  %color;
+      packcolorbitmap.setBitmap(%colorloc);
+    case 5:
+      $pref::Accessory::leftHandColor =  %color;
+      othercolorbitmap.setBitmap(%colorloc);
+    case 7:
+      FX_Colorbg.setBitmap(%colorloc);
+      FX_Color.setValue($legocolor[%color]);
+    case 8:
+      Color_bg1.setBitmap(%colorloc);
+      Color_Name1.setValue($legocolor[%color]);
+    case 9:
+      Color_bg2.setBitmap(%colorloc);
+      Color_Name2.setValue($legocolor[%color]);
+    case -1:
+      $Pref::Player::iGobColor = %color;
+      commandToServer('iGobcolor', $legocolor[%color]);
+    }
+  canvas.popDialog(ColorPalletGui);
+}
+function clearoutscr() {
+   playerdecalscr.clear();
+   playerfacescr.clear();
+}
+function setcolorsettings() {
+      $Pref::Accessory::Armscolor = armsncrotchpopup.getSelected();
+      previewarms.setBitmap("tbm/client/ui/previewimages/armsncrotch/"@$armscolor[$Pref::Accessory::Armscolor]@".png");
+      bodycolorbitmap.setBitmap("tbm/data/shapes/"@$legoColor[$pref::Color::Skin]@".blank.jpg");
+      headcolorbitmap.setBitmap("tbm/data/shapes/"@$legoColor[$pref::Accessory::headColor]@".blank.jpg");
+      accentcolorbitmap.setBitmap("tbm/data/shapes/"@$legoColor[$pref::Accessory::VisorColor]@".blank.jpg");
+      packcolorbitmap.setBitmap("tbm/data/shapes/"@$legoColor[$pref::Accessory::BackColor]@".blank.jpg");
+      othercolorbitmap.setBitmap("tbm/data/shapes/"@$legoColor[$pref::Accessory::leftHandColor]@".blank.jpg");
+}
+$ColorPalletGuiTog = 0; //Noob protect
+function openColorPalletWindow (%val)
+{
+	if(%val && $ColorPalletGuiTog == 0)
+		canvas.pushDialog("colorpalletgui");
+	else if(%val && $ColorPalletGuiTog == 1)
+		canvas.popDialog("colorpalletgui");
+}
+function ColorPalletGui::OnWake(%this) {
+$ColorPalletGuiTog = 1;
+switch($colorsetting) {
+  case 1:
+    %obj = btnSkinColor;
+  case 2:
+    %obj = btnHead2;
+  case 3:
+    %obj = btnAccent2;
+  case 4:
+    %obj = btnPack2;
+  case 5:
+    %obj = btnOther2;
+  case 7:
+    %obj = FX_Skin;
+  case 8:
+    %obj = Color_Skin1;
+  case 9:
+    %obj = Color_Skin2;
+  default:
+    return;
+}
+if(%this.getExtent() !$= Canvas.getExtent())
+  %this.resize(0, 0, getWord(canvas.getExtent(), 0), getWord(canvas.getExtent(), 1));
+%pos = %obj.getRealPos();
+%px = getWord(%pos, 0);
+%py = getWord(%pos, 1);
+%ex = getWord(%obj.getExtent(), 0);
+%ey = getWord(%obj.getExtent(), 1);
+%lr = ((2 * %px) + %ex > getWord(Canvas.getExtent(), 0)); //Object is right of center 1, left 0
+%ud = ((2 * %py) + %ey > getWord(Canvas.getExtent(), 1)); //Object is below center 1, above 0
+%x = %px + (%ex * !%lr) - (getWord(ColorPalletWindow.getExtent(), 0) * %lr); //Put it to the right if the object is on the left half of the screen and vice versa
+%y = %py + ((%ey - 77) * !%ud) - (getWord(ColorPalletWindow.getExtent(), 1) * %ud) + 27; //Put on bottom if top etc, then adjust for that 25-pixel title bar thing at the top
+ColorPalletWindow.resize(%x, %y, getWord(ColorPalletWindow.getExtent(), 0), getWord(ColorPalletWindow.getExtent(), 1));
+}
+function ColorPalletGui::OnSleep() {
+$ColorPalletGuiTog = 0;
+}

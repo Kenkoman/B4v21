@@ -1,0 +1,257 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/Previews/galaxia.png";
+         desclines = "2";
+         desc0 = "Behold, the starlit sky of the universe.  Map By: Bri Guy";
+         name = "Galaxia";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Brian/Galaxia/galaxia.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0001";
+      cloudSpeed3 = "0.0001";
+      visibleDistance = "700";
+      fogDistance = "600";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.400000 0.400000 0.400000 1.000000";
+      ambient = "0.750000 0.750000 0.750000 1.000000";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-74.164 6.60525 181.3";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+   };
+   new StaticShape() {
+      position = "-45.1516 -32.9735 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-61.1516 -32.9735 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-61.1516 -0.973521 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-77.1516 -0.973521 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-45.1516 -16.9735 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-45.1516 -0.973522 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-77.1516 -16.9735 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-77.1516 -32.9735 179.843";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new fxSunLight(space2) {
+      position = "-52.1021 -2.3393 181.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "~/data/skies/brian/galaxia/blackhole1";
+      RemoteFlareBitmap = "~/data/skies/brian/galaxia/blackhole1";
+      SunAzimuth = "0";
+      SunElevation = "45";
+      FlareTP = "1";
+      Colour = "1.000000 1.000000 1.000000 1.000000";
+      Brightness = "0.1";
+      FlareSize = "0.8";
+      FadeTime = "5";
+      BlendMode = "1";
+      AnimColour = "0";
+      AnimBrightness = "0";
+      AnimRotation = "0";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "0";
+      LerpBrightness = "0";
+      LerpRotation = "0";
+      LerpSize = "0";
+      LerpAzimuth = "0";
+      LerpElevation = "0";
+      LinkFlareSize = "0";
+      SingleColourKeys = "0";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "5";
+      RotationTime = "5";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+   };
+   new fxSunLight(space1) {
+      position = "-52.3141 -2.7641 181.891";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "~/data/skies/brian/galaxia/blackhole";
+      RemoteFlareBitmap = "common/lighting/lightfalloffmono";
+      SunAzimuth = "151.5";
+      SunElevation = "15";
+      FlareTP = "1";
+      Colour = "1.600000 1.600000 1.000000 1.000000";
+      Brightness = "0.2";
+      FlareSize = "0.8";
+      FadeTime = "0.5";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "0";
+      AnimRotation = "1";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "1.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0.2";
+      MaxBrightness = "0.3";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "5";
+      RotationTime = "100";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+   };
+   new StaticShape() {
+      position = "-205.683 500.842 373.134";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-221.683 516.842 373.134";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-221.683 500.842 373.134";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-205.683 516.842 373.134";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

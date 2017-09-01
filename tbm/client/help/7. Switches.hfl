@@ -1,0 +1,130 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Switches
+
+<just:left><font:Arial:14>Switches in TOB are spawned and set with the Editor Staff/Gun from the <font:Arial Italic:14>Switches GUI<font:Arial:14>. This can be accessed by <font:Arial Italic:14>middle-clicking<font:Arial:14> to open the <font:Arial Italic:14>Special Options GUI<font:Arial:14>, and clicking on the Switches Tab.
+
+A switch is composed of one or more <font:Arial Italic:14>actions<font:Arial:14>, which are executed in order when the switch is activated.  There are different types of actions and they can each be used to alter the world in various ways, such as moving an elevator up and down, turning lights on and off, or teleporting a player to a different part of the map.
+
+To add a new action, double-click the item in the list that says <font:Arial Italic:14>Add New Action...<font:Arial:14> and select the one you want.  To remove an action, right-click its entry in the list.  To remove all the actions in the action list, double-click the item in the list that says <font:Arial Italic:14>Clear All Actions<font:Arial:14>.  To move an action up or down the list, select it and press the <font:Arial Italic:14>Up<font:Arial:14> or <font:Arial Italic:14>Down<font:Arial:14> arrows on your keyboard.
+
+To activate a switch, either walk into it, or point your cursor at it and press <font:Arial Italic:14>Enter<font:Arial:14>. Switches are not solid, so you can walk right through them. Keep in mind that switches will be selected instead of activated when in editor mode, so press <font:Arial Italic:14>E<font:Arial:14> until you are back in normal mode.
+
+You can also use the options below the action list to control how the switch works and who can use it.  The dropdown box that says Everyone allows you to restrict access to the switch to certain groups of people, such as teams, admins, or zombies.  <font:Arial Italic:14>Repeat<font:Arial:14> makes the switch keep performing its actions once it reaches the end of the list.  It will continue carrying out its actions until it is turned off.  To turn a repeat switch off, activate it again.
+
+<font:Arial Italic:14>Bumping<font:Arial:14> means that you can activate the switch by walking into it.  <font:Arial Italic:14>Using<font:Arial:14> means that you can activate the switch by pointing at it and pressing the <font:Arial Italic:14>Use<font:Arial:14> key (Enter).
+
+<font:Arial Italic:14>Reverse<font:Arial:14> makes the switch perform its actions from first to last the first time it's activated, then from last to first the next time it's activated.  <font:Arial Italic:14>Inverse<font:Arial:14> makes the switch perform its actions the first time then do the opposite of its actions the second time, such as moving a brick up then down.  This allows you to make things such as doors that go back and forth.  Most switches have both of these selected.
+
+Here's a list of the different actions you can use in your switches.
+
+
+
+<font:Arial Bold:20>Teleporter
+
+<font:Arial:14>The teleporter gets you from point A to point B in a snap! 
+
+All you need to do is set up a place to telport to. Stand/hover in the exact position you want to teleport to, and press <font:Arial Italic:14>Save Destination<font:Arial:14>. Go back to the area you want to put your teleporter and create it.
+
+To teleport to the destination, simply walk into the brick.  Feel free to cloak or scale the teleporter to make it fit the original area.
+
+
+
+<font:Arial Bold:20>Jumper
+
+<font:Arial:14>The jumper is for those time you don't need a teleporter, or want to make the player actually jump to get where he's going. A jumper can push a player in any direction at any speed you want.
+
+<font:Arial Bold:14>Velocity<font:Arial:14> - The 3 slider bars in the GUI determine the speed and angle of your jump. Setting multiple axis speeds makes the jumper move you in two directions at once, for a diagonal jump. Setting the slider to negative numbers makes you move downward instead of upward. Set these to whatever you please, and don't be afraid to experiment.
+
+<font:Arial Bold:14>Delay<font:Arial:14> - Sets the delay (in milliseconds) for a delayed jump. For an instant jump, just set to delay to 0.001 or something else very low.  This is only important if number of jumps is more than one.
+
+<font:Arial Bold:14>Repetitions<font:Arial:14> - Makes the switch jump you in the given direction multiple times.  The jumper will push the player in the given direction, wait for the specified delay, and push the player again until the player has "jumped" the specified number of times.  Most jumper switches only perform one jump.
+
+
+
+<font:Arial Bold:20>Mover
+
+<font:Arial:14>The mover moves all bricks assigned to a doorset in a certain direction. First, pick a unique number that you are sure nobody else will use. Type it into the box. Next, you must assign the doorsets. For each brick that you want the switch to move, select it and press <font:Arial Italic:14>Assign Doorset #<font:Arial:14>.
+
+Next, you will want to determine the movement factors. X and Y are side to side, while Z moves up and down. Moving sideways one brick is .5 units, and moving upwards one brick is .6 units. 
+
+Now, set the speed and smoothing options. The lower the speed, the faster the movement will take place. The lower the smoothing, the choppier the animation will be. Make sure you never put smoothing at an unreasonable number, as it simply adds to network lag. The two settings I have found to be useful are 25 for speed, and 60 for smoothing.
+
+Once you are done with these settings, deselect any currently selected objects and press <font:Arial Italic:14>Create Switch<font:Arial:14>.
+
+To update a mover, set the settings you want, select the mover, and press <font:Arial Italic:14>Update Selected Switch<font:Arial:14>. It is a good idea to make sure the switch is reset before doing this.
+
+
+
+<font:Arial Bold:20>Rotator
+
+<font:Arial:14>The rotator is set up nearly exactly to the mover, except that it deals with rotating around axises rather than moving along them. Pick the angle rotations you want, and create the switch. For a door, simply choose a factor of 90 or -90 along the Z axis. Simple enough.
+
+
+
+<font:Arial Bold:20>M&R
+
+<font:Arial:14>There's not much to say about this one.  It basically has the options of both a mover and a rotator. The options from both types are available here.
+
+
+
+<font:Arial Bold:20>Cloaker
+
+<font:Arial:14>Any objects assigned to the doorset will become cloaked when you hit the switch. There are no options for this switch.
+
+
+
+<font:Arial Bold:20>Fader
+
+<font:Arial:14>This switch gradually fades objects until they become completely invisible. The lower the value, the quicker the fade. Setting it to the maximum makes bricks slowly fade.
+
+
+
+<font:Arial Bold:20>Effects
+
+<font:Arial:14>Effects switches consist of mounting an <font:Arial Italic:14>image<font:Arial:14> onto a brick or set of them.
+
+First, you need to select the objects you plan to mount the effects to. Next, you need to either select an image from the dropdown box or type in the name of an image. 
+
+If you picked a weapon and want it to fire, check that box. 
+
+If you are mounting the image to a player or vehicle, experiment with different numbers in the <font:Arial Italic:14>Mount Point<font:Arial:14> box.
+
+When you are done with this, create the switch. Because you can mount any image currently loaded in TOB, you can mount nearly anything, from effects such as fire, to firing weapons.
+
+
+<font:Arial Bold:20>Turrets
+
+<font:Arial:14>This switch mounts a weapon onto a bricks which can aim and fire at players. Effect switches can only shoot in one direction.
+
+A maximum range and a firing speed must be supplied.
+
+You can also set the turret to only shoot at certain people.  This is convenient for constructing things such as zombie defense turrets that only shoot zombies and leave humans unharmed.
+
+
+<font:Arial Bold:20>Scaler
+
+<font:Arial:14>Dynamically scales bricks up or down on each axis.
+
+
+<font:Arial Bold:20>Pivot
+
+<font:Arial:14>A close relative of the rotator switch, the pivot switch makes bricks rotate around a certain point.  This point's co-ordinates must be supplied when the switch is created.
+
+
+<font:Arial Bold:20>Color
+
+<font:Arial:14>When this switch is used, the bricks identified will change from one colour to another.
+
+
+<font:Arial Bold:20>Kill
+
+<font:Arial:14>Whoever touches this switch will immediately be killed.  A death message can be set.
+
+
+<font:Arial Bold:20>Wait
+
+<font:Arial:14>This makes the switch pause for a certain amount of time before continuing.  It's handy if you need something to have precise timing, like doors that automatically close after a certain number of seconds.
+
+
+<font:Arial Bold:20>Tips
+
+<font:Arial:14>While some actions, such as Teleporter, Jumper, and Kill, that affect the user may not sound like you'd want to combine them with other actions such as Mover, you might want to combine them with each other.  Imagine creating a switch that teleports someone to an observation deck and teleports them back a few seconds later, or a Corpse Cannon that uses a Jumper to push a player in one direction then immediately kills them.

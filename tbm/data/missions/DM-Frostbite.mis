@@ -1,0 +1,266 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/previews/frost.png";
+         desclines = "2";
+         desc0 = "Map by Plague";
+         name = "Frostbite";
+   };
+   new MissionArea(MissionArea) {
+      area = "-504 -192 1136 1088";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Plague/Stormy2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "800";
+      fogColor = "0.900000 0.900000 0.910000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "200.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "200.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "200.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "2 2 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+         fogStorm3 = "0";
+         fogStorm1 = "0";
+         fogStorm2 = "0";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+         position = "0 0 0";
+         azimuth = "0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         elevation = "35";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "177.346 493.288 51.4";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "265.775 -57.121 52.235";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      terrainFile = "./DM-Frostbite.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         bumpScale = "1";
+         locked = "true";
+         bumpOffset = "0.01";
+         zeroBumpScale = "8";
+   };
+   new WaterBlock() {
+      position = "144 -16 -9.1";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 50";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water01";
+      ShoreTexture = "~/data/water/water01";
+      envMapOverTexture = "~/data/skies/Plague/Sky_Night1/resource";
+      envMapUnderTexture = "~/data/skies/Plague/Sky_Night1/resource";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "Lava";
+      density = "5";
+      viscosity = "10";
+      waveMagnitude = "0";
+      surfaceOpacity = "1";
+      envMapIntensity = "0.4";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "1";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "5";
+      DepthGradient = "5";
+      MinAlpha = "0.1";
+      MaxAlpha = "0.7";
+      removeWetEdges = "0";
+         floodFill = "1";
+         extent = "100 100 10";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "32 32";
+         specularColor = "1.000000 1.000000 1.000000 1.000000";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params1 = "0.63 -2.41 0.33 0.21";
+         specularMaskTex = "~/data/skies/Plague/Sky_Night1/resource";
+         envMapTexture = "tbm/data/skies/Plague/Sky_Night1";
+         params0 = "0.32 -0.67 0.066 0.5";
+         specularPower = "6";
+         seedPoints = "0 0 1 0 1 1 0 1";
+   };
+   new Precipitation(Precipitation) {
+      position = "29.2613 122.587 332.02";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "Snow";
+      offsetSpeed = "0.25";
+      minVelocity = "0.25";
+      maxVelocity = "1.5";
+      color1 = "1.000000 1.000000 1.000000 1.000000";
+      color2 = "-1.000000 0.000000 0.000000 1.000000";
+      color3 = "-1.000000 0.000000 0.000000 1.000000";
+      percentage = "1";
+      maxNumDrops = "2000";
+      maxRadius = "125";
+         turbulenceSpeed = "0.2";
+         minMass = "0.75";
+         numDrops = "2000";
+         useTurbulence = "1";
+         maxMass = "0.85";
+         doCollision = "1";
+         boxWidth = "2000";
+         boxHeight = "2000";
+         rotateWithCamVel = "1";
+         minSpeed = "1";
+         maxSpeed = "2.2";
+         maxTurbulence = "0.1";
+   };
+   new InteriorInstance() {
+      position = "271.103 -58.6639 77";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      interiorFile = "~/data/interiors/Plague/sci-fi/global_shield_center.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-281.911 -0.64955 163.425";
+      rotation = "0 0 1 53.2851";
+      scale = "3 3 3";
+      interiorFile = "~/data/interiors/Plague/sci-fi/pipeline.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "179.276 501.487 76.6534";
+      rotation = "1 0 0 0";
+      scale = "4 4 4";
+      interiorFile = "~/data/interiors/Plague/sci-fi/global_shield_center.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "229.893 376.417 49.8194";
+      rotation = "0 0 1 64.1713";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Plague/sci-fi/dm_bunker.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "290.563 101.26 87.5875";
+      rotation = "0 0 -1 25.21";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Plague/sci-fi/hub2.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "246.421 333.255 -144.603";
+      rotation = "1 0 0 0";
+      scale = "50 80 40";
+      interiorFile = "~/data/interiors/Plague/City/barrier_box.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-81.077 -18.8935 44.1646";
+      rotation = "0 0 1 236.814";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Plague/sci-fi/dm_bunker.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-45.4372 -261.331 193.83";
+      rotation = "0 0 1 196.525";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Plague/sci-fi/dm_bunker.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-227.789 385.944 126.321";
+      rotation = "0 0 -1 49.8473";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Plague/sci-fi/converter.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "206.8 798.793 49.075";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Plague/sci-fi/pipeline.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-365.566 173.104 119.799";
+      rotation = "0 0 1 70.4739";
+      scale = "3 3 3";
+      interiorFile = "~/data/interiors/Plague/sci-fi/pipeline.dif";
+      showTerrainInside = "0";
+   };
+   new Item() {
+      position = "226.333 17.8197 51.0057";
+      rotation = "0 0 1 49.2744";
+      scale = "1 1 1";
+      dataBlock = "SnowballGun";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "218.73 430.835 50.9028";
+      rotation = "0 0 1 230.902";
+      scale = "1 1 1";
+      dataBlock = "SnowballGun";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+};
+//--- OBJECT WRITE END ---

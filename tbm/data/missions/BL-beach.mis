@@ -1,0 +1,398 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         desc0 = "Ahhh...The sea sprays it\'s gentle foam across the golden sands...                    Map by Plague";
+         name = "Beach";
+         preview = "tbm/data/missions/previews/beach.png";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-640 -736 1136 1248";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Plague/sunny/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1000";
+      fogDistance = "900";
+      fogColor = "0.550000 0.700000 0.550000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "-0.305737 -0.72981 -0.611475";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.740000 0.700000 0.700000 1.000000";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+         position = "0 0 0";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/sand2";
+      terrainFile = "./BL-beach.ter";
+      squareSize = "8";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "148.65 -81.3722 145.746";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "6";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new InteriorInstance() {
+      position = "-655.909 455.93 247.123";
+      rotation = "0 0 1 142.094";
+      scale = "4 4 4";
+      interiorFile = "~/data/interiors/Plague/Beach/beachumbrella.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "303.562 274.308 189.507";
+      rotation = "0 0 1 99.6947";
+      scale = "4 4 4";
+      interiorFile = "~/data/interiors/Plague/Beach/beachumbrella.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "243.386 -32.0132 117.531";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "-700.951 387.826 238.81";
+      rotation = "0 0 1 180.091";
+      scale = "5 5 5";
+      interiorFile = "~/data/interiors/Plague/Beach/beachchair.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "775.782 -44.184 138.016";
+      rotation = "0 0 1 180.091";
+      scale = "5 5 5";
+      interiorFile = "~/data/interiors/Plague/Beach/beachchair.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "243.386 -48.0125 117.531";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "227.386 -48.0125 117.531";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "366.195 178.336 186.566";
+      rotation = "0 0 1 180.091";
+      scale = "5 5 5";
+      interiorFile = "~/data/interiors/Plague/Beach/beachchair.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "818.142 64.8872 142.238";
+      rotation = "0 0 1 127.197";
+      scale = "4 4 4";
+      interiorFile = "~/data/interiors/Plague/Beach/beachumbrella.dif";
+      showTerrainInside = "0";
+   };
+   new WaterBlock(ocean) {
+      position = "-24 -328 18.2296";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 75";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water09";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "10";
+      waveMagnitude = "20";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0.1";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "-90";
+      FlowRate = "0.3";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "3.6";
+      DepthGradient = "1";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         params0 = "0.32 -0.67 0.066 0.5";
+         floodFill = "1";
+         params2 = "0.39 0.39 0.2 0.133";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         extent = "100 100 10";
+   };
+   new InteriorInstance() {
+      position = "-383.532 183.717 163.791";
+      rotation = "0 0 -1 89.9544";
+      scale = "0.6 0.6 0.6";
+      interiorFile = "~/data/interiors/Plague/Beach/sandcastle.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-232.909 112.207 195.031";
+      rotation = "0 0 1 180.091";
+      scale = "5 5 5";
+      interiorFile = "~/data/interiors/Plague/Beach/beachchair.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "677.761 -30.2626 112.56";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-534.338 112.475 154.71";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-566.338 112.475 154.71";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "693.761 -30.2626 112.56";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "661.761 -30.2626 112.56";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-550.338 112.475 154.71";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "1029.78 -54.4296 87.8461";
+      rotation = "0 0 -1 89.9544";
+      scale = "0.6 0.6 0.6";
+      interiorFile = "~/data/interiors/Plague/Beach/sandcastle.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-26.0308 376.328 202.635";
+      rotation = "0 0 1 104.851";
+      scale = "0.6 0.6 0.6";
+      interiorFile = "~/data/interiors/Plague/Beach/sandturret.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "342.903 -8.34708 122.056";
+      rotation = "1 0 0 0";
+      scale = "0.7 0.7 0.7";
+      interiorFile = "~/data/interiors/Plague/Beach/sandturret2.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "663.533 384.184 183.258";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Plague/Beach/sandturret2.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-534.338 96.4748 154.71";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-550.338 96.4748 154.71";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-802.563 413.207 217.981";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-786.58 429.204 217.979";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-786.58 413.204 217.979";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-802.563 429.207 217.981";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-131.075 390.344 206.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "227.386 -32.0132 117.531";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-131.075 374.344 206.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "661.761 -14.2626 112.56";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "693.761 -14.2626 112.56";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "677.761 -14.2626 112.56";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new InteriorInstance() {
+      position = "30.5848 -20.0108 117.387";
+      rotation = "0 -1 0 22.3453";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Plague/Beach/beachpail.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "774.117 348.068 159.311";
+      rotation = "0 0 1 135.791";
+      scale = "0.6 0.6 0.6";
+      interiorFile = "~/data/interiors/Plague/Beach/beachshovel.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-27.53 28.4611 123.327";
+      rotation = "0 0 1 45.8366";
+      scale = "0.6 0.6 0.6";
+      interiorFile = "~/data/interiors/Plague/Beach/beachshovel.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-578.327 344.11 173.674";
+      rotation = "0.274 0.0219385 -0.961479 89.3898";
+      scale = "0.5 0.5 0.5";
+      interiorFile = "~/data/interiors/Plague/Beach/beachpail.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-115.075 374.344 206.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-115.075 390.344 206.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-566.338 96.4748 154.71";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "351.098 211.555 188.364";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "367.098 211.555 188.364";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "367.098 195.555 188.364";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "351.098 195.555 188.364";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

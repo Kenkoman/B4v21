@@ -1,0 +1,59 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>
+<color:995500>The Orange Block
+<color:000000><font:Arial:16>"The Builder's Mod, Death to Block, and other mods"
+
+<font:Arial Bold:20><color:995500>The Orange Block 2.2<color:000000> Credits
+<font:arial:16>
+Dshiznit: New zombie models, new player models, decapitation system.
+Elrunethe2nd: Main Menu, GUI overhauls.
+EmperorWiggy: Fixing all of the community found bugs, programming and dealing with TGE without commiting suicide, decapitation system, sniper scope.
+Lucas: Help file revamp, bugspotting, file cleanup.
+Pr0gr4mm3r: Colour and Pivot switches.
+Ted: Sniper scope mod.
+
+<font:Arial Bold:20><color:995500>The Orange Block<color:000000> Credits
+<font:Arial Bold:12>(2.0 and below)
+
+<font:arial:16>Speckz - DTB mod.
+Elfprince - Cemetech AI 3 mod.
+Calc84Maniac - Webslinger, additional igob and switch code.
+<color:550099>DShiznit<color:000000> - Maps, coding, a shitload of modified models, packaging in Orange Block form with launcher.
+<color:555555>GreyMario<color:000000> - Assloads of code and code ideas, including the news system. A core Orange Block developer.
+TBM MONSTER aka Simba - Sent me a couple of models(including the pelican and HL2 guns) and some cool particles.
+EmperorWiggy - Gangsta homing code, saved my ass with the mountable chair, and continues to impress everyone with his scripting guile.
+GFeedBack - Models and decals and crap. Prototyped the R2 model.
+ElruneThe2nd - Sh*tloads of decals and crap.
+Spaceomega - Original Blockland player that let me use his cool guitar model.
+FiveForce & Ted - Ported Retail's port of RTB's Lego Vice City. I ended up repackaging it so it worked properly and didn't add any content to the game directory. It's content(if stolen) is the responsibility of Ted and FiveForce.
+
+<font:Arial Bold:20>TBM Staff
+<font:arial:16>Kier aka MCP - Main coding, development leader.
+Gobbles aka Chris - maps, bricks, Gui's, coding.
+Plague - maps, models.
+Shadowz - IRC code, eyedrop tool.
+KermMartian - Cemetech ai 3 mod, vehicle modeling, vehicle coding, additional coding.
+Rob - Main Gameplay Coding.
+Satan - Main 3d Modeling.
+Skiz0t - For His 3d Models.
+Luquado - Faces, Decals, Mapping, Modeling, Background, Tons of other stuff <3 Luq
+Sneeze - Faces, Decals, Models.
+Phatstreet - Maps, Faces, Decals, and original documentation.
+
+<font:Arial Bold:20>Shout Outs and Thanks
+
+<font:Arial Bold:16>All the previous modders before TBM<font:Arial:14>; your work inspired us and helped get us started.
+<font:Arial Bold:16>The folks at GarageGames<font:Arial:14>, for creating the Torque Game Engine. 
+<font:Arial Bold:16>Mix-Networks<font:Arial:14>, for providing forums, and adding to our great community up until 2010
+<font:Arial Bold:16>Our community<font:Arial:14>, for supporting us through the times, and constantly contributing to help make TBM "The Better Mod".
+<font:Arial Bold:16>Badspot aka Eric Hartman<font:Arial:14>,  Original Blockland0002 game, Inspiration for everything.
+<font:Arial Bold:16>RTB and SFM<font:Arial:14>, I (DShiznit) took a handful of content from other mods as follows:
+<font:Arial Bold:14>
+	RTB:<font:Arial:14>
+horse, bike, and plane(allthough they also appear in SFM which I do have permission to port content from, see below). I used some geometry data from rtb's Storm trooper helmet and truck mod in my own models, feel free to use in or release for RTB.
+<font:Arial Bold:14>
+	SFM:<font:Arial:14>
+Several face and chest decals. I can also claim I got the horse, bike, and plane from this mod. These were used with the permission of Plo Koon (great guy) and it is not my responsibility if he took them from any other mod/game.
+
+<font:Arial Bold:14>
+Feel free to use any of my models or scripts in your own mod/game, as long as you credit this mod (and provide a link: <a:URL>www.thebettermod.org</a>) within it's credits.
+I cannot, however, authorize the use of any of the other models or scripts, as they are not mine. Some scripts, such as the iGobs.cs, have disclaimers that allow for porting under certain circumstances. Obey these restrictions and we're cool. Break them, and I'll break your d*ck off.

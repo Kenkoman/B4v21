@@ -1,0 +1,104 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ServerNewsGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(ServerNewsWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "-27 -4";
+      extent = "474 408";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Server News";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(ServerNewsGUI);";
+
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "center";
+         vertSizing = "top";
+         position = "97 367";
+         extent = "60 26";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popdialog(ServerNewsGUI);";
+         helpTag = "0";
+         text = "Close";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+
+      new GuiScrollCtrl(ServerNewsScroller) {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "6 28";
+         extent = "462 332";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "1 0";
+
+         new GuiMLTextCtrl(txtServerNews) {
+            profile = "GuiTextProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "3 2";
+            extent = "440 332";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "1";
+            allowColorChars = "1";
+            maxChars = "-1";
+               fitParentWidth = "1";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function ClientCmdGetServerNews(%tag, %text) {
+if(%tag == 0) {
+	$ServerNews = "";
+	return;
+}
+if(%tag == 2) {
+	txtServerNews.setvalue($ServerNews);
+	canvas.pushDialog(ServerNewsGUI);
+	return;
+}
+$ServerNews = $ServerNews@%text@"\n";
+}
+
+//Does this need explanation?
+package Wiggy_Server_News_Stay_Open {
+function Canvas::setContent(%this, %content) {
+if(nameToID(%content) == nameToID(PlayGUI) && serverNewsGUI.isAwake()) {
+  canvas.schedule(10, pushDialog, serverNewsGUI);
+}
+Parent::setContent(%this, %content);
+}
+};
+activatepackage(Wiggy_Server_News_Stay_Open);

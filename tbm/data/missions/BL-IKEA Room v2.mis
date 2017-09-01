@@ -1,0 +1,142 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "IKEA Room v2";
+         desc0 = "IKEA Room was nice, but caused too much lag for the lower-end TBM users. This version should be better suited for average gameplay. -gobbles";
+         desclines = "2";
+         preview = "tbm/data/missions/Previews/ikearoomv2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "0 0 1 90";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "500";
+      fogColor = "0.400000 0.600000 0.800000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.000000 0.000000 0.000000 1.000000";
+      ambient = "0.450000 0.400000 0.350000 1.000000";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         position = "0 0 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-38.8 -54.2 5.2";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "10";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "-69.241 40.0767 27.311";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "10";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "94.4557 -75.347 48.2845";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "5";
+         sphereWeight = "10";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new InteriorInstance() {
+      position = "0 0 1";
+      rotation = "0 0 -1 90";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Chris/IKEA/ikearoomV2_lowpoly.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "-36 22 23";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-36 38 23";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "44 -77.6 44";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "9 22 1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-113 -70 29";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "-34.4 -96.8 38.8";
+      rotation = "1 0 0 0";
+      scale = "10.5 1 13.5";
+      shapeName = "~/data/shapes/environment/glassB.dts";
+   };
+};
+//--- OBJECT WRITE END ---

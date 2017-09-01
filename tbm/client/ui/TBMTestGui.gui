@@ -1,0 +1,96 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(TBMTestGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(TBMTestwindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "216 90";
+      extent = "280 75";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closecommand = "Canvas.popdialog(TBMtestGui);";
+
+      new GuiControl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "5 26";
+         extent = "270 47";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "top";
+            position = "7 -88";
+            extent = "256 256";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "~/data/shapes/decal/TBM.decal";
+            wrap = "0";
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "center";
+            vertSizing = "top";
+            position = "14 8";
+            extent = "241 30";
+            minExtent = "8 2";
+            visible = "1";
+            command = "animatewindow(TBMTestwindow,80,18,20);";
+            helpTag = "0";
+            text = "Push Me!";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function animatewindow(%this,%totalshift,%pershift,%delay) {
+    %totalshift /= %pershift;
+    %windowx = getword(%this.Position,0);
+    %windowy = getword(%this.Position,1);
+    %windowW = getword(%this.extent,0);
+    %windowH = getword(%this.extent,1);
+    switch$(%this.animopened) {
+    case "Yep":
+        for(%i=0;%i<%totalshift;%i++)
+            schedule(%i*%delay,0,"animatewindow2", %this, %pershift);
+        %this.animopened = "";
+    default:
+        for(%i=0;%i<%totalshift;%i++)
+            schedule(%i*%delay,0,"animatewindow2", %this, -1*%pershift);
+        %this.animopened = "Yep";
+    }
+}
+function animatewindow2(%this, %move) {
+    %windowx = getword(%this.Position,0);
+    %windowy = getword(%this.Position,1);
+    %windowW = getword(%this.extent,0);
+    %windowH = getword(%this.extent,1);
+    %this.resize(%windowx, %windowy, %windowW, %windowH - %move);
+}
+movemap.bindCmd(keyboard,"ctrl-alt t","Canvas.pushdialog(TBMtestGui);","");

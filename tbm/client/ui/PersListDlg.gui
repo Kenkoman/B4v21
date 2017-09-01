@@ -1,0 +1,103 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PersListDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl(PersListWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "214 109";
+      extent = "212 262";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Persistence Files";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(PersListDlg);";
+
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 27";
+         extent = "200 200";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(PersList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "178 2";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiButtonCtrl(LoadPersListBtn) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "115 231";
+         extent = "90 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ExecPersistence();";
+         helpTag = "0";
+         text = "Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(BackPersBtn) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 231";
+         extent = "90 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popDialog(PersListDlg);";
+         helpTag = "0";
+         text = "Back";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function PersListDlg::onWake(%this)
+{
+   LoadPersistenceList();
+}
+
+function PersListDlg::onSleep(%this)
+{
+   PersList.clear();
+}

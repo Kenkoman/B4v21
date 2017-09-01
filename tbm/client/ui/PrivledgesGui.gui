@@ -1,0 +1,313 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PrivledgesGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "155 90";
+      extent = "330 300";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Privledge GUI";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 30";
+         extent = "70 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "privtog(1);";
+         helpTag = "0";
+         text = "Ban";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "90 30";
+         extent = "70 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "privtog(2);";
+         helpTag = "0";
+         text = "Admin";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "250 30";
+         extent = "70 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "privtog(4);";
+         helpTag = "0";
+         text = "iGob";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "170 30";
+         extent = "70 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "privtog(3);";
+         helpTag = "0";
+         text = "Mod";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiControl(Privpanel1) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 60";
+         extent = "310 230";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiScrollCtrl() {
+            profile = "TBM_ScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "5 5";
+            extent = "300 190";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(txtprivlist1) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 2";
+               extent = "278 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "234 199";
+            extent = "70 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "removepriv(1);";
+            helpTag = "0";
+            text = "Remove";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+      new GuiControl(Privpanel2) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 60";
+         extent = "310 230";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiScrollCtrl() {
+            profile = "TBM_ScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "5 5";
+            extent = "300 190";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(txtprivlist2) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 2";
+               extent = "278 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "234 199";
+            extent = "70 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "removepriv(1);";
+            helpTag = "0";
+            text = "Remove";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+      new GuiControl(Privpanel3) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 60";
+         extent = "310 230";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiScrollCtrl() {
+            profile = "TBM_ScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "5 5";
+            extent = "300 190";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(txtprivlist3) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 2";
+               extent = "278 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "234 199";
+            extent = "70 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "removepriv(3);";
+            helpTag = "0";
+            text = "Remove";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+      new GuiControl(Privpanel4) {
+         profile = "TBM_WindowProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 60";
+         extent = "310 230";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiScrollCtrl() {
+            profile = "TBM_ScrollProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "5 5";
+            extent = "300 190";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "alwaysOn";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(txtprivlist4) {
+               profile = "GuiTextListProfile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "2 2";
+               extent = "278 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0";
+               fitParentWidth = "1";
+               clipColumnText = "0";
+            };
+         };
+         new GuiButtonCtrl() {
+            profile = "TBM_ButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "234 199";
+            extent = "70 25";
+            minExtent = "8 2";
+            visible = "1";
+            command = "removepriv(4);";
+            helpTag = "0";
+            text = "Remove";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

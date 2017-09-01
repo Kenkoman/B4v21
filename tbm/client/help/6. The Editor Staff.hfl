@@ -1,0 +1,45 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>The Editor Staff
+
+<just:left><font:Arial:14>One of the best things about TOB is the easy to use Editor Staff. Gone are the old days of manually entering rotation and movement values. The Editor Staff allows you to move and rotate in the increments you select, allowing for precision and ease of use. Although a basic understanding of Geometry will come in handy, it should be simple enough for anyone if given some time to learn. In order to use the Editor Staff, you must be either an Admin or a Mod. Mods can only edit their own bricks, whereas Admins can edit anyone's bricks. Let's go over the functions of the editor staff.
+
+
+
+<font:Arial Bold:20>Selection<font:Arial:14>
+
+The most basic function of the Editor Staff is the ability to select objects around you. Just equip the staff with <font:Arial Italic:14>E<font:Arial:14> and walk up to a brick, vehicle, switch, item spawn, or player. In the case of solid objects such as bricks, you must hit the brick with a <font:Arial Italic:14>left click<font:Arial:14> to select it. In the case of objects such as switches, simply walk into one to select it. For solid objects, you also have the option of using the <font:Arial Italic:14>Editor Gun<font:Arial:14>. Equip it by pressing <font:Arial Italic:14>Alt + E<font:Arial:14>.
+
+Once an item is selected, moving it is a breeze! Just move the selected item just as if you were moving a construction brick! All the Numpad controls work the same way with the staff. The movement factor can be adjusted, too. For this and rotation, see <font:Arial Italic:14>The Editor GUI<font:Arial:14>.
+
+To deselect a brick, simply press <font:Arial Italic:14>0<font:Arial:14> on the <font:Arial Italic:14>Numpad<font:Arial:14>. It's a good idea to always do this after you are done working with a brick, to prevent selection-related issues. 
+
+
+
+<font:Arial Bold:20>The Editor GUI
+
+<font:Arial:14>Here's a list of functions you can find on the Editor GUI. This GUI can be accessed by <font:Arial Italic:14>middle-clicking<font:Arial:14> to open the <font:Arial Italic:14>Special Options GUI<font:Arial:14>, and clicking on the Editor Tab. The editor functions will not work without being in editor mode.
+
+<font:Arial Bold:14>Spawn<font:Arial:14> menu - Clicking on the Spawn button brings up a drop-down menu with a list of spawnable items. Just click on the list, choose an item, and it will spawn right in front of you!
+
+<font:Arial Bold:14>Movement<font:Arial:14> - Movement determines how many Torque units you move bricks and items when you have them selected. The 4 buttons on the right of movement have some preset numbers that will make adjusting movement easy. Leave the text box blank or hit <font:Arial Italic:14>C<font:Arial:14> for normal brick movement, which is one peg at a time.
+
+<font:Arial Bold:14>Rotation<font:Arial:14> - Works the same way as movement, except that instead of Torque units, you are setting rotation by degrees. The 4 buttons on the side of the rotation box have 4 of the most common rotation angles. 90 degrees is the normal full-corner rotation, and 45 is half rotation. Once you set a rotation number, everything you select with the Editor Staff or the iGob can be rotated in increments of that degree.
+
+<font:Arial Bold:14>Rotation<font:Arial:14> checkbuttons - Choose the axis you want the rotation to apply to. It can be tricky determining whether to use X or Y, but Z is simple. It always rotates around the axis from the top to the bottom, like spinning a top.
+
+<font:Arial Bold:14>Name<font:Arial:14> - Select an object and enter whatever you want into this text box. Click the button, and it will assign text to the item you have selected.
+
+<font:Arial Bold:14>Scale<font:Arial:14> - Ever use the F11 menu to make things bigger/smaller? You can do that same thing with the staff. Just input a scale in the text box, select something, and press <font:Arial Italic:14>Scale<font:Arial:14> to change it's size. Scale works on 3 different axises; X, Y, and X. Normal scale is <font:Arial Italic:14>1 1 1<font:Arial:14>. To double the height of something, use <font:Arial Italic:14>1 1 2<font:Arial:14>. Get it? Always remember to have only one space in between each pair of numbers.
+
+<font:Arial Bold:14>Position/Rotation/Scale<font:Arial:14> boxes - These boxes on the bottom left of the Editor GUI show you the current scale, rotation, and position of the selected item in the game.
+
+<font:Arial Bold:14>Delete<font:Arial:14> - Deletes whatever item you have selected. You can also use the Delete key as well.
+
+<font:Arial Bold:14>Cloak<font:Arial:14> - Cloaks whatever brick you have selected.
+
+<font:Arial Bold:14>Sit<font:Arial:14> - Makes a player you have selected do a sit animation.
+
+<font:Arial Bold:14>Save Blocks<font:Arial:14> - Useable if you are a super admin but not the server host. It allows you to save to the most recently saved file, so you can save the server's progress as you go.
+
+<font:Arial Bold:14>Select Self<font:Arial:14> - Makes you select yourself.
+
+

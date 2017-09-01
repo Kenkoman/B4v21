@@ -1,0 +1,33 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(BuddylistGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "Chat_WindowProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "464 65";
+      extent = "160 200";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Buddy List";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "160 200";
+      closeCommand = "Canvas.pushdialog(Buddylistgui);";
+   };
+};
+//--- OBJECT WRITE END ---

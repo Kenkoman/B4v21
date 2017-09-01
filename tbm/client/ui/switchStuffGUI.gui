@@ -1,0 +1,621 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(SwitchStuffGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "20 57";
+      extent = "360 271";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Switch Stuff";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiTextCtrl(SS_Counter) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "330 20";
+         extent = "222 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "1/5";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnSSAdvance) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "210 230";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "switchStuffAdvance();";
+         helpTag = "0";
+         text = "Continue";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnSSSkip) {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "10 230";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popdialog(SwitchStuffGui);";
+         helpTag = "0";
+         text = "Skip This";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiControl(SS_page1) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 194";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "center";
+            vertSizing = "bottom";
+            position = "93 23";
+            extent = "165 86";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            bitmap = "./watermark.png";
+            wrap = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "6 112";
+            extent = "336 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = " Hey there. As you might have already guessed by the new";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 126";
+            extent = "330 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "layout, switches work differently now.  They're more advanced.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 140";
+            extent = "334 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "The basic switch types are unchanged but this should walk";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 154";
+            extent = "309 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "you through all of the new stuff.";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(SS_page2) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "The first thing you should notice is the big list thing taking up the  ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "majority of the window.  This is to display all of the actions the ";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 40";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "switch will perform and the time it will take for each action will take.";
+            maxLength = "255";
+         };
+
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 82";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Double-click an item in the list to edit it.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 96";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Right-click an item to remove it.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 110";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Select an item and press the Up and Down arrow keys on your";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 124";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "keyboard to move it up or down the list.";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(SS_page3) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Underneath that you can set options for the switches to control";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "how it works and who can use it.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 54";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "The dropdown box that currently says Everyone allows you to";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 68";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "  restrict access to the switch to certain groups of people,";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 82";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "  such as teams, admins, or zombies.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 96";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Repeat makes the switch repeat.";
+            maxLength = "255";
+         };
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 124";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Bumping means that you can activate the switch by walking into it.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 138";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Using means that you can activate the switch by pointing at it and";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 152";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "   pressing the Use key (Enter by default).";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(SS_page4) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Reverse makes the switch do actions from first to last then last";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "   to first.  A complex door would have this checked.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 54";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Inverse makes the switch undo actions (like moving a brick up";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 68";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "  the first time and down the second).  A traditional switch would";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 82";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "  have this checked, as well as things like airlocks.";
+            maxLength = "255";
+         };
+      };
+      new GuiControl(SS_page5) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 30";
+         extent = "351 192";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 12";
+            extent = "332 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "That's basically everything.  The switch actions such as Mover";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 26";
+            extent = "320 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "and Teleporter work the same as before, and the new stuff should";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 40";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "be intuitive enough for old players to find it easy to pick up.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 68";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "If you have any questions or feedback feel free to ask around";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 82";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "on the forums or IRC.  This will be getting updates in future";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 96";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "releases so if you don't like something you might not have to put";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 110";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "up with it for long.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 138";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Happy building!";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 152";
+            extent = "222 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "  -Wiggy and the rest of the TOB dev staff";
+            maxLength = "255";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function SwitchStuffGUI::onSleep(%this) {
+$Pref::Player::ShowSwitchStuff = 1;
+exportTBMPrefs();
+}
+
+function switchStuffAdvance() {
+if($SSPage)
+  nameToID("SS_page" @ $SSpage).setVisible(0);
+$SSpage++;
+SS_Counter.setText($SSpage @ "/5");
+nameToID("SS_page" @ $SSpage).setVisible(1);
+if($SSpage == 2) {
+  //Add poop
+  Frame_Switches_ActionList.addRow(1, "1\tMover\t1337\t2.0 s", 0);
+  Frame_Switches_ActionList.addRow(2, "2\tRotator\t1338\t800 ms", 1);
+  Frame_Switches_ActionList.addRow(3, "3\tWait\t\t3.0 s", 2);
+  Frame_Switches_ActionList.addRow(4, "4\tMover\t1337\t1.8 s", 3);
+
+  Frame_Switches_ActionList.setRowByID(999998, "\tTotal Time:\t\t7.6 s");
+}
+if($SSpage == 3) {
+  for(%i = 1; %i <= 4; %i++)
+    Frame_Switches_ActionList.removeRowByID(%i);
+  Frame_Switches_ActionList.setRowByID(999998, "\tTotal Time:\t\t0 s");
+}
+if($SSPage == 5) {
+  btnSSAdvance.setVisible(0);
+  btnSSSkip.resize(110, 230, 140, 30);
+  btnSSSkip.setText("All done!");
+}
+}
+
+$SSpage = 1;

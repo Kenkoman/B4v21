@@ -1,0 +1,67 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>Money System
+
+<just:left><font:Arial:14>The Orange Block has a working money system that can be saved between sessions.  Money can be gathered and used to buy stuff and use switches.
+
+
+<font:Arial Bold:20>
+Gathering Money:
+
+<font:Arial:14>
+Dirt bricks are located in slot 8, and when you break them, they spew money everywhere.  They can be destroyed with just about anything, although high-powered explosives can break them more quickly.  Explosives tend to destroy money which could otherwise be obtained - for this reason, melee weapons such as the pickaxe can yield higher amounts of money over time.
+
+The amount of money you have is displayed in the bottom-right hand corner of the screen.
+
+
+<font:Arial Bold:20>
+Pricing items:
+
+<font:Arial:14>
+Prices for items are taken from the item's name, so shoppers can quickly see how much an item costs.
+
+To set a price on an item, put a dollar sign ($) somewhere in the item's name, followed by a space, followed by the price.
+
+Examples:
+
+Lightsaber $ 800
+
+This lightsaber costs $ 800
+
+Lightsaber - $ 800 - An elegant weapon from a more civilized age. Can cut through almost any material like butter, including flesh.
+
+Lightsaber - This thing can cut EVERYTHING - On sale for $ 600
+
+If you run a shop or sell items, you can have the revenue generated from item sales transferred directly to you.
+
+At the end of the item's name, add a colon (:), a space and your name, like this:
+
+Lightsaber $ 800 : Lucas
+
+Lightsaber - THIS THING IS DANGEROUS - $ 800 : Elrune
+
+Barrett M82A1 - Perfect for all of your sniping needs.  Only $ 2995 : Sparty
+
+
+<font:Arial Bold:20>
+Stud Bank:
+
+<font:Arial:14>
+Something of a misnomer, the Stud Bank is the name of the system that tracks players' studs and keeps records of them while TOB isn't running.
+
+When enabled, it periodically saves the amount of money everyone has, and updates its records whenever a transaction occurs.  If someone who connects to your server had any money the last time they were playing, it gives them their money back.
+
+When enabled, it also makes sure that shopowners still receive revenue when people buy their items, even if they're not playing.
+
+The Stud Bank can be enabled and disabled by clicking the button in the Admin GUI.
+
+
+<font:Arial Bold:20>
+Naming currency:
+
+<font:Arial:14>
+By default, the server currency is called "$tuds", commonly called "studs."  If you're running a specialized RP, though, other names might be more appropriate.  Fortunately, you can change the name of your currency, and the counter in the bottom-right hand corner of the screen will change to show that.
+
+To change the name of your server's currency, press ~ to open the console, and type the following in:
+
+$Pref::Server::CurrencyName = "Studs";
+
+Replace Studs with whatever you want your currency to be called.

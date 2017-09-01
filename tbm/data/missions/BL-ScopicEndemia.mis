@@ -1,0 +1,1022 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      CTF_scoreLimit = "10";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         name = "Scopic Endemia";
+         desclines = "1";
+         preview = "tbm/data/missions/Previews/BL-ScopicEndemia.jpg";
+         desc0 = "An enormous outdoor area to build in. Map by Taehl";
+   };
+   new MissionArea(MissionArea) {
+      area = "-1024 -1024 2048 2048";
+      flightCeiling = "512";
+      flightCeilingRange = "32";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "-416 208 249.744";
+      rotation = "1 0 0 0";
+      scale = "128 192 0.0001";
+      materialList = "~/data/skies/Taehl/calm/calm2hack.dml";
+      cloudHeightPer[0] = "0.35";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0001";
+      cloudSpeed2 = "0.0002";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "1500";
+      fogDistance = "800";
+      fogColor = "0.750000 0.750000 0.770000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.800000 1.000000";
+      ambient = "0.300000 0.300000 0.300000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         locked = "true";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./BL-ScopicEndemia.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-63.0503 518.688 419.687";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "16";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new WaterBlock(Water) {
+      position = "8 -136 36.0491";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 50";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/Taehl/water01";
+      ShoreTexture = "~/data/water/Taehl/foam01";
+      envMapOverTexture = "~/data/water/water01";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "25";
+      waveMagnitude = "4";
+      surfaceOpacity = "0.95";
+      envMapIntensity = "0.6";
+      TessSurface = "20";
+      TessShore = "16";
+      SurfaceParallax = "0.5";
+      FlowAngle = "85";
+      FlowRate = "0.05";
+      DistortGridScale = "0.01";
+      DistortMag = "0.1";
+      DistortTime = "3";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "0";
+      MaxAlpha = "0.9";
+      removeWetEdges = "0";
+         params1 = "0.63 -2.41 0.33 0.21";
+         floodFill = "1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         extent = "100 100 10";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params0 = "0.32 -0.67 0.066 0.5";
+   };
+   new StaticShape() {
+      position = "-112 520 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new WaterBlock(highwater) {
+      position = "-312 552 306.6";
+      rotation = "1 0 0 0";
+      scale = "608 448 50";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/Taehl/water01";
+      ShoreTexture = "~/data/water/Taehl/foam01";
+      envMapOverTexture = "~/data/water/water01";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "25";
+      waveMagnitude = "0";
+      surfaceOpacity = "0.85";
+      envMapIntensity = "0.5";
+      TessSurface = "10";
+      TessShore = "8";
+      SurfaceParallax = "0.5";
+      FlowAngle = "110";
+      FlowRate = "0.07";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "2";
+      ShoreDepth = "10";
+      DepthGradient = "1";
+      MinAlpha = "0";
+      MaxAlpha = "0.9";
+      removeWetEdges = "1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         floodFill = "0";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         extent = "100 100 10";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params0 = "0.32 -0.67 0.066 0.5";
+   };
+   new fxFoliageReplicator(Grass1) {
+      position = "-109.628 519.984 401.123";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideFoliage = "0";
+      ShowPlacementArea = "0";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "11515321";
+      FoliageFile = "~/data/shapes/Taehl/foliage/grass1";
+      FoliageCount = "30000";
+      FoliageRetries = "100";
+      InnerRadiusX = "40";
+      InnerRadiusY = "40";
+      OuterRadiusX = "2048";
+      OuterRadiusY = "2048";
+      MinWidth = "0.2";
+      MaxWidth = "4";
+      MinHeight = "0.3";
+      MaxHeight = "6";
+      FixAspectRatio = "1";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "1";
+      UseCulling = "1";
+      CullResolution = "64";
+      ViewDistance = "100";
+      ViewClosest = "1";
+      FadeInRegion = "100";
+      FadeOutRegion = "1";
+      AlphaCutoff = "0.2";
+      GroundAlpha = "1";
+      SwayOn = "1";
+      SwaySync = "0";
+      SwayMagSide = "0.8";
+      SwayMagFront = "0.8";
+      MinSwayTime = "3";
+      MaxSwayTime = "15";
+      LightOn = "1";
+      LightSync = "0";
+      MinLuminance = "0.4";
+      MaxLuminance = "0.7";
+      lightTime = "10";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "40";
+   };
+   new fxFoliageReplicator(grass2) {
+      position = "-109.975 519.969 401.383";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideFoliage = "0";
+      ShowPlacementArea = "0";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "21515322";
+      FoliageFile = "~/data/shapes/Taehl/foliage/grass2";
+      FoliageCount = "30000";
+      FoliageRetries = "100";
+      InnerRadiusX = "40";
+      InnerRadiusY = "40";
+      OuterRadiusX = "2048";
+      OuterRadiusY = "2048";
+      MinWidth = "0.1";
+      MaxWidth = "3";
+      MinHeight = "0.2";
+      MaxHeight = "5";
+      FixAspectRatio = "1";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "1";
+      UseCulling = "1";
+      CullResolution = "64";
+      ViewDistance = "100";
+      ViewClosest = "1";
+      FadeInRegion = "100";
+      FadeOutRegion = "1";
+      AlphaCutoff = "0.2";
+      GroundAlpha = "1";
+      SwayOn = "1";
+      SwaySync = "0";
+      SwayMagSide = "1";
+      SwayMagFront = "1";
+      MinSwayTime = "3";
+      MaxSwayTime = "15";
+      LightOn = "1";
+      LightSync = "0";
+      MinLuminance = "0.4";
+      MaxLuminance = "0.7";
+      lightTime = "10";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "40";
+   };
+   new fxFoliageReplicator(grass3) {
+      position = "-110.395 519.995 401.347";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideFoliage = "0";
+      ShowPlacementArea = "0";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "31515323";
+      FoliageFile = "~/data/shapes/Taehl/foliage/grass3";
+      FoliageCount = "10000";
+      FoliageRetries = "100";
+      InnerRadiusX = "40";
+      InnerRadiusY = "40";
+      OuterRadiusX = "2048";
+      OuterRadiusY = "2048";
+      MinWidth = "0.2";
+      MaxWidth = "8";
+      MinHeight = "0.3";
+      MaxHeight = "10";
+      FixAspectRatio = "1";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "1";
+      UseCulling = "1";
+      CullResolution = "64";
+      ViewDistance = "200";
+      ViewClosest = "1";
+      FadeInRegion = "100";
+      FadeOutRegion = "1";
+      AlphaCutoff = "0.2";
+      GroundAlpha = "1";
+      SwayOn = "1";
+      SwaySync = "0";
+      SwayMagSide = "1";
+      SwayMagFront = "2";
+      MinSwayTime = "5";
+      MaxSwayTime = "15";
+      LightOn = "1";
+      LightSync = "0";
+      MinLuminance = "0.4";
+      MaxLuminance = "0.7";
+      lightTime = "10";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "40";
+   };
+   new fxSunLight(Sun) {
+      position = "-146.241 477.011 441.794";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "220";
+      SunElevation = "30";
+      FlareTP = "1";
+      Colour = "1.000000 1.000000 1.000000 1.000000";
+      Brightness = "1";
+      FlareSize = "1";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "0";
+      AnimRotation = "1";
+      AnimSize = "1";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0.4";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.8";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZA";
+      RotationKeys = "AZA";
+      SizeKeys = "AZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "500";
+      RotationTime = "500";
+      SizeTime = "500";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+   };
+   new AudioEmitter(ambient) {
+      position = "-56.4678 533.923 408.047";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      profile = "ambientSound";
+      useProfileDescription = "1";
+      description = "AudioLooping2D";
+      fileName = "0";
+      type = "2";
+      volume = "1";
+      outsideAmbient = "1";
+      referenceDistance = "1";
+      maxDistance = "4096";
+      isLooping = "1";
+      is3D = "0";
+      loopCount = "-1";
+      minLoopGap = "0";
+      maxLoopGap = "0";
+      coneInsideAngle = "360";
+      coneOutsideAngle = "360";
+      coneOutsideVolume = "1";
+      coneVector = "0 0 1";
+         minDistance = "1";
+   };
+   new AudioEmitter(Waterfall) {
+      position = "121.031 508.391 246.717";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      profile = "waterfallSound";
+      useProfileDescription = "1";
+      description = "AudioDefaultLooping3d";
+      fileName = "0";
+      type = "2";
+      volume = "0.5";
+      outsideAmbient = "1";
+      referenceDistance = "1";
+      maxDistance = "600";
+      isLooping = "1";
+      is3D = "1";
+      loopCount = "-1";
+      minLoopGap = "0";
+      maxLoopGap = "0";
+      coneInsideAngle = "360";
+      coneOutsideAngle = "360";
+      coneOutsideVolume = "1";
+      coneVector = "0 0 1";
+         minDistance = "20.0";
+   };
+   new ParticleEmitterNode() {
+      position = "101.48 545.809 358.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "94.389 545.679 357.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "87.002 545.607 357";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "66.6865 545 358.081";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "80.62 545.071 357.007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "73.4529 544.826 357.645";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "92.0455 549.687 362.514";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "73.3108 549.962 362.709";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "102.714 530.286 267.208";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "105.509 528.303 263.155";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "98.9839 534.371 273.224";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "89.2818 537.09 278.571";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "75.3246 536.648 285.545";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "172.964 544.818 359.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "180.201 544.987 359.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "187.759 545.433 359.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "195.917 545.679 359.6";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "202.955 545.848 359.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "211.192 546.017 358.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "202.427 549.659 363.237";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "177.533 549.805 363.247";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "174.387 528.682 261.213";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "192.016 531.55 266.891";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "166.121 524.541 263.299";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "162.414 525.3 246.361";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "154.46 515.687 86.8491";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "112.978 523.398 175.545";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "111.909 501.16 169.919";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "131.747 519.722 162.461";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEdgeEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "112.535 500.565 163.833";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "114.074 513.482 170.646";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "131.331 520.17 158.433";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "WaterfallEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "123.768 522.673 165.645";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "111.792 493.55 86.5775";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new ParticleEmitterNode() {
+      position = "139.159 514.778 85.9751";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "WaterfallEmitterNode";
+      emitter = "MistEmitter";
+      velocity = "1";
+   };
+   new TSStatic() {
+      position = "-305.111 792.132 422.921";
+      rotation = "1 0 0 0";
+      scale = "2.5 2.5 3";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new StaticShape() {
+      position = "-128 520 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-96 488 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-112 488 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-144 520 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-96 520 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-96 536 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-112 536 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-128 536 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-144 536 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-144 504 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-128 504 401 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-112 504 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-96 504 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-128 488 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-144 488 401";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "-116 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x4.dts";
+   };
+   new TSStatic() {
+      position = "-109.5 518.5 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x6.dts";
+   };
+   new TSStatic() {
+      position = "-108.5 519.5 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x4.dts";
+   };
+   new TSStatic() {
+      position = "-114.5 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x4.dts";
+   };
+   new TSStatic() {
+      position = "-113.5 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x4.dts";
+   };
+   new TSStatic() {
+      position = "-114 520 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-110.5 518.5 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x6.dts";
+   };
+   new TSStatic() {
+      position = "-110 520 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-112.5 519.5 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x4.dts";
+   };
+   new TSStatic() {
+      position = "-112 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-111.5 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-112 520 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-107.5 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-112 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-111.5 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-114 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-116 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-116.5 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-115.5 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-114.5 521 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new TSStatic() {
+      position = "-108 519 394";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/bricks/brick1x1.dts";
+   };
+   new StaticShape() {
+      position = "143 -256 110";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-658.5 83 211.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "567.94 -185.256 195.7";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new TSStatic() {
+      position = "-299.262 627.607 421.053";
+      rotation = "1 0 0 0";
+      scale = "3 3 3";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "253.549 908.76 461.335";
+      rotation = "1 0 0 0";
+      scale = "3.5 3.5 3";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "344.517 525.095 436.623";
+      rotation = "1 0 0 0";
+      scale = "2 2 2.5";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "540.218 383.217 399.777";
+      rotation = "1 0 0 0";
+      scale = "3 3 3";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "495.723 216.506 281.608";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "534.169 -547.168 337.779";
+      rotation = "1 0 0 0";
+      scale = "3 3 3.5";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "388.651 -816.866 233.569";
+      rotation = "1 0 0 0";
+      scale = "3 3 2";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "-269.927 -740.192 129.655";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "-298.085 -262.977 221.42";
+      rotation = "1 0 0 0";
+      scale = "2.5 2.5 2";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "-574.473 -400.032 292.75";
+      rotation = "1 0 0 0";
+      scale = "3.5 3.5 3.5";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "-656.868 -164.133 382.346";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+   new TSStatic() {
+      position = "-884.807 498.093 237.96";
+      rotation = "1 0 0 0";
+      scale = "3 3 2";
+      shapeName = "~/data/shapes/Taehl/trees/tree.dts";
+   };
+   new TSStatic() {
+      position = "-617.823 649.223 270.475";
+      rotation = "1 0 0 0";
+      scale = "2 2 3";
+      shapeName = "~/data/shapes/Taehl/trees/tree2.dts";
+   };
+};
+//--- OBJECT WRITE END ---

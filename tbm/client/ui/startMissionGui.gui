@@ -1,0 +1,606 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(startMissionGui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   helpPage = "4. Starting a Server";
+
+   new GuiBitmapCtrl(bgTile) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "1024 768";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./mainmenuImages/transgrey";
+      wrap = "0";
+         glow = "1";
+   };
+   new GuiControl(startMissionWindow) {
+      profile = "TBM_WindowProfile";
+      horizSizing = "right";
+      vertSizing = "center";
+      position = "192 0";
+      extent = "801 383";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiBitmapCtrl(startServerTile) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "801 64";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/tile";
+         wrap = "0";
+            glow = "1";
+      };
+      new GuiBitmapCtrl(startServerLogo) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "0 0";
+         extent = "192 63";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./mainmenuImages/newserver";
+         wrap = "0";
+            glow = "1";
+      };
+	  
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "638 352";
+         extent = "16 16";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./icons/connect";
+         wrap = "0";
+      };
+      new GuiCheckBoxCtrl(ML_isMultiplayer) {
+         profile = "TBM_CheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "21 295";
+         extent = "67 23";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "pref::HostMultiPlayer";
+         helpTag = "0";
+         text = "Multiplayer";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+            maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "658 348";
+         extent = "127 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "SM_StartMission();";
+         helpTag = "0";
+         text = "Launch Mission";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "TBM_ScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "245 81";
+         extent = "202 220";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+            defaultLineHeight = "15";
+
+         new GuiTextListCtrl(SM_missionList) {
+            profile = "GuiTextArrayProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "180 368";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               noDuplicates = "false";
+         };
+      };
+      new GuiCheckBoxCtrl() {
+         profile = "TBM_CheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "155 351";
+         extent = "140 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$Pref::Server::FloodProtectionEnabled";
+         helpTag = "0";
+         text = "Flood Protection";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiMLTextCtrl(MissionDescription) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "248 307";
+         extent = "199 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "21 273";
+         extent = "62 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Max Players:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "TBM_ButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 348";
+         extent = "127 23";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(startMissionGui);";
+         helpTag = "0";
+         text = "<< Back";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(TxtServerName) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 81";
+         extent = "146 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 81";
+         extent = "66 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Server Name:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(TxtServerInfo) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 105";
+         extent = "146 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "26 105";
+         extent = "57 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Server Info:";
+         maxLength = "255";
+      };
+      new GuiTextEditSliderCtrl(SliderNumPlayers) {
+         profile = "TBM_TextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 273";
+         extent = "47 17";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         format = "%3.0f";
+         range = "1.000000 64.000000";
+         increment = "1";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "51 129";
+         extent = "32 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "MOTD:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(TxtServerMOTD) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 129";
+         extent = "146 18";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Pref::Server::MOTD";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(TxtServerAdminPassword) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 153";
+         extent = "93 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "23 153";
+         extent = "60 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Admin Pass:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "61 225";
+         extent = "22 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Port:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(TxtServerPort) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 225";
+         extent = "93 18";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Pref::Server::Port";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(TxtServerTimeLimit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 201";
+         extent = "93 18";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Pref::Server::TimeLimit";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "35 200";
+         extent = "49 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Time Limit:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "31 177";
+         extent = "53 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Password:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(TxtServerPassword) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 177";
+         extent = "93 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiBitmapCtrl(PreviewImage) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "456 81";
+         extent = "329 241";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/data/missions/flatmap.png";
+         wrap = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "23 248";
+         extent = "61 18";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "IRC Channel:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(TxtIRCServerChannel) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 248";
+         extent = "93 19";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Pref::Server::IRC::Channel";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiCheckBoxCtrl(ML_isMultiplayer) {
+         profile = "TBM_CheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "91 295";
+         extent = "41 23";
+         minExtent = "8 8";
+         visible = "1";
+         variable = "$Pref::HostLAN";
+         helpTag = "0";
+         text = "LAN";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+            maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function GuitextlistCtrl::getSelectedRow(%this) {
+
+    return %this.getrowNumbyid(%this.getselectedid());
+
+}
+
+function SM_missionList::onSelect(%this, %row)
+{
+	%image = getField(SM_missionList.getRowTextById(%row), 2);
+	PreviewImage.setBitmap(%image);
+	MissionDescription.setText(getField(SM_missionList.getRowTextById(%row), 3));
+    $Pref::Client::Lastmap = SM_missionList.getselectedRow();
+}
+
+
+//----------------------------------------
+function SM_StartMission()
+{
+
+   //save the pref values
+	$Pref::Server::Name = TxtServerName.getValue();
+	$Pref::Server::Info = TxtServerInfo.getValue();
+	$Pref::Server::Password = TxtServerPassword.getValue();
+	$Pref::Server::AdminPassword = TxtServerAdminPassword.getValue();
+	$Pref::Server::MaxPlayers = SliderNumPlayers.getValue();
+	$Pref::Server::MOTD = TxtServerMOTD.getValue();
+	//set your join password so you can join your own server
+	$Client::Password = TxtServerPassword.getValue();
+
+   %id = SM_missionList.getSelectedId();
+   %mission = getField(SM_missionList.getRowTextById(%id), 1);
+   $Pref::Server::MissionName = getMissionDisplayName(%mission).name;
+
+   if ($pref::HostMultiPlayer)
+      %serverType = "MultiPlayer";
+   else
+      %serverType = "SinglePlayer";
+   if(($Pref::HostLAN == 1 && $pref::HostMultiPlayer == 1) || $pref::HostMultiPlayer == 0)
+      $pref::Net::DisplayOnMaster = "Never";
+   else
+      $pref::Net::DisplayOnMaster = "Yes";
+
+   createServer(%serverType, %mission);
+   %conn = new GameConnection(ServerConnection);
+   RootGroup.add(ServerConnection);
+   %conn.setConnectArgs($pref::Player::Name);
+   %conn.setJoinPassword($Client::Password);
+   %conn.connectLocal();
+	if ($Pref::Server::IsTBMServer)
+	{
+		createTBMServer();
+	}
+}
+
+
+//----------------------------------------
+function startMissionGui::onWake()
+{
+   startMissionWindow.resize((getWord($Pref::Video::Resolution, 0) > 800 ? 192 : 0), getWord(startMissionWindow.position, 1), getWord(startMissionWindow.extent, 0), getWord(startMissionWindow.extent, 1));
+   SM_missionList.clear();
+   %i = 0;
+   for(%file = findFirstFile($Server::MissionFileSpec); %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
+      if (strStr(%file, "/CVS/") == -1)
+      {
+         %mi = getMissionDisplayName(%file);
+
+	 %desc = %mi.desc[0];
+	 for(%d = 1; %d < %mi.desclines; %d++)
+		%desc = %desc @ " " @ %mi.desc[%d];
+
+         SM_missionList.addRow(%i++, %mi.name @ "\t" @ %file @ "\t" @ %mi.preview @ "\t" @ %desc);
+	 %mi.delete();
+      }
+   SM_missionList.sort(0);
+   if($Pref::Client::Lastmap)
+    SM_missionList.setSelectedRow($Pref::Client::Lastmap);
+   else
+    SM_missionList.setSelectedRow(0);
+   SM_missionList.scrollVisible(0);
+
+   //load the saved server prefs
+	TxtServerName.setValue($Pref::Server::Name);
+	TxtServerInfo.setValue($Pref::Server::Info);
+	TxtServerPassword.setValue($Pref::Server::Password);
+	TxtServerAdminPassword.setValue($Pref::Server::AdminPassword);
+	TxtServerMOTD.setValue($Pref::Server::MOTD);
+ 	SliderNumPlayers.setValue($Pref::Server::MaxPlayers);
+	%decalfound = testfordecal();
+	if (%decalfound)
+	{
+		Canvas.setContent(MainMenuGui);
+		Canvas.pushDialog(DECALFOUNDGUI);
+	}
+	
+}
+
+
+
+
+//----------------------------------------
+function getMissionDisplayName( %missionFile )
+{
+   %file = new FileObject();
+
+   %MissionInfoObject = "";
+
+   if ( %file.openForRead( %missionFile ) ) {
+		%inInfoBlock = false;
+
+		while ( !%file.isEOF() ) {
+			%line = %file.readLine();
+			%line = trim( %line );
+
+			if( %line $= "new ScriptObject(MissionInfo) {" )
+				%inInfoBlock = true;
+			else if( %inInfoBlock && %line $= "};" ) {
+				%inInfoBlock = false;
+				%MissionInfoObject = %MissionInfoObject @ %line;
+				break;
+			}
+
+			if( %inInfoBlock )
+			   %MissionInfoObject = %MissionInfoObject @ %line @ " ";
+		}
+
+		%file.close();
+	}
+	%MissionInfoObject = "%MissionInfoObject = " @ %MissionInfoObject;
+	eval( %MissionInfoObject );
+
+   %file.delete();
+
+   if( %MissionInfoObject.name !$= "" )
+   {
+      if( %MissionInfoObject.desc0 $= "" )
+         %MissionInfoObject.desc0 = "This mission has no description.";
+   }
+   else
+   {
+      // there is no missioninfo object, so just return some
+      // generic data for this mission
+      %MissionInfoObject = new ScriptObject();
+      %MissionInfoObject.name = %missionFile;
+      %MissionInfoObject.desc0 = "This mission has no description.";
+   }
+
+   return %MissionInfoObject;
+}

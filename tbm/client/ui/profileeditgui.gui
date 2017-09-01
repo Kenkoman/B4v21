@@ -1,0 +1,59 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(profileeditgui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "TBM_WindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "208 130";
+      extent = "224 219";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 31";
+         extent = "210 159";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+      };
+      new GuiTSCtrl(testomg) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "150 30";
+         extent = "64 64";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         cameraZRot = "0";
+         forceFOV = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

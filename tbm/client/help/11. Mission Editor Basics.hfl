@@ -1,0 +1,73 @@
+<lmargin%:5><rmargin%:95><just:center><font:Arial Bold:28>The Mission Editor Basics
+
+<just:left><font:Arial:14>This help document will show you some of the things you can do with Torque's Mission Editor (Nicknamed F11 because the F11 key opens it).
+
+<font:Arial Bold:16>Interiors
+<font:Arial:14>
+To load up an Interior, click on Window > World Editor Creator on the top menu.
+
+Click on the interior button on the midde right. Navigate the folder structure, keep opening up folders (brown) till you get to a blue name object, click on it. Either something has been spawned infront of you, or you have crashed. Now, with your mouse, click and drag the object to move it around. Holding down ctrl and draging the interior will move it up or down. Press alt + R to re-render shadowing.
+
+Note: Play around with other things than interiors; You can spawn weapons, vehicles and even bricks with it.
+
+<font:Arial Bold:16>Re-sizing
+<font:Arial:14>
+Go back up to "Window" but now go to "World Editor Inspector". Open up the transform button on the middle right, look for "scale" and input a number like you would for the edit staff, click apply.
+
+<font:Arial Bold:16>Changing Textures
+<font:Arial:14>
+Go to tbm > tbm > data > skies, now search around in here for a sky that looks nice. In this demonstration I will be using calm1 but just change it to fit the skybox your using.
+
+Go back to the Mission Editor, and into the Inspector in Window up the top, now at the top right you should see a box with a + in it, click it, click "Sky - Sky". Press the Media button in the midde right, from the skies bit onwards type in all the folders that lead to the images: EG. Rag/calm1 There should be a file called resource.dml or a file with .dml on the end, you will need to type this in at the end: EG. Rag/calm1/resource.dml After this you can click the apply button and your sky has been changed.
+
+You can also do this for the water, click Waterblock, or the water (Be carefull not to move it!). In the media section you will find diffrent slots for files:
+
+Surface texture: The water you see
+
+Shore texture: At the edge of land
+
+Mapover/under texture: Have no idea
+
+Submerge texture: What you see under water
+
+Do the same as the sky one, this time theres no need for .dml, you just need the file name: EG. lava03
+
+<font:Arial Bold:16>How To Add Rain
+<font:Arial:14>
+First go to World Editor Creator, go to Mission Objects and click on "Precipitation" (In blue). In the menu that comes up ignore everything but "Precipitation data" on that drop down menu you can choose between snow or water (or you can have both if you add another precipitation).
+
+<font:Arial Bold:16>How To Add Water
+<font:Arial:14>
+In the same place as we found rain you can also find water, called Water, ignore all of it except the last 2 were you can add a texture, then using the Inspector you can scale your water and you can also move it around.
+
+<font:Arial Bold:16>Terraforming
+<font:Arial:14>
+Terraforming can be used to mainpulate the ground, but note that other players won't be able to see your changes unless you make a new map or save and reload the server. 
+
+Start by going to Window > Terrain Editor, you can change the brush size in Brush. I will explain the functions in the Action menu:
+
+Select: Selects a area to edit
+
+Adjust Selection: You can edit the area you selected with Select
+
+Add Dirt: Makes a mountain/Moves land up
+
+Excavate: Opposite of Add Dirt
+
+Adjust Height: Click and drag to move ground higher or lower
+
+Flatten: Makes the ground flat
+
+Smooth: Makes a gentle slope
+
+Set Height: Makes the ground to the default height
+
+Set Empty: Makes a square hole
+
+Clear Empty: Undo's Set Empty
+
+Paint material: Paints the selected texture (more on this now)
+
+<font:Arial Bold:16>Painting
+<font:Arial:14>
+Go to Window > Terrain Texture Painter then on the right you can select a terrain, or in a box you can select a diffrent texture using "Change..." You cam then click and drag across the ground to paint it.

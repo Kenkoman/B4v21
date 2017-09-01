@@ -1,0 +1,886 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         preview = "tbm/data/missions/Previews/ana.png";
+         desc0 = "Welcome to the ultimate map of RPG. By Pelouze.";
+         name = "Anapolictic";
+         desclines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "400";
+      fogColor = "0.600000 0.700000 0.700000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./Anapolictic.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "24.2171 596.508 120.815";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "10";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new TSStatic() {
+      position = "-14.8888 292.658 143.053";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "-14.394 308.992 142.783";
+      rotation = "0 0 1 36.0963";
+      scale = "0.8 0.8 0.8";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "-7.71275 300.73 143.77";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new fxFoliageReplicator(Plants) {
+      position = "-722.27 -537.627 101.966";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      UseDebugInfo = "0";
+      DebugBoxHeight = "1";
+      HideFoliage = "0";
+      ShowPlacementArea = "1";
+      PlacementAreaHeight = "25";
+      PlacementColour = "0.400000 0.000000 0.800000 1.000000";
+      Seed = "1376312589";
+      FoliageFile = "~/data/terrains/pelouze/Anapoltic/understory";
+      FoliageCount = "300";
+      FoliageRetries = "0";
+      InnerRadiusX = "0";
+      InnerRadiusY = "0";
+      OuterRadiusX = "250";
+      OuterRadiusY = "380";
+      MinWidth = "3";
+      MaxWidth = "3";
+      MinHeight = "4";
+      MaxHeight = "4";
+      FixAspectRatio = "1";
+      FixSizeToMax = "0";
+      OffsetZ = "0";
+      RandomFlip = "1";
+      UseCulling = "1";
+      CullResolution = "32";
+      ViewDistance = "300";
+      ViewClosest = "1";
+      FadeInRegion = "10";
+      FadeOutRegion = "1";
+      AlphaCutoff = "0.2";
+      GroundAlpha = "1";
+      SwayOn = "1";
+      SwaySync = "1";
+      SwayMagSide = "0";
+      SwayMagFront = "0";
+      MinSwayTime = "0";
+      MaxSwayTime = "0";
+      LightOn = "1";
+      LightSync = "1";
+      MinLuminance = "1";
+      MaxLuminance = "1";
+      lightTime = "0";
+      AllowOnTerrain = "1";
+      AllowOnInteriors = "0";
+      AllowOnStatics = "0";
+      AllowOnWater = "0";
+      AllowWaterSurface = "0";
+      AllowedTerrainSlope = "60";
+   };
+   new TSStatic() {
+      position = "41.4674 291.137 187.853";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "39.1112 308.578 182.41";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "37.7721 299.337 184.053";
+      rotation = "1 0 0 0";
+      scale = "1.3 1.3 1.3";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "54.2323 316.791 182.813";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "-12.4407 -293.354 127.556";
+      rotation = "1 0 0 0";
+      scale = "0.7 0.7 0.7";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new InteriorInstance() {
+      position = "-1.84514 -230.797 127.402";
+      rotation = "1 0 0 0";
+      scale = "1.3 1.3 1.3";
+      interiorFile = "~/data/interiors/Pelouze/Anapolictic/snowybridge.dif";
+      showTerrainInside = "0";
+   };
+   new TSStatic() {
+      position = "13.7687 -183.667 124.045";
+      rotation = "0 0 -1 44.1178";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "-25.8159 -199.986 125.346";
+      rotation = "1 0 0 0";
+      scale = "0.8 0.8 0.8";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "-33.9559 -191.774 126.542";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "17.6332 -173.748 123.996";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "29.3675 -282.218 123.622";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "-15.9872 -282.18 127.079";
+      rotation = "1 0 0 0";
+      scale = "0.9 0.9 0.9";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new InteriorInstance() {
+      position = "-734.4 -524.79 38.4";
+      rotation = "0 0 1 180.1";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/Pelouze/Anapolictic/castle.dif";
+      showTerrainInside = "0";
+   };
+   new WaterBlock(dirtywater) {
+      position = "-1024 -1024 -5.9";
+      rotation = "1 0 0 0";
+      scale = "1024 1024 40";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/pelouze/dirtywater";
+      ShoreTexture = "~/data/water/pelouze/dirtywater";
+      liquidType = "OceanWater";
+      density = "0.8";
+      viscosity = "15";
+      waveMagnitude = "0";
+      surfaceOpacity = "0.9";
+      envMapIntensity = "0";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.01";
+      DistortTime = "1";
+      ShoreDepth = "6";
+      DepthGradient = "6";
+      MinAlpha = "0.03";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params0 = "0.32 -0.67 0.066 0.5";
+         extent = "100 100 10";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+         textureSize = "32 32";
+   };
+   new TSStatic() {
+      position = "-639.772 -505.987 41.7042";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-777.184 -504.173 39.3042";
+      rotation = "0 0 1 41.8259";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus2.dts";
+   };
+   new TSStatic() {
+      position = "-771.873 -531.196 41.7042";
+      rotation = "0 0 1 88.2355";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-775.637 -516.554 40.2675";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-779.876 -512.498 40.4158";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-633.244 -511.132 40.4239";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-644.364 -543.65 44.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-640.033 -536.389 44.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-628.114 -541.856 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-639.283 -542.613 48.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-803.687 -417.784 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-800.845 -418.539 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-665.781 -418.664 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-682.112 -414.027 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-701.461 -630.321 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-726.168 -542.419 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-721.028 -541.687 44.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-807.308 -629.197 44.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-733.921 -543.681 38.9042";
+      rotation = "1 0 0 0";
+      scale = "1 0.76534 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus2.dts";
+   };
+   new TSStatic() {
+      position = "-740.179 -542.923 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-705.676 -580.544 40.7042";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus3.dts";
+   };
+   new TSStatic() {
+      position = "-712.886 -578.645 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-686.666 -549.718 39.7042";
+      rotation = "0 0 1 93.9651";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-773.141 -553.033 38.7042";
+      rotation = "0 0 1 99.1217";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus3.dts";
+   };
+   new TSStatic() {
+      position = "-739.023 -422.525 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-735.949 -421.471 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-782.892 -572.629 41.7042";
+      rotation = "0 0 -1 47.5555";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus2.dts";
+   };
+   new TSStatic() {
+      position = "-804.183 -578.579 39.7042";
+      rotation = "0 0 -1 4.58367";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-796.927 -497.865 41.5042";
+      rotation = "0 0 -1 2.8649";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus3.dts";
+   };
+   new TSStatic() {
+      position = "-816.377 -499.589 39.9042";
+      rotation = "0 0 1 3.43748";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus2.dts";
+   };
+   new TSStatic() {
+      position = "-833.357 -515.199 41.7042";
+      rotation = "0 0 1 113.446";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-837.367 -540.662 38.7042";
+      rotation = "0 0 1 87.0896";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-836.465 -561.977 41.7042";
+      rotation = "0 0 1 83.0789";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus3.dts";
+   };
+   new TSStatic() {
+      position = "-790.153 -499.109 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-832.481 -501.423 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-833.893 -495.901 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-842.89 -525.615 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-837.979 -554.77 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-823.881 -580.105 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-827.166 -583.142 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-795.034 -578.801 40.4082";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-772.157 -582.408 40.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-771.794 -578.175 40.5";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-771.77 -543.636 40.3233";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-751.72 -628.552 41.7042";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-752.395 -632.361 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-756.225 -632.627 39.6231";
+      rotation = "1 0 0 89.9544";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-759.079 -632.592 39.5118";
+      rotation = "1 0 0 89.9544";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-757.569 -632.69 41.7116";
+      rotation = "1 0 0 89.9544";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-833.666 -625.221 41.3042";
+      rotation = "0 0 1 46.9825";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus3.dts";
+   };
+   new TSStatic() {
+      position = "-844.741 -619.132 40.3";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/barrel.dts";
+   };
+   new TSStatic() {
+      position = "-659.296 -516.772 38.3009";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-659.199 -530.998 38.3009";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-714.181 -506.581 38.301";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-741.555 -438.129 38.3009";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-842.361 -609.292 38.3009";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-766.57 -617.733 38.301";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-654.868 -603.262 38.301";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-655.298 -423.579 38.301";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-812.351 -453.993 38.3009";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/streetlamp.dts";
+   };
+   new TSStatic() {
+      position = "-704.049 -716.457 38.0131";
+      rotation = "1 0 0 0";
+      scale = "1.5 1.5 1.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-602.58 -722.291 36.958";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-648.995 -733.796 37.8663";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-612.701 -687.246 36.8962";
+      rotation = "1 0 0 0";
+      scale = "1.3 1.3 1.3";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-561.076 -687.262 37.2019";
+      rotation = "1 0 0 0";
+      scale = "1.6 1.6 1.6";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-775.897 -734.71 38.752";
+      rotation = "1 0 0 0";
+      scale = "1.7 1.7 1.7";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-848.892 -712.653 39.8517";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-866.969 -786.221 42.8575";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-711.501 -800.599 34.6041";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-760.874 -804.037 36.0802";
+      rotation = "1 0 0 0";
+      scale = "1.5 1.5 1.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree.dts";
+   };
+   new TSStatic() {
+      position = "-691.18 -751.192 31.3652";
+      rotation = "1 0 0 0";
+      scale = "1.5 1.5 1.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-597.677 -758.191 30.5867";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-631.122 -801.426 32.5239";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-754.773 -686.843 32.6206";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-819.621 -785.348 37.425";
+      rotation = "1 0 0 0";
+      scale = "1.4 1.4 1.4";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-826.702 -726.215 33.3814";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-861.544 -672.93 35.7621";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree2.dts";
+   };
+   new TSStatic() {
+      position = "-563.385 -719.542 34.8641";
+      rotation = "1 0 0 0";
+      scale = "1.6 1.6 1.6";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree3.dts";
+   };
+   new TSStatic() {
+      position = "-730.37 -777.027 37.3937";
+      rotation = "1 0 0 0";
+      scale = "2 2 2";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree3.dts";
+   };
+   new TSStatic() {
+      position = "-680.705 -698.225 36.2333";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree3.dts";
+   };
+   new TSStatic() {
+      position = "-803.957 -685.367 35.5275";
+      rotation = "1 0 0 0";
+      scale = "1.8 1.8 1.8";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/lushtree3.dts";
+   };
+   new TSStatic() {
+      position = "-631.583 -769.946 37.4702";
+      rotation = "0 0 1 27.502";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/bench.dts";
+   };
+   new TSStatic() {
+      position = "-726.694 -755.561 38.4528";
+      rotation = "0 0 -1 54.431";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/bench.dts";
+   };
+   new TSStatic() {
+      position = "-661.14 -710.287 39.6911";
+      rotation = "0 0 1 52.1391";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/campus1.dts";
+   };
+   new TSStatic() {
+      position = "-657.129 -712.875 38.6295";
+      rotation = "0 0 1 8.59438";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/bench.dts";
+   };
+   new TSStatic() {
+      position = "-665.143 -706.115 37.7999";
+      rotation = "0 0 1 89.3814";
+      scale = "0.5 0.5 0.5";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/bench.dts";
+   };
+   new TSStatic() {
+      position = "577.16 121.686 343.524";
+      rotation = "0 0 1 71.0468";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "599.42 104.237 340.111";
+      rotation = "0 0 1 34.9504";
+      scale = "1.3 1.3 1.3";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "487.728 131.878 236.978";
+      rotation = "0 0 1 35.5234";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "485.509 48.182 215.872";
+      rotation = "0 0 1 36.6693";
+      scale = "1.3 1.3 1.3";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "496.132 34.2908 211.687";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "598.488 -34.2229 193.798";
+      rotation = "1 0 0 0";
+      scale = "0.8 0.8 0.8";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "628.234 -31.1666 190.549";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "714.495 -75.7848 134.827";
+      rotation = "1 0 0 0";
+      scale = "1.6 1.6 1.6";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "561.881 104.315 344.232";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/snowytree.dts";
+   };
+   new TSStatic() {
+      position = "23.3594 532.551 118.757";
+      rotation = "0 0 1 67.609";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/citysign.dts";
+   };
+   new TSStatic() {
+      position = "38.6308 557.106 118.625";
+      rotation = "0 0 -1 47.5554";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/janderedpeak.dts";
+   };
+   new TSStatic() {
+      position = "22.2401 577.391 118.655";
+      rotation = "0 0 1 228.61";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/cavesign.dts";
+   };
+   new TSStatic() {
+      position = "556.258 109.265 340.547";
+      rotation = "-0.791468 0.514626 -0.329756 104.353";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/clue2.dts";
+   };
+   new TSStatic() {
+      position = "-845.694 -640.358 121.3";
+      rotation = "0 0 1 232.803";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/clue1.dts";
+   };
+   new TSStatic() {
+      position = "-634.367 -548.182 42.7517";
+      rotation = "0 0 1 179.909";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/clue0.dts";
+   };
+   new TSStatic() {
+      position = "23.7933 576.264 114.637";
+      rotation = "0 0 1 228.61";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/clue.dts";
+   };
+   new TSStatic() {
+      position = "550.277 -870.23 133.105";
+      rotation = "0.00102189 -0.487976 0.872856 203.705";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/pelouze/Anapolicitc/treasure.dts";
+   };
+};
+//--- OBJECT WRITE END ---

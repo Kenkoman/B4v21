@@ -1,0 +1,23 @@
+//Here's how this works.
+//These are default impact messages
+//The ones after //UPIMPACT are only used when impacting up
+//Likewise //SIDEIMPACT is for hitting a wall and //DOWNIMPACT is the traditional falling to one's death stuff
+%1 went squishy.
+%1 turned into pudding.
+%1 turned into putty.
+%1 turned into gelatin.
+%1 tried to disobey Newton\'s laws. //madraven
+//UPIMPACT
+%1 hit the glass ceiling, and it didn\'t give.
+//SIDEIMPACT
+%1 ran into a wall.
+%1 painted the walls red with their everything. //DShiznit
+//DOWNIMPACT
+%1 fell for gravity.
+%1 made a pancake shape on the floor.
+%1 hates gravity.
+%1 forgot his parachute.
+%1\'s body hit the floor.
+%1 was too stupid to grab onto a ledge. //madraven
+It\'s a bird! It\'s a plane! It\'s... %1 falling from the sky... ouch. //yourdoom
+%1 forgot to buy a bungee cord. //DShiznit
