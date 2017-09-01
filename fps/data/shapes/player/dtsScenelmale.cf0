@@ -1,0 +1,93 @@
+AlwaysExport:
+eye
+cam
+Lb
+Rb
+Mount0
+//Mount1
+//Mount2
+//Mount3
+//Mount4
+Bip01 L UpperArm
+Bip01 L Forearm
+Bip01 L Hand
+Bip01 R UpperArm
+Bip01 R Forearm
+Bip01 R Hand
+Bip01 R Clavicle
+Bip01 L Clavicle
+Bip01 Spine
+Bip01 Spine 1
+Bip01 Spine 2
+Bip01 Neck
+Bip01 Head
+Bip01 Pelvis
+//Mount*
+
+NeverExport:
+//Mount0
+//Mount1
+//Mount2
+//Mount3
+//Mount4
+//Bip01 L UpperArm
+//Bip01 L Forearm
+//Bip01 L Hand
+//Bip01 R UpperArm
+//Bip01 R Forearm
+//Bip01 R Hand
+//Bip01 R Clavicle
+//Bip01 L Clavicle
+//Bip01 Spine
+//Bip01 Spine 1
+//Bip01 Spine 2
+//Bip01 Neck
+//Bip01 Head
+//eye
+//cam
+//Bip01 Pelvis
+Bip01 L Thigh
+Bip01 L Calf
+Bip01 L Foot
+Bip01 R Thigh
+Bip01 R Calf
+Bip01 R Foot
+Bip01
+Bip01 L Finger*
+Bip01 R Finger*
+Dum*
+submesh*
+Bip01 L Toe*
+Bip01 R Toe*
+Gun256
+case right
+guide right
+case left
+housing left
+disc
+housing right
+sensor
+handle_disc
+second hand hold
+guide left
+generator
+hideGun256
+start01
+root 128
+energy 128
+endcap 128
+sensor 128
+barrel 128
+mountpoint
+
++Error::AllowEmptySubtrees
++Error::AllowCrossedDetails
++Error::AllowUnusedMeshes
+-Error::AllowOldSequences
+-Error::RequireViconNode
+-Param::CollapseTransforms
+
+-Param::findMergeIndices
+-Param::computeScreenError
+=Params::T2AutoDetail 0
+=Params::baseTexturePath 

@@ -1,0 +1,117 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MainMenuGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./background.jpg";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "29 434";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "quit();";
+      helpTag = "0";
+      text = "Quit";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "29 237";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.setContent(startMissionGui);";
+      helpTag = "0";
+      text = "Start Server...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "29 264";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.setContent(JoinServerGui);";
+      helpTag = "0";
+      text = "Join Server...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "29 291";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.pushDialog(optionsDlg);";
+      helpTag = "0";
+      text = "Options...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "left";
+      vertSizing = "top";
+      position = "517 448";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "getHelp(\"1. Credits\");";
+      helpTag = "0";
+      text = "Credits...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "29 317";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.pushDialog(recordingsDlg);";
+      helpTag = "0";
+      text = "Demos...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "left";
+      vertSizing = "top";
+      position = "402 448";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.pushDialog(aboutDlg);";
+      helpTag = "0";
+      text = "About...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+
