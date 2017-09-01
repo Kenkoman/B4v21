@@ -1,7 +1,1 @@
-v20/base/server/temp/temp.bls
-v20/config/server/*.cs
-v20/config/client/*.cs
-v20/cache.db
-v20/cache.db.journal
-v20/console.log
-v20/key.dat
+console.log

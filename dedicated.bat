@@ -1,0 +1,1 @@
+blockLand.exe -dedicated -mod fps -mission "fps/data/missions/bedroom.mis"
