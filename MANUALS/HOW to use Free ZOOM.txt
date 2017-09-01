@@ -1,0 +1,1 @@
+hold on key (X) and use mouse scroll for ZOOM. (you can change that key in Options/controls)

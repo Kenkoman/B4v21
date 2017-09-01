@@ -1,0 +1,179 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         desc0 = "Get lost in deep space... Just make sure you have 'Clouds' enabled in the 'Video Options' \nBy Mocheeze\nhttp://rtb.mocheeze.com";
+         name = "Celestial Dreams";
+	 bitmap = "celestialdreams";
+         descLines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Mo_Space/resource.dml";
+      cloudHeightPer[0] = "0.4";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.0015";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      fogDistance = "100";
+      fogColor = "0.000000 0.000000 0.000000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "0";
+      SkySolidColor = "0.200000 0.100000 0.100000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.900000 1.000000";
+      ambient = "0.600000 0.600000 0.600000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -9.02238e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1467";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-46.1615 -205.041 387.406";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.60238e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "-46.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-46.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up1 = "20278";
+         up = "20276";
+         upSize = "4";
+         up2 = "20280";
+         up3 = "20399";
+   };
+   new StaticShape() {
+      position = "-62.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up1 = "20282";
+         up = "20280";
+         up6 = "20401";
+         up7 = "20413";
+         upSize = "9";
+         up8 = "20431";
+         up4 = "20383";
+         up2 = "20284";
+         up5 = "20385";
+         up3 = "20297";
+   };
+   new StaticShape() {
+      position = "-62.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up1 = "20433";
+         up = "20411";
+         up17 = "7217";
+         up6 = "7195";
+         up16 = "7215";
+         up7 = "7197";
+         up11 = "7205";
+         up10 = "7203";
+         upSize = "19";
+         up8 = "7199";
+         up9 = "7201";
+         up12 = "7207";
+         SkinName = "base";
+         up4 = "7191";
+         up2 = "7187";
+         up15 = "7213";
+         up18 = "7219";
+         up5 = "7193";
+         up3 = "7189";
+         up14 = "7211";
+         up13 = "7209";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.68057e+006";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "285.443 216.027 334.873";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         up0 = "-1";
+         downSize = "0";
+         down0 = "-1";
+         upSize = "0";
+         owner = "7168";
+         OwnerIP = "local";
+         wasHung = "1";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -7.80032e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+};
+//--- OBJECT WRITE END ---

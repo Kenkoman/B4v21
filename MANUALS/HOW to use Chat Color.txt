@@ -1,0 +1,11 @@
+This adds some colors to your chat hud, so if you type /(color),
+it'll make your text color that color, except for the name.
+Type /help for a complete listing.
+
+
+if you want to chat all the time with one color.
+Open BAC's MAIN MENU (M) and chouse your Chatcolor.
+
+
+if you use this permanent Chatcolor, the color commands /(color) dont work.
+(only with permanent Chatcolor yellow (OFF), you can use color commands)

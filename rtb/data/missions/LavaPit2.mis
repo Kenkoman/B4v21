@@ -1,0 +1,525 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         descLines = "2";
+         desc0 = "Its lava, its everywhere. Your f***ed.\nBy ReD_eYe\nUpdate by Mocheeze";
+         name = "Lavapit Update";
+	 bitmap = "lavapit2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      fogDistance = "100";
+      fogColor = "0.370000 0.190000 0.130000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.200000 0.100000 0.100000 1.000000";
+      useSkyTextures = "0";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "1.000000 0.800000 0.700000 1.000000";
+      ambient = "0.700000 0.600000 0.550000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -8.84208e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1467";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-74.4163 -204.712 387.8";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "-75.3315 -261.527 387.431";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "-102.173 -233.89 387.33";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+      new SpawnSphere() {
+         position = "-46.1615 -233.641 387.406";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new WaterBlock() {
+      position = "-8 -200 -65.027";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 400";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava2";
+      ShoreTexture = "~/data/water/lava2";
+      submergeTexture[0] = "~/data/water/lava2";
+      liquidType = "Lava";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "8";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.06";
+      TessSurface = "28";
+      TessShore = "30";
+      SurfaceParallax = "4";
+      FlowAngle = "45";
+      FlowRate = "0.1";
+      DistortGridScale = "0.1";
+      DistortMag = "0";
+      DistortTime = "100";
+      ShoreDepth = "4";
+      DepthGradient = "1";
+      MinAlpha = "0.25";
+      MaxAlpha = "0.7";
+      removeWetEdges = "0";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         extent = "100 100 10";
+         params0 = "0.32 -0.67 0.066 0.5";
+         textureSize = "32 32";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+   };
+   new StaticShape() {
+      position = "-46.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-46.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         upSize = "4";
+         up1 = "20278";
+         up = "20276";
+         up2 = "20280";
+         up3 = "20399";
+   };
+   new StaticShape() {
+      position = "-62.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up7 = "20413";
+         upSize = "9";
+         up8 = "20431";
+         up1 = "20282";
+         up4 = "20383";
+         up = "20280";
+         up2 = "20284";
+         up5 = "20385";
+         up3 = "20297";
+         up6 = "20401";
+   };
+   new StaticShape() {
+      position = "-62.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         upSize = "2";
+         up1 = "20433";
+         up = "20411";
+   };
+   new StaticShape() {
+      position = "-46.256 -261.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-46.256 -277.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-62.256 -277.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-62.256 -261.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-102.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-102.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-118.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-118.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-102.256 -261.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-102.256 -277.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-118.256 -277.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-118.256 -261.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-80.256 -260.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -7.62002e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "-86.256 -260.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -1.4215e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new Trigger() {
+      position = "-77.9353 -231.914 385.131";
+      rotation = "1 0 0 0";
+      scale = "4.94217 4.63758 3.02083";
+      dataBlock = "HealthTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+         safe = "1";
+   };
+   new StaticShape() {
+      position = "-74.256 -260.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-68.256 -260.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "285.443 216.027 334.873";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -2.87218e+006";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "-68.256 -204.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-74.256 -204.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-80.256 -204.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-86.256 -204.085 385";
+      rotation = "0 0 1 90.0002";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-47.756 -227.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-47.756 -233.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-47.756 -239.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-47.756 -245.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-103.756 -245.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-103.756 -239.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-103.756 -233.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+   new StaticShape() {
+      position = "-103.756 -227.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "staticPlate6x12";
+         upSize = "0";
+         OwnerIP = "local";
+         up0 = "-1";
+         down0 = "-1";
+         wasHung = "1";
+         downSize = "0";
+         owner = "7168";
+   };
+};
+//--- OBJECT WRITE END ---

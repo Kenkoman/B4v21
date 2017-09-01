@@ -1,0 +1,49 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB Deathmatch...
+
+KeyBoard Shortcut = Ctrl+D
+
+<font:Arial Bold:20>Clear Inventory<font:Arial:16>
+Clears inventory and turns off the inventory system at the start of a deathmatch.(It is switched back on at the end)
+
+<font:Arial Bold:20>Jetpack<font:Arial:16>
+Turns jetpack on/off for deathmatch.
+
+<font:Arial Bold:20>Destroy Bricks<font:Arial:16>
+Turns on/off destroying bricks(only spear+speargun can do this) Bricks will turn red when they've been damaged a certain amount, then disappear. They will respawn after the specified time.
+
+<font:Arial Bold:20>Bombs<font:Arial:16>
+Enables Rigged and Timed Bombs to be Set Ingame.
+
+<font:Arial Bold:20>Brick Hits<font:Arial:16>
+Number of hits with a spear a brick can take before disappearing.
+
+<font:Arial Bold:20>Brick Respawn Time<font:Arial:16>
+Length of time before a brick will respawn after it has been destroyed.
+
+<font:Arial Bold:20>Start!<font:Arial:16>
+Starts a deathmatch with the current settings. Turns weapon damage on.
+
+<font:Arial Bold:20>End!<font:Arial:16>
+Ends a deathmatch and sets everythign back to normal. Turns weapon damage off.
+
+
+
+<lmargin%:5><rmargin%:95><font:Arial Bold:25>Best Builders Competition
+
+<font:Arial Bold:20>Allow Editor Wand<font:Arial:16>
+This gives everyone in the Competition an Editor Wand, that can only be used on their own bricks, or their Team's.
+
+<font:Arial Bold:20>Allow Teams<font:Arial:16>
+Allows people to build in Teams. Teams are done in the normal Team Window.
+
+<font:Arial Bold:20>Allow Movers<font:Arial:16>
+Allows people to make movers.
+
+<font:Arial Bold:20>Build Time Limit<font:Arial:16>
+The ammount of time people have to build before inspection begins.
+
+<font:Arial Bold:20>Warmup Time<font:Arial:16>
+A Period before the competition where people can sort out teams, test some colour schemes or something.
+
+<font:Arial Bold:20>Join in Warmup<font:Arial:16>
+People can join teams or still join the competition during the warmup period.

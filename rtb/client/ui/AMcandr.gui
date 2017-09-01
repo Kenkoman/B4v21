@@ -1,0 +1,74 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(AMcandr) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "183 140";
+      extent = "176 273";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Cops and Robbers";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(AMcandr);";
+
+      new GuiButtonCtrl(btnEnd) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "84 228";
+         extent = "61 34";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'endcopsandrobbers\');";
+         helpTag = "0";
+         text = "End";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 24";
+         extent = "87 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "No Options to Set.";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnStart) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "23 228";
+         extent = "61 34";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'initcopsandrobbers\');";
+         helpTag = "0";
+         text = "Start";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

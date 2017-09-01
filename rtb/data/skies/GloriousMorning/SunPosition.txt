@@ -1,0 +1,4 @@
+GloriousMorning
+
+Azimuth:143.8
+Altitude:29.5

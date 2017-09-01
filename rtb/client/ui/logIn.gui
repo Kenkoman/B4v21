@@ -1,0 +1,123 @@
+//####################################
+//# Login Modification - By Ephialtes
+//# ------------------   ------------
+//# To be Released in 1.05.
+//####################################
+
+
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(login) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "214 176";
+      extent = "247 138";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Login";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(login);";
+
+      new GuiTextEditCtrl(txtLIPassword) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 75";
+         extent = "138 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "1";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl(texts) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 49";
+         extent = "52 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Username:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(editorWandbut) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 109";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "openClose(register, login);";
+         helpTag = "0";
+         text = "Register!";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(editorWandbut) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "127 109";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "login();";
+         helpTag = "0";
+         text = "Login!";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(txtLIUsername) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "89 49";
+         extent = "138 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl(texts) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "18 72";
+         extent = "53 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Password:";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

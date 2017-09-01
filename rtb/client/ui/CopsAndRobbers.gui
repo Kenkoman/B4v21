@@ -1,0 +1,179 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(CopsAndRobbers) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "183 127";
+      extent = "292 227";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Cops and Robbers";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(CopsAndRobbers);";
+
+      new GuiRadioCtrl(CopSpawn) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 50";
+         extent = "79 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Cop Spawn";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(RobberSpawn) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 70";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Robber Spawn";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(JailSpawn) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 91";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Jail Spawn";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiTextEditCtrl(txtJailCapacity) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "142 119";
+         extent = "64 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "77 118";
+         extent = "63 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Jail Capacity:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 190";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "applycr();";
+         helpTag = "0";
+         text = "Apply";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(txtTriggerSize) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "135 165";
+         extent = "64 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 164";
+         extent = "61 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Trigger Size:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "82 32";
+         extent = "122 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Cops and Robbers SetUp";
+         maxLength = "255";
+      };
+      new GuiRadioCtrl(BaseTrigger) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "50 140";
+         extent = "81 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Base Trigger";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(BankTrigger) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "160 140";
+         extent = "82 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Bank Trigger";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

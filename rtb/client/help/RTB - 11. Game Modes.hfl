@@ -1,0 +1,33 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>Our Game Modes:
+
+<font:Arial:20>Deathmatch
+<font:Arial:16>
+Just select Deathmatch in the Minigames Section of the Admin Panel.
+o Just select all your options, then press Start.
+o You will be unable to start any other game modes while Deathmatch is running.
+
+<font:Arial:20>Cops and Robbers
+<font:Arial:16>
+You need to have loaded the mission "Bedroom" and persistence "cr".
+o This is a very basic game mode.
+o You must get to the Bank, wait for 5 seconds.
+o Then run back to your base as fast as possible!
+o Meanwhile the police will be trying to kill you and jail you.
+o If the police get you down to half health, they can jail you.
+o They do this by hitting you with their Lightsabre.
+o You will stay in jail until another Cop is killed.
+
+<font:Arial:20>Cops and Robbers II
+<font:Arial:16>
+You need to have loaded the mission "Bedroom" and persistence "cr2" - Or "cr2lowlag" for a low lag map.
+o This game mode gets a little complicated.
+o First the robbers must get into the Mall.
+o You can do this by breaking the red windows, but you dont have a hammer!
+o You will need to rob the hammer shop in the Mall, by gaining a key.
+o Every time a police is killed, he will drop a key.
+o This key can be used until you die.
+o If you dont think you can take on a policeman, sneak into the police station and rob the equipment house.
+----------------------------------------------------
+o Once in the Mall you have to find the password to the Bank Barrier.
+o You can then enter the code into the Keypad mounted on the wall.
+o The police are able to close the barrier too if they know the password.

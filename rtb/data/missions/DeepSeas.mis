@@ -1,0 +1,338 @@
+// mission made by âstrô
+
+datablock ParticleData( seaBubbleParticle )
+{
+	textureName        = "~/data/particles/bubble";
+	dragCoefficient    = 0.0;
+	windCoefficient	   = 0.0;
+	gravityCoefficient = -0.005;
+	inheritedVelFactor = 0.00;
+	useInvAlpha        = false;
+	spinRandomMin      = -30.0;
+	spinRandomMax      = 30.0;
+
+	lifetimeMS         = 5000000;
+	lifetimeVarianceMS = 0;
+
+	times[0] = 0.0;
+	times[1] = 0.9;
+	times[2] = 1.0;
+
+	colors[0] = "1.0 1.0 1 1";
+	colors[1] = "1.0 1.0 1 1";
+	colors[2] = "1.0 1.0 1.0 0";
+
+	sizes[0] = 0.3;
+	sizes[1] = 0.9;
+	sizes[2] = 1.0;
+};
+
+datablock ParticleEmitterData( seaBubbleParticleEmitter )
+{
+	particles = "seaBubbleParticle";
+
+	ejectionPeriodMS = 150;
+	periodVarianceMS = 0;
+
+	ejectionVelocity = 0.0125;
+	velocityVariance = 0.0125;
+	ejectionoffset=64;
+
+	thetaMin = 0.0;
+	thetaMax = 180.0;
+phireferencevel=0.0;
+phivariance=359;
+};
+
+
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         name = "Deep Seas";
+         bitmap = "deepseas";
+         desc0 = "\n";
+         descLines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "-32 -168 369.731";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 1e+006";
+      materialList = "~/data/skies/astroskies/ds.dml";
+      cloudHeightPer[0] = "0.4";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.0015";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      fogDistance = "150";
+      fogColor = "0.000000 0.111000 0.350000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "0";
+      SkySolidColor = "0.200000 0.100000 0.100000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "1";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.900000 0.900000 1.000000";
+      ambient = "0.600000 0.600000 0.600000 1.000000";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new fxSunLight(Sun) {
+      position = "98.5277 -289.053 188.13";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "224";
+      SunElevation = "45";
+      FlareTP = "1";
+      Colour = "0.200000 0.200000 0.800000 1.000000";
+      Brightness = "1";
+      FlareSize = "0.7";
+      FadeTime = "1";
+      BlendMode = "2";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "1";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "1.800000 1.000000 1.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "1";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "-359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "z";
+      RotationKeys = "ZA";
+      SizeKeys = "ATAZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "10";
+      RotationTime = "120";
+      SizeTime = "30";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+         LockToRealSun = "1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-37.2 -191.6 374 0";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-37.133 -159.909 374 0";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "3";
+         sphereWeight = "25";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            locked = "false";
+            lockCount = "0";
+      };
+   };
+   new fxSunLight(Sun2) {
+      position = "-37.5964 -202.737 391.107";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "224";
+      SunElevation = "45";
+      FlareTP = "1";
+      Colour = "0.300000 0.300000 0.800000 1.000000";
+      Brightness = "1";
+      FlareSize = "0.5";
+      FadeTime = "1";
+      BlendMode = "2";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "1";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "1.800000 1.000000 1.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "1";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "z";
+      RotationKeys = "ZA";
+      SizeKeys = "ATAZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "10";
+      RotationTime = "120";
+      SizeTime = "30";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+         LockToRealSun = "1";
+   };
+   new WaterBlock() {
+      position = "0 0 0";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 1e+006";
+      UseDepthMask = "0";
+      surfaceTexture = "~/data/water/water";
+      liquidType = "OceanWater";
+      density = "0.15333";
+      viscosity = "16";
+      waveMagnitude = "1";
+      surfaceOpacity = "0.75";
+      envMapIntensity = "0.4";
+      TessSurface = "50";
+      TessShore = "60";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "0.5";
+      ShoreDepth = "20";
+      DepthGradient = "1";
+      MinAlpha = "1";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params0 = "0.32 -0.67 0.066 0.5";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         extent = "100 100 10";
+         envMapTexture = "rtb/data/skies/sunset_0007";
+         textureSize = "32 32";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "0";
+   };
+   new StaticShape() {
+      position = "-45 -200 369.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";   
+};
+   new StaticShape() {
+      position = "-45 -168 369.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+	dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-77 -184 369.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-13 -184 369.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-46.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-46.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-62.256 -221.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-62.256 -205.585 385";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new ParticleEmitterNode() {
+      position = "-37.2143 -175.813 369.906";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SmokeParticleEmitterNode";
+      emitter = "seaBubbleParticleEmitter";
+      velocity = "1";
+   };
+};
+//--- OBJECT WRITE END ---

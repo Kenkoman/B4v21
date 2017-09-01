@@ -1,0 +1,42 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB Servers...
+<font:Arial Bold:20>Starting a Server<font:Arial:16>
+Server Name: The name of your server, RTB automatically adds  [RTB] to the beginning of the name, so it is identifiable as an RTB server.
+
+Server Info: Don't know what this is for? ah well...
+
+MOTD: A Message Sent to Every User when he Joins.
+
+Password: Leave blank to make it a public server, otherwise, people need to know it to get in.
+
+Admin Pass: The password admins need to become an admin.
+
+Port: t3h port?
+
+Start Money: The amount of money you start with.(only needed for servers with item cost money on)
+
+Max Players: Maximum number of people that can play on your server at any one time.
+
+Max Movers: Maximum number of moving bricks a single player can place.
+
+Admin Editor Functions: Allows admins to use the editor functions. Aswell as the super admin(make sure this is on for dedicated servers.
+
+Auto Secure: Secures everyone that enters your server when they arrive, so no ones stuff gets destroyed.
+
+Enable Sitting: Allows Users in your server to Sit Down. If Enabled, a glitch can be abused where people can "Sit" through floors and roofs.
+
+Enable Elevators: Allows Users to make but not use Elevators in your server. The Elevator can be used to "Move" people through walls, maybe to places they shouldn't be.
+
+Auto Secure: Secures everyone that enters your server when they arrive, so no ones stuff gets destroyed.
+
+Items Cost Money: Make items cost money.
+
+Launch Mission: GO GO GO GO!!!
+ 
+<font:Arial Bold:20>Joining A Server<font:Arial:16>
+You can now filter out non-RTB servers, so no more rubbish!
+Just click the box and press query master.
+
+<font:Arial Bold:20>Dedicated Servers<font:Arial:16>
+Use the "RTB - dedicated.bat" file. Its best to set up all your prefs by starting a listen server before hand. Change the starting map by changing the -mission arguement in the "RTB - dedicated.bat" file. 
+
+

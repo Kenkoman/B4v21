@@ -1,0 +1,377 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(BACsM) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "RTBGuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "290 0";
+      extent = "431 501";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(BACsM);";
+
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "2 87";
+         extent = "427 412";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/client/Menu.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "2 30";
+         extent = "427 57";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/client/MenuName.png";
+         wrap = "0";
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "17 97";
+         extent = "133 285";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(lstAdminPlayerList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "131 2";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+         new GuiTextListCtrl(lstBACPlayerList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "4 7";
+            extent = "131 16";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 97";
+         extent = "105 78";
+         minExtent = "8 2";
+         visible = "1";
+         command = "OpenClose(botopgui,BACsM);";
+         helpTag = "0";
+         text = "open BOTGUI";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "288 97";
+         extent = "125 38";
+         minExtent = "8 2";
+         visible = "1";
+         command = "OpenClose(cat,BACsM);";
+         helpTag = "0";
+         text = "Cat me MENU";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "288 137";
+         extent = "125 38";
+         minExtent = "8 2";
+         visible = "1";
+         command = "OpenClose(monkey,BACsM);";
+         helpTag = "0";
+         text = "Monkey me MENU";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "288 177";
+         extent = "125 38";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'droidme\'); ";
+         helpTag = "0";
+         text = "Droid me";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "288 217";
+         extent = "125 38";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'skeleme\');";
+         helpTag = "0";
+         text = "Skeleton me";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 280";
+         extent = "78 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "jet();";
+         helpTag = "0";
+         text = "Auto jet";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 310";
+         extent = "78 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "crouch();";
+         helpTag = "0";
+         text = "Auto crouch";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 340";
+         extent = "78 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "mousefire();";
+         helpTag = "0";
+         text = "Auto fire";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "304 310";
+         extent = "78 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Defaultzoomm();";
+         helpTag = "0";
+         text = "Default Zoom ";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "382 296";
+         extent = "30 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "zoommin();";
+         helpTag = "0";
+         text = "/\\";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "382 324";
+         extent = "30 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "zoommout();";
+         helpTag = "0";
+         text = "\\/";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "25 390";
+         extent = "118 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "onChatMessage(detag(\"Server\" SPC serverconnection.getaddress()), 0, 0);";
+         helpTag = "0";
+         text = "get Server IP:Port";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "25 420";
+         extent = "118 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "onChatMessage(detag(\"Server Ping is\" SPC serverconnection.getping()), 0, 0);";
+         helpTag = "0";
+         text = "get Server Ping";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 390";
+         extent = "118 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$pref::Player::Chatcolor=\"\\c0 \";";
+         helpTag = "0";
+         text = "Chatcolor white";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 420";
+         extent = "118 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$pref::Player::Chatcolor=\"\c4 \";";
+         helpTag = "0";
+         text = "Chatcolor grey";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "165 450";
+         extent = "118 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$pref::Player::Chatcolor=\"\c3 \";";
+         helpTag = "0";
+         text = "Chatcolor red";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "285 390";
+         extent = "128 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$pref::Player::Chatcolor=\"\";";
+         helpTag = "0";
+         text = "Chatcolor yellow (OFF)";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "285 420";
+         extent = "128 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$pref::Player::Chatcolor=\"\c2 \";";
+         helpTag = "0";
+         text = "Chatcolor green";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "285 450";
+         extent = "128 28";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$pref::Player::Chatcolor=\"\c5 \";";
+         helpTag = "0";
+         text = "Chatcolor blue";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function BACsM::toggle(%this)
+{
+   if (%this.isAwake())
+      Canvas.popDialog(%this);
+   else
+      Canvas.pushDialog(%this);
+}

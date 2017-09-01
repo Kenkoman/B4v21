@@ -1,0 +1,129 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(serverfilter) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "170 185";
+      extent = "300 112";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = " Server Filters";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(serverfilter);";
+
+      new GuiCheckBoxCtrl(filterRTB) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 30";
+         extent = "76 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "RTB Only";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(HidePasswordedServer) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 30";
+         extent = "119 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Show Passworded";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(HideEmptyServer) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 60";
+         extent = "89 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Show Empty";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(HideFullServer) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 60";
+         extent = "119 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Full Servers";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 78";
+         extent = "156 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "All Except RtB Only are in BETA.";
+         maxLength = "255";
+            buttonType = "ToggleButton";
+            groupNum = "-1";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "51 88";
+         extent = "125 19";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "They\'ll work in the future";
+         maxLength = "255";
+            buttonType = "ToggleButton";
+            groupNum = "-1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+function serverfilter::onSleep(%this)
+{
+   $Pref::FilterRTB = filterRtb.getValue(); 
+   $Pref::ShowEmptyServer = HideEmptyServer.getValue();
+   $Pref::HideFullServer = HideFullServer.getValue();
+   $Pref::ShowPasswordedServer = HidePasswordedServer.getValue();
+   JoinServerGui::Update();
+}
+function serverfilter::onWake(%this)
+{
+   filterRTB.setValue($Pref::FilterRTB); 
+   HideEmptyServer.setValue($Pref::ShowEmptyServer);
+   HideFullServer.setValue($Pref::HideFullServer);
+   HidePasswordedServer.setValue($Pref::ShowPasswordedServer);
+}  

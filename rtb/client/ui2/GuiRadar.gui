@@ -1,0 +1,209 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(GuiRadar) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "210 109";
+      extent = "219 262";
+      minExtent = "219 262";
+      visible = "1";
+      helpTag = "0";
+      text = "Radar Options";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "219 250";
+      closeCommand = "GuiRadar.toggle();";
+
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 35";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Toggle Display";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "toggleRadar();";
+     };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 70";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Toggle Autozoom";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "toggleAutoZoom();";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "112 35";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Toggle Size";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "toggleRadarSize();";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 99";
+         extent = "207 20";
+         minExtent = "207 20";
+         visible = "1";
+         helpTag = "0";
+         text = "--------------Admin Only Controls-------------";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 120";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Start Radar";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "commandToServer('RadarStart', 1);";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "112 120";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Stop Radar";
+         groupNum = "-1";
+         buttonType = "PushButton";
+          command = "commandToServer('RadarStop');";
+     };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 155";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Mark Admins";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "commandToServer('MarkAdminsOnRadar');";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 190";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Show Admins";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "commandToServer('ShowAdminsOnRadar');";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 225";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Hide Admins";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "commandToServer('HideAdminsFromRadar');";
+      };
+      new GuiTextEditCtrl(RadarPositionName) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "112 155";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "20";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "112 190";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Add Mark";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "commandToServer('AddMyRadarPosition', RadarPositionName.text); RadarPositionName.text = \"\";";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "112 225";
+         extent = "100 30";
+         minExtent = "100 30";
+         visible = "1";
+         helpTag = "0";
+         text = "Remove Mark";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "commandToServer('RemoveRadarPosition', RadarPositionName.text); RadarPositionName.text = \"\";";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function GuiRadar::toggle(%this)
+{
+   if (%this.isAwake())
+      Canvas.popDialog(%this);
+   else
+      Canvas.pushDialog(%this);
+}

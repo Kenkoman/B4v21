@@ -1,0 +1,20 @@
+This mod is for making a start Teleporter with many aims.
+--------------------------------------------------------------------
+
+use the MagicWand (dont use EditWand).
+
+
+how to set Teleporter aims:
+------------------------------------
+toggle the MagicWand mode with (alt W) (or use "J@N's W&WM")(key "K")
+if you see Teleporter-By-ID-Mode, just hit a brick of your wish.
+write down one nummer of your choice.
+repeat this for all your Teleporter aims. (never use numbers twice)
+
+
+how to set start Teleporter:
+------------------------------------
+toggle the MagicWand mode with (alt W) (or use "J@N's W&WM")(key "K")
+if you see Teleporter-Gateway-Mode, just hit a brick of your wish.
+when you touch this Teleporter-Gateway it ask you for the number.
+write down a nummer of your Telporter aims, and it will tele-port you there.

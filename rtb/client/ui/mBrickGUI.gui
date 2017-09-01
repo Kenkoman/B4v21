@@ -1,0 +1,102 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(mBrickGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "609 474";
+      extent = "189 123";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Change Position:";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(login);";
+
+      new GuiTextEditCtrl(mBrickXYZRot) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "56 33";
+         extent = "125 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 31";
+         extent = "46 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "XYZ Pos:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(posbutton) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 83";
+         extent = "176 27";
+         minExtent = "8 2";
+         visible = "1";
+         command = "applyPosSettings();";
+         helpTag = "0";
+         text = "Apply Position Change";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 57";
+         extent = "44 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "XYZ Rot:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(mBrickXYZRot) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "56 58";
+         extent = "125 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

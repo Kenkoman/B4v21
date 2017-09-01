@@ -1,0 +1,128 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(pttaGuipersonal) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "130 80";
+      extent = "380 320";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Power To The Admin - Control Panel - Personal Options";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(pttaGuipersonal);";
+
+      new GuiButtonCtrl(btnProtect) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "98 65";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'protectme\');";
+         helpTag = "0";
+         text = "Protect Me";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btncloak) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 89";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'cloakme\');";
+         helpTag = "0";
+         text = "Cloak";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "5 24";
+         extent = "99 22";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./pttaguilogo.PNG";
+         wrap = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "137 297";
+         extent = "176 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "PTTA Mods(c) v0010 (http://ptta.us/)";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnPersonal) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "172 24";
+         extent = "99 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "OpenClose(pttaGui,pttaGuipersonal);";
+         helpTag = "0";
+         text = "Player Options";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btngod) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 65";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'godme\');";
+         helpTag = "0";
+         text = "GOD Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnServer) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "275 24";
+         extent = "99 22";
+         minExtent = "8 2";
+         visible = "1";
+         command = "OpenClose(pttaGuiserver,pttaGuipersonal);";
+         helpTag = "0";
+         text = "Server Options";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

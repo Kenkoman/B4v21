@@ -1,0 +1,113 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(faceprintselect) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "156 126";
+      extent = "347 231";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(faceprintselect);";
+
+      new GuiBitmapCtrl(printbackg) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "226 107";
+         extent = "115 117";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/data/shapes/yellow.blank.jpg";
+         wrap = "0";
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 25";
+         extent = "213 195";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(FacePrintlist) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "193 224";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "26 4";
+         extent = "95 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Face Print Selection";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "237 26";
+         extent = "101 25";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Select";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiBitmapCtrl(Faceprintpreview) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "226 107";
+         extent = "115 117";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/data/shapes/player/Face Decals/aqua.facedecal.png";
+         wrap = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

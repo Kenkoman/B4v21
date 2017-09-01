@@ -1,0 +1,27 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB General Play...
+
+<font:Arial Bold:20>Before You Start...<font:Arial:16>
+Before playing it is recommended that you change your name(and appearance if you want). To something more original and unique. Do this in-game by going to the player menu(ctrl+s) and pressing Appearance, or by selecting Appearance from the main menu.
+
+<font:Arial Bold:20>Inventory System<font:Arial:16>
+The first thing you'll notice is the new inventory system. Its gives you full access to all bricks,tools,spraycan,lettercans and weapons(when enabled, if dm mode isnt started, they cant even be equipped). Select a slot by pressing a number key, and then scroll through the available items either by continually tapping the same key(ctrl+numkey goes backwards throught he list) or using the mousewheel to scroll. Slot 6 works slightly differently, you can scroll backwards and forwards through colours with the numkey and ctrl+numkey or mousewheel, but also, by clicking down on the mousewheel, you change the currently selected can(Available cans are: Spraycan, Letter Can, Black Letter Can). 
+Possibly the best bit is the preview pictures in the bottom left hand corner. They give you a clear indication of what each item looks like before you use it. Super!
+
+<font:Arial Bold:20>Money<font:Arial:16>
+You will also notice on your HUD there is now a grey box with $100(or another amount) This is because server admins now have the option of using "money" on their servers. They can choose how much money each person starts with. And when they select for items to cost money, you can only pick an item up if you have sufficient money.(Cost of items is edited in their .cs file, under itemData)
+
+<font:Arial Bold:20>Messaging<font:Arial:16>
+From the HUD, you'll also notice the "Typing:" bit. This can give you an indication of who is currently typing a message(no more wondering why someone is standing still for ages) However, its still abit bugged, so expect a recode soon ;) Another new messaging feature, is the private message. By pressing ctrl+t you can type out a normal message, click a name on the list and press send, the message is sent to that person only.
+  
+<font:Arial Bold:20>New Keys<font:Arial:16>
+Range of new things can be done via the keyboard. They are all re-mappable via the control menu(options -> controls):
+E - Mounts and dismounts from vehicles.
+F - Clears your hands.
+Q - Freezes and unfreezes you whereever you are. You can still turn+use items however.
+Alt + S - Takes a screen shot with no hud in view.
+U - Removes the last brick you placed. Saves having to get the hammer out.
+
+Ctrl + S - Opens the player menu.
+Ctrl + D - Opens the deathmatch menu.
+Ctrl + F - Opens the team menu.
+Ctrl + T - Opens the private message gui.

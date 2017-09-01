@@ -1,0 +1,43 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(PWBoxgui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiButtonCtrl(btnSend) {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "320 241";
+      extent = "60 19";
+      minExtent = "8 2";
+      visible = "1";
+      command = "Send();";
+      helpTag = "0";
+      text = "Send";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiTextEditCtrl(txtMessage) {
+      profile = "GuiTextEditProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "224 223";
+      extent = "260 18";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      escapeCommand = "txtMessage.onEnter();";
+      historySize = "0";
+      password = "0";
+      tabComplete = "0";
+      sinkAllKeyEvents = "0";
+   };
+};
+//--- OBJECT WRITE END ---

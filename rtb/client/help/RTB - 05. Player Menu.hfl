@@ -1,0 +1,37 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB Players...
+
+Keyboard Shortcut = Ctrl+S
+
+<font:Arial Bold:20>Toggle Secure<font:Arial:16>
+Turns your secure status on/off. If you are secure, only people on your friends list can build on your bricks. And only people on your safe list can destroy your bricks. It is wise to make sure people you add to your safe/friends lists add you to theirs aswell.
+
+<font:Arial Bold:20>Appearance<font:Arial:16>
+Opens up the appearance menu.
+
+<font:Arial Bold:20>Toggle Friend<font:Arial:16> 
+Select a name from the list and press this button to add/remove someone from your friends list.
+
+<font:Arial Bold:20>Toggle Safe<font:Arial:16>
+Select a name from the list and press this button to add/remove someone from your safe list.
+
+<font:Arial Bold:20>Give(money)<font:Arial:16>
+Gives the selected player the amount of money specify. You must have at least the amount you want to give for the transaction to take place.
+
+<font:Arial Bold:20>Toggle Wrench<font:Arial:16>
+Toggles the wrench mode. Can also be done with shortcut Ctrl+W(re-mappable in the controls menu)
+1.Mover Mode - allows you to make bricks move(mostly for doors) Hit a brick with the wrench and it opens the Movers Window.
+2.Colour Own Mode - colours all the bricks you own in a pile the colour of the brick you hit.
+3.Destroy Own Mode - destroys all the bricks that you own in a pile.
+4.Repair Mode - repairs damaged bricks in deathmatch mode. Repairs players too!
+5.Brick Message Mode - puts your current brick message onto a brick.
+
+Apply Wrench: Applys the above settings to the wrench, any brick you hit will inhert these settings.
+
+<font:Arial Bold:20>Destroy Own<font:Arial:16>
+Destroys all of your own bricks.
+
+<font:Arial Bold:20>Paint Own<font:Arial:16>
+Colours all of your own bricks the colour that the spraycan is currently set to.
+
+<font:Arial Bold:20>Set Brick Message<font:Arial:16>
+Sets your brick message to whatevers in the box. Apply to a brick by hitting with a wrench while in Brick Message Mode.

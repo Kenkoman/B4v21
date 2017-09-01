@@ -1,0 +1,193 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(AMdeathmatch) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "183 140";
+      extent = "176 273";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Deathmatch";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(AMdeathmatch);";
+
+      new GuiTextEditCtrl(TxtBrickRespawnTime) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "118 149";
+         extent = "40 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 24";
+         extent = "121 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Select your Preferences:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnStart) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "23 228";
+         extent = "61 34";
+         minExtent = "8 2";
+         visible = "1";
+         command = "StartDM();";
+         helpTag = "0";
+         text = "Start";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiCheckBoxCtrl(OptClearInventory) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 43";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Clear Inventory";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(OptJetPack) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 61";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Jetpack";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(OptFriendlyFire) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 78";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Friendly Fire";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(optbombrigging) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 96";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Bombs";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiCheckBoxCtrl(OptBrickDestroy) {
+         profile = "GuiCheckBoxProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 114";
+         extent = "150 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Destroy Bricks";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "12 148";
+         extent = "102 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Brick Respawn Time:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(TxtBrickMaxHits) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "117 174";
+         extent = "40 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 173";
+         extent = "71 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Max Brick Hits:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnEnd) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "84 228";
+         extent = "61 34";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'enddeathmatch\');";
+         helpTag = "0";
+         text = "End";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

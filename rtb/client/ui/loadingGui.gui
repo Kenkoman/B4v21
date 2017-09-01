@@ -1,0 +1,122 @@
+new GuiControlProfile ("LoadingGuiContentProfile")
+{
+   opaque = true;
+   fillColor = "200 200 200";
+   border = true;
+   borderColor   = "0 0 0";
+};
+
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(LoadingGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "./background.jpg";
+   useVariable = "0";
+   tile = "0";
+      qLineCount = "0";
+
+   new GuiControl() {
+      profile = "LoadingGuiContentProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "92 86";
+      extent = "482 308";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiTextCtrl(LOAD_MapName) {
+         profile = "GuiMediumTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "170 6";
+         extent = "8 28";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         text = "Map Name";
+         maxLength = "255";
+      };
+      new GuiMLTextCtrl(LOAD_MapDescription) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "172 62";
+         extent = "303 14";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiProgressCtrl(LoadingProgress) {
+         profile = "GuiProgressProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "158 262";
+         extent = "262 25";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiTextCtrl(LoadingProgressTxt) {
+            profile = "GuiProgressTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 3";
+            extent = "262 20";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            text = "LOADING MISSION";
+            maxLength = "255";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "90 262";
+         extent = "65 25";
+         minExtent = "20 20";
+         visible = "1";
+         command = "disconnect();";
+         accelerator = "escape";
+         helpTag = "0";
+         text = "CANCEL";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiBitmapCtrl(loadingbitmap) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "6 6";
+         extent = "160 120";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "~/data/missions/previews/celestialdreams.png";
+         wrap = "0";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "5 5";
+         extent = "162 122";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         wrap = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

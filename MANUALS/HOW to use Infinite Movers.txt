@@ -1,0 +1,8 @@
+To make an infinite mover...
+----------------------------
+Append #INF to the return delay of your mover, so your return delay would look like... 1000 #INF.
+
+
+To make a multiple section mover...
+-----------------------------------
+You can use the Ezy-Mover-Mode, or type the XYZ for each section into the Position box.  0 5 0 5 0 0 0 -5 0 -5 0 0 is an example, and it makes the mover move in a square back to its origin, and return in the opposing direction of the square.  You can have up to 4 sections.

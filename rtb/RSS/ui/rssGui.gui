@@ -1,0 +1,266 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(rssgui) {
+   profile = "BackFillProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+   bitmap = "~/client/ui/background";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "RSS News Reader";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "0";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.setContent(mainMenuGui);";
+         useVariable = "0";
+         tile = "0";
+
+      new GuiTextCtrl() {
+         profile = "GuiBigTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "148 35";
+         extent = "302 40";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "- RTB News Reader -";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "49 85";
+         extent = "54 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "RSS Feeds";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnView) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "14 432";
+         extent = "54 23";
+         minExtent = "8 2";
+         visible = "1";
+         command = "lstRSSFeeds.getRSS();";
+         helpTag = "0";
+         text = "View";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnAdd) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "83 433";
+         extent = "54 23";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ctrlAddFeed.visible=true;";
+         helpTag = "0";
+         text = "Add";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "150 83";
+         extent = "471 374";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMLTextCtrl(lstMLRSSView) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "464 358";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "1";
+            maxChars = "-1";
+         };
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "12 109";
+         extent = "127 316";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(lstRSSFeeds) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "125 32";
+            minExtent = "8 2";
+            visible = "1";
+            altCommand = "lstRSSFeeds.getRSS();";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+   };
+   new GuiControl(ctrlAddFeed) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "166 140";
+      extent = "308 200";
+      minExtent = "8 2";
+      visible = "0";
+      helpTag = "0";
+
+      new GuiWindowCtrl(wndAddFeed) {
+         profile = "GuiWindowProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "26 32";
+         extent = "255 135";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Add RSS Feed";
+         maxLength = "255";
+         resizeWidth = "1";
+         resizeHeight = "1";
+         canMove = "0";
+         canClose = "1";
+         canMinimize = "0";
+         canMaximize = "0";
+         minSize = "50 50";
+         closeCommand = "txtEditFeed.clear();txtEditURL.clear();ctrlAddFeed.visible=false;";
+
+         new GuiTextEditCtrl(txtEditFeed) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "49 34";
+            extent = "194 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextEditCtrl(txtEditURL) {
+            profile = "GuiTextEditProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "49 66";
+            extent = "194 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "13 34";
+            extent = "24 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Feed";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "13 65";
+            extent = "20 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "URL";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(btnFeedAdd) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "93 98";
+            extent = "69 23";
+            minExtent = "8 2";
+            visible = "1";
+            command = "lstRSSFeeds::addfeed();";
+            helpTag = "0";
+            text = "OK";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiButtonCtrl(btnFeedAdd) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "175 98";
+            extent = "69 23";
+            minExtent = "8 2";
+            visible = "1";
+            command = "txtEditFeed.clear();txtEditURL.clear();ctrlAddFeed.visible=false;";
+            helpTag = "0";
+            text = "Cancel";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

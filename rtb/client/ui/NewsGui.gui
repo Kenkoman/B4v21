@@ -1,0 +1,240 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(NewsDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "75 36";
+      extent = "618 459";
+      minExtent = "300 200";
+      visible = "1";
+      helpTag = "0";
+      text = "Game News!";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(NewsDlg);";
+
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "8 26";
+         extent = "132 400";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(NewsList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "130 8";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "8 432";
+         extent = "133 21";
+         minExtent = "8 8";
+         visible = "1";
+         command = "GetNews(NewsList.getRowTextById(NewsList.getSelectedId()));";
+         helpTag = "0";
+         text = "Refresh News";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "146 26";
+         extent = "465 426";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOn";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMLTextCtrl(NewsText) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "457 14";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+            autoSizeWidth = true;
+            autoSizeHeight = true;
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function NewsDlg::onWake(%this)
+{
+   // Web server to connect to in order
+   // to download the news. Note ':80'
+   // part must be left there or else
+   // this will not work.
+   $NewsHTTPHost="rtb.mocheeze.com:80";
+
+   // Directory on the web server where
+   // the news files are kept:
+   $NewsHTTPPath="/RTBIngame/";
+   getNews();
+}
+
+//----------------------------------------
+
+function GetItemList()
+{
+   NewsList.entryCount = 0;
+   NewsList.clear();
+   %newsc = new HTTPObject(ItemList){};
+   %newsc.get($NewsHTTPHost, $NewsHTTPPath @ "news.txt", "");
+}
+
+function ItemList::onLine( %this, %line )
+{
+   if(%line $= "[done]")
+   {
+      if($NewsName $= "")
+      {
+         NewsList.setSelectedRow(0);
+      } else {
+         %index = NewsList.findTextIndex($NewsName);
+         NewsList.setSelectedRow(%index);
+         //$NewsName="";
+      }
+   } else {
+      NewsList.addRow( NewsList.entryCount, %line );
+      %line = strreplace( %line, " ", "_" );
+      %line = strlwr( %line );
+      NewsList.fileName[NewsList.entryCount] = %line @ ".hfl";
+      NewsList.entryCount++;
+   }
+}
+
+function ItemList::onConnectFailed()
+{
+MessageBoxOK("ERROR","Couldn't connect to news server to receive news! Please ensure that you are connected to the internet, then try again!");
+getNews();
+}
+
+function ItemList::onConnected()
+{
+}
+
+function ItemList::onDisconnect()
+{
+}
+
+
+//----------------------------------------
+
+function NewsList::onSelect(%this, %row)
+{
+   GetNewsFile(%this.fileName[%row]);
+}
+
+function getNews(%NewsName)
+{
+   if(%NewsName !$= "") { $NewsName=%NewsName; }
+   NewsList.entryCount = 0;
+   NewsList.clear();
+   GetItemList();
+
+   //NewsList.setSelectedRow(0);
+   Canvas.pushDialog(NewsDlg);
+}
+
+function GuiMLTextCtrl::onURL(%this, %url)
+{
+   // Check to see if the user clicked on
+   // a section selection command link and
+   // not an actual URL.
+   %x = strpos( %url, ".." );
+   if(%x !$= -1 ) {
+      // yep it's a section selection command link!
+      // Now let's see what section we should select
+      // to automatically jump to that section.
+      %call = getSubStr( %url, 0, %x );
+      if(%call $= "news") { getNews(getSubStr( %url, %x + 2, strlen(%url) - %x )); }
+   } else {
+      // nope, it's just a URL. Therefore
+      // open the user's default web browser
+      // to that URL link that's provided.
+      gotoWebPage( %url );
+   }
+}   
+
+//-------------------------------------------
+
+function GetNewsFile(%filename)
+{
+   %newsi = new HTTPObject(TheNews){};
+   %newsi.get($NewsHTTPHost, $NewsHTTPPath @ %filename, "");
+}
+
+function TheNews::onLine( %this, %line )
+{
+   if(%line $= "[done]")
+   {
+      NewsText.setText($newslines);
+      $newslines="";
+   } else {
+      $newslines=$newslines @ "\n" @ %line;
+   }
+}
+
+function TheNews::onConnectFailed()
+{
+}
+
+function TheNews::onConnected()
+{
+}
+
+function TheNews::onDisconnect()
+{
+}

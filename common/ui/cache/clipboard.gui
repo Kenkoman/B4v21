@@ -1,0 +1,17 @@
+new SimSet(guiClipboard) {
+
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "340 52";
+      extent = "85 23";
+      minExtent = "8 2";
+      visible = "1";
+      command = "commandToServer(\'MagicWand\');";
+      helpTag = "0";
+      text = "Magic Wand";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+};

@@ -1,0 +1,235 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(WrenchM) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "1024 768";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "RTBGuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "91 178";
+      extent = "363 400";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(WrenchM);";
+
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 280";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Not Used";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 340";
+         extent = "320 45";
+         minExtent = "8 2";
+         visible = "1";
+         command = "canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Close Menu";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 60";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchMode2\');";
+         helpTag = "0";
+         text = "<= Previous WrenchMode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 60";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchMode\');";
+         helpTag = "0";
+         text = "Next WrenchMode =>";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 120";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet0\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Mover-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 160";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet2\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Repair-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 200";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet4\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Brick-Decal-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 240";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet6\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Doorbell-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "20 280";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet8\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Camera View Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 120";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet1\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Ezy-Mover-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 160";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet3\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Brick-Message-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 200";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet5\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Impulse-Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 240";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoServer(\'ToggleWrenchModeSet7\'); canvas.popDialog(WrenchM);";
+         helpTag = "0";
+         text = "Camera Place Mode";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "131 7";
+         extent = "100 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "J@n\'s Wrench Menu";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function WrenchM::toggle(%this)
+{
+   if (%this.isAwake())
+      Canvas.popDialog(%this);
+   else
+      Canvas.pushDialog(%this);
+}

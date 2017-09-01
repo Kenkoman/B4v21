@@ -1,0 +1,146 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(admingui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "176 13";
+      extent = "312 455";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Administrator Menu";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(admingui);";
+
+      new GuiTextEditCtrl(txtAdminPass) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "75 29";
+         extent = "115 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl(btnSubmit) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 29";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "SAD(txtAdminPass.getValue());";
+         helpTag = "0";
+         text = "Submit";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 30";
+         extent = "53 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Password:";
+         maxLength = "255";
+      };
+      new GuiTextListCtrl(lstAdminPlayerList) {
+         profile = "GuiTextListProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 57";
+         extent = "80 2";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         enumerate = "0";
+         resizeCell = "1";
+         columns = "0";
+         fitParentWidth = "1";
+         clipColumnText = "0";
+      };
+      new GuiButtonCtrl(btnMagicWand) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 171";
+         extent = "85 23";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandToServer(\'MagicWand\');";
+         helpTag = "0";
+         text = "Magic Wand";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnBan) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 111";
+         extent = "85 23";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ban();";
+         helpTag = "0";
+         text = "Ban Player";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnKick) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 82";
+         extent = "85 23";
+         minExtent = "8 2";
+         visible = "1";
+         command = "kick();";
+         helpTag = "0";
+         text = "Kick Player";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnChangeMap) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "200 201";
+         extent = "85 23";
+         minExtent = "8 2";
+         visible = "1";
+         command = "changeMap();";
+         helpTag = "0";
+         text = "Change Map";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

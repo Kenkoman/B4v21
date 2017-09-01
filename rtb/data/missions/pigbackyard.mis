@@ -1,0 +1,230 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+
+   new ScriptObject(MissionInfo) {
+         descLines = "2";
+         desc0 = "OINK!!!\n            -pig";
+         name = "Pigs Backyard";
+         bitmap = "pigby";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -272 704 720";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "490";
+      fogColor = "0.700000 0.800000 0.900000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.347509 0.560864 -0.751445";
+      color = "0.800000 0.800000 0.800000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./pigbackyard.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "0 0 67";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "100";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new SimGroup(Fence0) {
+
+      new InteriorInstance() {
+         position = "-120 342 145";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "120 342 145";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "-252.2 214.167 145.1";
+         rotation = "0 0 -1 90";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "-252.2 -25.8 145.01";
+         rotation = "0 0 -1 90";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "249.806 -29.821 145.1";
+         rotation = "0 0 1 90.0913";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "250 210.2 145.1";
+         rotation = "0 0 1 90";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "117 -158 145";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+      new InteriorInstance() {
+         position = "-123 -158 145";
+         rotation = "0 0 1 180";
+         scale = "1 1 1";
+         interiorFile = "~/data/interiors/pig/fence.dif";
+         showTerrainInside = "0";
+      };
+   };
+   new SimGroup(Trees0) {
+
+      new TSStatic() {
+         position = "-126.706 133.734 38.1452";
+         rotation = "0 0 -1 6.87562";
+         scale = "25 25 25";
+         shapeName = "~/data/shapes/pig/tree11.dts";
+      };
+      new TSStatic() {
+         position = "104.196 -36.5638 48.9452";
+         rotation = "0 0 -1 17.7617";
+         scale = "25 25 25";
+         shapeName = "~/data/shapes/pig/tree11a.dts";
+      };
+      new TSStatic() {
+         position = "-163.877 2.34208 48.3452";
+         rotation = "0 0 -1 48.7014";
+         scale = "25 25 25";
+         shapeName = "~/data/shapes/pig/tree11b.dts";
+      };
+      new TSStatic() {
+         position = "148.684 116.772 49.7408";
+         rotation = "0 0 -1 38.9611";
+         scale = "25 25 25";
+         shapeName = "~/data/shapes/pig/tree11c.dts";
+      };
+   };
+   new SimGroup(PlayerItems0) {
+
+      new Item() {
+         position = "95.6765 201.073 115.602";
+         rotation = "0 0 1 90.5273";
+         scale = "1 1 1";
+         dataBlock = "shield";
+         collideable = "0";
+         static = "1";
+         rotate = "0";
+      };
+      new Item() {
+         position = "96.9923 201.789 117.021";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "spear";
+         collideable = "0";
+         static = "1";
+         rotate = "0";
+      };
+   };
+   new InteriorInstance() {
+      position = "30 210 170";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/pig/swingset.dif";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "0 0 60";
+      rotation = "1 0 0 0";
+      scale = "1.26771 1.25641 1";
+      interiorFile = "~/data/interiors/pig/sandbox.dif";
+      showTerrainInside = "0";
+   };
+   new TSStatic() {
+      position = "-48.2676 -34.54 63.1018";
+      rotation = "0.981907 -0.0140384 -0.18884 188.35";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/player/minifig.dts";
+   };
+   new StaticShape() {
+      position = "-43.7481 -31.7231 61.9983";
+      rotation = "-0.790146 0.54773 -0.275066 91.8737";
+      scale = "1 1 1";
+      dataBlock = "pineTree";
+   };
+   new StaticShape() {
+      position = "15.4908 -13.8137 61.468";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-40.2121 31.7209 62.3055";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "49.5239 209.936 64.718";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---
