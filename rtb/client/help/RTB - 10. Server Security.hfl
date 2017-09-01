@@ -1,0 +1,64 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>Our Security Features
+
+<font:Arial:16>Because of all the People now Scripting, Brick Spamming, and just generally acting out of order, we have Features to help you out.
+
+<font:Arial Bold:16>Kicking
+<font:Arial:16>
+Simply Removes someone from your Server.
+o In CTRL+A Select their Name in the List.
+o Press the Kick Button
+
+<font:Arial Bold:16>Banning
+<font:Arial:16>
+This Prevents someone coming back to your Server.
+o In CTRL+A Select their Name in the List.
+o Press the Ban Button.
+o This will ban their Ip. But Users on Dialup can change it.
+
+<font:Arial Bold:16>Subnet Banning
+<font:Arial:16>
+This Prevents someone coming back to your Server, with a new IP.
+o In CTRL+A Select their Name in the List.
+o Press the Subnet Button.
+o This will ban their Ip. But Users on Dialup can change it.
+o If you see this message when someone Joins: "WARNING: NAME's IP almost Matches BANNEDPERSON who is Banned."
+o It means that they may have changed their IP. The server will automatically Stop them from Building.
+o It is up to you to decide if they are the banned person or not. If you decide they are not, in the Admin Menu, Select the Building Rights Button, to give them their Building Rights.
+o It is possible that this person is just an innocent person.
+
+<font:Arial Bold:16>Unbanning
+<font:Arial:16>
+Unbanning someone to allow them access to your server again.
+o In CTRL+A, select the ban you wish to remove, from the list at the bottom.
+o Then simply press the Unban button, and that person will be able to access your server again.
+
+<font:Arial Bold:16>Recommended Banning
+<font:Arial:16>
+A List of people the RTB Staff have deemed hazardous to your server.
+o Just go into CTRL+A and Select "Recommended Bans".
+o You will then be able to see how many bans we have recommended.
+o If you only want to add a few, go to the list at the bottom of the window, and select the ban, then press "Add".
+o You can press "Add All" to add all the Bans.
+o To view the progress of the load, you can open the console using the funky key with three lines on it.
+----------------------------------------------------------------------------------------------------------
+o These bans have been added by Ephialtes, and all the people in the list are proven brickspammers or server crashers.
+o This is simply to protect you from these people.
+
+<font:Arial Bold:16>Building Rights
+<font:Arial:16>
+To Stop a Person Building in your Server:
+o In CTRL+A Select their Name in the List.
+o Then press "Player Rights".
+o Now press the "Building Rights" Button to Stop them.
+o To Give their Rights back, simply Press it Again.
+
+<font:Arial Bold:16>Imprisonment
+<font:Arial:16>
+To Imprison someone for a certain ammount of Minutes:
+o Firstly you will need a Jail to put them in. So build a nice big Box.
+o Then just place a brick in the middle of it and get out your Magic Wand.
+o Toggle the Wand to Jail-Mode and hit the Brick with it.
+o You can now go into CTRL+A and Select their name from the List.
+o You can then enter how long you want them to be jailed, in Minutes.
+o Now just press the "Jail" button.
+o If you want to let them out early, simply press the Jail Button Again.

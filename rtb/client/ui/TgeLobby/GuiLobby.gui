@@ -1,0 +1,323 @@
+                                             //-----------------------------------------------------------------------------
+// GuiLobby and Game Browser Code
+// Created by Sean Pollock aka DarkRaven
+// If anyone uses this code for there own games or whatever I would
+// appreciate an email and also credit.  You can send email to
+// sean@darkravenstudios.com
+//-----------------------------------------------------------------------------
+
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(GuiLobby) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiChunkedBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "0 0";
+      extent = "640 480";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./tgelobby.png";
+      useVariable = "0";
+      tile = "0";
+
+      new GuiScrollCtrl(player_name) {
+         profile = "GuiScrollProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "508 72";
+         extent = "113 350";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(player_name2) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "138 224";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "0";
+            clipColumnText = "0";
+               entryCount = "1392";
+         };
+      };
+      new GuiScrollCtrl(irc_text) {
+         profile = "GuiScrollProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "17 72";
+         extent = "483 350";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMessageVectorCtrl(irc_message) {
+            profile = "TgeLobby_MessageVectorProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "1 1";
+            extent = "462 14";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "0";
+            lineContinuedIndex = "10";
+            allowedMatches[0] = "http";
+            matchColor = "139 23 23 255";
+            maxColorIndex = "9";
+         };
+      };
+      new GuiTextEditCtrl(send_text) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "16 426";
+         extent = "437 18";
+         minExtent = "8 2";
+         visible = "1";
+         altCommand = "sendCommand();";
+         accelerator = "ENTER";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "1";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl(send_it) {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "457 425";
+         extent = "44 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "sendCommand();";
+         helpTag = "0";
+         text = "Send";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            bitmap = "./buttons/send_it";
+      };
+      new GuiButtonCtrl(leave_room) {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "257 49";
+         extent = "78 20";
+         minExtent = "8 2";
+         visible = "0";
+         command = "myIrc::leaveRoom();";
+         helpTag = "0";
+         text = "Leave Room";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            bitmap = "./buttons/leave_room";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "508 49";
+         extent = "113 20";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "<NULL>";
+         wrap = "0";
+
+         new GuiMLTextCtrl(channel_text) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "width";
+            vertSizing = "height";
+            position = "5 3";
+            extent = "79 14";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "$pref::Chat::Channel";
+            helpTag = "0";
+            lineSpacing = "1";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "339 49";
+         extent = "76 20";
+         minExtent = "8 2";
+         visible = "0";
+         command = "canvas.pushDialog(CreateRoom_Dlg);";
+         helpTag = "0";
+         text = "Create Room";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            bitmap = "./buttons/create_room";
+      };
+      new GuiButtonCtrl(switch_channels) {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "419 49";
+         extent = "80 20";
+         minExtent = "8 2";
+         visible = "0";
+         command = "ListChannels();";
+         helpTag = "0";
+         text = "Switch Rooms";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+            bitmap = "./buttons/switch_rooms";
+      };
+      new GuiButtonCtrl(log_out) {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "137 49";
+         extent = "75 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "disconnectMe();Canvas.popDialog(GuiLobby);";
+         helpTag = "0";
+         text = "Logout";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            bitmap = "./buttons/logout";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "508 425";
+         extent = "60 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "myIrc::goMessenger();";
+         helpTag = "0";
+         text = "Whisper";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+            bitmap = "./buttons/private_msg";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "17 49";
+         extent = "76 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "getHelp(\"13. TgeLobby\");";
+         helpTag = "0";
+         text = "Help";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            bitmap = "./buttons/help";
+      };
+      new GuiButtonCtrl(ignore_btn) {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "573 425";
+         extent = "48 20";
+         minExtent = "8 2";
+         visible = "1";
+         command = "myIrc::ignore();";
+         helpTag = "0";
+         text = "Ignore";
+         groupNum = "-1";
+         buttonType = "ToggleButton";
+            bitmap = "./buttons/ignore";
+      };
+      new GuiButtonCtrl(ircCancelBtn) {
+         profile = "GuiButtonProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "244 448";
+         extent = "140 20";
+         minExtent = "8 8";
+         visible = "1";
+         command = "Canvas.popDialog(guiLobby);";
+         accelerator = "escape";
+         helpTag = "0";
+         text = "<<<  Return to RTB  >>>";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiBitmapCtrl(Channel_List_Dlg) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "367 72";
+         extent = "184 350";
+         minExtent = "8 2";
+         visible = "0";
+         helpTag = "0";
+         bitmap = "./channel_list_bkg.png";
+         wrap = "0";
+
+         new GuiScrollCtrl(channel_scrollbar) {
+            profile = "GuiScrollProfile";
+            horizSizing = "relative";
+            vertSizing = "relative";
+            position = "8 4";
+            extent = "168 340";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            willFirstRespond = "1";
+            hScrollBar = "alwaysOff";
+            vScrollBar = "dynamic";
+            constantThumbHeight = "0";
+            childMargin = "0 0";
+
+            new GuiTextListCtrl(channel_list) {
+               profile = "TgeLobby_Profile";
+               horizSizing = "right";
+               vertSizing = "bottom";
+               position = "1 1";
+               extent = "166 2";
+               minExtent = "8 2";
+               visible = "1";
+               helpTag = "0";
+               enumerate = "0";
+               resizeCell = "1";
+               columns = "0 125";
+               fitParentWidth = "1";
+               clipColumnText = "1";
+                  entryCount = "11167";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+

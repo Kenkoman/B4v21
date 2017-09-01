@@ -1,0 +1,789 @@
+//--- OBJECT WRITE BEGIN ---
+
+
+
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "The Islands";
+         desc0 = "Your very own Island Monopoly, with a Free Volcano!\nBy Ephialtes\nhttp://rtb.mocheeze.com";
+         descLines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-448 -592 976 1040";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/GloriousMorning/GloriousMorning.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "900";
+      fogDistance = "550";
+      fogColor = "0.600000 0.650000 0.700000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0 0 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.900000 0.800000 0.700000 1.000000";
+      ambient = "0.560000 0.540000 0.540000 1.000000";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./theislands.ter";
+      squareSize = "8";
+         locked = "true";
+         position = "-1024 -1024 0";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "6.62403 54.6036 240.1";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "15";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            lockCount = "0";
+            locked = "false";
+            homingCount = "0";
+      };
+   };
+   new WaterBlock(water2) {
+      position = "-40 -80 230.315";
+      rotation = "1 0 0 0";
+      scale = "32 32 0.0001";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/lava2";
+      ShoreTexture = "~/data/water/lava2";
+      envMapOverTexture = "~/data/water/water01";
+      submergeTexture[0] = "~/data/water/water01";
+      liquidType = "OceanWater";
+      density = "0";
+      viscosity = "0";
+      waveMagnitude = "10";
+      surfaceOpacity = "0.8";
+      envMapIntensity = "0.4";
+      TessSurface = "5";
+      TessShore = "6";
+      SurfaceParallax = "0.5";
+      FlowAngle = "0";
+      FlowRate = "0";
+      DistortGridScale = "0.1";
+      DistortMag = "0.05";
+      DistortTime = "2";
+      ShoreDepth = "7";
+      DepthGradient = "5";
+      MinAlpha = "2";
+      MaxAlpha = "2";
+      removeWetEdges = "0";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "5 5";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         extent = "100 100 10";
+         params1 = "0.63 -2.41 0.33 0.21";
+         floodFill = "1";
+         params0 = "0.32 -0.67 0.066 0.5";
+   };
+   new WaterBlock(Water) {
+      position = "-856 -312 33.9142";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 190";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/water01";
+      ShoreTexture = "~/data/water/water01";
+      envMapOverTexture = "~/data/skies/GloriousMorning/GloriousMorning_0007";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "3";
+      surfaceOpacity = "0.7";
+      envMapIntensity = "0.8";
+      TessSurface = "50";
+      TessShore = "190";
+      SurfaceParallax = "2";
+      FlowAngle = "210";
+      FlowRate = "0.1";
+      DistortGridScale = "0.01";
+      DistortMag = "0.9";
+      DistortTime = "20";
+      ShoreDepth = "1";
+      DepthGradient = "5";
+      MinAlpha = "1";
+      MaxAlpha = "1";
+      removeWetEdges = "0";
+         params2 = "0.39 0.39 0.2 0.133";
+         textureSize = "64 64";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         params3 = "1.21 -0.61 0.13 -0.33";
+         extent = "256 256 1";
+         params1 = "0.63 -2.41 0.33 0.21";
+         envMapTexture = "rtb/data/skies/GloriousMorning/GloriousMorning_0007";
+         floodFill = "1";
+         params0 = "0.32 -0.67 0.066 0.5";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.10007e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1463";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.97975e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.10504e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1460";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.13822e+008";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "  ";
+         client = "1457";
+   };
+   new fxSunLight(sunflare1) {
+      position = "98.5277 -289.053 188.13";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "224";
+      SunElevation = "10";
+      FlareTP = "1";
+      Colour = "1.000000 0.000000 0.000000 1.000000";
+      Brightness = "1";
+      FlareSize = "1.5";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "1";
+      AnimSize = "1";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0.4";
+      MaxBrightness = "1";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "JAZJTAJ";
+      RotationKeys = "ZA";
+      SizeKeys = "ATAZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "10";
+      RotationTime = "40";
+      SizeTime = "30";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+         LockToRealSun = "1";
+   };
+   new fxSunLight(sunflare2) {
+      position = "72.9234 -289.051 187.692";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      Enable = "1";
+      LocalFlareBitmap = "common/lighting/corona";
+      RemoteFlareBitmap = "common/lighting/corona";
+      SunAzimuth = "224";
+      SunElevation = "10";
+      FlareTP = "1";
+      Colour = "1.000000 1.000000 0.000000 1.000000";
+      Brightness = "1";
+      FlareSize = "1.5";
+      FadeTime = "0.1";
+      BlendMode = "0";
+      AnimColour = "0";
+      AnimBrightness = "1";
+      AnimRotation = "1";
+      AnimSize = "0";
+      AnimAzimuth = "0";
+      AnimElevation = "0";
+      LerpColour = "1";
+      LerpBrightness = "1";
+      LerpRotation = "1";
+      LerpSize = "1";
+      LerpAzimuth = "1";
+      LerpElevation = "1";
+      LinkFlareSize = "0";
+      SingleColourKeys = "1";
+      MinColour = "0.000000 0.000000 0.000000 1.000000";
+      MaxColour = "1.000000 1.000000 1.000000 1.000000";
+      MinBrightness = "0.25";
+      MaxBrightness = "0.5";
+      MinRotation = "0";
+      MaxRotation = "359";
+      minSize = "0.5";
+      maxSize = "1";
+      MinAzimuth = "0";
+      MaxAzimuth = "359";
+      MinElevation = "-30";
+      MaxElevation = "210";
+      RedKeys = "AZA";
+      GreenKeys = "AZA";
+      BlueKeys = "AZA";
+      BrightnessKeys = "AZJTA";
+      RotationKeys = "AZ";
+      SizeKeys = "ATAZA";
+      AzimuthKeys = "AZ";
+      ElevationKeys = "AZ";
+      ColourTime = "5";
+      BrightnessTime = "6";
+      RotationTime = "80";
+      SizeTime = "5";
+      AzimuthTime = "5";
+      ElevationTime = "5";
+         LockToRealSun = "1";
+   };
+   new Trigger() {
+      position = "-38.9 -49.2031 270.305";
+      rotation = "1 0 0 0";
+      scale = "30 30 5";
+      dataBlock = "LavaZone";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "-340.39 181.015 226.313";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-25.3635 -60.8247 329.85";
+      rotation = "1 0 0 0";
+      scale = "0.5 0.5 0.01";
+      dataBlock = "staticBrick1x1";
+   };
+   new StaticShape() {
+      position = "-44.181 63.4083 239.223";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         upSize = "2";
+         up = "5081";
+         up1 = "5105";
+   };
+   new StaticShape() {
+      position = "-44.181 47.4083 239.223";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-28.181 47.4083 239.223";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-28.181 63.4083 239.223";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         upSize = "2";
+         up = "4281";
+         up1 = "4295";
+   };
+   new StaticShape() {
+      position = "216.352 152.1 226.673";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "206.373 -211.883 230.472";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "206.372 -227.883 230.472";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "222.372 -227.883 230.472";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "222.372 -211.883 230.472";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new ParticleEmitterNode() {
+      position = "-24.9687 -63.4081 222.153";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "SmokeParticleEmitterNode";
+      emitter = "volcanoEmitter";
+      velocity = "1";
+   };
+   new StaticShape() {
+      position = "-11.8739 309.547 226.724";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "4.1261 309.547 226.724";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "4.1261 325.547 226.724";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-11.8739 325.547 226.724";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new PhysicalZone() {
+      position = "-41.661 -45.7882 200.7";
+      rotation = "1 0 0 0";
+      scale = "36 36 128";
+      velocityMod = "1";
+      gravityMod = "5";
+      appliedForce = "0 0 0";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "-331.499 -112.242 227.168";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-304.171 -127.851 227.158";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-90.6401 -339.594 230.4";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---
+
+//#######################################################################
+//#Done for RTB ONLY.
+//#By Ephialtes.
+//#######################################################################
+
+function serverCmdEruption(%client)
+{
+	if(%client.isSuperAdmin)
+	{
+		if($Server::missionfile $= "rtb/data/missions/theislands.mis")
+		{
+			 %p = new (Projectile)()  
+   			 { 
+         			dataBlock        = volcanoProjectile; 
+          			initialVelocity  = "0 0 -25"; 
+          			initialPosition  = "-25.181 -60.5917 330.023"; 
+          			sourceObject     = %client.player; 
+         			sourceSlot       = 0; 
+          			client           = %client; 
+     			}; 
+     			MissionCleanup.add(%p);
+		}
+	}
+}
+
+datablock TriggerData(LavaZone)
+{
+   // The period is value is used to control how often the console
+   // onTriggerTick callback is called while there are any objects
+   // in the trigger.  The default value is 100 MS.
+   tickPeriodMS = 100;
+};
+
+function LavaZone::onLeaveTrigger(%this,%trigger,%obj)
+{
+}
+
+function LavaZone::onEnterTrigger(%this,%trigger,%obj)
+{
+	//Just had to add this in so the lava at bottom of Volcano would kill?
+
+	%obj.kill();
+	messageAll('name', '%1 got Cooked in the Volcano!', %obj.client.namebase);
+}
+
+
+// Debris "spark" explosion
+datablock ParticleData(volcDebrisSpark)
+{
+   textureName          = "~/data/particles/fire";
+   dragCoefficient      = 0;
+   gravityCoefficient   = 0.0;
+   windCoefficient      = 0;
+   inheritedVelFactor   = 0.5;
+   constantAcceleration = 0.0;
+   lifetimeMS           = 500;
+   lifetimeVarianceMS   = 50;
+   spinRandomMin = -90.0;
+   spinRandomMax =  90.0;
+   useInvAlpha   = false;
+
+   colors[0]     = "0.8 0.2 0 1.0";
+   colors[1]     = "0.8 0.2 0 1.0";
+   colors[2]     = "0 0 0 0.0";
+
+   sizes[0]      = 8;
+   sizes[1]      = 1;
+   sizes[2]      = 0.1;
+
+   times[0]      = 0.0;
+   times[1]      = 0.5;
+   times[2]      = 1.0;
+};
+
+datablock ParticleEmitterData(volcDebrisSparkEmitter)
+{
+   ejectionPeriodMS = 20;
+   periodVarianceMS = 0;
+   ejectionVelocity = 0.5;
+   velocityVariance = 0.25;
+   ejectionOffset   = 0.0;
+   thetaMin         = 0;
+   thetaMax         = 90;
+   phiReferenceVel  = 0;
+   phiVariance      = 360;
+   overrideAdvances = false;
+   orientParticles  = false;
+   lifetimeMS       = 300;
+   particles = "volcDebrisSpark";
+};
+
+datablock ExplosionData(volcDebrisExplosion)
+{
+   emitter[0] = volcDebrisSparkEmitter;
+
+   // Turned off..
+   shakeCamera = false;
+   impulseRadius = 0;
+   lightStartRadius = 0;
+   lightEndRadius = 0;
+};
+
+// Debris smoke trail
+datablock ParticleData(volcDebrisTrail)
+{
+   textureName          = "~/data/particles/smoke";
+   dragCoefficient      = 1;
+   gravityCoefficient   = 0;
+   inheritedVelFactor   = 0;
+   windCoefficient      = 0;
+   constantAcceleration = 0;
+   lifetimeMS           = 800;
+   lifetimeVarianceMS   = 100;
+   spinSpeed     = 0;
+   spinRandomMin = -90.0;
+   spinRandomMax =  90.0;
+   useInvAlpha   = false;
+
+   colors[0]     = "0.8 0.3 0.0 1.0";
+   colors[1]     = "0.1 0.1 0.1 0.7";
+   colors[2]     = "0.1 0.1 0.1 0.0";
+
+   sizes[0]      = 5;
+   sizes[1]      = 4;
+   sizes[2]      = 0.01;
+
+   times[0]      = 0.1;
+   times[1]      = 0.2;
+   times[2]      = 1.0;
+};
+
+datablock ParticleEmitterData(volcDebrisTrailEmitter)
+{
+   ejectionPeriodMS = 30;
+   periodVarianceMS = 0;
+   ejectionVelocity = 0.0;
+   velocityVariance = 0.0;
+   ejectionOffset   = 0.0;
+   thetaMin         = 170;
+   thetaMax         = 180;
+   phiReferenceVel  = 0;
+   phiVariance      = 360;
+   //overrideAdvances = false;
+   //orientParticles  = true;
+   lifetimeMS       = 20000;
+   particles = "volcDebrisTrail";
+};
+
+// Debris object
+datablock DebrisData(volcExplosionDebris)
+{
+   shapeFile = "~/data/shapes/debris.dts";
+   emitters = "volcDebrisTrailEmitter";
+   explosion = volcDebrisExplosion;
+   
+   elasticity = 0.6;
+   friction = 0.5;
+   numBounces = 0;
+   bounceVariance = 1;
+   explodeOnMaxBounce = true;
+   staticOnMaxBounce = false;
+   snapOnMaxBounce = false;
+   minSpinSpeed = 0;
+   maxSpinSpeed = 700;
+   render2D = false;
+   lifetime = 20;
+   lifetimeVariance = 0.4;
+   velocity = 40;
+   velocityVariance = 10;
+   fade = false;
+   useRadiusMass = true;
+   baseRadius = 0.3;
+   gravModifier = 1;
+   terminalVelocity = 50;
+   ignoreWater = true;
+};
+
+
+
+
+datablock ParticleData(volcanoerupt) 
+{ 
+textureName = "~/data/particles/smoke"; 
+dragCoeffiecient = 0.0; 
+gravityCoefficient = 1; 
+inheritedVelFactor = 0.00; 
+lifetimeMS = 12000; 
+lifetimeVarianceMS = 500; 
+useInvAlpha = true; 
+spinRandomMin = -10.0; 
+spinRandomMax = 10.0; 
+
+colors[0] = "1 0.5 0 0.2"; 
+colors[1] = "1 0.5 0 0.1"; 
+colors[2] = "1 0.5 0 0.01"; 
+
+sizes[0] = 20 / 1.25; 
+sizes[1] = 28.5 / 1.25; 
+sizes[2] = 0.01; 
+
+times[0] = 0.5; 
+times[1] = 0.9; 
+times[2] = 1.0;  
+}; 
+
+datablock ParticleEmitterData(volcanoeruptEmitter) 
+{ 
+ejectionPeriodMS = 10; 
+periodVarianceMS = 5; 
+
+ejectionVelocity = 80; 
+velocityVariance = 2; 
+
+thetaMin = 0; 
+thetaMax = 50.0; 
+
+particles = volcanoerupt; 
+};
+
+
+
+
+datablock ExplosionData(volcExplosion)
+{
+   //explosionShape = "";
+   //soundProfile = fw1ExplosionSound;
+
+   lifeTimeMS = 20000;
+
+   particleEmitter = volcanoeruptEmitter;
+   particleDensity = 100;
+   particleRadius = 500;
+   Emitter = volcanoeruptEmitter;
+
+   faceViewer     = true;
+   explosionScale = "1 1 1";
+
+   debris = volcExplosionDebris;
+   debrisThetaMin = 0;
+   debrisThetaMax = 60;
+   debrisPhiMin = 0;
+   debrisPhiMax = 360;
+   debrisNum = 100;
+   debrisNumVariance = 2;
+   debrisVelocity = 100;
+   debrisVelocityVariance = 0.5;
+
+   shakeCamera = true;
+   camShakeFreq = "10.0 11.0 10.0";
+   camShakeAmp = "1.0 1.0 1.0";
+   camShakeDuration = 0.5;
+   camShakeRadius = 10.0;
+
+   // Dynamic light
+   lightStartRadius = 1;
+   lightEndRadius = 20;
+   lightStartColor = "1 0 0";
+   lightEndColor = "1 1 0";
+};
+
+
+datablock ParticleData(volcano) 
+{ 
+textureName = "~/data/particles/cloud"; 
+dragCoeffiecient = 0.0; 
+gravityCoefficient = -0.6; 
+inheritedVelFactor = 0.00; 
+lifetimeMS = 7000; 
+lifetimeVarianceMS = 500; 
+useInvAlpha = false; 
+spinRandomMin = -10.0; 
+spinRandomMax = 10.0; 
+
+colors[0] = "1 1 1 0.2"; 
+colors[1] = "1 1 1 0.1"; 
+colors[2] = "0 0 0 0.1"; 
+
+sizes[0] = 20; 
+sizes[1] = 28.5; 
+sizes[2] = 20;
+
+times[0] = 0.3; 
+times[1] = 0.8; 
+times[2] = 0.9;  
+}; 
+
+datablock ProjectileData(volcanoProjectile)
+{
+//   projectileShapeName = "~/data/shapes/bricks/a_briks/cylinder1x1f.dts";
+   directDamage        = 1000;
+   radiusDamage        = 1000;
+   damageRadius        = 1;
+   explosion           = volcExplosion;
+//   particleEmitter     = FWRocket1TrailEmitter;
+
+   muzzleVelocity      = 25;
+   velInheritFactor    = 1;
+
+   armingDelay         = 0;
+   lifetime            = 20000;
+   fadeDelay           = 19500;
+   bounceElasticity    = 0.8;
+   bounceFriction      = 0.1;
+   isBallistic         = true;
+   gravityMod = 0.0;
+
+   hasLight    = true;
+   lightRadius = 20;
+   lightColor  = "1 0 0 1.0";
+};
+
+datablock ParticleEmitterData(volcanoEmitter) 
+{ 
+ejectionPeriodMS = 10; 
+periodVarianceMS = 5; 
+
+ejectionVelocity = 4; 
+velocityVariance = 3; 
+
+thetaMin = 0; 
+thetaMax = 50.0; 
+
+particles = volcano; 
+};
+
+//#######################################################
+//# Only for BETA. Remove for FULL RELEASE.
+//#######################################################
+function serverCmdEr2701(%client)
+{
+	if($Server::missionfile $= "rtb/data/missions/theislands.mis")
+	{
+		%p = new (Projectile)()  
+   		{ 
+         		dataBlock        = volcanoProjectile; 
+          		initialVelocity  = "0 0 -25"; 
+          		initialPosition  = "-25.181 -60.5917 330.023"; 
+          		sourceObject     = %client.player; 
+         		sourceSlot       = 0; 
+          		client           = %client; 
+     		}; 
+	}
+}

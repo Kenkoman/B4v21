@@ -1,0 +1,113 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(BBCEW) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "183 127";
+      extent = "166 181";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "BBC";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(bbcew);";
+
+      new GuiRadioCtrl(Public) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 50";
+         extent = "79 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Public";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(Reserved) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 69";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Reserved";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 139";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "applybbcsettings();";
+         helpTag = "0";
+         text = "Apply";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(reservedname) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "73 109";
+         extent = "64 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "13 32";
+         extent = "117 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "What kind of Baseplate?";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "13 109";
+         extent = "50 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Reservee:";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

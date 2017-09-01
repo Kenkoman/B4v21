@@ -1,0 +1,58 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(CreateRoom_Dlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "120 140";
+      extent = "400 200";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./createroom_bkg.png";
+      wrap = "0";
+
+      new GuiTextEditCtrl() {
+         profile = "GuiTextEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "97 66";
+         extent = "256 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$ChatRoom";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl() {
+         profile = "GuiTextEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "97 102";
+         extent = "256 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$Topic";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

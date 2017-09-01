@@ -1,0 +1,116 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB Movers...
+
+<font:Arial:16>In Update 1.04 movers in rtb changed quite a bit. Theres no extra or tools but we do have a new GUI, where you have to hit the brick to be able to set your Mover. But there are also a few more steps to get what you want to achieve. I figure the best way to do this is by example, so i'll go through the main mover combinations:
+
+
+<font:Arial Bold:18>Normal Mover Programming
+<font:Arial Bold:16>Simple Doors
+<font:Arial:16>
+To make a single brick move in any direction/rotation(or both):
+o Place your brick.
+o Hit the Brick with your Wrench.
+o Input the values for the movement+rotation, like to move it Up 5, in the Move Box you put 0 0 5.
+o Set the Return Pause to a Value between 1000 and 5000, they work the best with normal doors.
+o Press Give Brick Properties to Make it a Mover.
+
+<font:Arial Bold:16>Toggle Doors
+<font:Arial:16>
+To make a Brick Toggle Open and Shut:
+o Place your brick.
+o Hit the Brick with your Wrench.
+o Input the values for the movement+rotation, like to rotate 90 Degrees on the Z Axis, in the Rotate Box you put 0 0 90.
+o Tick the Return Toggle Box.
+o Press Give Brick Properties to make it a Mover.
+o Now your Door must be Touched again to Close.
+
+<font:Arial Bold:16>Trigger Doors
+<font:Arial:16>
+To Trigger a Door using a Switch:
+o Place your brick.
+o Hit the Brick with your Wrench.
+o If the Door is already a Triggered Mover, its Door Set ID will already be entered into the box.
+o Input the values for the movement+rotation, like to rotate 270 Degrees on the X Axis, in the Rotate Box you put 270 0 0.
+o You must now Select the Triggered Door Radio Button. This tells the game that the door is going to be triggered.
+o You can then select No Collision to make it so when people run into the Door itself, it doesn't open.
+o Now you must set the Door Set ID to something. The Door Set ID works by giving doors groups. So you have 3 doors, with all their Door Set IDs at 1, and a Trigger with Door Set ID at 1. This means it is easy to change which group a Door belongs to.
+o Press Give Brick Properties to make it a mover.
+o You can now go and make as many Trigger Doors as you want. All you need to do is change the Movement Values. Keep the Door Set ID the same if you want all the doors to move by pressing 1 Button.
+o Once you have made your Doors, We need to make the Switch. So build yourself a Brick for a Switch.
+o If the Brick is already a Trigger, its Door Set ID will already be entered into the box.
+o Generally you want to have most of the other boxes unticked. But you MUST have Trigger ticked. You can give your switch a password, make it private or whatever. But make sure you tick Trigger.
+o Now you leave the Door Set ID the same so that it controls the doors you made previously.
+o Depending on wether you want your switch to move when it is pressed, change the Movement values accordingly.
+o You can now press Give Brick Properties to make it a mover.
+
+<font:Arial Bold:16>Passworded Doors
+<font:Arial:16>
+To put a password on a Door:
+o Place your brick.
+o Hit the Brick with your Wrench.
+o Input the values for the movement+rotation, like to rotate 90 Degrees on the Z Axis, in the Rotate Box you put 0 0 90.
+o Tick the Password Box and Enter a Password in the Text Field.
+o Press Give Brick Properties to make it a mover.
+o And now people must enter a Password to open your Door.
+
+<font:Arial Bold:16>Locking Doors
+<font:Arial:16>
+Instead of Re-Wrenching it, Lock it like so:
+o Assuming you have your Door infront of you, Obtain a Key from Slot 5 in your Inventory.
+o Now go and Hit the door with the Key. You should get a message telling you it was Locked.
+o When it is Locked, people who you have added to your safe list can unlock it.
+o And the Password will not open the door if it is locked.
+o To Unlock the door, Simply hit it again with your Key.
+
+<font:Arial Bold:16>Making A Lift
+<font:Arial:16>
+Make yourself a nice Lift instead of Climbing all those Stairs:
+o Place your Brick.
+o Then Hit the Brick with the Wrench.
+o Input the values for the movement+rotation, like to move it up 10 on the Z Axis, in the Move Box you put 0 0 10.
+o You would then tick the box saying Elevator.
+o You can now Press Give Brick Properties to make it a mover.
+o When you Jump on the Elevator,it should go up.
+
+<font:Arial Bold:16>The Checkboxes
+<font:Arial:16>
+What all those Checkboxes do:
+o No Collision is used when you dont want a door to open when someone walks into it.
+o Return Toggle means it will stop once it has moved, and will not return until you walk into it again.
+o Team Only means that only the Team you select from the box can Open the Door.
+o Password is to give your door a Password, so you can tell Friends.
+o Elevator is to make Lifts.
+o Private means that only you can open the Doors.
+
+<font:Arial Bold:16>Notes
+<font:Arial:16>
+A Couple of Things to take on Board before you get Wrenching:
+o When making a Trigger, you can set it to Private, so only you can press the Trigger.
+o You can also password it, and make it Team Only.
+
+
+<font:Arial Bold:16>Notes
+<font:Arial:16>
+Further Explanation of Door Set IDs:
+o Basically, if you have 2 doors (A and B) and a Trigger (C).
+o If you set Door A's Door Set ID to 1 and set Trigger C's Door Set ID to 1, the Trigger will open that Door.
+o Now supposing you want to have Door B open with Door A.
+o You would change the Door Set ID to 1.
+o Now if you wanted another set of Doors, you create your door (C) but set the Door Set ID to 2.
+o That way it wont open with Doors A and B.
+o You can then make a trigger (D) with Door Set ID 2. This will open Door C.
+o Now if you wanted Trigger (D) to open doors A and B, all you have to do is change the Door Set ID to 1. Simple!
+
+o Ask ingame for help if you dont understand.
+
+
+
+<font:Arial Bold:18>Ezy Mover Programming
+<font:Arial Bold:16>How it Works
+<font:Arial:16>
+o This is an easier way to make a mover, you don't need to know the co-ordinates.
+o Just toggle your Wrench to "Ezy-Mover-Mode".
+o Now hit your brick with your Wrench.
+o It will create a ghost brick, which you just move to where you want your mover to go.
+o You then place this brick, and it will open up the Mover Window, where you can modify the co-ordinates or change the Step Time.
+
+

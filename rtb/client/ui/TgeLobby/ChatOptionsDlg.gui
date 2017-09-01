@@ -1,0 +1,140 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ChatOptionsDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "144 60";
+      extent = "384 336";
+      minExtent = "8 2";
+      visible = "1";
+      bitmap = "./Options_Dlg.png";
+      wrap = "0";
+
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "333 24";
+         extent = "24 20";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./buttons/close";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "20 64";
+         extent = "52 14";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Nick Name:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "20 92";
+         extent = "56 14";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Real Name:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "20 120";
+         extent = "24 14";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Host:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "20 144";
+         extent = "24 14";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Port:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "84 68";
+         extent = "180 14";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::Chat::NickName";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "84 92";
+         extent = "180 14";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::Chat::RealName";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "84 120";
+         extent = "180 14";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl() {
+         profile = "GuiMyEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "84 148";
+         extent = "100 14";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::Chat::Port";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

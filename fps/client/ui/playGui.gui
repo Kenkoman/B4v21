@@ -1,0 +1,363 @@
+
+
+//--- OBJECT WRITE BEGIN ---
+new GameTSCtrl(PlayGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+   cameraZRot = "0";
+   forceFOV = "0";
+      noCursor = "1";
+
+   new GuiBitmapCtrl(CenterPrintDlg) {
+      profile = "CenterPrintProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "45 230";
+      extent = "550 20";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./hudfill.png";
+      wrap = "0";
+
+      new GuiMLTextCtrl(CenterPrintText) {
+         profile = "CenterPrintTextProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "0 0";
+         extent = "546 12";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+   new GuiBitmapCtrl(BottomPrintDlg) {
+      profile = "CenterPrintProfile";
+      horizSizing = "center";
+      vertSizing = "top";
+      position = "45 375";
+      extent = "550 20";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./hudfill.png";
+      wrap = "0";
+
+      new GuiMLTextCtrl(BottomPrintText) {
+         profile = "CenterPrintTextProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "0 0";
+         extent = "546 12";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+   new GuiBitmapCtrl(LagIcon) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "572 3";
+      extent = "32 32";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./lagIcon.png";
+      wrap = "0";
+   };
+   new GuiControl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "top";
+      position = "66 448";
+      extent = "508 42";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+
+      new GuiBitmapCtrl(Slot1BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "0 2";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot1) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "omgwtf";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "1:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot2BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "102 2";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot2) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "omgwtf";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "2:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot3BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "204 2";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot3) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "omgwtf";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "3:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot4BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "306 2";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot4) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "omgwtf";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "4:";
+            maxLength = "255";
+         };
+      };
+      new GuiBitmapCtrl(Slot5BG) {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "top";
+         position = "408 2";
+         extent = "100 28";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         bitmap = "./GUIbrickSide.png";
+         wrap = "1";
+
+         new GuiTextCtrl(TxtInvSlot5) {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "100 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "omgwtf";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "InventoryTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 6";
+            extent = "16 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "5:";
+            maxLength = "255";
+         };
+      };
+   };
+   new GuiHealthBarHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "451 5";
+      extent = "184 25";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      fillColor = "0.972500 0.800000 0.000000 1.000000";
+      frameColor = "0.000000 1.000000 0.000000 0.000000";
+      damageFillColor = "0.000000 0.470600 0.196100 1.000000";
+      pulseRate = "500";
+      pulseThreshold = "0.75";
+      showFill = "1";
+      showFrame = "1";
+      displayEnergy = "0";
+         value = "1";
+   };
+   new GuiClockHud(HudClock) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "383 5";
+      extent = "66 25";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      showFill = "1";
+      showFrame = "0";
+      fillColor = "0.000000 0.000000 0.000000 0.500000";
+      frameColor = "0.000000 1.000000 0.000000 1.000000";
+      textColor = "0.972500 0.800000 0.000000 1.000000";
+   };
+   new GuiCrossHairHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "304 224";
+      extent = "32 32";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./crossHair";
+      wrap = "0";
+      damageFillColor = "0.000000 1.000000 0.000000 1.000000";
+      damageFrameColor = "1.000000 0.600000 0.000000 1.000000";
+      damageRect = "50 4";
+      damageOffset = "0 10";
+   };
+   new GuiShapeNameHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      position = "0 0";
+      extent = "640 444";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      fillColor = "0.250000 0.250000 0.250000 0.000000";
+      frameColor = "0.972500 0.800000 0.000000 0.000000";
+      textColor = "1.000000 1.000000 0.909000 -19.810902";
+      showFill = "1";
+      showFrame = "1";
+      verticalOffset = "0.5";
+      distanceFade = "0.1";
+   };
+   new GuiHealthBarHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "left";
+      vertSizing = "bottom";
+      position = "451 31";
+      extent = "184 7";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      fillColor = "0.000000 0.000000 0.000000 0.500000";
+      frameColor = "1.000000 1.000000 1.000000 1.000000";
+      damageFillColor = "0.000000 0.000000 1.000000 1.000000";
+      pulseRate = "0";
+      pulseThreshold = "0.3";
+      showFill = "1";
+      showFrame = "0";
+      displayEnergy = "1";
+   };
+};
+//--- OBJECT WRITE END ---

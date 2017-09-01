@@ -1,0 +1,67 @@
+___________________________________
+/-----BAC's PACK v1.03 for RTB v1.045-----\
+\___________________________________/
+
+contents: (+ = new additive) (~ = repaired)
+---------------------------------------------------------
+-Aclhmey Guild decals/prints v3.0
+-[WC3]Keal's paint pack 4.0----------------------------(BAC put all the colors in texturecan and -repaired some of them)
+-Bleh's Chat Colors--------------------------------------(with permanent Chatcolor from BAC)
+~Bleh´s Custom Shifting with Brick Scrolling--(now with Scrolling to all moves, and scroll key "Z")
+-Bleh's Inventory Redesign----------------------------(with some liddle Changes from BAC)
+-Bleh's JoinServerGui Accelerator
+-Bleh's LoadingGui Enhancer
+-Bleh's Longer EditorWand Distance
+-Bleh's Longer Brick Placement
+-Bleh's Teleporter Gateways
+~Bleh's Infinite Movers--------------------------------(now 100% comaptible with modfree RTB v1.045)
+(read the "HOW to use Infinite Movers.txt")
+-Bleh's Persistence Methods----------------------------(some parts of it)
+-Ytud Fo Llac´s PTTA
+-[SS]Thelegodude's Camera mode and Decal fix
+-BAC's MENU
+-BAC's KillBrick-ScaleBrick and PaintBrick
+-BAC's Load Menu----------------------------------------(current load menu with 1.04 load menu)
+-BAC's improved Impulse-------------------------------(read the "Triggered Impulse.txt")
+-BAC's improved FXBricks
+-BAC's Key Protecting-----------------------------------(read the "Key Protecting.txt")
+-BAC and J@N's improved Slots (20 slots)------------(read the "Improved Slots.txt")
+-J@N's Wrench and Wand Menu------------------------(read the "J@N's W&WM.txt")
+-ASTRO's Free ZOOM------------------------------------(hold on key (X) and use mouse scroll for ZOOM)
+-Kaje's onewayBrick-------------------------------------(Observer in the inventory 0)
++BlueGreen's Radar 2.0--------------------------------(Optical improved and repaired by BAC)
+-Remove Decal repaired (Delete Print is now functioning)
+-JumpForce modified into 30 (Blockdude high)
++(NOW all key's can be changed in Options/controls)(also custemshifting Key's)
+
+
+all help Text Files are in \Blockland\MANUALS
+-----------------------------------------------------
+
+and BAC gives all weapons the power to destroy bricks. 
+(if you dont want that, overwrite the weapons with the origenal files) 
+rtb\server\scripts\Weapons\
+
+
+Thanks to ASTRO. For helping scripting, and for repairing some bugs.
+Thanks to J@n(J4n). For helping scripting, and for the Optical improvement of my PACK.
+Thanks to ATF Clan. That they voluntarily as guinea pigs sacrificed themselves.
+Thanks to Warground. For Weapon sound Patch.
+Thanks to ATF-Steffen. For new Face and Player decals.
+Thanks Bleh for so many cool mods =D
+
+Installation:
+-------------
+start the (downloadet)file in /Blockland
+or choose (write in) the right path
+
+Important:
+------------
+-This Pack is only for RTB v1.045 full install.
+-BAC's Pack hasn't been tested with other mods!(or old BAC Pack's)
+-No function garenty, if you try this pack with other mods.
+
+for reasons of security execute "CleanUp.bat" after installation.
+if the game don't works anyway, try to use "rtbprelauncher.jar". (you need Java for it)
+
+(if you want to Uninstall my pack, execute "Uninstall BACsPack.bat")

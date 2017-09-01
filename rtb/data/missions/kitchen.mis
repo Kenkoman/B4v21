@@ -1,0 +1,314 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      CTF_scoreLimit = "5";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         descLines = "2";
+         desc0 = "Map by rohlfinator. ";
+	 bitmap = "kitchen";
+         desc1 = "For the latest version, go to www.public.iastate.edu/~mrohlf/blockland/";
+         name = "Kitchen";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "500";
+      fogDistance = "300";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.400000 1.000000";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-51.6 0 54";
+         rotation = "1 0 0 0";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "10";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            homingCount = "0";
+            lockCount = "0";
+            locked = "false";
+      };
+   };
+   new InteriorInstance() {
+      position = "0 0 65";
+      rotation = "1 0 0 0";
+      scale = "7.5 7.5 7.5";
+      interiorFile = "~/data/interiors/Matt/kitchen.dif";
+      showTerrainInside = "0";
+   };
+   new Item() {
+      position = "-103.051 98.5868 77.3539";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "bow";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-103.269 102.068 78.3362";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "spear";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-103.518 105.918 77.2726";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sword";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-103.69 108.697 77.1912";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "axe";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-30 0 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up = "3433";
+         groundCheckVal = "18";
+         upSize = "1";
+   };
+   new Item() {
+      position = "-19 -4 55";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "hammer";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-17 -4 55";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "sprayCan";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new StaticShape() {
+      position = "-30 -95 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new Item() {
+      position = "-21 -4 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-23 -4 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-25 -4 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-27 -4 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick2x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-29 -4 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick2x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-29 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x10";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-27 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x8";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-25 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x6";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-23 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x4";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-21 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x2";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-19 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate1x1";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-31 -4 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "brick1x4x5window";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new Item() {
+      position = "-33 -12 53.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "plate6x12";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -3.14218e+006";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         initialPosition = "0 0 -90";
+   };
+   new StaticShape() {
+      position = "85.1045 -2.41172 65.3262";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "89.5312 0.905597 155.304";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-50.3963 92.3119 65.0128";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "13.8293 37.7304 -2.19091";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "69.5737 111.687 102.802";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new Item() {
+      position = "-109.508 -103.697 96.4663";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "cape";
+      collideable = "0";
+      static = "1";
+      rotate = "0";
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,260 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      musicTrack = "lush";
+      cdTrack = "2";
+      CTF_scoreLimit = "5";
+
+   new ScriptObject(MissionInfo) {
+         desc0 = "This is an edited version of Happy Valley. The safe zones are marked off. Use the world editor to learn how to place them. Map By Wedge";
+         name = "Death Valley";
+	 bitmap = "deathvalley";
+         descLines = "3";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/sky_blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "400";
+      fogDistance = "150";
+      fogColor = "0.800000 0.700000 0.500000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "1 1 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "0";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.800000 0.700000 0.500000 1.000000";
+      ambient = "0.550000 0.550000 0.550000 1.000000";
+         position = "0 0 0";
+         locked = "true";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new TerrainBlock(Terrain) {
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      detailTexture = "~/data/terrains/details/detail1";
+      terrainFile = "./deathvalley.ter";
+      squareSize = "8";
+         position = "-1024 -1024 0";
+         locked = "true";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-43.052 -200.547 87.2868";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "8";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "324.6 -456.8 168.2";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "8";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+      };
+   };
+   new WaterBlock() {
+      position = "-8 -200 -81.482";
+      rotation = "1 0 0 0";
+      scale = "2048 2048 148";
+      UseDepthMask = "1";
+      surfaceTexture = "~/data/water/canal_water";
+      ShoreTexture = "~/data/water/canal_water";
+      submergeTexture[0] = "~/data/water/water03";
+      liquidType = "OceanWater";
+      density = "1";
+      viscosity = "40";
+      waveMagnitude = "2";
+      surfaceOpacity = "0.975";
+      envMapIntensity = "0.4";
+      TessSurface = "30";
+      TessShore = "30";
+      SurfaceParallax = "0.5";
+      FlowAngle = "150";
+      FlowRate = "0.01";
+      DistortGridScale = "0.1";
+      DistortMag = "0.001";
+      DistortTime = "100";
+      ShoreDepth = "4";
+      DepthGradient = "1";
+      MinAlpha = "0.25";
+      MaxAlpha = "0.7";
+      removeWetEdges = "0";
+         extent = "100 100 10";
+         seedPoints = "0 0 1 0 1 1 0 1";
+         textureSize = "32 32";
+         params0 = "0.32 -0.67 0.066 0.5";
+         params1 = "0.63 -2.41 0.33 0.21";
+         params2 = "0.39 0.39 0.2 0.133";
+         floodFill = "1";
+         envMapTexture = "fps/data/skies/sunset_0007";
+         params3 = "1.21 -0.61 0.13 -0.33";
+   };
+   new WheeledVehicle() {
+      position = "0 0 -4.50268e+007";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "1457";
+         initialPosition = "  ";
+   };
+   new StaticShape() {
+      position = "-30 -230.8 85.868";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-30 -210.8 85.8368";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-30 -190.8 85.825";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new Trigger() {
+      position = "-86.5438 -164.958 85.5028";
+      rotation = "1 0 0 0";
+      scale = "75 75 75";
+      dataBlock = "SafeTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "-9.87337 -242.641 86.1467";
+      rotation = "0 1 0 90";
+      scale = "2.2 2.2 390.308";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "-87.2076 -241.103 86.1467";
+      rotation = "0 1 0 90";
+      scale = "2.2 149.472 6";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "-9.88436 -166.114 86.1467";
+      rotation = "0 1 0 90";
+      scale = "2.2 2.2 390.836";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "-10.2143 -241.965 86.1467";
+      rotation = "0.577197 0.577657 0.577197 119.974";
+      scale = "2.2 2.2 381.813";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "-63.7644 -191.747 85.9177";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "-63.7644 -231.747 86.1607";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new Trigger() {
+      position = "277.961 -418.717 158.182";
+      rotation = "1 0 0 0";
+      scale = "75 75 75";
+      dataBlock = "SafeTrigger";
+      polyhedron = "0.0000000 0.0000000 0.0000000 1.0000000 0.0000000 0.0000000 0.0000000 -1.0000000 0.0000000 0.0000000 0.0000000 1.0000000";
+   };
+   new StaticShape() {
+      position = "354.631 -496.4 168.226";
+      rotation = "0 1 0 90";
+      scale = "2.2 2.2 390.308";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "277.297 -494.861 168.226";
+      rotation = "0 1 0 90";
+      scale = "2.2 149.472 6";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "354.62 -419.873 168.226";
+      rotation = "0 1 0 90";
+      scale = "2.2 2.2 390.836";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "354.291 -495.723 168.226";
+      rotation = "0.577197 0.577657 0.577197 119.974";
+      scale = "2.2 2.2 381.813";
+      dataBlock = "ghostBrick1x1";
+   };
+   new StaticShape() {
+      position = "300.74 -445.506 167.997";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "300.74 -485.506 168.24";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "334.505 -444.559 167.904";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "334.505 -464.559 167.916";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+   new StaticShape() {
+      position = "334.505 -484.559 167.947";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,196 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(votinggui) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "169 51";
+      extent = "302 297";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Voting Gui";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(votingGui);";
+
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 274";
+         extent = "176 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "PTTA Mods(c) v0009 (http://ptta.us/)";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnvotedm) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "118 73";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'startdmvote\');";
+         helpTag = "0";
+         text = "Death Match";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnNo) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "207 73";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'VoteNo\');";
+         helpTag = "0";
+         text = "Vote No";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "146 29";
+         extent = "22 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Polls";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnYes) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "207 54";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'VoteYes\');";
+         helpTag = "0";
+         text = "Vote Yes";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextListCtrl(lstVotingPlayerList) {
+         profile = "GuiTextListProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 42";
+         extent = "80 16";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         enumerate = "0";
+         resizeCell = "1";
+         columns = "0";
+         fitParentWidth = "1";
+         clipColumnText = "0";
+      };
+      new GuiButtonCtrl(btnvotemap) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "117 131";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "votemap();";
+         helpTag = "0";
+         text = "Map Change";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(btnvotekick) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "118 54";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "votekick();";
+         helpTag = "0";
+         text = "Kick";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "236 29";
+         extent = "23 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Vote";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(txtMapname2) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "117 113";
+         extent = "84 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "131 94";
+         extent = "50 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Map Name";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btntogglevote) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "208 100";
+         extent = "85 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'togglevoting\');";
+         helpTag = "0";
+         text = "Toggle Voting";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,22 @@
+this is only for Triggered Impulse. (simple impulse, as usual)
+
+Make a Trigger:
+---------------------
+Switch with ctrl+W to "Wrench in Mover-Mode". (or use "J@N's W&WM")(key "J")
+hit the a Brick of your wish with the Wrench.
+chouse Trigger / tipe in a ID / chouse Trigger Jumper. *(memorize this ID)
+push Apply Settings.
+
+Make a Triggered impulse:
+---------------------------------------
+Switch with ctrl+W to "Wrench in Impulse-Mode". (or use "J@N's W&WM")(key "J")
+hit the to Triggered Brick with the Wrench.
+chouse is Triggered Jumper / tipe in the *ID / set your Impilse.
+push Apply Settings.
+
+now place yourselves on the to triggered brick, and push them the Trigger Brick.
+the Impulse let you jump like you set it.
+
+
+you can make many Triggered Impulse and T.Movers with the same ID
+(and also Triggered Impulse and T.Movers in one brick)

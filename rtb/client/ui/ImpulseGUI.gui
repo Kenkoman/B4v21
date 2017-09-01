@@ -1,0 +1,206 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ImpulseGUI) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "230 32";
+      extent = "333 424";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Impulse Settings";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(ImpulseGUI);";
+
+      new GuiControl(impulse) {
+         profile = "GuiTextArrayProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "3 43";
+         extent = "327 373";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 8";
+            extent = "129 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Enter your Impulse Values:";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(applyimpulseBtn) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "52 269";
+            extent = "213 39";
+            minExtent = "8 2";
+            visible = "1";
+            command = "ApplyImpulseSettings();";
+            helpTag = "0";
+            text = "Done";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiSliderCtrl(sliZimpulse) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "16 180";
+            extent = "301 33";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-30.000000 30.000000";
+            ticks = "20";
+            value = "30";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 100";
+            extent = "50 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Y Impulse:";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 39";
+            extent = "49 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "X Impulse:";
+            maxLength = "255";
+         };
+         new GuiSliderCtrl(sliXimpulse) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 61";
+            extent = "302 33";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-30.000000 30.000000";
+            ticks = "20";
+            value = "30";
+         };
+         new GuiSliderCtrl(sliYimpulse) {
+            profile = "GuiSliderProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "15 120";
+            extent = "300 33";
+            minExtent = "8 2";
+            visible = "1";
+            variable = "value";
+            helpTag = "0";
+            range = "-30.000000 30.000000";
+            ticks = "20";
+            value = "30";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 161";
+            extent = "49 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Z Impulse:";
+            maxLength = "255";
+         };
+         new GuiButtonCtrl(removeimpulseBtn) {
+            profile = "GuiButtonProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "52 316";
+            extent = "213 39";
+            minExtent = "8 2";
+            visible = "1";
+            command = "RemoveImpulseSettings();";
+            helpTag = "0";
+            text = "Remove Jumper Properties";
+            groupNum = "-1";
+            buttonType = "PushButton";
+         };
+         new GuiCheckBoxCtrl(isTriggeredJumper) {
+            profile = "GuiCheckBoxProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "35 223";
+            extent = "140 30";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Is Triggered Jumper";
+            groupNum = "-1";
+            buttonType = "ToggleButton";
+         };
+         new GuiTextEditSliderCtrl(jumpsetid) {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "226 229";
+            extent = "51 24";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            maxLength = "255";
+            historySize = "0";
+            password = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "0";
+            format = "%3.0f";
+            range = "1.000000 200.000000";
+            increment = "1";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "168 229";
+            extent = "59 18";
+            minExtent = "8 2";
+            visible = "1";
+            helpTag = "0";
+            text = "Jump Set ID:";
+            maxLength = "255";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

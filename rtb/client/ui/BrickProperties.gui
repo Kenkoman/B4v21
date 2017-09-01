@@ -1,0 +1,116 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(delplayerbricks) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "225 137";
+      extent = "190 98";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Brick Properties";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(delplayerbricks);";
+
+      new GuiButtonCtrl(btnDelBricks) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 67";
+         extent = "175 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "DeletePlayerBricks();";
+         helpTag = "0";
+         text = "Delete All Players Bricks";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextEditCtrl(ownername) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "74 25";
+         extent = "80 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 23";
+         extent = "64 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Brick Owner:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(ownerip) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "74 45";
+         extent = "80 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "7 43";
+         extent = "48 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Owner IP:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(btnDelBricks2) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "158 46";
+         extent = "26 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "banplayerb();";
+         helpTag = "0";
+         text = "Ban";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

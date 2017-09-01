@@ -1,0 +1,117 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(HelpDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "78 43";
+      extent = "483 393";
+      minExtent = "300 200";
+      visible = "1";
+      helpTag = "0";
+      text = "Help";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(HelpDlg);";
+
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "right";
+         vertSizing = "height";
+         position = "8 31";
+         extent = "132 356";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "dynamic";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(HelpFileList) {
+            profile = "GuiTextListProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "130 352";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               fileName15 = "rtb/client/help/RTB - 07. Team Menu.hfl";
+               fileName13 = "rtb/client/help/RTB - 09. Movers.hfl";
+               fileName18 = "rtb/client/help/RTB - 04. Admin Menu.hfl";
+               fileName20 = "rtb/client/help/RTB - 02. General.hfl";
+               fileName12 = "rtb/client/help/RTB - 10. Server Security.hfl";
+               fileName7 = "common/help/3. Gui Editor.hfl";
+               fileName2 = "common/help/8. Terrain Terraform Editor.hfl";
+               fileName5 = "common/help/5. World Editor.hfl";
+               fileName8 = "common/help/2. License.hfl";
+               fileName21 = "rtb/client/help/RTB - 01. Welcome.hfl";
+               fileName10 = "rtb/client/help/RTB - 12. Credits.hfl";
+               fileName3 = "common/help/7. Terrain Editor.hfl";
+               fileName9 = "common/help/10. Terrain Texture Painter.hfl";
+               fileName4 = "common/help/6. Mission Area Editor.hfl";
+               fileName19 = "rtb/client/help/RTB - 03. Server Menu.hfl";
+               entryCount = "22";
+               fileName6 = "common/help/4. Mission Editor Overview.hfl";
+               fileName11 = "rtb/client/help/RTB - 11. Game Modes.hfl";
+               fileName1 = "common/help/9. Terrain Texture Editor.hfl";
+               fileName0 = "fps/client/help/1. Credits.hfl";
+               fileName17 = "rtb/client/help/RTB - 05. Player Menu.hfl";
+               fileName14 = "rtb/client/help/RTB - 08. Update Stuff.hfl";
+               fileName16 = "rtb/client/help/RTB - 06. Deathmatch Menu.hfl";
+         };
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "146 31";
+         extent = "328 356";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "alwaysOff";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiMLTextCtrl(HelpText) {
+            profile = "GuiMLTextProfile";
+            horizSizing = "width";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "310 671";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---

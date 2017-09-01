@@ -1,0 +1,6 @@
+Make a Door Key Protected:
+-------------------------------------
+Switch with ctrl+W to "Wrench in Mover-Mode". (or use "J@N's W&WM")(key "J")
+hit the a Brick of your wish with the Wrench.
+chouse Key Protected.
+push Apply Settings.

@@ -1,0 +1,243 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+      CTF_scoreLimit = "5";
+      musicTrack = "lush";
+      cdTrack = "2";
+
+   new ScriptObject(MissionInfo) {
+         name = "Bedroom";
+	 bitmap = "bedroom";
+         desc0 = "If it doesnt load, get the new version here: \n http://filebox.vt.edu/users/ehartman/";
+         descLines = "2";
+   };
+   new MissionArea(MissionArea) {
+      area = "-360 -648 720 1296";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new Sky(Sky) {
+      position = "336 136 0";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      materialList = "~/data/skies/Sky_Blue2/resource.dml";
+      cloudHeightPer[0] = "0.349971";
+      cloudHeightPer[1] = "0.3";
+      cloudHeightPer[2] = "0.199973";
+      cloudSpeed1 = "0.0005";
+      cloudSpeed2 = "0.001";
+      cloudSpeed3 = "0.0003";
+      visibleDistance = "600";
+      fogDistance = "500";
+      fogColor = "0.600000 0.600000 0.600000 1.000000";
+      fogVolume1 = "0 0 0";
+      fogVolume2 = "0 0 0";
+      fogVolume3 = "0 0 0";
+      fogVolumeColor1 = "128.000000 128.000000 128.000000 -222768174765569860000000000000000000000.000000";
+      fogVolumeColor2 = "128.000000 128.000000 128.000000 0.000000";
+      fogVolumeColor3 = "128.000000 128.000000 128.000000 -170698929442160050000000000000000000000.000000";
+      windVelocity = "0 0 0";
+      windEffectPrecipitation = "1";
+      SkySolidColor = "0.600000 0.600000 0.600000 1.000000";
+      useSkyTextures = "1";
+      renderBottomTexture = "0";
+      noRenderBans = "1";
+         locked = "true";
+   };
+   new Sun() {
+      direction = "0.57735 0.57735 -0.57735";
+      color = "0.600000 0.600000 0.600000 1.000000";
+      ambient = "0.400000 0.400000 0.300000 1.000000";
+         locked = "true";
+         position = "0 0 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "68.3609 -117.85 137.415";
+         rotation = "0 0 1 130.062";
+         scale = "0.940827 1.97505 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "20";
+         sphereWeight = "1";
+         indoorWeight = "1";
+         outdoorWeight = "1";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+   };
+   new WheeledVehicle() {
+      position = "0 0 -9.17993e+006";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "deathVehicle";
+      disableMove = "0";
+         client = "1467";
+         initialPosition = "  ";
+   };
+   new InteriorInstance() {
+      position = "48.9485 -118.604 198.779";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/lego/bedroom.dif";
+      showTerrainInside = "0";
+   };
+   new StaticShape() {
+      position = "46 -83 136.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up7 = "1876";
+         up12 = "2207";
+         up3 = "1857";
+         up4 = "1870";
+         up9 = "1891";
+         up10 = "1893";
+         up6 = "1874";
+         up13 = "2099";
+         up2 = "1855";
+         upSize = "14";
+         up11 = "1895";
+         up8 = "1889";
+         Up = "1842";
+         up5 = "1872";
+         up1 = "1844";
+   };
+   new StaticShape() {
+      position = "46 -99 136.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up7 = "1876";
+         up12 = "2207";
+         up3 = "1857";
+         up4 = "1870";
+         up9 = "1891";
+         up10 = "1893";
+         up6 = "1874";
+         up13 = "2099";
+         up2 = "1855";
+         upSize = "14";
+         up11 = "1895";
+         up8 = "1889";
+         Up = "1842";
+         up5 = "1872";
+         up1 = "1844";
+   };
+   new StaticShape() {
+      position = "-5 -146 158.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up7 = "1876";
+         up12 = "2207";
+         up3 = "1857";
+         up4 = "1870";
+         up9 = "1891";
+         up10 = "1893";
+         up6 = "1874";
+         up2 = "1855";
+         upSize = "13";
+         up11 = "1895";
+         up8 = "1889";
+         Up = "1842";
+         up5 = "1872";
+         up1 = "1844";
+   };
+   new StaticShape() {
+      position = "-37 -12 168.8";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up7 = "1876";
+         up12 = "2207";
+         up3 = "1857";
+         up4 = "1870";
+         up9 = "1891";
+         up10 = "1893";
+         up6 = "1874";
+         up2 = "1855";
+         upSize = "13";
+         up11 = "1895";
+         up8 = "1889";
+         Up = "1842";
+         up5 = "1872";
+         up1 = "1844";
+   };
+   new StaticShape() {
+      position = "30 -83 136.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up7 = "1876";
+         up12 = "2207";
+         up3 = "1857";
+         up4 = "1870";
+         up9 = "1891";
+         up10 = "1893";
+         up6 = "1874";
+         up13 = "2099";
+         up2 = "1855";
+         upSize = "14";
+         up11 = "1895";
+         up8 = "1889";
+         Up = "1842";
+         up5 = "1872";
+         up1 = "1844";
+   };
+   new StaticShape() {
+      position = "30 -99 136.2";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      dataBlock = "gray32";
+         up16 = "2187";
+         up7 = "1876";
+         up12 = "2207";
+         up3 = "1857";
+         up18 = "2199";
+         up4 = "1870";
+         up9 = "1891";
+         up10 = "1893";
+         up15 = "2185";
+         up6 = "1874";
+         up19 = "2205";
+         up13 = "2099";
+         up14 = "2123";
+         up2 = "1855";
+         upSize = "20";
+         up11 = "1895";
+         up8 = "1889";
+         up17 = "2193";
+         Up = "1842";
+         up5 = "1872";
+         up1 = "1844";
+   };
+   new StaticShape() {
+      position = "47.9247 31.4995 178.906";
+      rotation = "1 0 0 0";
+      scale = "32 32 35.6979";
+      dataBlock = "glassA";
+   };
+   new StaticShape() {
+      position = "15.7247 31.4995 179.03";
+      rotation = "1 0 0 0";
+      scale = "32 32 35.6979";
+      dataBlock = "glassA";
+   };
+   new StaticShape() {
+      position = "15.7247 31.4995 215.657";
+      rotation = "1 0 0 0";
+      scale = "32 32 35.6979";
+      dataBlock = "glassA";
+   };
+   new StaticShape() {
+      position = "47.9247 31.4995 215.978";
+      rotation = "1 0 0 0";
+      scale = "32 32 35.6979";
+      dataBlock = "glassA";
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,68 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB Admins...
+
+Keyboard Shortcut = Ctrl+A
+
+<font:Arial Bold:20>Kick<font:Arial:16>
+Kicks a player from your server. Make sure you select the name from the list first.
+
+<font:Arial Bold:20>Ban<font:Arial:16>
+Bans a player from your server. Make sure you select the name from the list first.
+
+<font:Arial Bold:20>Building Rights<font:Arial:16>
+You can Toggle wether a Person can Build in your Server or Not. Make Sure you select the name from the list First.
+
+<font:Arial Bold:20>Imprison<font:Arial:16>
+If someone is being Unruly, Select their name and Click Imprison, to Jail them for 5 Minutes. They will be unable to kill themselves.
+For Instructions on how to set up a Jail Spawn, See <font:Arial Bold:18>RTB - 10. Server Security.
+
+<font:Arial Bold:20>Temp Admin<font:Arial:16>
+Gives a player temporary admin status. They can kick other players. Good when you want someone to look after your server while you are afk.
+
+<font:Arial Bold:20>Admin to Player<font:Arial:16>
+Teleports the admin who presses the button to the selected player.
+
+<font:Arial Bold:20>Temp Admin<font:Arial:16>
+Teleports the selected player to the admin who presses the button.
+
+<font:Arial Bold:20>Give(money)<font:Arial:16>
+Gives a player more money. The money doesnt come out of your account. You can give a player as much as you like.
+
+<font:Arial Bold:20>Magic Wand<font:Arial:16>
+Equips the magic wand to an admin.
+
+<font:Arial Bold:20>Toggle Wand<font:Arial:16>
+Toggles the wands function.
+	1.Baseplate Mode - allows you to "own" a baseplate.
+	2.Destroy Mode - chain kills a pile of bricks.
+	3.Colour Mode - chain colours a pile of bricks the same colour as the brick that is struck.
+	4.Message Mode - puts your brick message onto any brick.
+	5.Teleport Mode - hit 2 separate bricks to link them. Hit both again to remove links.
+	6.Safe Brick Mode - makes a brick indestructible in deathmatch mode.
+	7.Impulse Mode - makes a brick turn into a small Jump Pad.
+
+<font:Arial Bold:20>Persistence<font:Arial:16>
+Allows you to load and save your bricks and added map items(items you place via the admin menu) All bricks that are loaded become the property of the admin who loads them.
+
+<font:Arial Bold:20>Fall Damage<font:Arial:16>
+Turns fall damage on and off.
+
+<font:Arial Bold:20>Temp Admin<font:Arial:16>
+Sets the amount of jet lag. 80 is default. 0 turns jets off. The lower the value the faster the jets go.
+
+<font:Arial Bold:20>Floating Bricks<font:Arial:16>
+Turns floating bricks on/off.
+
+<font:Arial Bold:20>Colour All Bricks<font:Arial:16>
+Colours all the bricks on the server the same colour(last selected spraycan colour).
+
+<font:Arial Bold:20>Change Map<font:Arial:16>
+Moves on to a new map. Seemingly randomly.
+
+<font:Arial Bold:20>Toggle Inventory<font:Arial:16>
+Turns the inventory system on/off.
+
+<font:Arial Bold:20>Toggle Item $<font:Arial:16>
+Turns items costing money on/off.
+
+<font:Arial Bold:20>Close Server<font:Arial:16>
+Super admins only. Kicks everyone out and disconnects.

@@ -1,0 +1,62 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(GuiLogonDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "130 84";
+      extent = "400 300";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./logon_dlg-bkg.png";
+      wrap = "0";
+
+      new GuiTextEditCtrl(RealName_LogonFld) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "150 171";
+         extent = "203 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::Chat::RealName";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(Nick_LogonFld) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "relative";
+         vertSizing = "relative";
+         position = "150 135";
+         extent = "203 18";
+         minExtent = "8 2";
+         visible = "1";
+         variable = "$pref::Chat::NickName";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+function GuiLogonDlg::onWake(%this)
+{
+Nick_LogonFld.setCursorPos(0);
+}

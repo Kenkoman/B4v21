@@ -1,0 +1,16 @@
+To Scale...
+    Hold Ctrl, Ctrl+Alt, or Alt, and push /, or *.
+
+To Rotate...
+    Hold Ctrl, Ctrl+Alt, or Alt, and push 7, or 9.
+
+To Move...
+    Hold Ctrl, and push 1, 2, 3, 4, 5, 6, 8, or +.
+
+To Change Options...
+    Push (del).  (The one on the numpad.)
+
+To Cycle Favorites...
+    Hold Ctrl for shifting, Alt for rotation, or Ctrl+Alt for scaling, and push Home, or End.
+
+(you can change that keys in Options/controls)

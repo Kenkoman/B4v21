@@ -1,0 +1,155 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(playerrights) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "21 140";
+      extent = "247 138";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Player Rights";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(playerrights);";
+
+      new GuiTextEditCtrl(txtCashCost) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "149 68";
+         extent = "87 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextCtrl(texts) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "9 27";
+         extent = "91 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Player Permissions";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(editorWandbut) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 51";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "togeditorWand();";
+         helpTag = "0";
+         text = "Editor Wand";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(buildingrights) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 70";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "SB();";
+         helpTag = "0";
+         text = "Building Rights";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(tempadmin) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 89";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "MakeTempAdmin();";
+         helpTag = "0";
+         text = "Temp Admin";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(masterkeyholder) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 108";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "mkh();";
+         helpTag = "0";
+         text = "Master Key Holder";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl(texts2) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 50";
+         extent = "104 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Player Cash Price per";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(texts3) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 68";
+         extent = "27 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Brick:";
+         maxLength = "255";
+      };
+      new GuiButtonCtrl(editorWandbut) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "123 89";
+         extent = "107 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "setPlantingCost();";
+         helpTag = "0";
+         text = "Set";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

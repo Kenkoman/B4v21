@@ -1,0 +1,32 @@
+use the MagicWand (dont use EditWand).
+
+
+for Killing-Brick-Mode:
+-----------------------
+toggle the MagicWand mode with (alt W) (you can change that key in Options/controls)
+ (or use "J@N's W&WM")(key "K")
+
+if you see Killing-Brick-Mode, just hit a brick of your wish, and you see KillerBrick ON.
+when you touch this brick you wil die.
+
+
+for Scale-Brick-Mode:
+---------------------
+toggle the MagicWand. (or use "J@N's W&WM")(key "K")
+
+if you see Scale-Brick-Mode, just hit a brick of your wish, and you see ScaleBrick ON.
+this brick scales you with his own scale.
+change the scale of the brick and touch him, observe what wil happends.
+
+
+for Paint-Brick-Mode:
+---------------------
+toggle the MagicWand. (or use "J@N's W&WM")(key "K")
+
+if you see PaintBrick mode, just hit a brick of your wish, and you see PaintBrick ON.
+this brick paints you with his own color, when you tuch him.
+
+
+  __________________________________________________
+ / to switch OFF the Brick mods, use the same steps \
+ \__________________________________________________/

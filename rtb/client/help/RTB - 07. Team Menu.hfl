@@ -1,0 +1,25 @@
+<lmargin%:5><rmargin%:95><font:Arial Bold:20>RTB Teams...
+
+Keyboard Shortcut = Ctrl + F
+
+<font:Arial Bold:20>Del From Team<font:Arial:16>
+Admin only, removes a player from a certain team.
+
+<font:Arial Bold:20>Set Team<font:Arial:16>
+Admin only, sets a player to a certain team.
+
+<font:Arial Bold:20>Join Team<font:Arial:16>
+When teams are unlocked, select a team and rpess join to join that team.
+
+<font:Arial Bold:20>Leave Team<font:Arial:16>
+When teams are unlocked, select your current team and press leave, to leave that team.
+
+<font:Arial Bold:20>Add Team<font:Arial:16>
+Adds the team to the team list.
+
+<font:Arial Bold:20>Remove Team<font:Arial:16>
+Removes a team from the team list.(also sets all of the teams members to no team.
+
+<font:Arial Bold:20>Lock Teams<font:Arial:16>
+Locks teams. No one can join or leave teams, players can still be moved around using set team. Press again to unlock.
+

@@ -1,0 +1,144 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(brickFX) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "183 127";
+      extent = "216 181";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "Brick FX";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(brickFX);";
+
+      new GuiRadioCtrl(firesmoke) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 50";
+         extent = "79 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$Pref::FX::Selection = 1;";
+         helpTag = "0";
+         text = "Fire (Smoke)";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(fire) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "115 52";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$Pref::FX::Selection = 2;";
+         helpTag = "0";
+         text = "Smoke";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(lightpulsing) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 96";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "0";
+         command = "$Pref::FX::Selection = 3;";
+         helpTag = "0";
+         text = "Light (Pulsing";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(lightsteady) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "115 98";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "0";
+         command = "$Pref::FX::Selection = 4;";
+         helpTag = "0";
+         text = "Light (Steady)";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiRadioCtrl(Bubbles) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 73";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$Pref::FX::Selection = 5;";
+         helpTag = "0";
+         text = "Bubbles";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "11 139";
+         extent = "90 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "applybFX();";
+         helpTag = "0";
+         text = "Apply";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "118 139";
+         extent = "90 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "removeFX();";
+         helpTag = "0";
+         text = "Remove";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "13 32";
+         extent = "120 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "What kind of Special FX?";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

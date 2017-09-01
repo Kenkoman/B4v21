@@ -1,0 +1,1 @@
+$ClientCashlocal = "100";

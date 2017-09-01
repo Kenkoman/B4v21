@@ -1,0 +1,166 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(Changemap) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "189 102";
+      extent = "262 276";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      text = "Change Map";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(Changemap);";
+
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "37 227";
+         extent = "185 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "commandtoserver(\'CM_Change\');";
+         helpTag = "0";
+         text = "Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "37 30";
+         extent = "185 183";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+            defaultLineHeight = "15";
+
+         new GuiTextListCtrl(CM_missionList) {
+            profile = "GuiTextArrayProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "1 1";
+            extent = "165 192";
+            minExtent = "8 8";
+            visible = "1";
+            helpTag = "0";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+               noDuplicates = "False";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function Changemap::onWake()
+{
+   $Server::MissionFileSpec = "*/missions/*.mis";
+   CM_missionList.clear();
+   %i = 0;
+   for(%file = findFirstFile($Server::MissionFileSpec); %file !$= ""; %file = findNextFile($Server::MissionFileSpec))  
+      if (strStr(%file, "/CVS/") == -1)
+      {
+         %mi = getCMDisplayName(%file);
+
+	 %desc = %mi.desc[0];
+	 for(%d = 1; %d < %mi.desclines; %d++)
+	 %desc = %desc @ "<br>" @ %mi.desc[%d];
+
+
+	 CM_missionList.addRow(%i++, %mi.name @ "\t" @ %file @ "\t" @ %mi.preview @ "\t" @ %desc);
+	 %mi.delete();
+      }
+   CM_missionList.sort(0);
+   CM_missionList.setSelectedRow(0);
+   CM_missionList.scrollVisible(0);
+
+   TxtServerName.setValue($pref::Server::Name);
+   TxtAdminPassword.setValue($Pref::Server::AdminPassword);
+   TxtMaxPlayers.setValue($Pref::Server::MaxPlayers);
+
+   TxtServerPassword.setValue($Pref::Server::Password);
+}
+
+function getCMDisplayName( %missionFile ) 
+{
+   %file = new FileObject();
+   
+   %MissionInfoObject = "";
+   
+   if ( %file.openForRead( %missionFile ) ) {
+		%inInfoBlock = false;
+		
+		while ( !%file.isEOF() ) {
+			%line = %file.readLine();
+			%line = trim( %line );
+			
+			if( %line $= "new ScriptObject(MissionInfo) {" )
+				%inInfoBlock = true;
+			else if( %inInfoBlock && %line $= "};" ) {
+				%inInfoBlock = false;
+				%MissionInfoObject = %MissionInfoObject @ %line; 
+				break;
+			}
+			
+			if( %inInfoBlock )
+			   %MissionInfoObject = %MissionInfoObject @ %line @ " "; 	
+		}
+		
+		%file.close();
+	}
+	%MissionInfoObject = "%MissionInfoObject = " @ %MissionInfoObject;
+	eval( %MissionInfoObject );
+	
+   %file.delete();
+
+   if( %MissionInfoObject.name !$= "" )
+   {
+      if( %MissionInfoObject.desc0 $= "" )
+         %MissionInfoObject.desc0 = "This mission has no description.";
+   }
+   else
+   {
+      // there is no missioninfo object, so just return some
+      // generic data for this mission
+      %MissionInfoObject = new ScriptObject();
+      %MissionInfoObject.name = %missionFile;
+      %MissionInfoObject.desc0 = "This mission has no description.";
+   }
+
+   return %MissionInfoObject;
+}
+
+function CM_missionList::onSelect(%this, %row)
+{
+	//%image = getField(CM_missionList.getRowTextById(%row), 2);
+	//PreviewImage2.setBitmap(%image);
+	//MissionDescription2.setText(getField(CM_missionList.getRowTextById(%row), 3));
+}

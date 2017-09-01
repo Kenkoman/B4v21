@@ -1,0 +1,6 @@
+all you have to do is, hit ctrl W
+till the chat hud says "Wrench in Camera place mode"(or use "J@N's W&WM")(key "J")hit a brick,
+then hit ctrl W again till chat hud says "Wrench in Camera view mode" hit R to sit,
+and now your not controlling your minifig anymore your in camera mode in the brick you put the camera in,
+hit R again to go back to your minifig, but leave wrench in camera view mode to go to your camera,
+if its not in camera view mode, you just sit.

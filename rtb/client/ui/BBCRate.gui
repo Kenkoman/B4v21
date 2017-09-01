@@ -1,0 +1,144 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(BBCRate) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "183 127";
+      extent = "166 205";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = "BBC";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(bbcrate);";
+
+      new GuiRadioCtrl(r5) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 50";
+         extent = "104 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "5 - Holyshiznit";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+	 command = "$Pref::BBC::Rating = 5;";
+      };
+      new GuiRadioCtrl(r4) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 69";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "4 - Pretty Good";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+	 command = "$Pref::BBC::Rating = 4;";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "14 169";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "applyrating();";
+         helpTag = "0";
+         text = "Rate!";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiRadioCtrl(r3) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 88";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "3 - Average";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+	 command = "$Pref::BBC::Rating = 3;";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "13 32";
+         extent = "33 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Rating:";
+         maxLength = "255";
+      };
+      new GuiRadioCtrl(r2) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 106";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "2 - Pretty Damn Poor";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+	 command = "$Pref::BBC::Rating = 2;";
+      };
+      new GuiRadioCtrl(r1) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 124";
+         extent = "140 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "1 - Turd";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+	 command = "$Pref::BBC::Rating = 1;";
+      };
+      new GuiRadioCtrl(r0) {
+         profile = "GuiRadioProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "16 142";
+         extent = "144 30";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "0 - Absolutely Disgraceful";
+         groupNum = "-1";
+         buttonType = "RadioButton";
+	 command = "$Pref::BBC::Rating = 0;";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

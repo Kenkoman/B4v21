@@ -1,0 +1,68 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(automessage) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "170 185";
+      extent = "300 71";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = " Automessaging";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(automessage);";
+
+      new GuiTextEditCtrl(txtautomessage) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 30";
+         extent = "280 18";
+         minExtent = "280 18";
+         visible = "1";
+         helpTag = "0";
+         text = "Put your entrance message here...";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "95 50";
+         extent = "110 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "automessage();";
+         helpTag = "0";
+         text = "Apply Automessage";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+function automessage::onWake()
+{
+   TxtAutomessage.setValue($pref::Player::Automessage);
+}

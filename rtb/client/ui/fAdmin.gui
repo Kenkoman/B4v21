@@ -1,0 +1,75 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(fAdmin) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+   helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "relative";
+      position = "233 186";
+      extent = "166 71";
+      minExtent = "8 2";
+      visible = "1";
+      helpTag = "0";
+      text = " Force Admin";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+      closeCommand = "canvas.popDialog(fAdmin);";
+
+      new GuiTextCtrl(txt) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 22";
+         extent = "86 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         text = "Admin Password:";
+         maxLength = "255";
+      };
+      new GuiTextEditCtrl(txtAdminPass) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "8 42";
+         extent = "80 18";
+         minExtent = "8 2";
+         visible = "1";
+         helpTag = "0";
+         maxLength = "255";
+         historySize = "0";
+         password = "1";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl(btnSubmit) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "92 42";
+         extent = "65 19";
+         minExtent = "8 2";
+         visible = "1";
+         command = "SAD(txtAdminPass.getValue());";
+         helpTag = "0";
+         text = "Submit";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

@@ -1,0 +1,242 @@
+Setting up for full export (dts) -- turning on optimized meshes
+Config file "//Compaq-vdhfeuva/shareddocs/sss.cfg" not found.
+
+Config file "//Compaq-vdhfeuva/shareddocs/sss.cfg" not found.
+
+Begin reading config file "//Compaq-vdhfeuva/shareddocs/dtsScene.cfg".
+Always export node: "Eye"
+Always export node: "Cam"
+Always export node: "Mount*"
+Always export node: "Hub*"
+Always export node: "eye"
+Always export node: "cam"
+Always export node: "mount*"
+Always export node: "hub*"
+Always export node: "Ski*"
+Always export node: "Unlink"
+Always export node: "Light*"
+Always export node: "Bip01_Pelvis"
+Always export node: "Bip01_Spine"
+Always export node: "Bip01_Spine1"
+Always export node: "Bip01_Spine2"
+Always export node: "Bip01_Neck"
+Always export node: "Bip01_Head"
+Always export node: "Bip01_L_Clavicle"
+Always export node: "Bip01_L_UpperArm"
+Always export node: "Bip01_L_Forearm"
+Always export node: "Bip01_L_Hand"
+Always export node: "Bip01_R_Clavicle"
+Always export node: "Bip01_R_UpperArm"
+Always export node: "Bip01_R_Forearm"
+Always export node: "Bip01_R_Hand"
+Always export node: "Bip01_L_Thigh"
+Always export node: "Bip01_L_Calf"
+Always export node: "Bip01_L_Foot"
+Always export node: "Bip01_R_Thigh"
+Always export node: "Bip01_R_Calf"
+Always export node: "Bip01_R_Foot"
+Always export node: ""
+Never export node: "Bip01"
+Never export node: "Bip01_L_Finger*"
+Never export node: "Bip01_R_Finger*"
+Never export node: "Dum*"
+Never export node: "Bip01_L_Toe*"
+Never export node: "Bip01_R_Toe*"
+End reading config file.
+First pass:  enumerate scene...
+
+Processing Node groundPlane_transform with parent world
+Found subtree starting at Node "groundPlane_transform"
+Processing Node persp with parent world
+Found subtree starting at Node "persp"
+Processing Node top with parent world
+Found subtree starting at Node "top"
+Processing Node front with parent world
+Found subtree starting at Node "front"
+Processing Node side with parent world
+Found subtree starting at Node "side"
+Processing Node base01 with parent world
+Found subtree starting at Node "base01"
+Processing Node bounds with parent world
+Bounding box found
+Processing Node groundPlane with parent groundPlane_transform
+Processing Node perspShape with parent persp
+Processing Node topShape with parent top
+Processing Node frontShape with parent front
+Processing Node sideShape with parent side
+Processing Node start01 with parent base01
+Processing Node detail1 with parent base01
+Processing Node collision-1 with parent base01
+Processing Node collision-2 with parent base01
+Processing Node collision-3 with parent base01
+Processing Node collision-4 with parent base01
+Processing Node col-1 with parent start01
+Processing Node col-2 with parent start01
+Processing Node col-3 with parent start01
+Processing Node col-4 with parent start01
+Processing Node hesefe1 with parent start01
+
+Second pass:  put shape structure together...
+
+Adding detail named "detail1" of size 1 to subtree "base01".
+Adding detail named "collision-1" of size -1 to subtree "base01".
+Adding detail named "collision-2" of size -2 to subtree "base01".
+Adding detail named "collision-3" of size -3 to subtree "base01".
+Adding detail named "collision-4" of size -4 to subtree "base01".
+Adding node "base01" with parent "base01" to subtree rooted on node "base01".
+Adding node "start01" with parent "base01" to subtree rooted on node "base01".
+Adding node "col-1" with parent "start01" to subtree rooted on node "base01".
+Attaching object to node.
+Adding object named "col".
+Adding mesh of size -1 to object "col".
+Adding node "col-2" with parent "start01" to subtree rooted on node "base01".
+Attaching object to node.
+Adding mesh of size -2 to object "col".
+Adding node "col-3" with parent "start01" to subtree rooted on node "base01".
+Attaching object to node.
+Adding mesh of size -3 to object "col".
+Adding node "col-4" with parent "start01" to subtree rooted on node "base01".
+Attaching object to node.
+Adding mesh of size -4 to object "col".
+Adding node "hesefe1" with parent "start01" to subtree rooted on node "base01".
+Attaching object to node.
+Adding object named "hesefe".
+Adding mesh of size 1 to object "hesefe".
+
+Third pass:  Collapsing unneeded nodes...
+
+Removing node "base01"
+Removing node "start01"
+
+Add default object states...
+
+Adding object state to 1 detail level(s) of mesh "hesefe".
+Adding frame.
+Object is visible.
+Object offset transform for mesh dl=0:
+    scale:            x=1.00000, y=1.00000, z=1.00000
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=-0.00000, y=0.00000, z=0.00000
+    actual rotation:  x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding object state to 4 detail level(s) of mesh "col".
+Adding frame.
+Object is visible.
+Object offset transform for mesh dl=0:
+    scale:            x=1.00000, y=0.94749, z=1.04353
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=1.11120, y=2.85762, z=1.87788
+    actual rotation:  x=-0.00000, y=0.00000, z=0.00000, w=1.00000
+Object offset transform for mesh dl=1:
+    scale:            x=1.00000, y=1.00000, z=1.04353
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=1.58282, y=2.85762, z=1.87788
+    actual rotation:  x=-0.00000, y=0.00000, z=0.00000, w=1.00000
+Object offset transform for mesh dl=2:
+    scale:            x=1.00000, y=0.94749, z=1.04353
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00566, y=3.02312, z=1.87788
+    actual rotation:  x=-0.00000, y=0.00000, z=0.00000, w=1.00000
+Object offset transform for mesh dl=3:
+    scale:            x=1.00000, y=0.94749, z=1.04353
+    stretch rotation: x=0.00000, y=0.00000, z=0.00000, w=1.00000
+    translation:      x=0.00000, y=-0.00000, z=1.87788
+    actual rotation:  x=-0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+
+Add default node states...
+
+Adding node rotation at time 0.000000 for node "col-1".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "col-1".
+  translation:     x=-0.49915, y=-0.74890, z=0.05903
+---------------------------------
+Adding node rotation at time 0.000000 for node "col-2".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "col-2".
+  translation:     x=-0.02753, y=-0.74890, z=0.05903
+---------------------------------
+Adding node rotation at time 0.000000 for node "col-3".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "col-3".
+  translation:     x=-1.60469, y=-0.58340, z=0.05903
+---------------------------------
+Adding node rotation at time 0.000000 for node "col-4".
+  rotation:     x=0.00000, y=0.00000, z=0.00000, w=1.00000
+---------------------------------
+Adding node translation at time 0.000000 for node "col-4".
+  translation:     x=-1.61035, y=-3.60652, z=0.05903
+---------------------------------
+Adding node rotation at time 0.000000 for node "hesefe1".
+  rotation:     x=0.50000, y=0.50000, z=0.50000, w=0.50000
+---------------------------------
+Adding node translation at time 0.000000 for node "hesefe1".
+  translation:     x=-1.00005, y=-1.99978, z=0.00000
+---------------------------------
+
+Adding 0 sequences...
+
+
+Optimizing meshes...
+
+Optimizing mesh "hesefe" detail level 1.
+244 verts before joining verts
+226 verts after joining verts
+127 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+71 strips with average length 3.79 (range 3 to 4) and 0 reversals
+
+Optimizing mesh "col" detail level -4.
+24 verts before joining verts
+24 verts after joining verts
+12 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+6 strips with average length 4.00 (range 4 to 4) and 0 reversals
+
+Optimizing mesh "col" detail level -3.
+24 verts before joining verts
+24 verts after joining verts
+12 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+6 strips with average length 4.00 (range 4 to 4) and 0 reversals
+
+Optimizing mesh "col" detail level -2.
+24 verts before joining verts
+24 verts after joining verts
+12 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+6 strips with average length 4.00 (range 4 to 4) and 0 reversals
+
+Optimizing mesh "col" detail level -1.
+24 verts before joining verts
+24 verts after joining verts
+12 faces before stripping
+Using Quick, dirty, & ugly stripping method.
+6 strips with average length 4.00 (range 4 to 4) and 0 reversals
+
+Shape Hierarchy:
+
+   Details:
+      detail1, Subtree 0, objectDetail 0, size 1
+      collision-1, Subtree 0, objectDetail 1, size -1
+      collision-2, Subtree 0, objectDetail 2, size -2
+      collision-3, Subtree 0, objectDetail 3, size -3
+      collision-4, Subtree 0, objectDetail 4, size -4
+
+   Subtrees:
+      Subtree 0
+         col-1
+         col-2
+         col-3
+         col-4 --> Object col with following details:  -1 -2 -3 -4
+         hesefe1 --> Object hesefe with following details:  1
+
+   Sequences:
+
+   Material list:
+   material #0: "base.brickSide.bmp".
+   material #1: "base.2x2Top.jpg".
+   material #2: "base.bottomLoop.jpg".

@@ -1,0 +1,13 @@
+you have now 20 Slots.
+
+For using 11-20 Slots, press Alt+number. (you can change that keys in Options/controls)
+
+we have made 2 different of it.
+Normally we use an arrangement which functions in all resolutions well. (4x5)
+
+if you only use resolutions 1024x... or higher, you can use a better looking version of it. (2X10)
+for using the better looking versin, edit this file
+BLOCKLAND\rtb\client\init.cs
+
+search for          exec("./ui/PlayGui2.gui");
+change it into     exec("./ui/PlayGui.gui");
