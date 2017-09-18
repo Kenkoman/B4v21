@@ -1,1 +1,0 @@
-start "" "v20\Blockland.exe" ptlaaxobimwroe -dedicated
