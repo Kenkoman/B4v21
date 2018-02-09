@@ -3,6 +3,10 @@ Various old blockland releases with extra B4v21 addons included.
 
 This is the v20 branch, check the other branches for the other versions.
 
+**Discord:** https://discord.gg/Sf4MRjS
+
+**Forum Topic:** https://forum.blockland.us/index.php?topic=312944.0
+
 # v20
 
 (credit to Port for the original v20 download!)
@@ -31,3 +35,4 @@ Addons from v21 have been added too:
 1) Click the 'Clone or download' button on this page, and click on 'Download ZIP'
 2) Extract the zip into a folder
 3) Run 'Launch v20' to launch the game.
+4) Paste your blockland key you got when you bought Blockland Retail (Optional)
