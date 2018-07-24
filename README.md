@@ -16,6 +16,17 @@ All B4v21 versions have differences to the vanilla game, here they are:
 * Script_CustomMS - Replaces the master server with the B4v21 custom master server.
 * System_ReturnToBlockland - (given by Polarity!) v19 version of RTB, with working IRC, addon manager, prefs, etc.
 
+There's also some additional client add-ons included, which adds essential features to the game. If you want a 'stock' experience, just delete all 'Client_' add-ons.
+
+* Client_AdminGuiEdit - Adds extra features to the admin menu.
+* Client_DownloadInfo - Adds extra information when downloading files from a server.
+* Client_FOVFix - Adds the v21 FOV slider back into the game.
+* Client_MapLightingFix - Fixes lighting on terrain maps (No more red slopes!)
+* Client_MissionEditor - Allows you to create/edit maps.
+* Client_OrbShift - Fixes brick moving being messed up in the admin orb.
+* Client_Quit_Button_Fix and Client_Tutorial_Button_Fix - Adds prompts before launching the tutorial or quitting the game, for accidental presses.
+* Client_TabShiftingBrickSelector - Adds arrows to the brick menu to access hidden brick sections.
+
 Addons from v21 have been added too:
 
 * Brick_ModTer_BasicPack
