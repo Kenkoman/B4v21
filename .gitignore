@@ -1,5 +1,5 @@
-v20/base/server/temp/temp.bls
-v20/cache.db
-v20/cache.db.journal
-v20/console.log
-v20/key.dat
+base/server/temp/temp.bls
+cache.db
+cache.db.journal
+console.log
+key.dat
