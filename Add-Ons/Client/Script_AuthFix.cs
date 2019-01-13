@@ -89,7 +89,9 @@ package CustomMSPackage {
 		%postText = %postText @ "&blid=" @ urlEnc(getKeyID());
 		%postText = %postText @ "&csg=" @ urlEnc(getVersionNumber());
 		%postText = %postText @ "&ver="@$version;
+		%postText = %postText @ "&ourName=" @ urlEnc(trim($pref::Player::NetName));
 		%postText = %postText @ "&build=1988";
+		%postText = %postText @ "&Patch=1";
 		%this.postText = %postText;
 		%this.cmd = %finishedCMD;
 		%this.postTextLen = strlen(%postText);
