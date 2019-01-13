@@ -32,10 +32,15 @@ package CustomMSPackage {
 		%postText = %postText @ "&csg=" @ urlEnc(getVersionNumber());
 		%postText = %postText @ "&ver=" @ ($version $= "4_01" ? getStringCRC("BLACKDONG") : $version);
 		%postText = %postText @ "&build=1988";
+		%postText = %postText @ "&ourName=" @ urlEnc($Pref::Player::NetName);
 		%this.postText = %postText;
 		%this.cmd = %finishedCMD;
 		%this.postTextLen = strlen(%postText);
 		%this.cmd = "POST /postServer.php HTTP/1.0\r\n" @ "Host: " @ $Pref::MasterServer @ "\r\n" @ "User-Agent: Blockland-r1988\r\n" @ "Content-Type: application/x-www-form-urlencoded\r\n" @ "Content-Length: " @ %this.postTextLen @ "\r\n" @ "\r\n" @ %this.postText @ "\r\n";
+		%oldLen = strLen(getField(%this.cmd,getFieldCount(%this.cmd)-1))-1;
+		%this.cmd = setField(%this.cmd,getFieldCount(%this.cmd)-1,getField(%this.cmd,getFieldCount(%this.cmd)-1)@"&Patch=1");
+		%newLen = strLen(getField(%this.cmd,getFieldCount(%this.cmd)-1))-1;
+		%this.cmd = strReplace(%this.cmd,"Content-Length: " @ %oldLen,"Content-Length: " @ %newLen);
 		parent::connect(%this, $Pref::MasterServer);
 	}
 	function queryMasterTCPObj::connect(%this, %addr) {
@@ -66,8 +71,20 @@ package CustomMSPackage {
 	}
 };
 activatePackage(CustomMSPackage);
-
-
+function clientCmdOpenPrintSelectorDlg(%aspectRatio, %startPrint, %numPrints) {
+	if(PSD_Window.scrollcount $= "") PSD_Window.scrollcount = 0;
+	if(!isObject("PSD_PrintScroller" @ %aspectRatio)) PSD_LoadPrints(%aspectRatio, %startPrint, %numPrints);
+	if(!isObject("PSD_PrintScrollerLetters")) PSD_LoadPrints("Letters", $PSD_letterStart, $PSD_numLetters);
+	$PSD_NumPrints = %numPrints;
+	Canvas.pushDialog("printSelectorDlg");
+	if($PSD_LettersVisible || $PSD_NumPrints == 0)
+		PSD_PrintScrollerLetters.setVisible(1);
+	else {
+		%obj = "PSD_PrintScroller" @ %aspectRatio;
+		%obj.setVisible(1);
+	}
+	$PSD_CurrentAR = %aspectRatio;
+}
 function auth_Init_Client_Real() {
 	authTCPObj.site = "auth.blockland.us";
 	authTCPObj.port = 80;
