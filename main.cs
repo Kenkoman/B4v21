@@ -197,6 +197,14 @@ function displayHelp() {
    );
 }
 
+//-----------------------------------------------------------------------------
+// Create the missing connect() function to allow -connect to be used
+function connect(%address,%password,%connectArgs) {
+	%conn = new GameConnection(ServerConnection);
+	%conn.setConnectArgs(%connectArgs);
+	%conn.setJoinPassword(%password);
+	%conn.connect(%address);
+}
 
 //--------------------------------------------------------------------------
 
