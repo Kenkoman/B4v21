@@ -19,6 +19,21 @@ package CustomMSPackage {
 		Parent::onConnectionDropped(%this,%reason);
 		WebCom_PostServer();
 	}
+	function GameConnection::onConnectRequestRejected( %this, %msg )
+	{
+		echo(%msg);
+		if(%msg $= "CHR_PASSWORD" && $JoinGameAddress !$= "")
+		{
+			$JoinNetServer = 1;
+			$ServerInfo::Ping = "???";
+			$ServerInfo::Address = $JoinGameAddress;
+			Canvas.popDialog(connectingGui);
+			Canvas.pushDialog(JoinServerPassGui);
+			return;
+		}
+		deleteVariables("$JoinGameAddress");
+		return Parent::onConnectRequestRejected(%this, %msg);
+	}
 };
 activatePackage(CustomMSPackage);
 if(isObject(Canvas) && isObject(JoinServerGui) && !JoinServerGui.isNew) JoinServerGui.delete();
@@ -45,7 +60,7 @@ function connectingGui::cancel() {
 		$ArrangedConnection.cancelConnect();
 		$ArrangedConnection.delete();
 	}
-	deleteVariables("$connectArg");
+	deleteVariables("$JoinGameAddress");
 	if(!JoinServerGui.isAwake()) {
 		MainMenuGui.showButtons();
 	}
@@ -1075,11 +1090,11 @@ function JoinServerPassGui::enterPass(%this)
 function JoinServerPassGui::cancel(%this)
 {
 	Canvas.popDialog("joinServerPassGui");
-	if (strlen($connectArg) > 1.0 || strlen($steamLobbyArg) > 1.0)
+	if (strlen($JoinGameAddress) > 1.0 || strlen($steamLobbyArg) > 1.0)
 	{
 		MainMenuGui.showButtons();
 	}
-	deleteVariables("$connectArg");
+	deleteVariables("$JoinGameAddress");
 	deleteVariables("$steamLobbyArg");
 	if (Canvas.getContent() $= "LoadingGui")
 	{
