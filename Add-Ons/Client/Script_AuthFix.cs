@@ -68,16 +68,13 @@ package CustomMSPackage {
 		if(!$AuthingKey) return;
 		$version = $oldver;
 		$AuthingKey = 0;
-	}
-	// Auto connect to the server if the -connect argument is specified
-	function MM_AuthBar::BlinkSuccess(%this) {
+		// Auto connect to the server if the -connect argument is specified
 		if ($connectArg !$= "" && !$Server::Dedicated)
 		{
 			// for lack of a better way to do this, we're going to abuse the manual join gui
 			MJ_txtIP.setValue($connectArg);
 			MJ_connect();
 		}
-		return Parent::BlinkSuccess(%this);
 	}
 	// If the server is passworded, ask for it
 	function GameConnection::onConnectRequestRejected(%this, %msg)
