@@ -154,7 +154,6 @@ package CustomMSPackage {
 		Parent::cancel(%this);
 	}
 };
-};
 activatePackage(CustomMSPackage);
 
 function auth_Init_Client_Real() {
@@ -223,7 +222,7 @@ for ($i = 1; $i < $Game::argc ; $i++)
 		if ($hasNextArg) {
 			$connectArg = $nextArg;
 			$argUsed[$i+1]++;
-			echo("Saved connection argument " SPC $connectArg);
+			echo("Saved connection argument" SPC $connectArg);
 			$i++;
 		}
 		else
