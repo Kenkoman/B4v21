@@ -32,10 +32,15 @@ package CustomMSPackage {
 		%postText = %postText @ "&csg=" @ urlEnc(getVersionNumber());
 		%postText = %postText @ "&ver=" @ ($version $= "4_01" ? getStringCRC("BLACKDONG") : $version);
 		%postText = %postText @ "&build=1988";
+		%postText = %postText @ "&ourName=" @ urlEnc($Pref::Player::NetName);
 		%this.postText = %postText;
 		%this.cmd = %finishedCMD;
 		%this.postTextLen = strlen(%postText);
 		%this.cmd = "POST /postServer.php HTTP/1.0\r\n" @ "Host: " @ $Pref::MasterServer @ "\r\n" @ "User-Agent: Blockland-r1988\r\n" @ "Content-Type: application/x-www-form-urlencoded\r\n" @ "Content-Length: " @ %this.postTextLen @ "\r\n" @ "\r\n" @ %this.postText @ "\r\n";
+		%oldLen = strLen(getField(%this.cmd,getFieldCount(%this.cmd)-1))-1;
+		%this.cmd = setField(%this.cmd,getFieldCount(%this.cmd)-1,getField(%this.cmd,getFieldCount(%this.cmd)-1)@"&Patch=1");
+		%newLen = strLen(getField(%this.cmd,getFieldCount(%this.cmd)-1))-1;
+		%this.cmd = strReplace(%this.cmd,"Content-Length: " @ %oldLen,"Content-Length: " @ %newLen);
 		parent::connect(%this, $Pref::MasterServer);
 	}
 	function queryMasterTCPObj::connect(%this, %addr) {
@@ -63,11 +68,66 @@ package CustomMSPackage {
 		if(!$AuthingKey) return;
 		$version = $oldver;
 		$AuthingKey = 0;
+		// Auto connect to the server if the -connect argument is specified
+		if ($connectArg !$= "" && !$Server::Dedicated)
+		{
+			// Abuse the manual join gui
+			MJ_txtIP.setValue($connectArg);
+			MJ_connect();
+		}
+	}
+	// If the server is passworded, ask for it
+	function GameConnection::onConnectRequestRejected(%this, %msg)
+	{
+		if (%msg $= "CHR_PASSWORD" && $connectArg !$= "")
+		{
+			$JoinNetServer = 1;
+			$ServerInfo::Ping = "???";
+			$ServerInfo::Address = $connectArg;
+			Canvas.popDialog(connectingGui);
+			Canvas.pushDialog(JoinServerPassGui);
+			return;
+		}
+		deleteVariables("$connectArg");
+		return Parent::onConnectRequestRejected(%this, %msg);
+	}
+	// make sure the $connectArg variable becomes unset
+	function connectingGui::cancel()
+	{
+		deleteVariables("$connectArg");
+		Parent::cancel(%this);
+	}
+	function disconnectedCleanup()
+	{
+		deleteVariables("$connectArg");
+		return Parent::disconnectedCleanup();
+	}
+	function JoinServerPassGui::cancel(%this)
+	{
+		deleteVariables("$connectArg");
+		Parent::cancel(%this);
+	}
+	function keyGui::cancel(%this)
+	{
+		deleteVariables("$connectArg");
+		Parent::cancel(%this);
 	}
 };
 activatePackage(CustomMSPackage);
-
-
+function clientCmdOpenPrintSelectorDlg(%aspectRatio, %startPrint, %numPrints) {
+	if(PSD_Window.scrollcount $= "") PSD_Window.scrollcount = 0;
+	if(!isObject("PSD_PrintScroller" @ %aspectRatio)) PSD_LoadPrints(%aspectRatio, %startPrint, %numPrints);
+	if(!isObject("PSD_PrintScrollerLetters")) PSD_LoadPrints("Letters", $PSD_letterStart, $PSD_numLetters);
+	$PSD_NumPrints = %numPrints;
+	Canvas.pushDialog("printSelectorDlg");
+	if($PSD_LettersVisible || $PSD_NumPrints == 0)
+		PSD_PrintScrollerLetters.setVisible(1);
+	else {
+		%obj = "PSD_PrintScroller" @ %aspectRatio;
+		%obj.setVisible(1);
+	}
+	$PSD_CurrentAR = %aspectRatio;
+}
 function auth_Init_Client_Real() {
 	authTCPObj.site = "auth.blockland.us";
 	authTCPObj.port = 80;
@@ -89,5 +149,34 @@ function auth_Init_Client_Real() {
 		case 2:
 			authTCPObj.cmd = strReplace(authTCPObj.cmd,authTCPObj.filePath,"/authConfirm2.php");
 			authTCPObj.connect(authTCPObj.site @ ":" @ authTCPObj.port);
+	}
+}
+
+// Re-parse the command line arguments in order to find what server we're connecting to
+for ($i = 1; $i < $Game::argc ; $i++)
+{
+	%allArgs = %allArgs SPC $Game::argv[$i];
+}
+
+for ($i = 1; $i < $Game::argc ; $i++)
+{
+	$arg = $Game::argv[$i];
+	$nextArg = $Game::argv[$i+1];
+	$hasNextArg = $Game::argc - $i > 1;
+	$logModeSpecified = false;
+
+	switch$ ($arg)
+	{
+	 //--------------------
+	 case "-connect":
+		$argUsed[$i]++;
+		if ($hasNextArg) {
+			$connectArg = $nextArg;
+			$argUsed[$i+1]++;
+			echo("Saved connection argument " SPC $connectArg);
+			$i++;
+		}
+		else
+			error("Error: Missing Command Line argument. Usage: -connect <ip_address>");
 	}
 }
