@@ -1,1 +1,1 @@
-start "" "Blockland.exe" ptlaaxobimwroe -dedicated
+start "" "Blocklandv20.exe" -dedicated
