@@ -5,14 +5,20 @@ This is the v20 branch, check the other branches for the other versions.
 v20 (Windows) is compatible with both Steam and Regular authentication.
 
 # Instructions
-1) Click the 'Clone or download' button on this page, and click on 'Download ZIP'
-2) Extract the zip into a folder on your computer. The Documents folder will work fine.
-3) Run 'Blocklandv20.exe' to launch the game.
+1. Click the 'Clone or download' button on this page, and click on 'Download ZIP'
+2. Extract the zip into a folder on your computer. The Documents folder will work fine.
+3. Run 'Blocklandv20.exe' to launch the game.
+
 __**v20 Non-steam**__
-4) Click "Regular Authentication", then enter your key.
+
+4. Click "Regular Authentication", then enter your key.
+
 __**v20 Steam**__
-5) Click "Steam Authentication", and then enter your in-game name and BLID*.
+
+4. Click "Steam Authentication", and then enter your in-game name and BLID*.
+
 *If you don't know your BLID, launch v21, wait for the game to authenticate and then enter `echo(getNumKeyId());` into the console.
+
 If it doesn't authenticate, launch v21, wait for it to authenticate and then try again on v20.
 
 # v20
