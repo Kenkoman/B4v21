@@ -41,6 +41,7 @@ There's also some additional client add-ons included, which adds essential featu
 * Client_AdminGuiEdit - Adds extra features to the admin menu.
 * Client_DownloadInfo - Adds extra information when downloading files from a server.
 * Client_FOVFix - Adds the v21 FOV slider back into the game.
+* Client_LoadingEscapeMenu - Makes pressing the escape key while loading open the escape menu, rather than disconnecting you instantly.
 * Client_MapLightingFix - Fixes lighting on terrain maps (No more red slopes!)
 * Client_MissionEditor - Allows you to create/edit maps.
 * Client_OrbShift - Fixes brick moving being messed up in the admin orb.
