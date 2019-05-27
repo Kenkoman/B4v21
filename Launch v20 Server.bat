@@ -1,1 +1,1 @@
-start "" "Blocklandv20.exe" -dedicated
+start "" "Blocklandv20.exe" a -dedicated
