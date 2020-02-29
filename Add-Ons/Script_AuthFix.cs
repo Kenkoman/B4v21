@@ -1,5 +1,5 @@
 if($Pref::MasterServer $= "")
- $Pref::MasterServer = "clayhanson.x10host.com:80";
+ $Pref::MasterServer = "b4v21.block.land:80";
 
 function getBrickCount() {
 	// This isn't implemented in v1.03 for some reason
