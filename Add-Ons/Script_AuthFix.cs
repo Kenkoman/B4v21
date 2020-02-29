@@ -1,5 +1,5 @@
 if($Pref::MasterServer $= "")
- $Pref::MasterServer = "clayhanson.x10host.com:80";
+ $Pref::MasterServer = "b4v21.block.land:80";
 
 package CustomMSPackage {
 	function authTCPObj::disconnect(%this) {
