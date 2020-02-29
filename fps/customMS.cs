@@ -41,7 +41,7 @@ if(isObject(Canvas) && !isObject(JoinServerGui)) exec("fps/JoinServerGui.gui");
 if(isObject(Canvas) && !isObject(JoinServerPassGui)) exec("fps/JoinServerPassGui.gui");
 if(isObject(Canvas) && !isObject(ConnectingGui)) exec("fps/ConnectingGui.gui");
 if(!isObject(ServerInfoGroup)) new SimGroup(ServerInfoGroup);
-$Pref::MasterServer = "clayhanson.x10host.com";
+$Pref::MasterServer = "b4v21.block.land";
 function isUnlocked() { return 1; }
 function isNonsenseVerfied() { return 1; }
 function pingSingleServer() { return 0; }
