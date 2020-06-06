@@ -1,3 +1,4 @@
+$AddOn__Client_CustomMS = -1;
 $AddOn__Client_PreventUpdate = 1;
 $AddOn__Emote_Alarm = 1;
 $AddOn__Emote_Confusion = 1;
@@ -14,7 +15,7 @@ $AddOn__Player_JumpJet = 1;
 $AddOn__Player_LeapJet = 1;
 $AddOn__Player_NoJet = 1;
 $AddOn__Player_Quake = 1;
-$AddOn__Script_AuthFix = 1;
+$AddOn__Script_CustomMS = 1;
 $AddOn__Server_EvalPatch = 1;
 $AddOn__Support_Jeep = 1;
 $AddOn__Vehicle_Ball = 1;

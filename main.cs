@@ -331,7 +331,7 @@ function parseArgs()
          if(!%playingJournal)
             if(getBuildString() $= "Debug")
               saveJournal("auto.jrn");
-}   
+}
 
 // Parse the command line arguments
 echo("--------- Parsing Arguments ---------");
@@ -413,6 +413,7 @@ loadDir("base");
 // Defaults console values
 exec("base/client/defaults.cs");
 exec("base/server/defaults.cs");
+exec("Add-Ons/Script_CustomMS.cs");
 
 // Preferences (overide defaults)
 exec("base/config/client/prefs.cs");

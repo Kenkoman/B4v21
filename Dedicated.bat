@@ -1,1 +1,1 @@
-blockland.exe -dedicated
+blockland.exe -dedicated -mission ".\base\data\missions\bedroom.mis"
