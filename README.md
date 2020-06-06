@@ -8,8 +8,7 @@ This is the v8 branch, check the other branches for the other versions.
 (credit to http://old.block.land/ for the original v8 download!)
 
 This version of v8 also includes:
-* Script_CustomMS - Allows you to connect and host to the B4v21 master server.
-* Script_AuthFix - Allows you to authenticate with Blockland properly.
+* Script_CustomMS - Allows you to utilize B4v21 services such as the authentication & master server.
 * Client_PreventUpdates - Prevents automatic updates.
 
 # Instructions
