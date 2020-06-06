@@ -8,8 +8,7 @@ This is the v9 branch, check the other branches for the other versions.
 (credit to tapemaster21 for the original v9 download!)
 
 This version of v9 also includes:
-* Script_CustomMS - Allows you to connect and host to the B4v21 master server.
-* Script_AuthFix_New - Allows you to authenticate with Blockland properly.
+* Script_CustomMS - Allows you to utilize B4v21 services such as the authentication & master server.
 * System_ReturntoBlockland - Return to Blockland, for v9! (optional)
 
 # Instructions
