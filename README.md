@@ -4,6 +4,9 @@ This is only for Windows users. Mac users can find a different download on the B
 This is the v20 branch, check the other branches for the other versions.
 v20 (Windows) is compatible with both Steam and Regular authentication.
 
+# Deprecation Notice
+As of June 6th, 2020, the master branch (v20 installation) of this repository is no longer regularly updated / maintained. To get the latest version of *Blockland v20: B4v21 Edition*, please download the B4v21 Launcher from http://b4v21.block.land/index.php?a=launcher&c=4.
+
 # Instructions
 1. Click the 'Clone or download' button on this page, and click on 'Download ZIP'
 2. Extract the zip into a folder on your computer. The Documents folder will work fine.
