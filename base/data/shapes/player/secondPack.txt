@@ -1,7 +1,0 @@
-none
-epaulets
-epauletsRankA
-epauletsRankB
-epauletsRankC
-epauletsRankD
-ShoulderPads
