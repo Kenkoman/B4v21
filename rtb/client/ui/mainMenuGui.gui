@@ -34,7 +34,7 @@ new GuiChunkedBitmapCtrl(MainMenuGui) {
       extent = "97 20";
       minExtent = "8 8";
       visible = "1";
-      command = "Canvas.setContent(JoinServerGui);";
+      command = "Canvas.pushDialog(JoinServerGui);";
       helpTag = "0";
       text = "Join Server...";
       groupNum = "-1";

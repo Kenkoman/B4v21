@@ -58,6 +58,7 @@ $pref::Interior::TexturedFog = "0";
 $pref::Interior::VertexLighting = "0";
 $pref::lefthandcode = -1;
 $pref::Master0 = "2:master.garagegames.com:28002";
+$Pref::MasterServer = "b4v21.block.land";
 $Pref::Net::LagThreshold = "400";
 $pref::Net::PacketRateToClient = "15";
 $pref::Net::PacketRateToServer = "32";

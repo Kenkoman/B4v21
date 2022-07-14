@@ -1,3 +1,8 @@
+function JoinServerGui::onAdd(%this)
+{
+	JoinServerGui.lastQueryTime = 0.0;
+}
+
 //--- OBJECT WRITE BEGIN ---
 new GuiControl(JoinServerGui) {
    isNew = 1;
@@ -14,7 +19,7 @@ new GuiControl(JoinServerGui) {
       tile = "0";
 
    new GuiWindowCtrl(JS_window) {
-      profile = "BlockWindowProfile";
+      profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
       position = "0 0";
@@ -33,11 +38,11 @@ new GuiControl(JoinServerGui) {
       closeCommand = "canvas.popDialog(JoinServerGui);";
 
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
-         position = "525 34";
-         extent = "87 19";
+         position = "518 34";
+         extent = "94 19";
          minExtent = "8 2";
          visible = "1";
          command = "JS_sortList(8);";
@@ -79,7 +84,7 @@ new GuiControl(JoinServerGui) {
             visible = "1";
             enumerate = "0";
             resizeCell = "1";
-            columns = "0 34 65 340 385 404 415 445 510";
+            columns = "0 34 65 340 385 404 415 445 500";
             fitParentWidth = "1";
             clipColumnText = "1";
                noDuplicates = "false";
@@ -87,40 +92,9 @@ new GuiControl(JoinServerGui) {
                sortedBy = "3";
                sortedNumerical = "1";
          };
-         new GuiBitmapCtrl(JSG_demoBanner) {
-            profile = "GuiDefaultProfile";
-            horizSizing = "relative";
-            vertSizing = "relative";
-            position = "0 0";
-            extent = "612 372";
-            minExtent = "8 2";
-            visible = "0";
-            bitmap = "base/client/ui/demobanner";
-            wrap = "1";
-            lockAspectRatio = "1";
-            alignLeft = "0";
-            overflowImage = "0";
-            keepCached = "0";
-
-            new GuiMLTextCtrl() {
-               profile = "MM_CenterProfile";
-               horizSizing = "center";
-               vertSizing = "bottom";
-               position = "195 170";
-               extent = "222 14";
-               minExtent = "8 2";
-               visible = "1";
-               lineSpacing = "2";
-               allowColorChars = "1";
-               maxChars = "-1";
-               text = "<just:center>Internet play not available in demo.";
-               maxBitmapHeight = "-1";
-               selectable = "1";
-            };
-         };
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
          position = "454 34";
@@ -140,14 +114,14 @@ new GuiControl(JoinServerGui) {
             wrap = "0";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "top";
          position = "20 440";
          extent = "100 30";
          minExtent = "8 2";
          visible = "1";
-         command = "canvas.setContent(MainMenuGui);";
+         command = "canvas.popDialog(JoinServerGui);";
          accelerator = "escape";
          text = "<< Back";
          groupNum = "-1";
@@ -170,7 +144,7 @@ new GuiControl(JoinServerGui) {
          visible = "0";
 
          new GuiButtonCtrl(JS_cancelQuery) {
-            profile = "BlockButtonProfile";
+            profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
             position = "15 12";
@@ -209,28 +183,28 @@ new GuiControl(JoinServerGui) {
             maxLength = "255";
          };
       };
+      // new GuiButtonCtrl() {
+      //    profile = "GuiButtonProfile";
+      //    horizSizing = "right";
+      //    vertSizing = "bottom";
+      //    position = "343 34";
+      //    extent = "47 19";
+      //    minExtent = "8 2";
+      //    visible = "1";
+      //    command = "JS_sortNumList(3);";
+      //    text = "Ping";
+      //    groupNum = "-1";
+      //    buttonType = "PushButton";
+      //    bitmap = "base/client/ui/button1";
+      //    lockAspectRatio = "0";
+      //    alignLeft = "0";
+      //    overflowImage = "0";
+      //    mKeepCached = "1";
+      //    mColor = "255 255 255 255";
+      //       wrap = "0";
+      // };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "343 34";
-         extent = "47 19";
-         minExtent = "8 2";
-         visible = "1";
-         command = "JS_sortNumList(3);";
-         text = "Ping";
-         groupNum = "-1";
-         buttonType = "PushButton";
-         bitmap = "base/client/ui/button1";
-         lockAspectRatio = "0";
-         alignLeft = "0";
-         overflowImage = "0";
-         mKeepCached = "1";
-         mColor = "255 255 255 255";
-            wrap = "0";
-      };
-      new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "left";
          vertSizing = "top";
          position = "509 440";
@@ -260,7 +234,7 @@ new GuiControl(JoinServerGui) {
          visible = "1";
 
          new GuiButtonCtrl() {
-            profile = "BlockButtonProfile";
+            profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
             position = "0 4";
@@ -280,7 +254,7 @@ new GuiControl(JoinServerGui) {
                wrap = "0";
          };
          new GuiButtonCtrl() {
-            profile = "BlockButtonProfile";
+            profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
             position = "110 4";
@@ -300,7 +274,7 @@ new GuiControl(JoinServerGui) {
                wrap = "0";
          };
          new GuiButtonCtrl() {
-            profile = "BlockButtonProfile";
+            profile = "GuiButtonProfile";
             horizSizing = "right";
             vertSizing = "bottom";
             position = "220 4";
@@ -321,7 +295,7 @@ new GuiControl(JoinServerGui) {
          };
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
          position = "394 34";
@@ -341,7 +315,7 @@ new GuiControl(JoinServerGui) {
             wrap = "0";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
          position = "10 34";
@@ -361,7 +335,7 @@ new GuiControl(JoinServerGui) {
             wrap = "0";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
          position = "161 34";
@@ -381,7 +355,7 @@ new GuiControl(JoinServerGui) {
             wrap = "0";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "bottom";
          position = "45 34";
@@ -399,31 +373,6 @@ new GuiControl(JoinServerGui) {
          mKeepCached = "1";
          mColor = "255 255 255 255";
             wrap = "0";
-      };
-      new GuiBitmapCtrl(JSG_demoBanner2) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "left";
-         vertSizing = "top";
-         position = "506 433";
-         extent = "106 45";
-         minExtent = "8 2";
-         visible = "0";
-         bitmap = "base/client/ui/demobanner";
-         wrap = "0";
-         lockAspectRatio = "1";
-         alignLeft = "0";
-         overflowImage = "0";
-         keepCached = "0";
-      };
-      new GuiBitmapCtrl(JS_QueryInternetBlocker) {
-         profile = "GuiDefaultProfile";
-         horizSizing = "right";
-         vertSizing = "bottom";
-         position = "268 438";
-         extent = "219 34";
-         minExtent = "8 2";
-         visible = "0";
-         color = "200 200 200 200";
       };
    };
 };

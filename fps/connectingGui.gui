@@ -9,7 +9,7 @@ new GuiControl(connectingGui) {
    visible = "1";
 
    new GuiWindowCtrl() {
-      profile = "BlockWindowProfile";
+      profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
       position = "140 131";
@@ -43,7 +43,7 @@ new GuiControl(connectingGui) {
          selectable = "1";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "center";
          vertSizing = "top";
          position = "134 167";
