@@ -176,12 +176,6 @@ function RemoveImpulseSettings()
 	canvas.popDialog(impulseGui);
 }
 
-function mainmenugui::onWake(%this)
-{
-	getLatestVers();
-        initRSSview();
-}
-
 function serverrulesGui::onWake(%this)
 {
 	commandToServer('getServerRules');

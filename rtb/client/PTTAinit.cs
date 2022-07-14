@@ -92,7 +92,6 @@ function initClient()
    exec("./ui/MessagePopupDlg.gui");
    exec("./ui/serverconfig.gui");
    exec("./ui/serverrulesgui.gui");
-   exec("./ui/UpdateDlg.gui");
    exec("./ui/brickProperties.gui");
    exec("./ui/playerrights.gui");
    exec("./ui/AMbbc.gui");
