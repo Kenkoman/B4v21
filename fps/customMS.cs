@@ -782,30 +782,12 @@ function ServerInfoSO_DisplayAll()
 
 function ScriptObject::serialize(%this)
 {
-	if (%this.ping $= "Dead")
-	{
-		%ret = "\cr";
-	}
-	else
-	{
-		if (%this.pass $= "Yes")
-		{
-			%ret = "\c2";
-		}
-		else
-		{
-			if (%this.currPlayers >= %this.maxPlayers)
-			{
-				%ret = "\c3";
-			}
-		}
-	}
 	%name = %this.name;
 	if ($Pref::Chat::CurseFilter)
 	{
 		%name = censorString(%name);
 	}
-	%ret = %ret @ %this.pass TAB %this.ded TAB %name TAB %this.ping TAB %this.currPlayers TAB "/" TAB %this.maxPlayers TAB %this.brickCount TAB %this.map TAB %this.ip;
+	%ret = %this.pass TAB %this.ded TAB %name TAB %this.ping TAB %this.currPlayers TAB "/" TAB %this.maxPlayers TAB %this.brickCount TAB %this.map TAB %this.ip;
 	%simpleName = %this.name;
 	%simpleName = strreplace(%simpleName, " ", "_");
 	%simpleName = alphaOnlyWhiteListFilter(%simpleName);
