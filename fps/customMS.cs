@@ -47,6 +47,7 @@ if(isObject(Canvas) && isObject(JoinServerGui) && !JoinServerGui.isNew) JoinServ
 if(isObject(Canvas) && !isObject(JoinServerGui)) exec("fps/JoinServerGui.gui");
 if(isObject(Canvas) && !isObject(JoinServerPassGui)) exec("fps/JoinServerPassGui.gui");
 if(isObject(Canvas) && !isObject(ConnectingGui)) exec("fps/ConnectingGui.gui");
+if(isObject(Canvas) && !isObject(ManualJoin)) exec("fps/ManualJoin.gui");
 if(!isObject(ServerInfoGroup)) new SimGroup(ServerInfoGroup);
 $Pref::MasterServer = "b4v21.block.land";
 function isNonsenseVerfied() { return 1; }
@@ -78,7 +79,7 @@ function MJ_connect()
 	%ip = MJ_txtIP.getValue();
 	%joinPass = MJ_txtJoinPass.getValue();
 	echo("Attempting to connect to ", %ip);
-	if (%ip)
+	if (%ip !$= "")
 	{
 		if (isObject($conn))
 		{
