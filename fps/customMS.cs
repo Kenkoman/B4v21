@@ -25,7 +25,7 @@ package CustomMSPackage {
 		if(%msg $= "CHR_PASSWORD" && $JoinGameAddress !$= "")
 		{
 			$JoinNetServer = 1;
-			$ServerInfo::Ping = "???";
+			$ServerInfo::Ping = "";
 			$ServerInfo::Address = $JoinGameAddress;
 			Canvas.popDialog(connectingGui);
 			Canvas.pushDialog(JoinServerPassGui);
@@ -36,15 +36,21 @@ package CustomMSPackage {
 	}
 };
 activatePackage(CustomMSPackage);
+
+function alphaOnlyWhiteListFilter(%string)
+{
+	%filter = stripChars(%string, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz");
+	return stripChars(%string, %filter);
+}
+
 if(isObject(Canvas) && isObject(JoinServerGui) && !JoinServerGui.isNew) JoinServerGui.delete();
 if(isObject(Canvas) && !isObject(JoinServerGui)) exec("fps/JoinServerGui.gui");
 if(isObject(Canvas) && !isObject(JoinServerPassGui)) exec("fps/JoinServerPassGui.gui");
 if(isObject(Canvas) && !isObject(ConnectingGui)) exec("fps/ConnectingGui.gui");
 if(!isObject(ServerInfoGroup)) new SimGroup(ServerInfoGroup);
 $Pref::MasterServer = "b4v21.block.land";
-function isUnlocked() { return 1; }
 function isNonsenseVerfied() { return 1; }
-function pingSingleServer() { return 0; }
+//function pingSingleServer() { return 0; }
 function onSendConnectChallengeRequest() {
 	echo("Sending challenge request...");
 	Connecting_Text.setText(Connecting_Text.getText() @ "\nSending challenge request...");
@@ -93,41 +99,19 @@ function ManualJoin::onWake()
 
 function JoinServerGui::onWake()
 {
-	if ($launchedFromSteam && !isUnlocked())
-	{
-		MessageBoxOK("Offline Mode", "You can\'t join a game because you haven\'t authenticated with the master server.  \n\nVerify that your internet connection and steam are both working and try again.");
-		Canvas.popDialog(JoinServerGui);
-		MainMenuGui.showButtons();
-		return;
-	}
 	if (!"JoinServerGui".hasQueriedOnce)
 	{
 		JS_sortNumList(3);
 	}
-	if ($pref::Gui::AutoQueryMasterServer || !isUnlocked())
+	if (("JoinServerGui".lastQueryTime == 0.0) || ((getSimTime() - "JoinServerGui".lastQueryTime) > 5.0 * 60.0 * 1000.0))
 	{
-		if ("JoinServerGui".lastQueryTime == 0.0 || getSimTime() - "JoinServerGui".lastQueryTime > 5.0 * 60.0 * 1000.0)
-		{
-			JoinServerGui.queryWebMaster();
-		}
+		JoinServerGui.queryWebMaster();
 	}
 }
 
 function JoinServerGui::queryWebMaster(%this)
 {
 	%this.hasQueriedOnce = 1;
-	if (!isUnlocked())
-	{
-		JSG_demoBanner.setVisible(1);
-		JSG_demoBanner.setColor("1 1 1 0.65");
-		JSG_demoBanner2.setVisible(1);
-		JSG_demoBanner2.setColor("1 1 1 0.65");
-	}
-	else
-	{
-		JSG_demoBanner.setVisible(0);
-		JSG_demoBanner2.setVisible(0);
-	}
 	"JoinServerGui".lastQueryTime = getSimTime();
 	$JoinNetServer = 1;
 	$MasterQueryCanceled = 0;
@@ -269,7 +253,6 @@ function queryMasterTCPObj::onLine(%this, %line)
 							{
 								JS_queryStatus.setVisible(0);
 								ServerInfoSO_DisplayAll();
-								ServerInfoSO_StartPingAll();
 								%this.done = 1;
 								%this.disconnect();
 								return;
@@ -399,7 +382,7 @@ function queryMasterTCPObj::onLine(%this, %line)
 			}
 			%i = %i + 1.0;
 		}
-		%ping = "???";
+		%ping = "";
 		if (%ded)
 		{
 			%ded = "Yes";
@@ -512,33 +495,6 @@ function JoinServerGui::join(%this)
 		{
 			%doDirect = 1;
 			%doArranged = 1;
-			if ($ServerInfo::Ping $= "???")
-			{
-				%doDirect = 1;
-				%doArranged = 1;
-			}
-			else
-			{
-				if ($ServerInfo::Ping $= "---")
-				{
-					%doDirect = 0;
-					%doArranged = 1;
-				}
-				else
-				{
-					if ($ServerInfo::Ping $= mFloor($ServerInfo::Ping))
-					{
-						%doDirect = 1;
-						%doArranged = 0;
-					}
-					else
-					{
-						error("ERROR: Strange ping value " @ $ServerInfo::Ping @ "");
-						%doDirect = 1;
-						%doArranged = 1;
-					}
-				}
-			}
 			ConnectToServer($ServerInfo::Address, "", %doDirect, %doArranged);
 		}
 		else
@@ -570,7 +526,7 @@ function handlePunchConnect(%address, %clientNonce)
 	cancelAllPendingConnections();
 	$conn = new GameConnection(ServerConnection);
 	RootGroup.add($conn);
-	$conn.setConnectArgs($pref::Player::LANName, $pref::Player::NetName, $Pref::Player::ClanPrefix, $Pref::Player::ClanSuffix, %clientNonce);
+	$conn.setConnectArgs($pref::Player::Name);
 	$conn.setJoinPassword($Connection::Password);
 	$conn.connect(%address);
 }
@@ -597,7 +553,7 @@ function JoinServerGui::update(%this)
 		{
 			%serverName = censorString(%serverName);
 		}
-		JS_serverList.addRow(%i, ($ServerInfo::Password ? "Yes" : "No") TAB ($ServerInfo::Dedicated ? "D" : "L") TAB %serverName TAB $ServerInfo::Ping TAB $ServerInfo::PlayerCount TAB "/" TAB $ServerInfo::MaxPlayers TAB " " TAB $ServerInfo::MissionName TAB $ServerInfo::PlayerCount TAB %i);
+		JS_serverList.addRow(%i, ($ServerInfo::Password ? "Yes" : "No") TAB ($ServerInfo::Dedicated ? "D" : "L") TAB %serverName TAB "" TAB $ServerInfo::PlayerCount TAB "/" TAB $ServerInfo::MaxPlayers TAB " " TAB $ServerInfo::MissionName TAB $ServerInfo::PlayerCount TAB %i);
 		%playerCount = %playerCount + $ServerInfo::PlayerCount;
 		%i = %i + 1.0;
 	}
@@ -731,7 +687,7 @@ function ServerInfoSO_Add(%ip, %pass, %ded, %name, %currPlayers, %maxPlayers, %m
 		$ServerSO_Count = 0;
 	}
 	$ServerSO[$ServerSO_Count] = new ScriptObject(ServerSO){
-		ping = "???";
+		ping = "";
 		ip = %ip;
 		pass = %pass;
 		ded = %ded;
@@ -788,7 +744,7 @@ function ServerInfoSO_DisplayAll()
 		{
 			%doRow = 0;
 		}
-		if (%obj.ping !$= "???")
+		if (%obj.ping !$= "")
 		{
 			if (%obj.ping > $pref::Filter::maxPing)
 			{
@@ -821,90 +777,6 @@ function ServerInfoSO_DisplayAll()
 		%text = %text @ %TotalServerCount @ " Servers";
 	}
 	JS_window.setText("Join Server - " @ %text);
-}
-
-function ServerInfoSO_StartPingAll()
-{
-	echo("");
-	echo("\c5Pinging Servers...");
-	if ($Pref::Net::MaxSimultaneousPings <= 0.0)
-	{
-		$Pref::Net::MaxSimultaneousPings = 10;
-	}
-	$ServerSO_PingCount = 0;
-	if ($ServerSO_Count < $Pref::Net::MaxSimultaneousPings)
-	{
-		%count = $ServerSO_Count;
-	}
-	else
-	{
-		%count = $Pref::Net::MaxSimultaneousPings;
-	}
-	%i = 0;
-	while(%i < %count)
-	{
-		echo("\c2Sending ping to    IP:" @ $ServerSO[$ServerSO_PingCount].ip);
-		pingSingleServer($ServerSO[%i].ip, %i);
-		$ServerSO_PingCount = %i;
-		%i = %i + 1.0;
-	}
-}
-
-function ServerInfoSO_PingNext(%slot)
-{
-	if (!$MasterQueryCanceled)
-	{
-		if ($ServerSO_PingCount < $ServerSO_Count - 1.0)
-		{
-			$ServerSO_PingCount = $ServerSO_PingCount + 1.0;
-			echo("\c2Sending ping to    IP:" @ $ServerSO[$ServerSO_PingCount].ip);
-			pingSingleServer($ServerSO[$ServerSO_PingCount].ip, %slot);
-		}
-		else
-		{
-			return;
-		}
-	}
-}
-
-function onSimplePingReceived(%ip, %ping, %slot)
-{
-	if ($JoinNetServer == 0.0)
-	{
-		return;
-	}
-	echo("Recieved ping from " @ %ip @ " - " @ %ping @ "ms");
-	ServerInfoSO_UpdatePing(%ip, %ping);
-	ServerInfoSO_PingNext(%slot);
-}
-
-function onSimplePingTimeout(%ip, %slot)
-{
-	if ($JoinNetServer == 0.0)
-	{
-		return;
-	}
-	echo("\c3No response from   ", %ip);
-	ServerInfoSO_UpdatePing(%ip, "---");
-	ServerInfoSO_PingNext(%slot);
-}
-
-function ServerInfoSO_UpdatePing(%ip, %ping)
-{
-	%strIP = %ip;
-	%strIP = strreplace(%strIP, ".", "_");
-	%strIP = strreplace(%strIP, ":", "X");
-	%idx = $ServerSOFromIP[%strIP];
-	%obj = $ServerSO[%idx];
-	if (isObject(%obj))
-	{
-		%obj.ping = %ping;
-		%obj.Display();
-	}
-	else
-	{
-		error("ERROR: ServerInfoSO_UpdatePing() - No script object found for ip: ", %strIP);
-	}
 }
 
 function ScriptObject::serialize(%this)
@@ -968,7 +840,8 @@ function JoinServerGui::ClickBack(%this)
 	MainMenuGui.showButtons();
 }
 
-function ConnectToServer(%address, %password, %useDirect, %useArranged) {
+function ConnectToServer(%address, %password, %useDirect, %useArranged)
+{
 	%conn = new GameConnection(ServerConnection);
 	%conn.setConnectArgs($pref::Player::Name);
 	%conn.setJoinPassword(%password);
@@ -993,7 +866,7 @@ function ReConnectToServer()
 		$conn = new GameConnection(ServerConnection){
 		};
 		RootGroup.add($conn);
-		$conn.setConnectArgs($pref::Player::LANName, $pref::Player::NetName, $Pref::Player::ClanPrefix, $Pref::Player::ClanSuffix, %clientNonce);
+		$conn.setConnectArgs($pref::Player::Name);
 		$conn.setJoinPassword($Connection::Password);
 		if ($Connection::Address $= "local")
 		{
@@ -1049,33 +922,6 @@ function JoinServerPassGui::enterPass(%this)
 		{
 			%doDirect = 1;
 			%doArranged = 1;
-			if ($ServerInfo::Ping $= "???")
-			{
-				%doDirect = 1;
-				%doArranged = 1;
-			}
-			else
-			{
-				if ($ServerInfo::Ping $= "---")
-				{
-					%doDirect = 0;
-					%doArranged = 1;
-				}
-				else
-				{
-					if ($ServerInfo::Ping $= mFloor($ServerInfo::Ping))
-					{
-						%doDirect = 1;
-						%doArranged = 0;
-					}
-					else
-					{
-						error("ERROR: Strange ping value " @ $ServerInfo::Ping @ "");
-						%doDirect = 1;
-						%doArranged = 1;
-					}
-				}
-			}
 			ConnectToServer($ServerInfo::Address, %pass, %doDirect, %doArranged);
 		}
 		else
@@ -1095,7 +941,6 @@ function JoinServerPassGui::cancel(%this)
 		MainMenuGui.showButtons();
 	}
 	deleteVariables("$JoinGameAddress");
-	deleteVariables("$steamLobbyArg");
 	if (Canvas.getContent() $= "LoadingGui")
 	{
 		Canvas.setContent("MainMenuGui");
@@ -1134,6 +979,10 @@ function urlEnc(%str) {
 function getTimeScale() { return 1; }
 $WebCom_PostSchedule = 0;
 function WebCom_PostServer() {
+	if($Server::ServerType $= "SinglePlayer") {
+		echo("Can\'t post to master server in singleplayer game");
+		return;
+	}
 	if($Server::LAN) {
 		echo("Can\'t post to master server in LAN game");
 		return;

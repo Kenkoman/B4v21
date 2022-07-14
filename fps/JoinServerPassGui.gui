@@ -7,15 +7,17 @@ new GuiControl(JoinServerPassGui) {
    extent = "640 480";
    minExtent = "8 2";
    visible = "1";
+   helpTag = "0";
 
    new GuiWindowCtrl() {
-      profile = "BlockWindowProfile";
+      profile = "GuiWindowProfile";
       horizSizing = "center";
       vertSizing = "center";
       position = "170 161";
       extent = "300 158";
       minExtent = "8 2";
       visible = "1";
+      helpTag = "0";
       text = "Enter Password";
       maxLength = "255";
       resizeWidth = "0";
@@ -37,6 +39,7 @@ new GuiControl(JoinServerPassGui) {
          visible = "1";
          altCommand = "JoinServerPassGui::enterPass();";
          accelerator = "return";
+         helpTag = "0";
          maxLength = "255";
          historySize = "0";
          password = "1";
@@ -44,7 +47,7 @@ new GuiControl(JoinServerPassGui) {
          sinkAllKeyEvents = "0";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "top";
          position = "196 103";
@@ -53,15 +56,16 @@ new GuiControl(JoinServerPassGui) {
          visible = "1";
          command = "JoinServerPassGui::enterPass();";
          accelerator = "return";
+         helpTag = "0";
          text = "Connect";
          groupNum = "-1";
          buttonType = "PushButton";
-         bitmap = "./client/ui/button2";
-         lockAspectRatio = "0";
-         alignLeft = "0";
-         overflowImage = "0";
-         mKeepCached = "0";
-         mColor = "255 255 255 255";
+            overflowImage = "0";
+            bitmap = "./client/ui/button2";
+            alignLeft = "0";
+            mColor = "255 255 255 255";
+            lockAspectRatio = "0";
+            mKeepCached = "0";
       };
       new GuiTextCtrl() {
          profile = "GuiTextProfile";
@@ -71,11 +75,12 @@ new GuiControl(JoinServerPassGui) {
          extent = "53 18";
          minExtent = "8 2";
          visible = "1";
+         helpTag = "0";
          text = "Password:";
          maxLength = "255";
       };
       new GuiButtonCtrl() {
-         profile = "BlockButtonProfile";
+         profile = "GuiButtonProfile";
          horizSizing = "right";
          vertSizing = "top";
          position = "12 103";
@@ -84,15 +89,16 @@ new GuiControl(JoinServerPassGui) {
          visible = "1";
          command = "JoinServerPassGui.cancel();";
          accelerator = "escape";
+         helpTag = "0";
          text = "<< Back";
          groupNum = "-1";
          buttonType = "PushButton";
-         bitmap = "./client/ui/button2";
-         lockAspectRatio = "0";
-         alignLeft = "0";
-         overflowImage = "0";
-         mKeepCached = "0";
-         mColor = "255 255 255 255";
+            overflowImage = "0";
+            bitmap = "./client/ui/button2";
+            alignLeft = "0";
+            mColor = "255 255 255 255";
+            lockAspectRatio = "0";
+            mKeepCached = "0";
       };
       new GuiTextCtrl() {
          profile = "GuiTextProfile";
@@ -102,6 +108,7 @@ new GuiControl(JoinServerPassGui) {
          extent = "194 18";
          minExtent = "8 2";
          visible = "1";
+         helpTag = "0";
          text = "This server requires a password to join.";
          maxLength = "255";
       };
